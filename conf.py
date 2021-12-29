@@ -13,6 +13,9 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+from configparser import RawConfigParser
 
 
 # -- Project information -----------------------------------------------------
@@ -27,7 +30,21 @@ author = 'YOEM Rattana'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+sys.path.append(os.path.abspath('_ext'))
 extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinxcontrib.httpdomain',
+    'djangodocs',
+    # 'doc_extensions',
+    'sphinx_tabs.tabs',
+    'sphinx-prompt',
+    'notfound.extension',
+    'hoverxref.extension',
+    'sphinx_search.extension',
+    'sphinxemoji.sphinxemoji',
+    'myst_parser',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

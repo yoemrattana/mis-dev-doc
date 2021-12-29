@@ -8,7 +8,7 @@ We use 2 database
 
 Some report use Store procedure
 
-.. image:: ../images/store-procedure.png
+.. image:: ../images/store-procedure.PNG
    :width: 368
    :align: center
    :alt: 'store-procedure'

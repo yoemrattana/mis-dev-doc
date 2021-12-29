@@ -13,6 +13,19 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css\rtd_sphinx_search.min.css" type="text/css" />
 
   
   
@@ -26,16 +39,25 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/js\rtd_sphinx_search.min.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="V4" href="../api/v4.html" />
+    <link rel="prev" title="Managing Databases" href="../Overview/database.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,13 +102,28 @@
               
             
             
-              <p class="caption"><span class="caption-text">Overview</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Overview/welcome.html">Welcome to MIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Overview/mis-audience.html">Who is for MIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Overview/development-tool.html">Development Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Overview/project-structure.html">Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Overview/database.html">Managing Databases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Third Party</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#notification-case">Notification (case)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-tool-on-home-page">Export Tool (on home page)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#daily-task-cron-job">Daily task (cron job)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monthly-task-cron-job">Monthly task (cron job)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db-backup-cron-job">DB Backup (cron job)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">api</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/v4.html">V4</a></li>
 </ul>
 
             
@@ -154,12 +191,43 @@
             
   <div class="section" id="third-party">
 <h1>Third Party<a class="headerlink" href="#third-party" title="Permalink to this headline">¶</a></h1>
-<p>Some task is run by .exe file</p>
+<p>Some task is run by <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file</p>
+<div class="section" id="notification-case">
+<h2>Notification (case)<a class="headerlink" href="#notification-case" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Multi thread message purpose we use <code class="docutils literal notranslate"><span class="pre">\media\Message\MIS</span> <span class="pre">Notification.exe</span></code></p></li>
+<li><p>Other library: Firebase cloud message.</p></li>
+<li><p>Git repository <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/rattana/mis-notification.git</span></code></p></li>
+</ul>
+</div>
 <div class="section" id="export-tool-on-home-page">
 <h2>Export Tool (on home page)<a class="headerlink" href="#export-tool-on-home-page" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/export-tool.png"><img alt="'Export tool on home page'" class="align-center" src="../_images/export-tool.png" style="width: 368px;" /></a>
-<p>Export tool on home page use <code class="docutils literal notranslate"><span class="pre">MISExcel.exe</span></code></p>
-<a class="reference internal image-reference" href="../_images/export-exe.png"><img alt="'Export tool on home page'" class="align-center" src="../_images/export-exe.png" style="width: 368px;" /></a>
+<a class="reference internal image-reference" href="../_images/export-tool.PNG"><img alt="'Export tool on home page'" class="align-center" src="../_images/export-tool.PNG" style="width: 368px;" /></a>
+<ul class="simple">
+<li><p>To speed up export data to excel we use <code class="docutils literal notranslate"><span class="pre">\media\ExportExcel\MISExcel.exe</span></code></p></li>
+<li><p>Git repository <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-excel.git</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="daily-task-cron-job">
+<h2>Daily task (cron job)<a class="headerlink" href="#daily-task-cron-job" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Daily task cron job execute <code class="docutils literal notranslate"><span class="pre">C:\MIS\Task</span> <span class="pre">Scheduler\MIS</span> <span class="pre">Daily</span> <span class="pre">Task.exe</span></code> for dashboard data and pivot data. This cron job run by windows task scheduler every day.</p></li>
+<li><p>Git repository: <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-task-scheduler.git</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="monthly-task-cron-job">
+<h2>Monthly task (cron job)<a class="headerlink" href="#monthly-task-cron-job" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Monthly task cron job execute <code class="docutils literal notranslate"><span class="pre">C:\MIS\Task</span> <span class="pre">Scheduler\MIS</span> <span class="pre">Monthly</span> <span class="pre">Task.exe</span></code> for log HF and VMW. This cron job run by windows task scheduler every month.</p></li>
+<li><p>Git repository: <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-task-scheduler.git</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="db-backup-cron-job">
+<h2>DB Backup (cron job)<a class="headerlink" href="#db-backup-cron-job" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>DB Backup task cron job execute <code class="docutils literal notranslate"><span class="pre">C:\MIS\Task</span> <span class="pre">Scheduler\MIS</span> <span class="pre">DB</span> <span class="pre">Backup.exe</span></code> for dashboard data. This cron job run by windows task scheduler every day.</p></li>
+<li><p>Git repository: <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-db-backup.git</span></code></p></li>
+</ul>
 </div>
 </div>
 
@@ -168,6 +236,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../api/v4.html" class="btn btn-neutral float-right" title="V4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Overview/database.html" class="btn btn-neutral float-left" title="Managing Databases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
