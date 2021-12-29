@@ -37,7 +37,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinxcontrib.httpdomain',
     'djangodocs',
-    # 'doc_extensions',
+    #'doc_extensions',
     'sphinx_tabs.tabs',
     'sphinx-prompt',
     'notfound.extension',
