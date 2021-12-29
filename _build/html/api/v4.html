@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API v4 &mdash; MIS developer doc  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css\rtd_sphinx_search.min.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/js\rtd_sphinx_search.min.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Third Party" href="../Third%20Party/data-export-tool.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> MIS developer doc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Overview/welcome.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Overview/mis-audience.html">Who is for MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Overview/development-tool.html">Development Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Overview/project-structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Overview/database.html">Managing Databases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Third%20Party/data-export-tool.html">Third Party</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">api</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API v4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hf-activity-case">HF Activity case</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#insert">Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update">Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete">Delete</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MIS developer doc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>API v4</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/v4.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-v4">
+<h1>API v4<a class="headerlink" href="#api-v4" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hf-activity-case">
+<h2>HF Activity case<a class="headerlink" href="#hf-activity-case" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="insert">
+<h3>Insert<a class="headerlink" href="#insert" title="Permalink to this headline">¶</a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Reports-hf_activity_cases">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Reports/hf_activity_cases</span></span><a class="headerlink" href="#post--api4-Reports-hf_activity_cases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert new case</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;HF_Activity_Cases&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-01&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;Test Patient&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;010123456789&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Vill_t&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+            <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+            <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+            <span class="nt">&quot;Diagnosistext&quot;</span><span class="p">:</span> <span class="s2">&quot;Simple&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Microscopy&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;RDT&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;799440634c87b27f&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;140612&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-01&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;Test Patient&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;010123456789&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Vill_t&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+            <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+            <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+            <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Diagnosistext&quot;</span><span class="p">:</span> <span class="s2">&quot;Simple&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Microscopy&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;RDT&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ អា+អឹម&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;ផ្សេង&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="s2">&quot;កកាកិកី&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;1004050523&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="s2">&quot;មកពីស្រុកសៀម&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;799440634c87b27f&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;140612&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ReferedReason</strong> (<em>string</em>) – Blank/Severe/Other.</p></li>
+<li><p><strong>ReferedOtherReason</strong> (<em>string</em>) – Available when ReferedReason value is Other.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="update">
+<h3>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Reports-update_hf_activity_case">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Reports/update_hf_activity_case</span></span><a class="headerlink" href="#post--api4-Reports-update_hf_activity_case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update case</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;HFCase&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1101492</span><span class="p">,</span>
+        <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;Diagnosistext&quot;</span><span class="p">:</span> <span class="s2">&quot;Simple&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Microscopy&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;RDT&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;ServiceText&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span>
+        <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+        <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_t&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-04&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;test1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;1234567&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="mi">46</span><span class="p">,</span>
+        <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;172eb328d808e45f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;140612&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="delete">
+<h3>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Reports-delete_hf_activity_case">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Reports/delete_hf_activity_case</span></span><a class="headerlink" href="#post--api4-Reports-delete_hf_activity_case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete case</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year of report, e.g: 2020,2021,…</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – month of report, e.g: 01, 02, …, 12</p></li>
+<li><p><strong>hc_code</strong> (<em>string</em>) – code of health facility</p></li>
+<li><p><strong>rec_id</strong> (<em>int</em>) – primary key of row</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Third%20Party/data-export-tool.html" class="btn btn-neutral float-left" title="Third Party" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, YOEM Rattana
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
