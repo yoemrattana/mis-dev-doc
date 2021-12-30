@@ -47,9 +47,13 @@ We use 2 database
 -  ``DB_MIS2`` for real data
 -  ``DB_MIS2_LOCK`` for locking data in previous years
 
-Some report use Store procedure
+Structure
+=========
 
-.. image:: ../images/store-procedure.PNG
-   :width: 100
-   :align: center
-   :alt: 'store-procedure'
+Project Structure
+-----------------
+MIS prject is follow ``MVC`` structure.
+
+Model view (KnockoutJS - MVVM)   
+------------------------------
+To bind data with UI we use KnockoutJS ``MVVM`` structure. ViewModel is in ``\media\ViewModel`` directory.
