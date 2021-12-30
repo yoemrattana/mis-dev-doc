@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Development Tools &mdash; MIS developer doc  documentation</title>
+  <title>Technology usage &mdash; MIS developer doc  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
@@ -34,7 +34,9 @@
         <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Third Party" href="../Third%20Party/data-export-tool.html" />
+    <link rel="prev" title="Welcome to MIS" href="../overview/overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,7 +56,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html#who-is-for-mis">Who is for MIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">technology</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Technology usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#development-tools">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-requirement">Server Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-site-programming-languages">Server site programming languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#php-framework">PHP Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#php-libraries">PHP Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frontend-languages">Frontend languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-databases">Managing Databases</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
 <ul>
@@ -80,9 +96,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Development Tools</li>
+      <li>Technology usage</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/overview/development-tool.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/technology/technology.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -90,13 +106,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="development-tools">
-<h1>Development Tools<a class="headerlink" href="#development-tools" title="Permalink to this headline"></a></h1>
+  <div class="section" id="technology-usage">
+<h1>Technology usage<a class="headerlink" href="#technology-usage" title="Permalink to this headline"></a></h1>
+<div class="section" id="development-tools">
+<h2>Development Tools<a class="headerlink" href="#development-tools" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Visual Studio 2015</p></li>
 <li><p>Microsoft SQL Server Managment Studio</p></li>
 <li><p>PHP Tools for Visual Studio (crack)</p></li>
 </ul>
+</div>
 <div class="section" id="server-requirement">
 <h2>Server Requirement<a class="headerlink" href="#server-requirement" title="Permalink to this headline"></a></h2>
 <ul class="simple">
@@ -139,12 +158,25 @@
 <li><p><a class="reference external" href="https://pagerjs.com/">Pagerjs</a></p></li>
 </ul>
 </div>
+<div class="section" id="managing-databases">
+<h2>Managing Databases<a class="headerlink" href="#managing-databases" title="Permalink to this headline"></a></h2>
+<p>We use 2 database</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MIS2</span></code> for real data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_MIS2_LOCK</span></code> for locking data in previous years</p></li>
+</ul>
+<p>Some report use Store procedure</p>
+<a class="reference internal image-reference" href="../_images/store-procedure.PNG"><img alt="'store-procedure'" class="align-center" src="../_images/store-procedure.PNG" style="width: 100px;" /></a>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../overview/overview.html" class="btn btn-neutral float-left" title="Welcome to MIS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Third%20Party/data-export-tool.html" class="btn btn-neutral float-right" title="Third Party" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

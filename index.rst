@@ -7,13 +7,18 @@ Welcome to MIS developer doc's documentation!
 =============================================
 .. toctree::
    :maxdepth: 2
-   :caption: Overview
+   :caption: overview
 
-   Overview/welcome
-   Overview/mis-audience
-   Overview/development-tool
-   Overview/project-structure
-   Overview/database
+   overview/overview
+   .. Overview/development-tool
+   .. Overview/project-structure
+   .. Overview/database
+
+.. toctree::
+   :maxdepth: 2
+   :caption: technology
+
+   technology/technology
 
 .. toctree::
    :maxdepth: 2
@@ -22,7 +27,7 @@ Welcome to MIS developer doc's documentation!
    Third Party/data-export-tool
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: api
 
    api/v4
