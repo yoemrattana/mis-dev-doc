@@ -7,13 +7,13 @@ Welcome to MIS developer doc's documentation!
 =============================================
 .. toctree::
    :maxdepth: 2
-   :caption: overview
+   :caption: Overview
 
    overview/overview
 
 .. toctree::
    :maxdepth: 2
-   :caption: technology
+   :caption: Technology
 
    technology/technology
 
