@@ -10,9 +10,6 @@ Welcome to MIS developer doc's documentation!
    :caption: overview
 
    overview/overview
-   .. Overview/development-tool
-   .. Overview/project-structure
-   .. Overview/database
 
 .. toctree::
    :maxdepth: 2
