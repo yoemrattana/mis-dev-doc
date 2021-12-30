@@ -137,3 +137,344 @@ Delete
     :query string month: month of report, e.g: 01, 02, ..., 12
     :query string hc_code: code of health facility 
     :query int rec_id: primary key of row 
+
+List
+~~~~
+
+.. http:post:: /api4/Reports/hc_data
+
+    Retrieve case data
+
+    :query int year: year of report, e.g: 2020,2021,...
+    :query string month: month of report, e.g: 01, 02, ..., 12
+    :query string hc_code: code of health facility 
+
+    **Response as json**:
+
+    .. sourcecode:: json
+
+        [
+            {
+                "Year": "2021",
+                "Month": "12",
+                "DateCase": "2021-12-09 00:00:00.000",
+                "Code_Prov_T": "15",
+                "Code_Dist_T": "1504",
+                "Code_Comm_T": "150406",
+                "Code_Vill_t": "1504060300",
+                "PassProvince": null,
+                "PassDistrict": null,
+                "PassCommune": null,
+                "PassAddress": null,
+                "NameK": "វ៉ាន់ រ៉ា",
+                "Age": 29,
+                "AgeType": "Y",
+                "Sex": "M",
+                "PregnantMTHS": "N",
+                "DiagnosisText": "Simple",
+                "ServiceText": "",
+                "Microscopy": 1,
+                "RDT": 0,
+                "Diagnosis": "F",
+                "Treatment": "Other",
+                "OtherTreatment": "Moru stady",
+                "Refered": 0,
+                "ReferedReason": "",
+                "ReferedOtherReason": "",
+                "Dead": 0,
+                "ID": "150301",
+                "UUID": "02b9a6cd50ddd32b",
+                "NumberTests": 1,
+                "Rec_ID": 1180704,
+                "Is_Mobile_Entry": 1,
+                "Weight": 62,
+                "Temperature": "38",
+                "PatientCode": "",
+                "PatientPhone": "066408991",
+                "G6PD": null,
+                "PQTreatment": "",
+                "IsConsult": null,
+                "IsACT": null,
+                "IsPrimaquine": "0",
+                "Primaquine15": null,
+                "Primaquine75": null,
+                "PrimaquineDate": null,
+                "G6PDdL": null,
+                "G6PDHb": null,
+                "Relapse": 0,
+                "L1": 0,
+                "LC": 1,
+                "IMP": null,
+                "LC_Province": null,
+                "LC_District": null,
+                "LC_Commune": null,
+                "LC_Code": "ចំណុច កានម វែនសែន ឃុំរកាត ស្រុកភ្នំក្រវាញ ខេត្តពោធិ៍សាត់",
+                "IMP_Text": null,
+                "Fingerprint": null
+            },
+            {
+                "Year": "2021",
+                "Month": "12",
+                "DateCase": "2021-12-10 00:00:00.000",
+                "Code_Prov_T": null,
+                "Code_Dist_T": null,
+                "Code_Comm_T": null,
+                "Code_Vill_t": "",
+                "PassProvince": null,
+                "PassDistrict": null,
+                "PassCommune": null,
+                "PassAddress": null,
+                "NameK": "",
+                "Age": 64,
+                "AgeType": "Y",
+                "Sex": "F",
+                "PregnantMTHS": "N",
+                "DiagnosisText": "Simple",
+                "ServiceText": null,
+                "Microscopy": 0,
+                "RDT": 1,
+                "Diagnosis": "N",
+                "Treatment": null,
+                "OtherTreatment": null,
+                "Refered": 0,
+                "ReferedReason": null,
+                "ReferedOtherReason": null,
+                "Dead": 0,
+                "ID": "150301",
+                "UUID": "02b9a6cd50ddd32b",
+                "NumberTests": 1,
+                "Rec_ID": 1180984,
+                "Is_Mobile_Entry": 1,
+                "Weight": 0,
+                "Temperature": "37",
+                "PatientCode": null,
+                "PatientPhone": "",
+                "G6PD": null,
+                "PQTreatment": null,
+                "IsConsult": null,
+                "IsACT": null,
+                "IsPrimaquine": null,
+                "Primaquine15": null,
+                "Primaquine75": null,
+                "PrimaquineDate": null,
+                "G6PDdL": null,
+                "G6PDHb": null,
+                "Relapse": null,
+                "L1": null,
+                "LC": null,
+                "IMP": null,
+                "LC_Province": null,
+                "LC_District": null,
+                "LC_Commune": null,
+                "LC_Code": null,
+                "IMP_Text": null,
+                "Fingerprint": null
+            }
+        ]
+
+VMW Activity case
+-----------------
+
+Insert
+~~~~~~
+
+.. http:post:: /api4/Reports/vmw_activity_cases
+
+    Insert new case
+
+    **Parse as json**:
+
+    .. sourcecode:: json
+
+        {
+            "VMW_Activity_Cases": [
+                {
+                    "Month": "07",
+                    "Year": "2021",
+                    "Age": 88,
+                    "Sex": "M",
+                    "Diagnosis": "N",
+                    "NumberTests": 1,
+                    "HC_Code": "",
+                    "UUID": "799440634c87b27f",
+                    "User_Code_Fa_T": "1406010100"
+                },
+                {
+                    "Month": "07",
+                    "Year": "2021",
+                    "DateCase": "2021-07-01",
+                    "NameK": "test",
+                    "PatientPhone": "3333333333",
+                    "Sex": "M",
+                    "Age": 25,
+                    "PregnantMTHS": "",
+                    "Weight": 25.5,
+                    "Temperature": 39.5,
+                    "Mobile": "N",
+                    "Diagnosis": "F",
+                    "Treatment": "ASMQ អា+អឹម",
+                    "TreatmentPill": 10,
+                    "OtherTreatment": "ASMQ អា+អឹម",
+                    "DOT1": 1,
+                    "ReferedReason": "PV",
+                    "ReferedOtherReason": "កការកិកី",
+                    "Relapse": 0,
+                    "L1": 0,
+                    "LC": 1,
+                    "LC_Code": "1004050523",
+                    "IMP": 1,
+                    "IMP_Text": "មកពីស្រុកសៀម",
+                    "G6PDHb": 15,
+                    "G6PDdL": 15,
+                    "IsACT": "Yes",
+                    "IsConsult": "Yes",
+                    "IsPrimaquine": "Yes",
+                    "Primaquine15": 0,
+                    "Primaquine75": 15,
+                    "NumberTests": 1,
+                    "Remark": "",
+                    "UUID": "799440634c87b27f",
+                    "User_Code_Fa_T": "1406010100",
+                    "HC_Code": ""
+                }
+            ]
+        }
+
+    :>json string ReferedReason: Blank/Severe/Other. 
+    :>json string ReferedOtherReason: Available when ReferedReason value is Other.
+
+Update
+~~~~~~
+.. http:post:: /api4/Reports/update_vmw_activity_case
+
+    Update case
+
+    **Parse as json**:
+
+    .. sourcecode:: json
+
+        {
+            "VMWCase": {
+                "Rec_ID": 2563751,
+                "Month": "02",
+                "Year": "2020",
+                "DateCase": "2020-02-01",
+                "NameK": "test",
+                "PatientPhone": "3333333333",
+                "Sex": "M",
+                "Age": 25,
+                "PregnantMTHS": "",
+                "Weight": 25.5,
+                "Temperature": 39.5,
+                "Mobile": "N",
+                "Diagnosis": "F",
+                "Treatment": "ASMQ អា+អឹម",
+                "TreatmentPill": 10,
+                "OtherTreatment": "ASMQ អា+អឹម",
+                "DOT1": 1,
+                "ReferedReason": "PV",
+                "ReferedOtherReason": "កការកិកី",
+                "Relapse": 0,
+                "L1": 0,
+                "LC": 1,
+                "LC_Code": "1004050523",
+                "IMP": 1,
+                "IMP_Text": "មកពីស្រុកសៀម",
+                "G6PDHb": 15,
+                "G6PDdL": 15,
+                "IsACT": "Yes",
+                "IsConsult": "Yes",
+                "IsPrimaquine": "Yes",
+                "Primaquine15": 0,
+                "Primaquine75": 15,
+                "NumberTests": 1,
+                "Remark": "",
+                "User_Code_Fa_T": "1406010100",
+                "UUID": "799440634c87b27f",
+                "PatientCode": "AA0743"
+            }
+        }
+
+Delete
+~~~~~~
+
+.. http:post:: /api4/Reports/delete_vmw_activity_case
+
+    Delete case
+
+    :query int year: year of report, e.g: 2020,2021,...
+    :query string month: month of report, e.g: 01, 02, ..., 12
+    :query string village_code: code of village
+    :query int rec_id: primary key of row 
+
+List
+~~~~
+
+.. http:post:: /api4/Reports/search_patient
+
+    Retrieve case data
+
+    :query int year: year of report, e.g: 2020,2021,...
+    :query string month: month of report, e.g: 01, 02, ..., 12
+    :query string hc_code: code of health facility 
+
+    **Response as json**:
+
+    .. sourcecode:: json
+
+        [
+            {
+                "Code_Vill_T": "1406010100",
+                "Year": "2021",
+                "Month": "06",
+                "DateCase": "2021-06-18 00:00:00.000",
+                "NameK": "ឌិណា",
+                "Age": 36,
+                "AgeType": "Y",
+                "Sex": "M",
+                "PregnantMTHS": "N",
+                "Weight": 60,
+                "Temperature": 39,
+                "Mobile": "N",
+                "Diagnosis": "V",
+                "Treatment": "ASMQ",
+                "ReferedReason": "PV Radical Cure",
+                "ReferedOtherReason": null,
+                "OtherTreatment": "",
+                "DOT1": 0,
+                "Dot3days": 0,
+                "Refered": 1,
+                "Dead": 0,
+                "Remark": null,
+                "ID": "1406010100",
+                "UUID": "172eb328d808e45f",
+                "NumberTests": 1,
+                "Rec_ID": 2636965,
+                "Is_Mobile_Entry": 1,
+                "Passive": 0,
+                "PatientCode": "AA2957",
+                "PatientPhone": "1234688",
+                "PQTreatment": null,
+                "G6PD": null,
+                "IsConsult": null,
+                "IsACT": null,
+                "IsPrimaquine": "1",
+                "Primaquine15": null,
+                "Primaquine75": 42,
+                "PrimaquineDate": "2021-06-18",
+                "G6PDdL": "15.00",
+                "G6PDHb": "14.00",
+                "Relapse": 0,
+                "L1": 1,
+                "LC": null,
+                "IMP": null,
+                "LC_Province": null,
+                "LC_District": null,
+                "LC_Commune": null,
+                "LC_Code": null,
+                "Primaquine": null,
+                "ASMQ": 1,
+                "IMP_Text": null,
+                "Fingerprint": null
+            }
+        ]
