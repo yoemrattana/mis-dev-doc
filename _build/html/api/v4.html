@@ -62,7 +62,6 @@
 <p class="caption" role="heading"><span class="caption-text">Technology</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../technology/technology.html">Technology usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../technology/technology.html#structure">Structure</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
 <ul>
@@ -93,6 +92,16 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#stock-data">Stock data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#stock-close">Stock close</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report">Report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#case-report">Case report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stock-report">Stock report</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#population">Population</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#form-and-data">Form and data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-update-population">Insert/Update Population</a></li>
 </ul>
 </li>
 </ul>
@@ -292,122 +301,122 @@
 </dl>
 <p><strong>Response as json</strong>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-09 00:00:00.000&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Dist_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Comm_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150406&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Vill_t&quot;</span><span class="p">:</span> <span class="s2">&quot;1504060300&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PassProvince&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PassDistrict&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PassCommune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PassAddress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;វ៉ាន់ រ៉ា&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
-        <span class="nt">&quot;AgeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DiagnosisText&quot;</span><span class="p">:</span> <span class="s2">&quot;Simple&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ServiceText&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Microscopy&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;RDT&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;Moru stady&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;02b9a6cd50ddd32b&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1180704</span><span class="p">,</span>
-        <span class="nt">&quot;Is_Mobile_Entry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">62</span><span class="p">,</span>
-        <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="s2">&quot;38&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;066408991&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;G6PD&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PQTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PrimaquineDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Province&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_District&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Commune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;ចំណុច កានម វែនសែន ឃុំរកាត ស្រុកភ្នំក្រវាញ ខេត្តពោធិ៍សាត់&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Fingerprint&quot;</span><span class="p">:</span> <span class="kc">null</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-10 00:00:00.000&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Dist_T&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Comm_T&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Code_Vill_t&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PassProvince&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PassDistrict&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PassCommune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PassAddress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
-        <span class="nt">&quot;AgeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DiagnosisText&quot;</span><span class="p">:</span> <span class="s2">&quot;Simple&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ServiceText&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Microscopy&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;RDT&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;02b9a6cd50ddd32b&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1180984</span><span class="p">,</span>
-        <span class="nt">&quot;Is_Mobile_Entry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="s2">&quot;37&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;G6PD&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PQTreatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;PrimaquineDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Province&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_District&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Commune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Fingerprint&quot;</span><span class="p">:</span> <span class="kc">null</span>
-    <span class="p">}</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-09 00:00:00.000&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Dist_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Comm_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150406&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Vill_t&quot;</span><span class="p">:</span> <span class="s2">&quot;1504060300&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PassProvince&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PassDistrict&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PassCommune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PassAddress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;វ៉ាន់ រ៉ា&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
+    <span class="nt">&quot;AgeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DiagnosisText&quot;</span><span class="p">:</span> <span class="s2">&quot;Simple&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceText&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Microscopy&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;RDT&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;Moru stady&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;02b9a6cd50ddd32b&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1180704</span><span class="p">,</span>
+    <span class="nt">&quot;Is_Mobile_Entry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">62</span><span class="p">,</span>
+    <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="s2">&quot;38&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;066408991&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;G6PD&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PQTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PrimaquineDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Province&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_District&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Commune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;ចំណុច កានម វែនសែន ឃុំរកាត ស្រុកភ្នំក្រវាញ ខេត្តពោធិ៍សាត់&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Fingerprint&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-10 00:00:00.000&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Dist_T&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Comm_T&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Vill_t&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PassProvince&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PassDistrict&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PassCommune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PassAddress&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+    <span class="nt">&quot;AgeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DiagnosisText&quot;</span><span class="p">:</span> <span class="s2">&quot;Simple&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceText&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Microscopy&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;RDT&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;02b9a6cd50ddd32b&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1180984</span><span class="p">,</span>
+    <span class="nt">&quot;Is_Mobile_Entry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="s2">&quot;37&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;G6PD&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PQTreatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PrimaquineDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Province&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_District&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Commune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Fingerprint&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -425,84 +434,22 @@
 <dd><p>Insert new case</p>
 <p><strong>Parse as json</strong>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;VMW_Activity_Cases&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span>
-            <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;799440634c87b27f&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-01&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;3333333333&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-            <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mf">25.5</span><span class="p">,</span>
-            <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="mf">39.5</span><span class="p">,</span>
-            <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ អា+អឹម&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;TreatmentPill&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ អា+អឹម&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;DOT1&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;PV&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="s2">&quot;កការកិកី&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;1004050523&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="s2">&quot;មកពីស្រុកសៀម&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-            <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-            <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-            <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="nt">&quot;Remark&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;799440634c87b27f&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Response JSON Object</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ReferedReason</strong> (<em>string</em>) – Blank/Severe/Other.</p></li>
-<li><p><strong>ReferedOtherReason</strong> (<em>string</em>) – Available when ReferedReason value is Other.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="id2">
-<h3>Update<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
-<dl class="http post">
-<dt class="sig sig-object http" id="post--api4-Reports-update_vmw_activity_case">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Reports/update_vmw_activity_case</span></span><a class="headerlink" href="#post--api4-Reports-update_vmw_activity_case" title="Permalink to this definition"></a></dt>
-<dd><p>Update case</p>
-<p><strong>Parse as json</strong>:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;VMWCase&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2563751</span><span class="p">,</span>
-        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;02&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;VMW_Activity_Cases&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span>
+        <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;799440634c87b27f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-01&quot;</span><span class="p">,</span>
         <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
         <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;3333333333&quot;</span><span class="p">,</span>
         <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
@@ -533,10 +480,72 @@
         <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
         <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="nt">&quot;Remark&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
         <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;799440634c87b27f&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA0743&quot;</span>
+        <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
     <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ReferedReason</strong> (<em>string</em>) – Blank/Severe/Other.</p></li>
+<li><p><strong>ReferedOtherReason</strong> (<em>string</em>) – Available when ReferedReason value is Other.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h3>Update<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Reports-update_vmw_activity_case">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Reports/update_vmw_activity_case</span></span><a class="headerlink" href="#post--api4-Reports-update_vmw_activity_case" title="Permalink to this definition"></a></dt>
+<dd><p>Update case</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;VMWCase&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2563751</span><span class="p">,</span>
+    <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;02&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;3333333333&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mf">25.5</span><span class="p">,</span>
+    <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="mf">39.5</span><span class="p">,</span>
+    <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ អា+អឹម&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TreatmentPill&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ អា+អឹម&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DOT1&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;PV&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="s2">&quot;កការកិកី&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;1004050523&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="s2">&quot;មកពីស្រុកសៀម&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Remark&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;User_Code_Fa_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;799440634c87b27f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA0743&quot;</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -579,60 +588,60 @@
 </dl>
 <p><strong>Response as json</strong>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-18 00:00:00.000&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;ឌិណា&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
-        <span class="nt">&quot;AgeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-        <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span>
-        <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;PV Radical Cure&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DOT1&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;Dot3days&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;Remark&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;172eb328d808e45f&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2636965</span><span class="p">,</span>
-        <span class="nt">&quot;Is_Mobile_Entry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;Passive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA2957&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;1234688&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;PQTreatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;G6PD&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
-        <span class="nt">&quot;PrimaquineDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-18&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="s2">&quot;15.00&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="s2">&quot;14.00&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Province&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_District&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Commune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Primaquine&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;ASMQ&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;Fingerprint&quot;</span><span class="p">:</span> <span class="kc">null</span>
-    <span class="p">}</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DateCase&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-18 00:00:00.000&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;ឌិណា&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+    <span class="nt">&quot;AgeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PregnantMTHS&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nt">&quot;Temperature&quot;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span>
+    <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Diagnosis&quot;</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Treatment&quot;</span><span class="p">:</span> <span class="s2">&quot;ASMQ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedReason&quot;</span><span class="p">:</span> <span class="s2">&quot;PV Radical Cure&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ReferedOtherReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;OtherTreatment&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DOT1&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Dot3days&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Dead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Remark&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;172eb328d808e45f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NumberTests&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2636965</span><span class="p">,</span>
+    <span class="nt">&quot;Is_Mobile_Entry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Passive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA2957&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;1234688&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PQTreatment&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;G6PD&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsConsult&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsACT&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IsPrimaquine&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine15&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine75&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+    <span class="nt">&quot;PrimaquineDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-18&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDdL&quot;</span><span class="p">:</span> <span class="s2">&quot;15.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;G6PDHb&quot;</span><span class="p">:</span> <span class="s2">&quot;14.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Relapse&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;LC&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Province&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_District&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Commune&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LC_Code&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Primaquine&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ASMQ&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;IMP_Text&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Fingerprint&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -917,187 +926,341 @@
 <dd><p>Insert/Update data</p>
 <p><strong>Parse as json</strong>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="mi">123456</span><span class="p">,</span>
-    <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
-    <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;Data&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">41</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-7&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;727&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-624.833&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;500&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;52&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;279&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;1803&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-1,144.167&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;1300&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;61&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;564&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;1343&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-1,246.167&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;463&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;172&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-126.667&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;43&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;58&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-51&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;58&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
-                <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-                    <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-                <span class="p">}</span>
-            <span class="p">]</span>
+  <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="mi">123456</span><span class="p">,</span>
+  <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+  <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Data&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">41</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-7&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;727&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-624.833&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;500&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;52&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;279&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;1803&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-1,144.167&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;1300&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;61&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;564&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;1343&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-1,246.167&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;463&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;172&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-126.667&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;43&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;58&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;-51&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;58&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-12&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Adjustment&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Estimate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;ItemId&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+                  <span class="nt">&quot;Note&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockIn&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockOut&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;StockStart&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;Expire&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+              <span class="p">}</span>
+          <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="report">
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline"></a></h2>
+<div class="section" id="case-report">
+<h3>Case report<a class="headerlink" href="#case-report" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-reports-report_by_hc">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/reports/report_by_hc</span></span><a class="headerlink" href="#post--api4-reports-report_by_hc" title="Permalink to this definition"></a></dt>
+<dd><p>Get case data</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;HF_Request&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;end_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-30&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;140612&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-08&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ALL&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Negative&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Incidence&quot;</span><span class="p">:</span> <span class="s2">&quot;.15&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="stock-report">
+<h3>Stock report<a class="headerlink" href="#stock-report" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-reports-stock">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/reports/stock</span></span><a class="headerlink" href="#post--api4-reports-stock" title="Permalink to this definition"></a></dt>
+<dd><p>Get case data</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Date_From&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-30&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Date_To&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-30&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;140612&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Negative&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Incidence&quot;</span><span class="p">:</span> <span class="s2">&quot;.00&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="population">
+<h2>Population<a class="headerlink" href="#population" title="Permalink to this headline"></a></h2>
+<div class="section" id="form-and-data">
+<h3>Form and data<a class="headerlink" href="#form-and-data" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Population-pop_village">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Population/pop_village</span></span><a class="headerlink" href="#post--api4-Population-pop_village" title="Permalink to this definition"></a></dt>
+<dd><p>show form with data</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020100&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;លាច&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Distance&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">1307</span><span class="p">,</span>
+    <span class="nt">&quot;MobilePop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;HHold&quot;</span><span class="p">:</span> <span class="mi">324</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020200&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពេជ្របាន&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Distance&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">1511</span><span class="p">,</span>
+    <span class="nt">&quot;MobilePop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;HHold&quot;</span><span class="p">:</span> <span class="mi">385</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="insert-update-population">
+<h3>Insert/Update Population<a class="headerlink" href="#insert-update-population" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Population-update_pop_village">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Population/update_pop_village</span></span><a class="headerlink" href="#post--api4-Population-update_pop_village" title="Permalink to this definition"></a></dt>
+<dd><p>Insert / update population</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;PopVillage&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010200&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Distance&quot;</span><span class="p">:</span> <span class="mf">4.6</span><span class="p">,</span>
+        <span class="nt">&quot;HHold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;MobilePop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010300&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Distance&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="nt">&quot;HHold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;MobilePop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010400&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Distance&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;HHold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;MobilePop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Distance&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;HHold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;MobilePop&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
