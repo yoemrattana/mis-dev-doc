@@ -478,3 +478,458 @@ List
                 "Fingerprint": null
             }
         ]
+
+Reactive case
+-------------
+
+List 
+~~~~
+
+.. http:get:: /api4/ReactiveCase/list
+
+    Retrieve list data
+
+    :query int year: year of report, e.g: 2020,2021,...
+    :query string month: month of report, e.g: 01, 02, ..., 12
+    :query string HC_Code: code of health facility 
+
+    **Response as json**:
+
+    .. sourcecode:: json
+
+        {
+            "code": 200,
+            "message": "success",
+            "data": [
+                {
+                    "Passive_Case_Id": "2648747_VMW",
+                    "Case_Type": "VMW",
+                    "ID": "1406010100",
+                    "Name_K": "សុខា",
+                    "Diagnosis": "V",
+                    "Year": "2021",
+                    "Month": "06",
+                    "Code_Vill_t": "1406010100",
+                    "Age": 22,
+                    "Gender": "M",
+                    "PatientPhone": "0789456123",
+                    "Is_Reactive": 2,
+                    "HCCode": "140612"
+                },
+                {
+                    "Passive_Case_Id": "2636965_VMW",
+                    "Case_Type": "VMW",
+                    "ID": "1406010100",
+                    "Name_K": "ឌិណា",
+                    "Diagnosis": "V",
+                    "Year": "2021",
+                    "Month": "06",
+                    "Code_Vill_t": "1406010100",
+                    "Age": 36,
+                    "Gender": "M",
+                    "PatientPhone": "1234688",
+                    "Is_Reactive": 4,
+                    "HCCode": "140612"
+                }
+            ]
+        }
+
+Detail 
+~~~~~~
+
+.. http:get:: /api4/ReactiveCase/detail
+
+    Retrieve detail information
+
+    :query string Passive_Case_Id: Passive case ID, e.g: 1092112_HC, 1092112_VMW (Rec_ID + _HC / Rec_ID + _VMW)
+
+    **Response as json**:
+
+    .. sourcecode:: json
+
+        {
+            "code": 200,
+            "message": "success",
+            "data": [
+                {
+                    "Rec_ID": 1553,
+                    "Passive_Case_Id": "1092112_HC",
+                    "DateCase": "2021-05-28",
+                    "PatientCode": null,
+                    "PatientName": "a 01",
+                    "PatientIDCard": "07893444",
+                    "PatientPhone": "153886",
+                    "PatientAge": 36,
+                    "PatientSex": "M",
+                    "Lat": 11.5946862,
+                    "Long": 104.8611213,
+                    "Code_Vill_T": "1406010100",
+                    "ForestSleep": "Other",
+                    "ForestSleepOther": "yyh",
+                    "Workplace": null,
+                    "WorkplaceOther": null,
+                    "Shelter": "House",
+                    "Bednet": "No",
+                    "InvestigationDate": "2021-05-28",
+                    "Investigator": "tghh",
+                    "InvestigatorJob": "test",
+                    "InvestigatorPhone": "480666",
+                    "Classify": "LC",
+                    "HouseNumber": 1,
+                    "Member": "02",
+                    "Age": 25,
+                    "Sex": "M",
+                    "Missing": "Absent",
+                    "Diagnosis": "N",
+                    "Treatment": null,
+                    "TreatmentOther": null,
+                    "Fever": 1,
+                    "Forest": 0,
+                    "Travel": 0,
+                    "History": 0,
+                    "Relative": 0,
+                    "InitTime": "2021-05-28 13:35:52.583",
+                    "Code_Prov_T": "14",
+                    "Code_OD_T": "1406",
+                    "Code_Facility_T": "140612"
+                },
+                {
+                    "Rec_ID": 1554,
+                    "Passive_Case_Id": "1092112_HC",
+                    "DateCase": "2021-05-28",
+                    "PatientCode": null,
+                    "PatientName": "a 01",
+                    "PatientIDCard": "07893444",
+                    "PatientPhone": "153886",
+                    "PatientAge": 36,
+                    "PatientSex": "M",
+                    "Lat": 11.5946862,
+                    "Long": 104.8611213,
+                    "Code_Vill_T": "1406010100",
+                    "ForestSleep": "Other",
+                    "ForestSleepOther": "yyh",
+                    "Workplace": null,
+                    "WorkplaceOther": null,
+                    "Shelter": "House",
+                    "Bednet": "No",
+                    "InvestigationDate": "2021-05-28",
+                    "Investigator": "tghh",
+                    "InvestigatorJob": "test",
+                    "InvestigatorPhone": "480666",
+                    "Classify": "LC",
+                    "HouseNumber": 102,
+                    "Member": "03",
+                    "Age": 55,
+                    "Sex": "F",
+                    "Missing": "Reject",
+                    "Diagnosis": "F",
+                    "Treatment": "ASMQ",
+                    "TreatmentOther": null,
+                    "Fever": 0,
+                    "Forest": 1,
+                    "Travel": 1,
+                    "History": 1,
+                    "Relative": 1,
+                    "InitTime": "2021-05-28 13:35:52.587",
+                    "Code_Prov_T": "14",
+                    "Code_OD_T": "1406",
+                    "Code_Facility_T": "140612"
+                }
+            ]
+        }
+
+Update 
+~~~~~~
+
+.. http:post:: /api4/ReactiveCase/update
+
+    Insert/Update data
+
+    **Parse as json**:
+
+    .. sourcecode:: json        
+
+        {
+            "Reactive_Activity_Cases": [
+                {
+                    "Age": 25,
+                    "Bednet": "No",
+                    "Classify": "LC",
+                    "Code_Vill_T": "1406010100",
+                    "DateCase": "2021-05-28",
+                    "Diagnosis": "N",
+                    "Fever": 1,
+                    "Forest": 0,
+                    "ForestSleep": "Other",
+                    "ForestSleepOther": "yyh",
+                    "History": 0,
+                    "HouseNumber": "01",
+                    "Id": "",
+                    "InvestigationDate": "2021-05-28",
+                    "Investigation_Case_Id": "",
+                    "Investigator": "tghh",
+                    "InvestigatorJob": "test",
+                    "InvestigatorPhone": "480666",
+                    "Is_Mobile_Entry": 0,
+                    "Lat": 11.5946862,
+                    "Long": 104.8611213,
+                    "Member": "02",
+                    "Missing": "Absent",
+                    "Passive_Case_Id": "1092112_HC",
+                    "PatientAge": 36,
+                    "PatientIDCard": "07893444",
+                    "PatientName": "a 01",
+                    "PatientPhone": "153886",
+                    "PatientSex": "M",
+                    "Relative": 0,
+                    "Sex": "M",
+                    "Shelter": "House",
+                    "Travel": 0,
+                    "UUID": "799440634c87b27f",
+                    "User_Code_Fa_T": "140612",
+                    "User_Id": "140612"
+                },
+                {
+                    "Age": 55,
+                    "Bednet": "No",
+                    "Classify": "LC",
+                    "Code_Vill_T": "1406010100",
+                    "DateCase": "2021-05-28",
+                    "Diagnosis": "F",
+                    "Fever": 0,
+                    "Forest": 1,
+                    "ForestSleep": "Other",
+                    "ForestSleepOther": "yyh",
+                    "History": 1,
+                    "HouseNumber": "0102",
+                    "Id": "",
+                    "InvestigationDate": "2021-05-28",
+                    "Investigation_Case_Id": "",
+                    "Investigator": "tghh",
+                    "InvestigatorJob": "test",
+                    "InvestigatorPhone": "480666",
+                    "Is_Mobile_Entry": 0,
+                    "Lat": 11.5946862,
+                    "Long": 104.8611213,
+                    "Member": "03",
+                    "Missing": "Reject",
+                    "Passive_Case_Id": "1092112_HC",
+                    "PatientAge": 36,
+                    "PatientIDCard": "07893444",
+                    "PatientName": "a 01",
+                    "PatientPhone": "153886",
+                    "PatientSex": "M",
+                    "Relative": 1,
+                    "Sex": "F",
+                    "Shelter": "House",
+                    "Travel": 1,
+                    "Treatment": "ASMQ",
+                    "UUID": "799440634c87b27f",
+                    "User_Code_Fa_T": "140612",
+                    "User_Id": "140612"
+                }
+            ]
+        }
+
+.. note::
+    if Id = "" it will insert new data
+
+    if Id != "" it will update data
+
+Stock data
+----------
+
+Stock close
+~~~~~~~~~~~~
+
+.. http:post:: /api4/ReactiveCase/update
+
+    Insert/Update data
+
+    **Parse as json**:
+
+    .. sourcecode:: json  
+
+        {
+            "HC_Code": 123456,
+            "Year": 2021,
+            "Month": "01",
+            "Data": [
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 34,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 38,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 39,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 40,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 41,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 28,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 25,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "10",
+                            "Estimate": "-7",
+                            "ItemId": 26,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "10",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "727",
+                            "Estimate": "-624.833",
+                            "ItemId": 27,
+                            "Note": "",
+                            "StockIn": "500",
+                            "StockOut": "52",
+                            "StockStart": "279",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "1803",
+                            "Estimate": "-1,144.167",
+                            "ItemId": 29,
+                            "Note": "",
+                            "StockIn": "1300",
+                            "StockOut": "61",
+                            "StockStart": "564",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "1343",
+                            "Estimate": "-1,246.167",
+                            "ItemId": 32,
+                            "Note": "",
+                            "StockIn": "1000",
+                            "StockOut": "120",
+                            "StockStart": "463",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 30,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "172",
+                            "Estimate": "-126.667",
+                            "ItemId": 13,
+                            "Note": "",
+                            "StockIn": "200",
+                            "StockOut": "43",
+                            "StockStart": "15",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "58",
+                            "Estimate": "-51",
+                            "ItemId": 33,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "58",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 17,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": "2021-12-12"
+                        },
+                        {
+                            "Adjustment": "0",
+                            "Balance": "0",
+                            "Estimate": "0",
+                            "ItemId": 18,
+                            "Note": "",
+                            "StockIn": "0",
+                            "StockOut": "0",
+                            "StockStart": "0",
+                            "Expire": ""
+                        }
+                    ]
+        }

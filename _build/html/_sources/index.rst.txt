@@ -26,3 +26,4 @@ Welcome to MIS developer doc's documentation!
    :caption: api
 
    api/v4
+   api/v5
