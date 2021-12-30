@@ -1092,3 +1092,194 @@ Insert/Update Population
         }
       ]
     }
+
+Bednet
+------
+
+Bednet form
+~~~~~~~~~~~~
+
+.. http:post:: /api4/BedNet/form
+
+  Insert / update population
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "hc_code": "140612",
+      "month": 12,
+      "year": 2021
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    [
+      {
+        "Code_Comm_T": "140601",
+        "Name_Comm_K": "អង្គរអង្ក",
+        "Code_Vill_T": "1406010200",
+        "Name_Vill_K": "ព្រែកត្រែង",
+        "VillCode": "1406010200",
+        "LLIN": 1,
+        "LLIHN": 1,
+        "Campaign": 1,
+        "Continued": 0,
+        "Mobile": 0
+      }
+    ]
+
+Bednet Insert/Update
+~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/BedNet/update
+
+  Insert / update population
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "month": 12,
+      "year": 2021,
+      "hc_code": "010210",
+      "data": [
+        {
+            "Year": "2021",
+            "Month": "12",
+            "ID": "010210",
+            "VillCode": "0109061001",
+            "LLIN": 256,
+            "LLIHN": 256,
+            "Campaign": 0,
+            "Continued": 0,
+            "Mobile": 1
+        },
+        {
+            "Year": "2019",
+            "Month": "01",
+            "ID": "010210",
+            "VillCode": "0109061000",
+            "LLIN": 256,
+            "LLIHN": 256,
+            "Campaign": 0,
+            "Continued": 0,
+            "Mobile": 1
+        }
+      ]
+    }  
+
+Dashboard
+---------
+
+Malaria status
+~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Reports/vill_surveillance
+
+  Retrieve data
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "hc_code": "150301",
+      "year": 2021,
+      "mt": "01",
+      "mf": "12"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+      [
+        {
+          "Code": "1504020100",
+          "Name_Vill_K": "លាច",
+          "TotalTestLastYear": 5,
+          "TotalTestThisYear": 2,
+          "TotalCaseLastYear": 5,
+          "TotalCaseThisYear": 2,
+          "PfLastYear": 3,
+          "PfThisYear": 0,
+          "PvLastYear": 2,
+          "PvThisYear": 2,
+          "MixLastYear": 0,
+          "MixThisYear": 0,
+          "PositiveRateLastYear": "100",
+          "PositiveRateThisYear": "100"
+        },
+        {
+          "Code": "1504020200",
+          "Name_Vill_K": "ពេជ្របាន",
+          "TotalTestLastYear": 9,
+          "TotalTestThisYear": 6,
+          "TotalCaseLastYear": 9,
+          "TotalCaseThisYear": 6,
+          "PfLastYear": 2,
+          "PfThisYear": 1,
+          "PvLastYear": 7,
+          "PvThisYear": 5,
+          "MixLastYear": 0,
+          "MixThisYear": 0,
+          "PositiveRateLastYear": "100",
+          "PositiveRateThisYear": "100"
+        }
+      ]
+
+API of villages (chart)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Reports/vill_surveillance
+
+  Retrieve data
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "hc_code": "150301",
+      "year": 2021,
+      "mt": "01",
+      "mf": "12"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+     [
+      {
+          "Code_Vill_T": "0209050100",
+          "Name_Vill_K": "ស្រែអណ្ដូង១",
+          "VillLat": 12.570106,
+          "VillLong": 102.738759,
+          "HFLat": 12.645585,
+          "HFLong": 102.76089,
+          "Pop": 498,
+          "Positive": 0,
+          "HFPositive": 0,
+          "VMWPositive": 0,
+          "API": ".000000000000"
+      },
+      {
+          "Code_Vill_T": "0209050200",
+          "Name_Vill_K": "ឆករការ",
+          "VillLat": 12.57063,
+          "VillLong": 102.740888,
+          "HFLat": 12.645585,
+          "HFLong": 102.76089,
+          "Pop": 1768,
+          "Positive": 0,
+          "HFPositive": 0,
+          "VMWPositive": 0,
+          "API": ".000000000000"
+      }
+     ] 

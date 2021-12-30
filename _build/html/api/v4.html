@@ -104,6 +104,16 @@
 <li class="toctree-l3"><a class="reference internal" href="#insert-update-population">Insert/Update Population</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#bednet">Bednet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bednet-form">Bednet form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bednet-insert-update">Bednet Insert/Update</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dashboard">Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#malaria-status">Malaria status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-of-villages-chart">API of villages (chart)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="v5.html">API v5</a></li>
@@ -1262,6 +1272,191 @@
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="bednet">
+<h2>Bednet<a class="headerlink" href="#bednet" title="Permalink to this headline"></a></h2>
+<div class="section" id="bednet-form">
+<h3>Bednet form<a class="headerlink" href="#bednet-form" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-BedNet-form">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/BedNet/form</span></span><a class="headerlink" href="#post--api4-BedNet-form" title="Permalink to this definition"></a></dt>
+<dd><p>Insert / update population</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;140612&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;month&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+  <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Code_Comm_T&quot;</span><span class="p">:</span> <span class="s2">&quot;140601&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Comm_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អង្គរអង្ក&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010200&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រែកត្រែង&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VillCode&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010200&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;LLIN&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;LLIHN&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Campaign&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;Continued&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="bednet-insert-update">
+<h3>Bednet Insert/Update<a class="headerlink" href="#bednet-insert-update" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-BedNet-update">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/BedNet/update</span></span><a class="headerlink" href="#post--api4-BedNet-update" title="Permalink to this definition"></a></dt>
+<dd><p>Insert / update population</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;month&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+  <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+  <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;010210&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;010210&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VillCode&quot;</span><span class="p">:</span> <span class="s2">&quot;0109061001&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;LLIN&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="nt">&quot;LLIHN&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="nt">&quot;Campaign&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Continued&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ID&quot;</span><span class="p">:</span> <span class="s2">&quot;010210&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VillCode&quot;</span><span class="p">:</span> <span class="s2">&quot;0109061000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;LLIN&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="nt">&quot;LLIHN&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="nt">&quot;Campaign&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Continued&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="dashboard">
+<h2>Dashboard<a class="headerlink" href="#dashboard" title="Permalink to this headline"></a></h2>
+<div class="section" id="malaria-status">
+<h3>Malaria status<a class="headerlink" href="#malaria-status" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Reports-vill_surveillance">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Reports/vill_surveillance</span></span><a class="headerlink" href="#post--api4-Reports-vill_surveillance" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve data</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+  <span class="nt">&quot;mt&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mf&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Code&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020100&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;លាច&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TotalTestLastYear&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;TotalTestThisYear&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;TotalCaseLastYear&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;TotalCaseThisYear&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;PfLastYear&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;PfThisYear&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;PvLastYear&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;PvThisYear&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;MixLastYear&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;MixThisYear&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;PositiveRateLastYear&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PositiveRateThisYear&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Code&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020200&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពេជ្របាន&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TotalTestLastYear&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="nt">&quot;TotalTestThisYear&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;TotalCaseLastYear&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="nt">&quot;TotalCaseThisYear&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;PfLastYear&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;PfThisYear&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;PvLastYear&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="nt">&quot;PvThisYear&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;MixLastYear&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;MixThisYear&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;PositiveRateLastYear&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PositiveRateThisYear&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="api-of-villages-chart">
+<h3>API of villages (chart)<a class="headerlink" href="#api-of-villages-chart" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Reports-vill_surveillance">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Reports/vill_surveillance</span></span><a class="headerlink" href="#post--api4-Reports-vill_surveillance" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve data</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+  <span class="nt">&quot;mt&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mf&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+ <span class="p">{</span>
+     <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050100&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្រែអណ្ដូង១&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;VillLat&quot;</span><span class="p">:</span> <span class="mf">12.570106</span><span class="p">,</span>
+     <span class="nt">&quot;VillLong&quot;</span><span class="p">:</span> <span class="mf">102.738759</span><span class="p">,</span>
+     <span class="nt">&quot;HFLat&quot;</span><span class="p">:</span> <span class="mf">12.645585</span><span class="p">,</span>
+     <span class="nt">&quot;HFLong&quot;</span><span class="p">:</span> <span class="mf">102.76089</span><span class="p">,</span>
+     <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">498</span><span class="p">,</span>
+     <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;HFPositive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;VMWPositive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
+ <span class="p">},</span>
+ <span class="p">{</span>
+     <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050200&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ឆករការ&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;VillLat&quot;</span><span class="p">:</span> <span class="mf">12.57063</span><span class="p">,</span>
+     <span class="nt">&quot;VillLong&quot;</span><span class="p">:</span> <span class="mf">102.740888</span><span class="p">,</span>
+     <span class="nt">&quot;HFLat&quot;</span><span class="p">:</span> <span class="mf">12.645585</span><span class="p">,</span>
+     <span class="nt">&quot;HFLong&quot;</span><span class="p">:</span> <span class="mf">102.76089</span><span class="p">,</span>
+     <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">1768</span><span class="p">,</span>
+     <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;HFPositive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;VMWPositive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
+ <span class="p">}</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </dd></dl>
