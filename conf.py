@@ -71,11 +71,5 @@ html_static_path = ['_static']
 latex_engine = 'xelatex'
 latex_use_xindy = False
 latex_elements = {
-  'extraclassoptions': 'openany,oneside',
-  'inputenc': '',
-  'utf8extra': '',
-  'preamble':  r''' 
-    \setsansfont{Arial}
-    \setromanfont{Arial}
-    \setmonofont{DejaVu Sans Mono} ''' 
+  'extraclassoptions': 'openany,oneside'
 }
