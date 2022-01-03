@@ -72,11 +72,7 @@ html_static_path = ['_static']
 
 latex_elements = {
   'extraclassoptions': 'openany,oneside',
-  'preamble': r'''
-  \\usepackage{pstricks}  % since the dash is rendered by pstricks!
-  \\usepackage[postscript]{ucs}
-  \\usepackage[utf8x]{inputenc}
-  '''
+  'preamble': r'\input{khmerfont.tex}',
 }
 
 latex_engine = 'xelatex'
