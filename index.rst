@@ -9,7 +9,7 @@ Welcome to MIS developer doc's documentation!
    :maxdepth: 2
    :caption: Overview
 
-   overview/about-mis
+   about/about-mis
 
 .. toctree::
    :maxdepth: 2
