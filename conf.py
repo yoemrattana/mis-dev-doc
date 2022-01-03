@@ -72,9 +72,9 @@ root_doc = 'index'
 
 latex_elements = {
   'extraclassoptions': 'openany,oneside',
-  'preamble': r'''
-    \setmainfont{Arial}
-  ''',
+  # 'preamble': r'''
+  #   \setmainfont{Arial}
+  # ''',
 }
 
 latex_engine = 'xelatex'
