@@ -73,7 +73,7 @@ root_doc = 'index'
 latex_elements = {
   'extraclassoptions': 'openany,oneside',
   'preamble': r'''
-    \setmainfont{Khmer OS}
+    \setmainfont{Arial}
   ''',
 }
 
