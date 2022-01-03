@@ -74,5 +74,9 @@ latex_elements = {
   'extraclassoptions': 'openany,oneside',
   'inputenc': '',
   'utf8extra': '',
-  'preamble': '\\usepackage[UTF8]{ctex}\n',
+  'preamble':  r''' 
+    \usepackage{fontspec}
+    \setsansfont{Arial}
+    \setromanfont{Arial}
+    \setmonofont{DejaVu Sans Mono} ''' 
 }
