@@ -73,8 +73,6 @@ root_doc = 'index'
 latex_elements = {
   'extraclassoptions': 'openany,oneside',
   'preamble': r'''
-    \def\input@path{{../}} 
-    \makeatother
     \input{khmerfont.tex}
   ''',
 }
