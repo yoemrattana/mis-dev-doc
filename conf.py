@@ -72,7 +72,7 @@ html_static_path = ['_static']
 
 latex_elements = {
   'extraclassoptions': 'openany,oneside',
-  'preamble': r'\input{khmerfont.tex}',
+  'preamble': r'\\input{khmerfont.tex}',
 }
 
 latex_engine = 'xelatex'
