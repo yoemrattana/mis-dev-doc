@@ -68,11 +68,16 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-
+root_doc = 'index'
 
 latex_elements = {
   'extraclassoptions': 'openany,oneside',
-  'preamble': r'\\input{khmerfont.tex}',
+  # 'preamble': r'\input{khmerfont.tex}',
 }
+
+latex_documents = [
+    (root_doc, 'khmerfont.tex', u'test Documentation',
+     u'test', 'manual'),
+]
 
 latex_engine = 'xelatex'
