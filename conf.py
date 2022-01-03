@@ -75,7 +75,6 @@ latex_elements = {
   'inputenc': '',
   'utf8extra': '',
   'preamble':  r''' 
-    \usepackage{fontspec}
     \setsansfont{Arial}
     \setromanfont{Arial}
     \setmonofont{DejaVu Sans Mono} ''' 
