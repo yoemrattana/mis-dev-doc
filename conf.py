@@ -71,3 +71,5 @@ html_static_path = ['_static']
 latex_elements = {
   'extraclassoptions': 'openany,oneside'
 }
+
+latex_engine = 'xelatex'

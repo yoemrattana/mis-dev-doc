@@ -1750,3 +1750,27 @@ HF follow up detail
   :>json string Refered: Yes/No, if refer patient to HC/RH the value is Yes, otherwise is no
   :>json int Code: 0/1/2/3/4/5, 0 = គ្មាន, 1 = ស្លេកស្លាំង,ស្បែក និងភ្នែកឡើងលឿង, 2 = ហត់ដង្ហក់ពេលធ្វើសកម្មភាព, 3 = ជីពចរដើរញាប់ ញា័រដើមទ្រូង បេះដូងដើរខុសចង្វាក់, 4 = ចុករោយខ្នងចង្កេះ, 5 = ទឹកនោមឡើងពណ៍ក្រម៉ៅ (ពិន្ទុ ៥ ឬលើសពីនេះ) 
   :>json int TabletRemain: number of tablet that remain (medicine)
+
+HF follow up Insert/Update
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/HFFollowup/update
+
+  update/insert follow up
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "followup": {
+          "Code_Vill_T": "1406010100",
+          "Case_ID" : "HC_123",
+          "PatientCode": "AA1338",
+          "Day": "Day3",
+          "Date": "2020-12-12",
+          "Call": "Yes",
+          "Refered": "No",
+          "Code": "1,2"
+      }
+    }
