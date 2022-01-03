@@ -1282,4 +1282,201 @@ API of villages (chart)
           "VMWPositive": 0,
           "API": ".000000000000"
       }
-     ] 
+     ]
+
+Cases (chart)
+~~~~~~~~~~~~~
+
+.. http:post:: /api4/Chart/cases
+
+  Retrieve data
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "hc_code": "150301",
+      "year": 2021,
+      "mt": "01",
+      "mf": "12"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    [
+      {
+          "Month": "01",
+          "pf": 10,
+          "pv": 138,
+          "mix": 2,
+          "TotalCases": 150
+      },
+      {
+          "Month": "02",
+          "pf": 13,
+          "pv": 96,
+          "mix": 1,
+          "TotalCases": 110
+      },
+      {
+          "Month": "03",
+          "pf": 5,
+          "pv": 84,
+          "mix": 0,
+          "TotalCases": 89
+      },
+      {
+          "Month": "04",
+          "pf": 4,
+          "pv": 85,
+          "mix": 0,
+          "TotalCases": 89
+      },
+      {
+          "Month": "05",
+          "pf": 1,
+          "pv": 78,
+          "mix": 0,
+          "TotalCases": 79
+      },
+      {
+          "Month": "06",
+          "pf": 7,
+          "pv": 77,
+          "mix": 4,
+          "TotalCases": 88
+      },
+      {
+          "Month": "07",
+          "pf": 11,
+          "pv": 90,
+          "mix": 0,
+          "TotalCases": 101
+      },
+      {
+          "Month": "08",
+          "pf": 1,
+          "pv": 69,
+          "mix": 2,
+          "TotalCases": 72
+      },
+      {
+          "Month": "09",
+          "pf": 0,
+          "pv": 43,
+          "mix": 0,
+          "TotalCases": 43
+      },
+      {
+          "Month": "10",
+          "pf": 4,
+          "pv": 54,
+          "mix": 0,
+          "TotalCases": 58
+      },
+      {
+          "Month": "11",
+          "pf": 1,
+          "pv": 46,
+          "mix": 0,
+          "TotalCases": 47
+      },
+      {
+          "Month": "12",
+          "pf": 2,
+          "pv": 32,
+          "mix": 0,
+          "TotalCases": 34
+      }
+    ]
+
+Top 10 villages (chart)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Chart/piechart
+
+  Retrieve data
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "hc_code": "150301",
+      "year": 2021,
+      "mt": "01",
+      "mf": "12"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    [
+      {
+          "Code_Vill_T": "0209050301",
+          "Name_Vill_K": "អូរតាតឹង",
+          "Positive": 4,
+          "TotalCases": 15,
+          "API": "26.666666666600"
+      },
+      {
+          "Code_Vill_T": "0209050601",
+          "Name_Vill_K": "ព្រលាន",
+          "Positive": 4,
+          "TotalCases": 15,
+          "API": "26.666666666600"
+      },
+      {
+          "Code_Vill_T": "0209050400",
+          "Name_Vill_K": "កន្ទួត",
+          "Positive": 3,
+          "TotalCases": 15,
+          "API": "20.000000000000"
+      },
+      {
+          "Code_Vill_T": "0209050300",
+          "Name_Vill_K": "សំឡូត",
+          "Positive": 2,
+          "TotalCases": 15,
+          "API": "13.333333333300"
+      },
+      {
+          "Code_Vill_T": "0209050500",
+          "Name_Vill_K": "អូរច្រាប",
+          "Positive": 1,
+          "TotalCases": 15,
+          "API": "6.666666666600"
+      },
+      {
+          "Code_Vill_T": "0209050600",
+          "Name_Vill_K": "បឹងរុន",
+          "Positive": 1,
+          "TotalCases": 15,
+          "API": "6.666666666600"
+      },
+      {
+          "Code_Vill_T": "0209050305",
+          "Name_Vill_K": "អូរតាតឹង (M)",
+          "Positive": 0,
+          "TotalCases": 15,
+          "API": ".000000000000"
+      },
+      {
+          "Code_Vill_T": "0209050304",
+          "Name_Vill_K": "សំឡូត_ស្លេវ (M)",
+          "Positive": 0,
+          "TotalCases": 15,
+          "API": ".000000000000"
+      },
+      {
+          "Code_Vill_T": "0209050303",
+          "Name_Vill_K": "អូរអាច់ក្របី (M)",
+          "Positive": 0,
+          "TotalCases": 15,
+          "API": ".000000000000"
+      }
+    ]

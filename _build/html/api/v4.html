@@ -56,8 +56,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../overview/about-mis.html">Welcome to MIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/about-mis.html#who-is-for-mis">Who is for MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html#who-is-for-mis">Who is for MIS</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technology</span></p>
 <ul>
@@ -112,6 +112,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#dashboard">Dashboard</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#malaria-status">Malaria status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-of-villages-chart">API of villages (chart)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cases-chart">Cases (chart)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#top-10-villages-chart">Top 10 villages (chart)</a></li>
 </ul>
 </li>
 </ul>
@@ -1456,6 +1458,199 @@
      <span class="nt">&quot;VMWPositive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="cases-chart">
+<h3>Cases (chart)<a class="headerlink" href="#cases-chart" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Chart-cases">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Chart/cases</span></span><a class="headerlink" href="#post--api4-Chart-cases" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve data</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+  <span class="nt">&quot;mt&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mf&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">138</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">150</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;02&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">96</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">110</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;03&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">84</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">89</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;04&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">89</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;05&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">79</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">77</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">88</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">101</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;08&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">72</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">43</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">43</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">54</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">58</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">46</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">47</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pf&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;pv&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+      <span class="nt">&quot;mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">34</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="top-10-villages-chart">
+<h3>Top 10 villages (chart)<a class="headerlink" href="#top-10-villages-chart" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Chart-piechart">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Chart/piechart</span></span><a class="headerlink" href="#post--api4-Chart-piechart" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve data</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;hc_code&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+  <span class="nt">&quot;mt&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mf&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050301&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរតាតឹង&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;26.666666666600&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050601&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រលាន&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;26.666666666600&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050400&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កន្ទួត&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;20.000000000000&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050300&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំឡូត&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;13.333333333300&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050500&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរច្រាប&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;6.666666666600&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050600&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បឹងរុន&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;6.666666666600&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050305&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរតាតឹង (M)&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050304&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំឡូត_ស្លេវ (M)&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050303&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរអាច់ក្របី (M)&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
+  <span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
 </div>
