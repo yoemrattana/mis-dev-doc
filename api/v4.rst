@@ -1,6 +1,212 @@
 API v4
 ======
 
+Users
+-----
+
+HF Authentication
+~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Users/mobile_auth
+
+  User login
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "place_code": "010206",
+      "Imei": "869501020203870"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Name_Prov_K": "បន្ទាយមានជ័យ",
+      "Name_OD_K": "ប៉ោយប៉ែត",
+      "Is_Enable_VMW_Report": 1,
+      "Is_Enable_Investigation_Report": 1,
+      "Is_Enable_Reactive_Report": 1,
+      "Is_Enable_SMS_Alert": 1,
+      "Is_Enable_Stock": 1,
+      "Is_Radical_Cure": 1,
+      "Is_Radical_Cure_HSD": 1,
+      "Name_Facility_K": "កូប",
+      "Code_Facility_T": "010206",
+      "IsReminder": null,
+      "BedNetView": 1,
+      "BedNetEdit": 1,
+      "BedNetDelete": 1,
+      "HCCaseDelete": 1,
+      "HCCaseEdit": 1,
+      "VMWCaseDelete": 1,
+      "VMWCaseEdit": 1,
+      "PopView": 1,
+      "PopEdit": 1,
+      "User_Role": "HC",
+      "Phone": "0974930445"
+    }
+
+VMW Authentication
+~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Users/mobile_auth
+
+  User login
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "place_code": "1406010100",
+      "Imei": "863338030163372"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Name_Prov_K": "ព្រៃវែង",
+      "Name_Dist_K": "ពាមជរ",
+      "Name_Comm_K": "អង្គរអង្ក",
+      "Name_Vill_K": "អង្គរអង្គ (M)",
+      "Code_Vill_T": "1406010100",
+      "Name_Facility_K": "អង្គរអង្គ",
+      "Is_Radical_Cure": 1,
+      "Is_Radical_Cure_HSD": 1,
+      "IsLastmile": 0,
+      "IsReminder": 1,
+      "User_Role": "VMW",
+      "Phone": null
+    }   
+
+.. note::
+  place_code if length of place_code is 6 digits, it is HF code
+
+  place_code if length of place_code is 10 digits, it is Village code
+
+Logout
+~~~~~~
+
+.. http:post:: /api4/Users/logout
+
+  Logout from device
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": "123456"
+    }
+
+  **Response as json (correct code)**:
+
+  .. sourcecode:: json
+
+    {
+      "logout": true
+    }
+
+  **Response as json (incorrect code)**:
+
+  .. sourcecode:: json
+
+    {
+      "logout": false
+    }
+
+Location
+~~~~~~~~
+
+.. http:post:: /api4/Users/location
+
+  Log location of device
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Lat": "123456",
+      "Lon": "223454354",
+      "Imei": "123456789",
+      "HC_Code": "010206"
+    }
+
+Log device information
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Users/phone_info
+
+  Log information of device
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Model_Name": "Samsung",
+      "Phone_Number": "223454354",
+      "Imei": "123456789",
+      "HC_Code": "010206"
+    }
+
+Restrict user login
+~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Users/restrict_login
+
+  Validation user code login and feed back
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Imei": "123456789",
+      "HC_Code": "010206",
+      "Logged": 1,
+      "Malaria_Version": "3.0.1"
+    }
+
+  .. note::
+
+    If HC_Code not found in database, it will return message: ``លេខកូដមិនត្រឹមត្រូវ``
+
+    If HC_Code found in database and not yet logedin before, it will return message: ``ដើម្បីដំណើរការកម្មវិធីនេះ សូមទាក់ទងទៅ CNM តាមលេខទូរស័ព្ទ 010 88 33 88``
+
+User permission
+~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/Users/permission
+
+  Check app permission
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Imei": "123456789",
+      "HC_Code": "010206"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json 
+
+    {
+      "entry_expired_form": 1,
+      "entry_expired_stock": 1,
+      "send_phone": 1
+    }
+
 HF Activity case
 ----------------
 
@@ -1436,47 +1642,136 @@ Top 10 villages (chart)
           "Positive": 3,
           "TotalCases": 15,
           "API": "20.000000000000"
-      },
-      {
-          "Code_Vill_T": "0209050300",
-          "Name_Vill_K": "សំឡូត",
-          "Positive": 2,
-          "TotalCases": 15,
-          "API": "13.333333333300"
-      },
-      {
-          "Code_Vill_T": "0209050500",
-          "Name_Vill_K": "អូរច្រាប",
-          "Positive": 1,
-          "TotalCases": 15,
-          "API": "6.666666666600"
-      },
-      {
-          "Code_Vill_T": "0209050600",
-          "Name_Vill_K": "បឹងរុន",
-          "Positive": 1,
-          "TotalCases": 15,
-          "API": "6.666666666600"
-      },
-      {
-          "Code_Vill_T": "0209050305",
-          "Name_Vill_K": "អូរតាតឹង (M)",
-          "Positive": 0,
-          "TotalCases": 15,
-          "API": ".000000000000"
-      },
-      {
-          "Code_Vill_T": "0209050304",
-          "Name_Vill_K": "សំឡូត_ស្លេវ (M)",
-          "Positive": 0,
-          "TotalCases": 15,
-          "API": ".000000000000"
-      },
-      {
-          "Code_Vill_T": "0209050303",
-          "Name_Vill_K": "អូរអាច់ក្របី (M)",
-          "Positive": 0,
-          "TotalCases": 15,
-          "API": ".000000000000"
       }
     ]
+
+Pv Radical cure
+---------------
+
+HF patient follow up list
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api4/HFFollowup/list
+
+  Retrieve list data
+
+  :query int year: year of report, e.g: 2020,2021,...
+  :query string month: month of report, e.g: 01, 02, ..., 12
+  :query string hc_code: code of health facility 
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Code_Vill_T": "1406010400",
+            "Name_Vill_K": "វាលរបងលើ",
+            "PatientCode": "AA4397",
+            "NameK": "sa",
+            "Sex": "M",
+            "Age": 55,
+            "PatientPhone": null,
+            "HaveVMW": 0,
+            "Case_ID": "1139092",
+            "Type": "HC",
+            "Day3": 0,
+            "Day3Date": "2021-09-02",
+            "Day7": 1,
+            "Day7Date": "2021-09-06",
+            "Day14": 1,
+            "Day14Date": "2021-09-13"
+        },
+        {
+            "Code_Vill_T": "1406010400",
+            "Name_Vill_K": "វាលរបងលើ",
+            "PatientCode": "AA4414",
+            "NameK": "soda",
+            "Sex": "M",
+            "Age": 66,
+            "PatientPhone": null,
+            "HaveVMW": 0,
+            "Case_ID": "1140082",
+            "Type": "HC",
+            "Day3": 0,
+            "Day3Date": "2021-09-03",
+            "Day7": 1,
+            "Day7Date": "2021-09-07",
+            "Day14": 1,
+            "Day14Date": "2021-09-14"
+        }
+      ]
+    }
+
+HF follow up detail
+~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api4/HFFollowup/detail
+
+  Retrieve detail data
+
+  :query string patient_code: patient code, e.g: AA1234
+  :query string day: day of follow up, e.g: Day3, Day7, Day14
+  :query string case_id: Rec_ID of case get from tblHFActivityCases 
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": {
+          "Rec_ID": 313,
+          "Case_ID": "1139092",
+          "Code_Vill_T": null,
+          "PatientCode": "AA4397",
+          "Day": "Day3",
+          "Date": "2021-09-02",
+          "Call": "Yes",
+          "Refered": "Yes",
+          "Code": "1, 4, 5",
+          "TabletRemain": null,
+          "IsMobileEntry": 1,
+          "InitTime": "2021-09-02 13:43:15.240",
+          "InitUser": null,
+          "ModiTime": null,
+          "ModiUser": null
+      }
+    }
+
+  :>json string Case_ID: Rec_ID of case get from tblHFActivityCases. 
+  :>json string PatientCode: Patient code of case get from tblHFActivityCases.
+  :>json string Day: Day of follow up, e.g: Day3, Day7, Day14
+  :>json string Call: Yes/No, if follow up patient by phone call the value is Yes, otherwise is no
+  :>json string Refered: Yes/No, if refer patient to HC/RH the value is Yes, otherwise is no
+  :>json int Code: 0/1/2/3/4/5, 0 = គ្មាន, 1 = ស្លេកស្លាំង,ស្បែក និងភ្នែកឡើងលឿង, 2 = ហត់ដង្ហក់ពេលធ្វើសកម្មភាព, 3 = ជីពចរដើរញាប់ ញា័រដើមទ្រូង បេះដូងដើរខុសចង្វាក់, 4 = ចុករោយខ្នងចង្កេះ, 5 = ទឹកនោមឡើងពណ៍ក្រម៉ៅ (ពិន្ទុ ៥ ឬលើសពីនេះ) 
+  :>json int TabletRemain: number of tablet that remain (medicine)
+
+HF follow up Insert/Update
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/HFFollowup/update
+
+  update/insert follow up
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "followup": {
+          "Code_Vill_T": "1406010100",
+          "Case_ID" : "HC_123",
+          "PatientCode": "AA1338",
+          "Day": "Day3",
+          "Date": "2020-12-12",
+          "Call": "Yes",
+          "Refered": "No",
+          "Code": "1,2"
+      }
+    }
+    

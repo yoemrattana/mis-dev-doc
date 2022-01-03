@@ -70,6 +70,16 @@
 <p class="caption" role="heading"><span class="caption-text">api</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API v4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#users">Users</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hf-authentication">HF Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vmw-authentication">VMW Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logout">Logout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#location">Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-device-information">Log device information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#restrict-user-login">Restrict user login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-permission">User permission</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#hf-activity-case">HF Activity case</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#insert">Insert</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#update">Update</a></li>
@@ -116,6 +126,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#top-10-villages-chart">Top 10 villages (chart)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#pv-radical-cure">Pv Radical cure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hf-patient-follow-up-list">HF patient follow up list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hf-follow-up-detail">HF follow up detail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hf-follow-up-insert-update">HF follow up Insert/Update</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="v5.html">API v5</a></li>
@@ -147,6 +163,201 @@
              
   <div class="section" id="api-v4">
 <h1>API v4<a class="headerlink" href="#api-v4" title="Permalink to this headline"></a></h1>
+<div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline"></a></h2>
+<div class="section" id="hf-authentication">
+<h3>HF Authentication<a class="headerlink" href="#hf-authentication" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Users-mobile_auth">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Users/mobile_auth</span></span><a class="headerlink" href="#post--api4-Users-mobile_auth" title="Permalink to this definition"></a></dt>
+<dd><p>User login</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;place_code&quot;</span><span class="p">:</span> <span class="s2">&quot;010206&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;869501020203870&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយមានជ័យ&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Enable_VMW_Report&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Enable_Investigation_Report&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Enable_Reactive_Report&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Enable_SMS_Alert&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Enable_Stock&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Radical_Cure&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Radical_Cure_HSD&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កូប&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010206&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;IsReminder&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;BedNetView&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;BedNetEdit&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;BedNetDelete&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;HCCaseDelete&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;HCCaseEdit&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;VMWCaseDelete&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;VMWCaseEdit&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;PopView&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;PopEdit&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;User_Role&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;0974930445&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="vmw-authentication">
+<h3>VMW Authentication<a class="headerlink" href="#vmw-authentication" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Users-mobile_auth">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Users/mobile_auth</span></span><a class="headerlink" href="#post--api4-Users-mobile_auth" title="Permalink to this definition"></a></dt>
+<dd><p>User login</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;place_code&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;863338030163372&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រៃវែង&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Dist_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពាមជរ&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Comm_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អង្គរអង្ក&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អង្គរអង្គ (M)&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អង្គរអង្គ&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Radical_Cure&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Is_Radical_Cure_HSD&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;IsLastmile&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;IsReminder&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;User_Role&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>place_code if length of place_code is 6 digits, it is HF code</p>
+<p>place_code if length of place_code is 10 digits, it is Village code</p>
+</div>
+</div>
+<div class="section" id="logout">
+<h3>Logout<a class="headerlink" href="#logout" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Users-logout">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Users/logout</span></span><a class="headerlink" href="#post--api4-Users-logout" title="Permalink to this definition"></a></dt>
+<dd><p>Logout from device</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json (correct code)</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;logout&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json (incorrect code)</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;logout&quot;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="location">
+<h3>Location<a class="headerlink" href="#location" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Users-location">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Users/location</span></span><a class="headerlink" href="#post--api4-Users-location" title="Permalink to this definition"></a></dt>
+<dd><p>Log location of device</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Lon&quot;</span><span class="p">:</span> <span class="s2">&quot;223454354&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;010206&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="log-device-information">
+<h3>Log device information<a class="headerlink" href="#log-device-information" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Users-phone_info">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Users/phone_info</span></span><a class="headerlink" href="#post--api4-Users-phone_info" title="Permalink to this definition"></a></dt>
+<dd><p>Log information of device</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Model_Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Samsung&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Phone_Number&quot;</span><span class="p">:</span> <span class="s2">&quot;223454354&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;010206&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="restrict-user-login">
+<h3>Restrict user login<a class="headerlink" href="#restrict-user-login" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Users-restrict_login">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Users/restrict_login</span></span><a class="headerlink" href="#post--api4-Users-restrict_login" title="Permalink to this definition"></a></dt>
+<dd><p>Validation user code login and feed back</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;010206&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Logged&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;Malaria_Version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.0.1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If HC_Code not found in database, it will return message: <code class="docutils literal notranslate"><span class="pre">លេខកូដមិនត្រឹមត្រូវ</span></code></p>
+<p>If HC_Code found in database and not yet logedin before, it will return message: <code class="docutils literal notranslate"><span class="pre">ដើម្បីដំណើរការកម្មវិធីនេះ</span> <span class="pre">សូមទាក់ទងទៅ</span> <span class="pre">CNM</span> <span class="pre">តាមលេខទូរស័ព្ទ</span> <span class="pre">010</span> <span class="pre">88</span> <span class="pre">33</span> <span class="pre">88</span></code></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="user-permission">
+<h3>User permission<a class="headerlink" href="#user-permission" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-Users-permission">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/Users/permission</span></span><a class="headerlink" href="#post--api4-Users-permission" title="Permalink to this definition"></a></dt>
+<dd><p>Check app permission</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;010206&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;entry_expired_form&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;entry_expired_stock&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;send_phone&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
 <div class="section" id="hf-activity-case">
 <h2>HF Activity case<a class="headerlink" href="#hf-activity-case" title="Permalink to this headline"></a></h2>
 <div class="section" id="insert">
@@ -1608,50 +1819,153 @@
       <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
       <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
       <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;20.000000000000&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050300&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំឡូត&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;13.333333333300&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050500&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរច្រាប&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;6.666666666600&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050600&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បឹងរុន&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;6.666666666600&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050305&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរតាតឹង (M)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050304&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំឡូត_ស្លេវ (M)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0209050303&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរអាច់ក្របី (M)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="nt">&quot;TotalCases&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-      <span class="nt">&quot;API&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
   <span class="p">}</span>
 <span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="pv-radical-cure">
+<h2>Pv Radical cure<a class="headerlink" href="#pv-radical-cure" title="Permalink to this headline"></a></h2>
+<div class="section" id="hf-patient-follow-up-list">
+<h3>HF patient follow up list<a class="headerlink" href="#hf-patient-follow-up-list" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api4-HFFollowup-list">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api4/HFFollowup/list</span></span><a class="headerlink" href="#get--api4-HFFollowup-list" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve list data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year of report, e.g: 2020,2021,…</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – month of report, e.g: 01, 02, …, 12</p></li>
+<li><p><strong>hc_code</strong> (<em>string</em>) – code of health facility</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010400&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;វាលរបងលើ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA4397&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
+        <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;HaveVMW&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Case_ID&quot;</span><span class="p">:</span> <span class="s2">&quot;1139092&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Day3&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Day3Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-02&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Day7&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Day7Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-06&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Day14&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Day14Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-13&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010400&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;វាលរបងលើ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA4414&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;NameK&quot;</span><span class="p">:</span> <span class="s2">&quot;soda&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">66</span><span class="p">,</span>
+        <span class="nt">&quot;PatientPhone&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;HaveVMW&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Case_ID&quot;</span><span class="p">:</span> <span class="s2">&quot;1140082&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Day3&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Day3Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-03&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Day7&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Day7Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Day14&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Day14Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-14&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hf-follow-up-detail">
+<h3>HF follow up detail<a class="headerlink" href="#hf-follow-up-detail" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api4-HFFollowup-detail">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api4/HFFollowup/detail</span></span><a class="headerlink" href="#get--api4-HFFollowup-detail" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve detail data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>patient_code</strong> (<em>string</em>) – patient code, e.g: AA1234</p></li>
+<li><p><strong>day</strong> (<em>string</em>) – day of follow up, e.g: Day3, Day7, Day14</p></li>
+<li><p><strong>case_id</strong> (<em>string</em>) – Rec_ID of case get from tblHFActivityCases</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">313</span><span class="p">,</span>
+      <span class="nt">&quot;Case_ID&quot;</span><span class="p">:</span> <span class="s2">&quot;1139092&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA4397&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Day&quot;</span><span class="p">:</span> <span class="s2">&quot;Day3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-02&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Call&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code&quot;</span><span class="p">:</span> <span class="s2">&quot;1, 4, 5&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;TabletRemain&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;IsMobileEntry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-02 13:43:15.240&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;InitUser&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;ModiTime&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;ModiUser&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Case_ID</strong> (<em>string</em>) – Rec_ID of case get from tblHFActivityCases.</p></li>
+<li><p><strong>PatientCode</strong> (<em>string</em>) – Patient code of case get from tblHFActivityCases.</p></li>
+<li><p><strong>Day</strong> (<em>string</em>) – Day of follow up, e.g: Day3, Day7, Day14</p></li>
+<li><p><strong>Call</strong> (<em>string</em>) – Yes/No, if follow up patient by phone call the value is Yes, otherwise is no</p></li>
+<li><p><strong>Refered</strong> (<em>string</em>) – Yes/No, if refer patient to HC/RH the value is Yes, otherwise is no</p></li>
+<li><p><strong>Code</strong> (<em>int</em>) – 0/1/2/3/4/5, 0 = គ្មាន, 1 = ស្លេកស្លាំង,ស្បែក និងភ្នែកឡើងលឿង, 2 = ហត់ដង្ហក់ពេលធ្វើសកម្មភាព, 3 = ជីពចរដើរញាប់ ញា័រដើមទ្រូង បេះដូងដើរខុសចង្វាក់, 4 = ចុករោយខ្នងចង្កេះ, 5 = ទឹកនោមឡើងពណ៍ក្រម៉ៅ (ពិន្ទុ ៥ ឬលើសពីនេះ)</p></li>
+<li><p><strong>TabletRemain</strong> (<em>int</em>) – number of tablet that remain (medicine)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="hf-follow-up-insert-update">
+<h3>HF follow up Insert/Update<a class="headerlink" href="#hf-follow-up-insert-update" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api4-HFFollowup-update">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api4/HFFollowup/update</span></span><a class="headerlink" href="#post--api4-HFFollowup-update" title="Permalink to this definition"></a></dt>
+<dd><p>update/insert follow up</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;followup&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1406010100&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Case_ID&quot;</span> <span class="p">:</span> <span class="s2">&quot;HC_123&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;PatientCode&quot;</span><span class="p">:</span> <span class="s2">&quot;AA1338&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Day&quot;</span><span class="p">:</span> <span class="s2">&quot;Day3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-12&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Call&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Refered&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code&quot;</span><span class="p">:</span> <span class="s2">&quot;1,2&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </dd></dl>
