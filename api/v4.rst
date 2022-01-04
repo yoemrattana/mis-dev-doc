@@ -2275,7 +2275,7 @@ Get district
         },
         {
             "Code_Comm_T": "010203",
-            "Name_Comm_E": "Chamnaom",
+            "Name_Comm_E": "ទ្រឹស្ដីបទ",
             "Name_Comm_K": "ចំណោម"
         }
       ]
