@@ -72,9 +72,9 @@ root_doc = 'index'
 
 latex_elements = {
   'extraclassoptions': 'openany,oneside',
-  # 'preamble': r'''
-  #   \setmainfont{Arial}
-  # ''',
+  'preamble': r'''
+    \setmainfont[Script=Khmer,Scale=0.95]{Khmer OS Battambang} 
+  ''',
 }
 
 latex_engine = 'xelatex'

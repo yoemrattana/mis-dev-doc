@@ -25,8 +25,8 @@ HF Authentication
   .. sourcecode:: json
 
     {
-      "Name_Prov_K": "បន្ទាយមានជ័យ",
-      "Name_OD_K": "ប៉ោយប៉ែត",
+      "Name_Prov_K": "Banteay mean chey",
+      "Name_OD_K": "Poi Pet",
       "Is_Enable_VMW_Report": 1,
       "Is_Enable_Investigation_Report": 1,
       "Is_Enable_Reactive_Report": 1,
@@ -34,7 +34,7 @@ HF Authentication
       "Is_Enable_Stock": 1,
       "Is_Radical_Cure": 1,
       "Is_Radical_Cure_HSD": 1,
-      "Name_Facility_K": "កូប",
+      "Name_Facility_K": "Kob",
       "Code_Facility_T": "010206",
       "IsReminder": null,
       "BedNetView": 1,
@@ -71,12 +71,12 @@ VMW Authentication
   .. sourcecode:: json
 
     {
-      "Name_Prov_K": "ព្រៃវែង",
-      "Name_Dist_K": "ពាមជរ",
-      "Name_Comm_K": "អង្គរអង្ក",
-      "Name_Vill_K": "អង្គរអង្គ (M)",
+      "Name_Prov_K": "Preyveng",
+      "Name_Dist_K": "Peamchor",
+      "Name_Comm_K": "Angkor Ang",
+      "Name_Vill_K": "Angkor Ang (M)",
       "Code_Vill_T": "1406010100",
-      "Name_Facility_K": "អង្គរអង្គ",
+      "Name_Facility_K": "Angkor Ang",
       "Is_Radical_Cure": 1,
       "Is_Radical_Cure_HSD": 1,
       "IsLastmile": 0,
@@ -175,11 +175,6 @@ Restrict user login
       "Malaria_Version": "3.0.1"
     }
 
-  .. note::
-
-    If HC_Code not found in database, it will return message: ``លេខកូដមិនត្រឹមត្រូវ``
-
-    If HC_Code found in database and not yet logedin before, it will return message: ``ដើម្បីដំណើរការកម្មវិធីនេះ សូមទាក់ទងទៅ CNM តាមលេខទូរស័ព្ទ 010 88 33 88``
 
 User permission
 ~~~~~~~~~~~~~~~~
@@ -258,17 +253,17 @@ Insert
             "Microscopy": false,
             "RDT": true,
             "Diagnosis": "F",
-            "Treatment": "ASMQ អា+អឹម",
+            "Treatment": "ASMQ",
             "Refered": true,
-            "ReferedReason": "ផ្សេង",
-            "ReferedOtherReason": "កកាកិកី",
+            "ReferedReason": "",
+            "ReferedOtherReason": "",
             "Dead": false,
             "Relapse": 0,
             "L1": 1,
             "LC": 0,
             "LC_Code": "1004050523",
             "IMP": 0,
-            "IMP_Text": "មកពីស្រុកសៀម",
+            "IMP_Text": "Thai",
             "G6PDHb": 15,
             "G6PDdL": 15,
             "IsACT": "Yes",
@@ -372,7 +367,7 @@ List
         "PassDistrict": null,
         "PassCommune": null,
         "PassAddress": null,
-        "NameK": "វ៉ាន់ រ៉ា",
+        "NameK": "Vannra",
         "Age": 29,
         "AgeType": "Y",
         "Sex": "M",
@@ -414,7 +409,7 @@ List
         "LC_Province": null,
         "LC_District": null,
         "LC_Commune": null,
-        "LC_Code": "ចំណុច កានម វែនសែន ឃុំរកាត ស្រុកភ្នំក្រវាញ ខេត្តពោធិ៍សាត់",
+        "LC_Code": "Pursat",
         "IMP_Text": null,
         "Fingerprint": null
       },
@@ -518,18 +513,18 @@ Insert
             "Temperature": 39.5,
             "Mobile": "N",
             "Diagnosis": "F",
-            "Treatment": "ASMQ អា+អឹម",
+            "Treatment": "ASMQ",
             "TreatmentPill": 10,
-            "OtherTreatment": "ASMQ អា+អឹម",
+            "OtherTreatment": "ASMQ",
             "DOT1": 1,
             "ReferedReason": "PV",
-            "ReferedOtherReason": "កការកិកី",
+            "ReferedOtherReason": "",
             "Relapse": 0,
             "L1": 0,
             "LC": 1,
             "LC_Code": "1004050523",
             "IMP": 1,
-            "IMP_Text": "មកពីស្រុកសៀម",
+            "IMP_Text": "Thai",
             "G6PDHb": 15,
             "G6PDdL": 15,
             "IsACT": "Yes",
@@ -566,7 +561,7 @@ Update
         "Year": "2020",
         "DateCase": "2020-02-01",
         "NameK": "test",
-        "PatientPhone": "3333333333",
+        "PatientPhone": "0123456789",
         "Sex": "M",
         "Age": 25,
         "PregnantMTHS": "",
@@ -574,18 +569,18 @@ Update
         "Temperature": 39.5,
         "Mobile": "N",
         "Diagnosis": "F",
-        "Treatment": "ASMQ អា+អឹម",
+        "Treatment": "ASMQ",
         "TreatmentPill": 10,
-        "OtherTreatment": "ASMQ អា+អឹម",
+        "OtherTreatment": "ASMQ",
         "DOT1": 1,
         "ReferedReason": "PV",
-        "ReferedOtherReason": "កការកិកី",
+        "ReferedOtherReason": "",
         "Relapse": 0,
         "L1": 0,
         "LC": 1,
         "LC_Code": "1004050523",
         "IMP": 1,
-        "IMP_Text": "មកពីស្រុកសៀម",
+        "IMP_Text": "Thai",
         "G6PDHb": 15,
         "G6PDdL": 15,
         "IsACT": "Yes",
@@ -1235,7 +1230,7 @@ Form and data
     [
       {
         "Code_Vill_T": "1504020100",
-        "Name_Vill_K": "លាច",
+        "Name_Vill_K": "Leach",
         "Distance": 9,
         "Pop": 1307,
         "MobilePop": 0,
@@ -1243,7 +1238,7 @@ Form and data
       },
       {
         "Code_Vill_T": "1504020200",
-        "Name_Vill_K": "ពេជ្របាន",
+        "Name_Vill_K": "Pich Ban",
         "Distance": 0,
         "Pop": 1511,
         "MobilePop": 0,
@@ -1326,9 +1321,9 @@ Bednet form
     [
       {
         "Code_Comm_T": "140601",
-        "Name_Comm_K": "អង្គរអង្ក",
+        "Name_Comm_K": "Angkor Ang",
         "Code_Vill_T": "1406010200",
-        "Name_Vill_K": "ព្រែកត្រែង",
+        "Name_Vill_K": "Praek Treng",
         "VillCode": "1406010200",
         "LLIN": 1,
         "LLIHN": 1,
@@ -1407,7 +1402,7 @@ Malaria status
       [
         {
           "Code": "1504020100",
-          "Name_Vill_K": "លាច",
+          "Name_Vill_K": "Leach",
           "TotalTestLastYear": 5,
           "TotalTestThisYear": 2,
           "TotalCaseLastYear": 5,
@@ -1423,7 +1418,7 @@ Malaria status
         },
         {
           "Code": "1504020200",
-          "Name_Vill_K": "ពេជ្របាន",
+          "Name_Vill_K": "Pich ban",
           "TotalTestLastYear": 9,
           "TotalTestThisYear": 6,
           "TotalCaseLastYear": 9,
@@ -1464,7 +1459,7 @@ API of villages (chart)
      [
       {
           "Code_Vill_T": "0209050100",
-          "Name_Vill_K": "ស្រែអណ្ដូង១",
+          "Name_Vill_K": "Srae Onduong 1",
           "VillLat": 12.570106,
           "VillLong": 102.738759,
           "HFLat": 12.645585,
@@ -1477,7 +1472,7 @@ API of villages (chart)
       },
       {
           "Code_Vill_T": "0209050200",
-          "Name_Vill_K": "ឆករការ",
+          "Name_Vill_K": "Chhork Roka",
           "VillLat": 12.57063,
           "VillLong": 102.740888,
           "HFLat": 12.645585,
@@ -1624,21 +1619,21 @@ Top 10 villages (chart)
     [
       {
           "Code_Vill_T": "0209050301",
-          "Name_Vill_K": "អូរតាតឹង",
+          "Name_Vill_K": "Outa toeng",
           "Positive": 4,
           "TotalCases": 15,
           "API": "26.666666666600"
       },
       {
           "Code_Vill_T": "0209050601",
-          "Name_Vill_K": "ព្រលាន",
+          "Name_Vill_K": "Prolean",
           "Positive": 4,
           "TotalCases": 15,
           "API": "26.666666666600"
       },
       {
           "Code_Vill_T": "0209050400",
-          "Name_Vill_K": "កន្ទួត",
+          "Name_Vill_K": "Kantout",
           "Positive": 3,
           "TotalCases": 15,
           "API": "20.000000000000"
@@ -1669,7 +1664,7 @@ HF patient follow up list
       "data": [
         {
             "Code_Vill_T": "1406010400",
-            "Name_Vill_K": "វាលរបងលើ",
+            "Name_Vill_K": "veal ro bong",
             "PatientCode": "AA4397",
             "NameK": "sa",
             "Sex": "M",
@@ -1687,7 +1682,7 @@ HF patient follow up list
         },
         {
             "Code_Vill_T": "1406010400",
-            "Name_Vill_K": "វាលរបងលើ",
+            "Name_Vill_K": "veal ro bong",
             "PatientCode": "AA4414",
             "NameK": "soda",
             "Sex": "M",
@@ -1748,7 +1743,7 @@ HF follow up detail
   :>json string Day: Day of follow up, e.g: Day3, Day7, Day14
   :>json string Call: Yes/No, if follow up patient by phone call the value is Yes, otherwise is no
   :>json string Refered: Yes/No, if refer patient to HC/RH the value is Yes, otherwise is no
-  :>json int Code: 0/1/2/3/4/5, 0 = គ្មាន, 1 = ស្លេកស្លាំង,ស្បែក និងភ្នែកឡើងលឿង, 2 = ហត់ដង្ហក់ពេលធ្វើសកម្មភាព, 3 = ជីពចរដើរញាប់ ញា័រដើមទ្រូង បេះដូងដើរខុសចង្វាក់, 4 = ចុករោយខ្នងចង្កេះ, 5 = ទឹកនោមឡើងពណ៍ក្រម៉ៅ (ពិន្ទុ ៥ ឬលើសពីនេះ)
+  :>json int Code: 0/1/2/3/4/5
   :>json int TabletRemain: number of tablet that remain (medicine)
 
 HF follow up Insert/Update
@@ -1773,4 +1768,515 @@ HF follow up Insert/Update
           "Refered": "No",
           "Code": "1,2"
       }
+    }
+
+VMW Follow up List
+~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api4/VMWFollowup/list
+
+  Retrieve list data
+
+  :query int year: year of report, e.g: 2020,2021,...
+  :query string month: month of report, e.g: 01, 02, ..., 12
+  :query string code_village: code of vmw village 
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "Year": "2021",
+          "Month": "09",
+          "Code_Vill_T": "1406010100",
+          "Name_Vill_K": "Angkor Ang (M)",
+          "PatientCode": "AA4618",
+          "NameK": "rey",
+          "Sex": "M",
+          "Age": 55,
+          "DateCase": "2021-09-17",
+          "Day3": 0,
+          "Day3Date": "2021-09-23",
+          "Day7": 0,
+          "Day7Date": "2021-09-27",
+          "Day14": 0,
+          "Day14Date": "2021-10-04",
+          "Case_ID": "HC_1143002"
+        },
+        {
+          "Year": "2021",
+          "Month": "09",
+          "Code_Vill_T": "1406010100",
+          "Name_Vill_K": "Angkor Ang (M)",
+          "PatientCode": "AA4620",
+          "NameK": "rin",
+          "Sex": "M",
+          "Age": 50,
+          "DateCase": "2021-09-17",
+          "Day3": 0,
+          "Day3Date": "2021-09-20",
+          "Day7": 0,
+          "Day7Date": "2021-09-24",
+          "Day14": 0,
+          "Day14Date": "2021-10-01",
+          "Case_ID": "HC_1143004"
+        }
+      ]
+    }
+
+VMW follow up detail
+~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api4/VMWFollowup/detail
+
+  Retrieve detail data
+
+  :query string patient_code: patient code, e.g: AA1234
+  :query string day: day of follow up, e.g: Day3, Day7, Day14
+  :query string case_id: Rec_ID of case get from tblVMWActivityCases/tblHFActivityCases, e.g: VMW_123456/HC_123456
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": {
+        "Code_Vill_T": "1406010100",
+        "Rec_ID": 650,
+        "Case_ID": "VMW_123",
+        "PatientCode": "AA0001",
+        "Day": "Day7",
+        "Date": "2019-01-15",
+        "Method": "Direct",
+        "Feeling": "Better",
+        "ASMQ": "Yes",
+        "Primaquine": "Yes",
+        "NoPrimaquineReason": "Yes",
+        "NoPrimaquineOtherReason": "",
+        "PrimaquineRemain": 10,
+        "CardNoted": "Yes",
+        "NotNotedReason": "Forget, NotSick",
+        "Symptom": "Yes",
+        "SevereFever": "Yes",
+        "VeryChills": "Yes",
+        "SoreThroat": "Yes",
+        "VeryPale": "Yes",
+        "VeryWeak": "Yes",
+        "SevereVomiting": "Yes",
+        "OtherSymptom": "",
+        "OverPrimaquine": "Yes",
+        "PatientManagement": "DoNothing",
+        "IsMobileEntry": null,
+        "InitTime": null,
+        "InitUser": null,
+        "ModiTime": null,
+        "ModiUser": null
+      }
+    }
+
+  :>json string Case_ID: Rec_ID of case get from tblVMWActivityCases/tblHFActivityCases, e.g: VMW_123456/HC_123456. 
+  :>json string PatientCode: Patient code of case get from tblVMWActivityCases/tblHFActivityCases.
+  :>json string Day: Day of follow up, e.g: Day3, Day7, Day14
+  :>json string Method: Direct/By Phone.
+  :>json string Symptom: Yes/No.
+  :>json string VeryPale: Yes/No.
+  :>json string VeryWeak:  Yes/No.
+  :>json string SevereVomiting:  Yes/No.
+  :>json string OtherSymptom: any string.
+  :>json string ASMQ:  Yes/No.
+  :>json string Primaquine:  Yes/No.
+  :>json string NoPrimaquineReason: Forget, NotSick, SideEffect, Travel, NotTrust, LostMedicine
+  :>json string NoPrimaquineOtherReason: Any string
+  :>json int PrimaquineRemain: Integer value
+  :>json string CardNoted: Yes/No.
+  :>json string NotNotedReason: Any string
+  :>json string OverPrimaquine: Yes/No.
+  :>json string PatientManagement: DoNothing, CallHC, ReferToHC, ReferToRH
+
+VMW follow up Insert/Update
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api4/VMWFollowup/update
+
+  update/insert follow up
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "followup":{
+        "Code_Vill_T" : "1406010100",
+        "Case_ID": "VMW_123",
+        "PatientCode": "AA0001",
+        "Day": "Day7",
+        "Date": "2019-01-15",
+        "Method": "Direct",
+        "Feeling": "Better",
+        "ASMQ": "Yes",
+        "Primaquine": "Yes",
+        "NoPrimaquineReason": "Yes",
+        "NoPrimaquineOtherReason":"",
+        "PrimaquineRemain": "10",
+        "CardNoted": "Yes",
+        "NotNotedReason":"Forget, NotSick",
+        "Symptom": "Yes",
+        "SevereFever": "Yes",
+        "VeryChills": "Yes",
+        "SoreThroat": "Yes",
+        "VeryPale": "Yes",
+        "VeryWeak": "Yes",
+        "SevereVomiting": "Yes",
+        "OtherSymptom": "headach",
+        "OverPrimaquine": "Yes",
+        "PatientManagement": "DoNothing"
+      }
+    }
+
+Medication
+----------
+
+HF Medication
+~~~~~~~~~~~~~
+
+.. http:get:: /api4/Medication/hf
+
+  Get medication list for HF device
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    [
+      {
+          "Id": 8,
+          "Value": "ASMQ",
+          "Name": "អា + អឹម"
+      },
+      {
+          "Id": 47,
+          "Value": "ASMQ + PQ",
+          "Name": "អា+អឹម និង ព្រីម៉ាគីន"
+      },
+      {
+          "Id": 50,
+          "Value": "ASMQ + PQ (1 Dose)",
+          "Name": "ASMQ + PQ (1ដូស)"
+      },
+      {
+          "Id": 51,
+          "Value": "ASMQ + PQ (14 Days)",
+          "Name": "ASMQ + PQ (14ថ្ងៃ)"
+      },
+      {
+          "Id": 38,
+          "Value": "Other",
+          "Name": "ផ្សេងៗ"
+      },
+      {
+          "Id": 48,
+          "Value": "Primaquine",
+          "Name": "Primaquine ព្រីម៉ាគីន"
+      }
+    ]
+
+VMW Medication
+~~~~~~~~~~~~~~
+
+.. http:get:: /api4/Medication/vmw
+
+  Get medication list for VMW device
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    [
+      {
+          "Id": 8,
+          "Value": "ASMQ",
+          "Name": "អា + អឹម"
+      },
+      {
+          "Id": 47,
+          "Value": "ASMQ + PQ",
+          "Name": "អា+អឹម និង ព្រីម៉ាគីន"
+      },
+      {
+          "Id": 13,
+          "Value": "No Stock",
+          "Name": "No Stock មិនមានថ្នាំក្នុងស្តុក"
+      },
+      {
+          "Id": 39,
+          "Value": "None",
+          "Name": "None មិនបានឲ្យថ្នាំ"
+      },
+      {
+          "Id": 38,
+          "Value": "Other",
+          "Name": "ផ្សេងៗ"
+      }
+    ]
+
+Register token
+--------------
+
+.. http:post:: /api4/Notification/update_token
+
+  update/insert follow up
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Imei": "123456789",
+      "CodePlace": "123456",
+      "Token": "1234567890"
+    }
+
+  :>json string CodePlace: 6 digits code for health facility, 10 digits code for village 
+
+Place
+-----
+
+Check place is modify
+~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api4/Places/isModify
+
+  To check if place is modified in system.
+
+  .. note::
+
+    if return empty it mean nothing change.
+
+    if return any json data it mean place has been changed. and the json data that return is new data of place.
+
+Get Province
+~~~~~~~~~~~~
+
+.. http:get:: /api4/Places/provinces
+
+  Get province list.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+        "meta": {
+            "total_page": 1
+        },
+        "data": [
+            {
+                "Code_Prov_T": "01",
+                "Name_Prov_E": "Banteay Meanchey",
+                "Name_Prov_K": "បន្ទាយមានជ័យ"
+            },
+            {
+                "Code_Prov_T": "02",
+                "Name_Prov_E": "Battambang",
+                "Name_Prov_K": "បាត់ដំបង"
+            },
+            {
+                "Code_Prov_T": "03",
+                "Name_Prov_E": "Kampong Cham",
+                "Name_Prov_K": "កំពង់ចាម"
+            },
+            {
+                "Code_Prov_T": "04",
+                "Name_Prov_E": "Kampong Chhnang",
+                "Name_Prov_K": "កំពង់ឆ្នាំង"
+            },
+            {
+                "Code_Prov_T": "05",
+                "Name_Prov_E": "Kampong Speu",
+                "Name_Prov_K": "កំពង់ស្ពឺ"
+            },
+            {
+                "Code_Prov_T": "06",
+                "Name_Prov_E": "Kampong Thom",
+                "Name_Prov_K": "កំពង់ធំ"
+            },
+            {
+                "Code_Prov_T": "07",
+                "Name_Prov_E": "Kampot",
+                "Name_Prov_K": "កំពត"
+            },
+            {
+                "Code_Prov_T": "08",
+                "Name_Prov_E": "Kandal",
+                "Name_Prov_K": "កណ្តាល"
+            },
+            {
+                "Code_Prov_T": "09",
+                "Name_Prov_E": "Koh Kong",
+                "Name_Prov_K": "កោះកុង"
+            },
+            {
+                "Code_Prov_T": "10",
+                "Name_Prov_E": "Kratie",
+                "Name_Prov_K": "ក្រចេះ"
+            },
+            {
+                "Code_Prov_T": "11",
+                "Name_Prov_E": "Mondul Kiri",
+                "Name_Prov_K": "មណ្ឌលគីរី"
+            },
+            {
+                "Code_Prov_T": "12",
+                "Name_Prov_E": "Phnom Penh",
+                "Name_Prov_K": "ភ្នំពេញ"
+            },
+            {
+                "Code_Prov_T": "13",
+                "Name_Prov_E": "Preah Vihear",
+                "Name_Prov_K": "ព្រះវិហារ"
+            },
+            {
+                "Code_Prov_T": "14",
+                "Name_Prov_E": "Prey Veng",
+                "Name_Prov_K": "ព្រៃវែង"
+            },
+            {
+                "Code_Prov_T": "15",
+                "Name_Prov_E": "Pursat",
+                "Name_Prov_K": "ពោធិ៍សាត់"
+            },
+            {
+                "Code_Prov_T": "16",
+                "Name_Prov_E": "Ratanakiri",
+                "Name_Prov_K": "រតនៈគីរី"
+            },
+            {
+                "Code_Prov_T": "17",
+                "Name_Prov_E": "Siemreap",
+                "Name_Prov_K": "សៀមរាប"
+            },
+            {
+                "Code_Prov_T": "18",
+                "Name_Prov_E": "Preah Sihanouk",
+                "Name_Prov_K": "ព្រះសីហនុ"
+            },
+            {
+                "Code_Prov_T": "19",
+                "Name_Prov_E": "Stung Treng",
+                "Name_Prov_K": "ស្ទឹងត្រែង"
+            },
+            {
+                "Code_Prov_T": "20",
+                "Name_Prov_E": "Svay Rieng",
+                "Name_Prov_K": "ស្វាយរៀង"
+            },
+            {
+                "Code_Prov_T": "21",
+                "Name_Prov_E": "Takeo",
+                "Name_Prov_K": "តាកែវ"
+            },
+            {
+                "Code_Prov_T": "22",
+                "Name_Prov_E": "Oddar Meanchey",
+                "Name_Prov_K": "ឧត្តរមានជ័យ"
+            },
+            {
+                "Code_Prov_T": "23",
+                "Name_Prov_E": "Kep",
+                "Name_Prov_K": "កែប"
+            },
+            {
+                "Code_Prov_T": "24",
+                "Name_Prov_E": "Pailin",
+                "Name_Prov_K": "ប៉ៃលិន"
+            },
+            {
+                "Code_Prov_T": "25",
+                "Name_Prov_E": "Tbong Khmum",
+                "Name_Prov_K": "ត្បូងឃ្មុំ"
+            },
+            {
+                "Code_Prov_T": "30",
+                "Name_Prov_E": "National Hospitals",
+                "Name_Prov_K": "មន្ទីរពេទ្យជាតិ"
+            }
+        ]
+    }
+
+Get district
+~~~~~~~~~~~~
+
+.. http:get:: /api4/Places/districts
+
+  Get district list.
+
+  :query int page: Page number.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "meta": {
+          "total_page": 7
+      },
+      "data": [
+        {
+            "Code_Dist_T": "0102",
+            "Name_Dist_E": "Mongkol Borei",
+            "Name_Dist_K": "មង្គល់បុរី"
+        },
+        {
+            "Code_Dist_T": "0103",
+            "Name_Dist_E": "Phnum Srok",
+            "Name_Dist_K": "ភ្នំស្រុក"
+        },
+        {
+            "Code_Dist_T": "0104",
+            "Name_Dist_E": "Preah Netr Preah",
+            "Name_Dist_K": "ព្រះនេត្រព្រះ"
+        }
+      ]
+    }
+
+Get district
+~~~~~~~~~~~~
+
+.. http:get:: /api4/Places/communes
+
+  Get communes list.
+
+  :query int page: Page number.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "meta": {
+          "total_page": 55
+      },
+      "data": [
+        {
+            "Code_Comm_T": "010201",
+            "Name_Comm_E": "Banteay Neang",
+            "Name_Comm_K": "បន្ទាយនាង"
+        },
+        {
+            "Code_Comm_T": "010202",
+            "Name_Comm_E": "Bat Trang",
+            "Name_Comm_K": "បាត់ទ្រាំង"
+        },
+        {
+            "Code_Comm_T": "010203",
+            "Name_Comm_E": "Chamnaom",
+            "Name_Comm_K": "ចំណោម"
+        }
+      ]
     }
