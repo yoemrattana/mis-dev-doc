@@ -22,7 +22,7 @@ from configparser import RawConfigParser
 
 project = 'MIS developer doc'
 copyright = '2021, CNM MIS'
-author = 'YOEM Rattana'
+author = 'MIS Developer'
 
 
 # -- General configuration ---------------------------------------------------
