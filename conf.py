@@ -21,7 +21,7 @@ from configparser import RawConfigParser
 # -- Project information -----------------------------------------------------
 
 project = 'MIS developer doc'
-copyright = '2021, YOEM Rattana'
+copyright = '2021, CNM MIS'
 author = 'YOEM Rattana'
 
 
