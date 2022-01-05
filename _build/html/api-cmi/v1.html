@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API v1 &mdash; MIS developer doc  documentation</title>
+  <title>API v1 of CMI &mdash; MIS developer doc  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
@@ -73,10 +73,19 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API v1</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API v1 of CMI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#users">Users</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#authentication">Authentication</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#register-token">Register token</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-logging">Device logging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daily-case">Daily case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weekly-case">Weekly case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monthly-case">Monthly case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#this-year-case">This year case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">This year case</a></li>
 </ul>
 </li>
 </ul>
@@ -97,7 +106,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>API v1</li>
+      <li>API v1 of CMI</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api-cmi/v1.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -107,8 +116,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="api-v1">
-<h1>API v1<a class="headerlink" href="#api-v1" title="Permalink to this headline"></a></h1>
+  <div class="section" id="api-v1-of-cmi">
+<h1>API v1 of CMI<a class="headerlink" href="#api-v1-of-cmi" title="Permalink to this headline"></a></h1>
 <div class="section" id="users">
 <h2>Users<a class="headerlink" href="#users" title="Permalink to this headline"></a></h2>
 <div class="section" id="authentication">
@@ -158,6 +167,169 @@
   <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;351910103270828901&quot;</span><span class="p">,</span>
   <span class="nt">&quot;Username&quot;</span> <span class="p">:</span> <span class="s2">&quot;bunthy&quot;</span><span class="p">,</span>
   <span class="nt">&quot;Token&quot;</span><span class="p">:</span> <span class="s2">&quot;gerate token from device&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="device-logging">
+<h3>Device logging<a class="headerlink" href="#device-logging" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-malaria-info-v1-Users-log">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Users/log</span></span><a class="headerlink" href="#post--api-malaria-info-v1-Users-log" title="Permalink to this definition"></a></dt>
+<dd><p>To log device</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Imei&quot;</span> <span class="p">:</span> <span class="s2">&quot;999&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;UserName&quot;</span> <span class="p">:</span> <span class="s2">&quot;odtest&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;PhoneModel&quot;</span> <span class="p">:</span> <span class="s2">&quot;Iphone 12&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;OS&quot;</span> <span class="p">:</span> <span class="s2">&quot;IOS14&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;AppVersion&quot;</span> <span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Frequency&quot;</span> <span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;HasUserAccount&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Lat&quot;</span> <span class="p">:</span> <span class="s2">&quot;11111&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Long&quot;</span> <span class="p">:</span> <span class="s2">&quot;22222&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;City&quot;</span> <span class="p">:</span> <span class="s2">&quot;Phnom penh&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;StartDate&quot;</span> <span class="p">:</span> <span class="s2">&quot;2020-10-10&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;LastOnline&quot;</span> <span class="p">:</span> <span class="s2">&quot;2020-10-10&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h2>
+<div class="section" id="daily-case">
+<h3>Daily case<a class="headerlink" href="#daily-case" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-case_daily">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/case_daily</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-case_daily" title="Permalink to this definition"></a></dt>
+<dd><p>To get today case information</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="weekly-case">
+<h3>Weekly case<a class="headerlink" href="#weekly-case" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-case_weekly">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/case_weekly</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-case_weekly" title="Permalink to this definition"></a></dt>
+<dd><p>To get weekly case information</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+          <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">8</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="monthly-case">
+<h3>Monthly case<a class="headerlink" href="#monthly-case" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-case_monthly">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/case_monthly</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-case_monthly" title="Permalink to this definition"></a></dt>
+<dd><p>To get monthly case information</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;PFThisYear&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;PFLastYear&quot;</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+          <span class="nt">&quot;PFChange&quot;</span><span class="p">:</span> <span class="s2">&quot;-.983050847457&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PVThisYear&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+          <span class="nt">&quot;PVLastYear&quot;</span><span class="p">:</span> <span class="mi">475</span><span class="p">,</span>
+          <span class="nt">&quot;PVChange&quot;</span><span class="p">:</span> <span class="s2">&quot;-.915789473684&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;MixThisYear&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;MixLastYear&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;MixChange&quot;</span><span class="p">:</span> <span class="s2">&quot;.000000000000&quot;</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="this-year-case">
+<h3>This year case<a class="headerlink" href="#this-year-case" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-case_this_year">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/case_this_year</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-case_this_year" title="Permalink to this definition"></a></dt>
+<dd><p>To get this year case information</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+          <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">54</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h3>This year case<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-pv_radicalcure">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/pv_radicalcure</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-pv_radicalcure" title="Permalink to this definition"></a></dt>
+<dd><p>To get pv radical cure info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year.</p></li>
+<li><p><strong>month_from</strong> (<em>string</em>) – month begin.</p></li>
+<li><p><strong>month_to</strong> (<em>string</em>) – month to.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Pv&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+          <span class="nt">&quot;G6PDTest&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+          <span class="nt">&quot;G6PDNormal&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+          <span class="nt">&quot;Primaquine&quot;</span><span class="p">:</span> <span class="mi">13</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>

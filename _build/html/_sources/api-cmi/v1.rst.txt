@@ -1,5 +1,5 @@
-API v1
-======
+API v1 of CMI
+=============
 
 Users
 -----
@@ -55,3 +55,162 @@ Register token
       "Username" : "bunthy",
       "Token": "gerate token from device"
     }
+
+Device logging
+~~~~~~~~~~~~~~
+
+.. http:post:: /api-malaria-info/v1/Users/log
+
+  To log device
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Imei" : "999",
+      "UserName" : "odtest",
+      "PhoneModel" : "Iphone 12",
+      "OS" : "IOS14",
+      "AppVersion" : "1.0",
+      "Frequency" : "5",
+      "HasUserAccount" : "1",
+      "Lat" : "11111",
+      "Long" : "22222",
+      "City" : "Phnom penh",
+      "StartDate" : "2020-10-10",
+      "LastOnline" : "2020-10-10"
+    }
+
+Summary
+-------
+
+Daily case
+~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/case_daily
+
+  To get today case information
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "PF": 0,
+              "PV": 0,
+              "Mix": 0,
+              "Total": 0
+          }
+      ]
+    }
+
+Weekly case
+~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/case_weekly
+
+  To get weekly case information
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "PF": 0,
+              "PV": 8,
+              "Mix": 0,
+              "Total": 8
+          }
+      ]
+    }
+
+Monthly case
+~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/case_monthly
+
+  To get monthly case information
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "PFThisYear": 1,
+              "PFLastYear": 59,
+              "PFChange": "-.983050847457",
+              "PVThisYear": 40,
+              "PVLastYear": 475,
+              "PVChange": "-.915789473684",
+              "MixThisYear": 0,
+              "MixLastYear": 0,
+              "MixChange": ".000000000000"
+          }
+      ]
+    }
+
+This year case
+~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/case_this_year
+
+  To get this year case information
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "PF": 1,
+              "PV": 53,
+              "Mix": 0,
+              "Total": 54
+          }
+      ]
+    }
+
+This year case
+~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/pv_radicalcure
+
+  To get pv radical cure info
+
+  :query int year: year.
+  :query string month_from: month begin.
+  :query string month_to: month to.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Pv": 56,
+              "G6PDTest": 32,
+              "G6PDNormal": 18,
+              "Primaquine": 13
+          }
+      ]
+    }
+
