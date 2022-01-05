@@ -25,7 +25,13 @@ Welcome to MIS developer doc's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: api
+   :caption: API of CNM Reporting App
 
    api/v4
    api/v5
+
+.. toctree::
+   :maxdepth: 2
+   :caption: API of Cambodia Malaria Info
+
+   api-cmi/v1

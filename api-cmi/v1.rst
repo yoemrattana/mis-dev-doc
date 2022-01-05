@@ -1,0 +1,57 @@
+API v1
+======
+
+Users
+-----
+
+Authentication
+~~~~~~~~~~~~~~
+
+.. http:post:: /api-malaria-info/v1/Users/auth
+
+  User login
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "user_name": "phdtest",
+      "password": 123
+    }
+
+  :Object:
+
+    * **user_name** (*string*) -- user name get from MIS User.
+    * **password** (*string*) -- password get from MIS User.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Us": "PHDTest",
+      "Role": "PHD",
+      "Code_Prov": "14",
+      "Code_OD": "",
+      "Code_RG": "",
+      "Activate": 1,
+      "IsNotification": 1
+    }
+
+Register token
+~~~~~~~~~~~~~~
+
+.. http:post:: /api-malaria-info/v1/Users/update_token
+
+  Insert/Update token
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Imei": "351910103270828901",
+      "Username" : "bunthy",
+      "Token": "gerate token from device"
+    }
