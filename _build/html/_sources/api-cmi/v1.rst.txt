@@ -186,12 +186,12 @@ This year case
       ]
     }
 
-This year case
-~~~~~~~~~~~~~~
+Pv Radical cure (chart)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. http:get:: /api-malaria-info/v1/Surveillance/pv_radicalcure
 
-  To get pv radical cure info
+  To get Pv radical cure info
 
   :query int year: year.
   :query string month_from: month begin.
@@ -214,3 +214,103 @@ This year case
       ]
     }
 
+HF report timely
+~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/hf_report_timely
+
+  To get report timely of health facility
+
+  :query int year: year, e.g: 2021, 2022, ...
+  :query string month: month, e.g: 01, ...,12.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Type": "Timely",
+              "Month": "09",
+              "Value": "36"
+          },
+          {
+              "Type": "Received",
+              "Month": "09",
+              "Value": "815"
+          }
+      ]
+    }
+
+VMW report timely
+~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/vmw_report_timely
+
+  To get report timely of VMW
+
+  :query int year: year, e.g: 2021, 2022, ...
+  :query string month: month, e.g: 01, ...,12.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Type": "Timely",
+              "Month": "06",
+              "Value": 42
+          },
+          {
+              "Type": "Received",
+              "Month": "06",
+              "Value": 3311
+          }
+      ]
+    }
+
+Health worker
+~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/HF/hf_worker
+
+  To get number of health facility, village, VMW, MMW, OD, province that is malaria target
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "PopAtRisk": 9714485
+          },
+          {
+              "Village": 10739
+          },
+          {
+              "MMW": 269
+          },
+          {
+              "VMW": 2560
+          },
+          {
+              "HC": 874
+          },
+          {
+              "OD": 55
+          },
+          {
+              "Province": 21
+          }
+      ]
+    }

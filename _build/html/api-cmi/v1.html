@@ -85,7 +85,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#weekly-case">Weekly case</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#monthly-case">Monthly case</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#this-year-case">This year case</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">This year case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pv-radical-cure-chart">Pv Radical cure (chart)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hf-report-timely">HF report timely</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vmw-report-timely">VMW report timely</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#health-worker">Health worker</a></li>
 </ul>
 </li>
 </ul>
@@ -303,12 +306,12 @@
 </dd></dl>
 
 </div>
-<div class="section" id="id1">
-<h3>This year case<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<div class="section" id="pv-radical-cure-chart">
+<h3>Pv Radical cure (chart)<a class="headerlink" href="#pv-radical-cure-chart" title="Permalink to this headline"></a></h3>
 <dl class="http get">
 <dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-pv_radicalcure">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/pv_radicalcure</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-pv_radicalcure" title="Permalink to this definition"></a></dt>
-<dd><p>To get pv radical cure info</p>
+<dd><p>To get Pv radical cure info</p>
 <dl class="field-list simple">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -328,6 +331,117 @@
           <span class="nt">&quot;G6PDTest&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
           <span class="nt">&quot;G6PDNormal&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
           <span class="nt">&quot;Primaquine&quot;</span><span class="p">:</span> <span class="mi">13</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hf-report-timely">
+<h3>HF report timely<a class="headerlink" href="#hf-report-timely" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-hf_report_timely">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/hf_report_timely</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-hf_report_timely" title="Permalink to this definition"></a></dt>
+<dd><p>To get report timely of health facility</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year, e.g: 2021, 2022, …</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – month, e.g: 01, …,12.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Timely&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="s2">&quot;36&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Received&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="s2">&quot;815&quot;</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="vmw-report-timely">
+<h3>VMW report timely<a class="headerlink" href="#vmw-report-timely" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-vmw_report_timely">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/vmw_report_timely</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-vmw_report_timely" title="Permalink to this definition"></a></dt>
+<dd><p>To get report timely of VMW</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year, e.g: 2021, 2022, …</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – month, e.g: 01, …,12.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Timely&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="mi">42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Received&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="mi">3311</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="health-worker">
+<h3>Health worker<a class="headerlink" href="#health-worker" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-HF-hf_worker">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/HF/hf_worker</span></span><a class="headerlink" href="#get--api-malaria-info-v1-HF-hf_worker" title="Permalink to this definition"></a></dt>
+<dd><p>To get number of health facility, village, VMW, MMW, OD, province that is malaria target</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;PopAtRisk&quot;</span><span class="p">:</span> <span class="mi">9714485</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Village&quot;</span><span class="p">:</span> <span class="mi">10739</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;MMW&quot;</span><span class="p">:</span> <span class="mi">269</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;VMW&quot;</span><span class="p">:</span> <span class="mi">2560</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;HC&quot;</span><span class="p">:</span> <span class="mi">874</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;OD&quot;</span><span class="p">:</span> <span class="mi">55</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Province&quot;</span><span class="p">:</span> <span class="mi">21</span>
       <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
