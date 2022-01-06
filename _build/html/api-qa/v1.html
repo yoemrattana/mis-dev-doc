@@ -83,6 +83,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#place">Place</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vmw-s-question">VMW’s question</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#list-of-vmw-s-question">List of VMW’s question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detail-of-question">Detail of question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-update-question">Insert/Update Question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-question">Delete Question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#report">Report</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -215,6 +223,1286 @@
 </div>
 </dd></dl>
 
+</div>
+<div class="section" id="vmw-s-question">
+<h2>VMW’s question<a class="headerlink" href="#vmw-s-question" title="Permalink to this headline"></a></h2>
+<div class="section" id="list-of-vmw-s-question">
+<h3>List of VMW’s question<a class="headerlink" href="#list-of-vmw-s-question" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-qa-v1-VMW-list">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-qa/v1/VMW/list</span></span><a class="headerlink" href="#post--api-qa-v1-VMW-list" title="Permalink to this definition"></a></dt>
+<dd><p>Get list of questions of VMW</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_VIll_T&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">387</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Pursat&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពោធិ៍សាត់&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kravanh&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រវាញ&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Kravanh&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំក្រវាញ&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020400&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Sbov Rik&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្បូវរីក&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VMWType&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VMWName&quot;</span><span class="p">:</span> <span class="s2">&quot;ជុំ នាង&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-08-09&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រូច សុខុម&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;បុគ្គលឹក់&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;WorkPlace&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;TPR&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+      <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span> <span class="mf">99.06</span><span class="p">,</span>
+      <span class="nt">&quot;PreviousScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;NextVisit&quot;</span><span class="p">:</span> <span class="s2">&quot;៩០ថ្ងៃបន្ទាប់&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;LowestSectionScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section2&quot;</span><span class="p">:</span> <span class="mf">34.25</span><span class="p">,</span>
+      <span class="nt">&quot;Section2Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;Section3&quot;</span><span class="p">:</span> <span class="mf">34.8</span><span class="p">,</span>
+      <span class="nt">&quot;Section3Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;Section4&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+      <span class="nt">&quot;Section4Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;Section5&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Section5Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;Section6&quot;</span><span class="p">:</span> <span class="mf">5.01</span><span class="p">,</span>
+      <span class="nt">&quot;Section6Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;Section7&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Section7Priority&quot;</span><span class="p">:</span> <span class="mi">8</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Pursat&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពោធិ៍សាត់&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kravanh&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រវាញ&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Kravanh&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំក្រវាញ&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020501&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Meart&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មៀត&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VMWType&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VMWName&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;WorkPlace&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;TPR&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;PreviousScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;NextVisit&quot;</span><span class="p">:</span> <span class="s2">&quot;Never access&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;LowestSectionScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section2&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section2Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Section3&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section3Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Section4&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section4Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Section5&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section5Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Section6&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section6Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Section7&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Section7Priority&quot;</span><span class="p">:</span> <span class="mi">5</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="detail-of-question">
+<h3>Detail of question<a class="headerlink" href="#detail-of-question" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-qa-v1-VMW-detail">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-qa/v1/VMW/detail</span></span><a class="headerlink" href="#post--api-qa-v1-VMW-detail" title="Permalink to this definition"></a></dt>
+<dd><p>Get detail info of question.</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">387</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">387</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020400&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;VMWName&quot;</span><span class="p">:</span> <span class="s2">&quot;ជុំ នាង&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-08-09&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រូច សុខុម&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;បុគ្គលឹក់&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WorkPlace&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span> <span class="mf">99.06</span><span class="p">,</span>
+  <span class="nt">&quot;TPR&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+  <span class="nt">&quot;Summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;Current&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;Section2&quot;</span><span class="p">:</span> <span class="mf">34.25</span><span class="p">,</span>
+          <span class="nt">&quot;Section3&quot;</span><span class="p">:</span> <span class="mf">34.8</span><span class="p">,</span>
+          <span class="nt">&quot;Section4&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+          <span class="nt">&quot;Section5&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+          <span class="nt">&quot;Section6&quot;</span><span class="p">:</span> <span class="mf">5.01</span><span class="p">,</span>
+          <span class="nt">&quot;Section7&quot;</span><span class="p">:</span> <span class="mi">5</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;Previous&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;Section2&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Section3&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Section4&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Section5&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Section6&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Section7&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Detail&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;≤ 6 Months&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Loss of consciousness/coma,Little urine,Convulsion&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Fever,Headache,Chills&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">6</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.5&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.6&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Health Center,Referral Hospital&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Conduct blood test (RDT)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">12.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.5&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.6&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.7&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.9&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.11&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.12&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.13&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.75</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ACT or ACT+PQ&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.5</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Weight&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.5</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">19.8</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.5&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.6&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;13.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;13.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;14&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">6</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.5&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">2.4799998</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.5&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.6&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.7&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.9&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">2.52</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;18&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.5&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;50&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.6&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.7&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.8&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">5.0099998</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22.1&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.67</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22.2&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.67</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22.3&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.67</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;23&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;24&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Sleep under a bednet every night,Wear long sleeved clothes especially at night and in the forest,Use mosquito repellent on exposed skin&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="insert-update-question">
+<h3>Insert/Update Question<a class="headerlink" href="#insert-update-question" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-qa-v1-VMW-update">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-qa/v1/VMW/update</span></span><a class="headerlink" href="#post--api-qa-v1-VMW-update" title="Permalink to this definition"></a></dt>
+<dd><p>Insert/Update question.</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0105090400&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Detail&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;13 Months - 24 Months&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Female&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;3.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Loss of consciousness\/coma,Little urine,Jaundice or very pale&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Fever,Headache,Chills&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">6</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.5&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;6.6&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Health Center&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Conduct blood test (RDT)&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">12.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.5&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.6&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.7&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.8&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.9&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.10&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.11&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.25</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.12&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;9.13&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.75</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ACT or ACT+PQ&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Weight,Age&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">16.5</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.5&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;12.6&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;13.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;13.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;14&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;15.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;16.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">6</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;17.5&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;18.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;19.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">2.1699998</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.5&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.6&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.7&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.8&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;20.9&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">2.1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;24&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.4&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;32&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.5&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.6&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.7&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;21.8&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">0.42</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">3.34</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22.2&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.67</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;22.3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mf">1.67</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;23&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">2</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;Sleep under a bednet every night,Plant holy basil around your home,Clear excess vegetation from around your home&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;24&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">3</span>
+          <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;áž”áŸ’ážšáž’áž¶áž“áž€áž˜áŸ’áž˜ážœáž·áž’áž¸áž‚áŸ’ážšáž»áž“áž…áž¶áž‰áŸ‹&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">177</span><span class="p">,</span>
+      <span class="nt">&quot;Summary&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;Section2&quot;</span><span class="p">:</span> <span class="mf">34.25</span><span class="p">,</span>
+          <span class="nt">&quot;Section3&quot;</span><span class="p">:</span> <span class="mf">31.5</span><span class="p">,</span>
+          <span class="nt">&quot;Section4&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+          <span class="nt">&quot;Section5&quot;</span><span class="p">:</span> <span class="mf">4.2699995</span><span class="p">,</span>
+          <span class="nt">&quot;Section6&quot;</span><span class="p">:</span> <span class="mf">3.34</span><span class="p">,</span>
+          <span class="nt">&quot;Section7&quot;</span><span class="p">:</span> <span class="mi">5</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span> <span class="mf">90.35999</span><span class="p">,</span>
+      <span class="nt">&quot;VMWName&quot;</span><span class="p">:</span> <span class="s2">&quot;        áž¢áŸáž„ áž•áž›áŸ’áž›áž¶&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-11&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot; áž˜áŸ‰áž»áž€ áž…áž“áŸáŸ’áž‘ážŸáž¶ážœáŸ‰áž¶áž&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;WorkPlace&quot;</span><span class="p">:</span> <span class="s2">&quot;OD&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if <code class="docutils literal notranslate"><span class="pre">Rec_ID</span></code> is empty/null it will insert new.</p>
+<p>if <code class="docutils literal notranslate"><span class="pre">Rec_ID</span></code> is not empty/null it will update.</p>
+</div>
+</div>
+<div class="section" id="delete-question">
+<h3>Delete Question<a class="headerlink" href="#delete-question" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-qa-v1-VMW-delete">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-qa/v1/VMW/delete</span></span><a class="headerlink" href="#post--api-qa-v1-VMW-delete" title="Permalink to this definition"></a></dt>
+<dd><p>Delete question.</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">387</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="report">
+<h3>Report<a class="headerlink" href="#report" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-qa-v1-VMW-report">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-qa/v1/VMW/report</span></span><a class="headerlink" href="#post--api-qa-v1-VMW-report" title="Permalink to this definition"></a></dt>
+<dd><p>Show report</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_VIll_T&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+  <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">387</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Pursat&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពោធិ៍សាត់&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kravanh&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រវាញ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Kravanh&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំក្រវាញ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020400&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Sbov Rik&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្បូវរីក&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VMWType&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VMWName&quot;</span><span class="p">:</span> <span class="s2">&quot;ជុំ នាង&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-08-09&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រូច សុខុម&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;បុគ្គលឹក់&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;WorkPlace&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TPR&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span> <span class="mf">99.06</span><span class="p">,</span>
+    <span class="nt">&quot;PreviousScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;NextVisit&quot;</span><span class="p">:</span> <span class="s2">&quot;៩០ថ្ងៃបន្ទាប់&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;LowestSectionScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section2&quot;</span><span class="p">:</span> <span class="mf">34.25</span><span class="p">,</span>
+    <span class="nt">&quot;Section2Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;Section3&quot;</span><span class="p">:</span> <span class="mf">34.8</span><span class="p">,</span>
+    <span class="nt">&quot;Section3Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;Section4&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="nt">&quot;Section4Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;Section5&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;Section5Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;Section6&quot;</span><span class="p">:</span> <span class="mf">5.01</span><span class="p">,</span>
+    <span class="nt">&quot;Section6Priority&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;Section7&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;Section7Priority&quot;</span><span class="p">:</span> <span class="mi">8</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Pursat&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពោធិ៍សាត់&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kravanh&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រវាញ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;150301&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Kravanh&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំក្រវាញ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504020501&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Meart&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មៀត&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VMWType&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VMWName&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;WorkPlace&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;TPR&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;PreviousScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;NextVisit&quot;</span><span class="p">:</span> <span class="s2">&quot;Never access&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;LowestSectionScore&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section2&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section2Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;Section3&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section3Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;Section4&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section4Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;Section5&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section5Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;Section6&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section6Priority&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;Section7&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Section7Priority&quot;</span><span class="p">:</span> <span class="mi">5</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
 </div>
 </div>
 

@@ -105,3 +105,1292 @@ Place
         }
       ]
     }
+
+VMW's question
+--------------
+
+List of VMW's question
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-qa/v1/VMW/list
+
+  Get list of questions of VMW
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Code_Prov_T": "15",
+      "Code_OD_T": "1503",
+      "Code_Facility_T": "150301",
+      "Code_VIll_T": ""
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    [
+      {
+          "Rec_ID": 387,
+          "Code_Prov_T": "15",
+          "Name_Prov_E": "Pursat",
+          "Name_Prov_K": "ពោធិ៍សាត់",
+          "Code_OD_T": "1503",
+          "Name_OD_E": "Kravanh",
+          "Name_OD_K": "ក្រវាញ",
+          "Code_Facility_T": "150301",
+          "Name_Facility_E": "Phnom Kravanh",
+          "Name_Facility_K": "ភ្នំក្រវាញ",
+          "Code_Vill_T": "1504020400",
+          "Name_Vill_E": "Sbov Rik",
+          "Name_Vill_K": "ស្បូវរីក",
+          "VMWType": "VMW",
+          "VMWName": "ជុំ នាង",
+          "VisitDate": "2021-08-09",
+          "VisitorName": "ក្រូច សុខុម",
+          "Position": "បុគ្គលឹក់",
+          "WorkPlace": "HC",
+          "TPR": 6,
+          "TotalScore": 99.06,
+          "PreviousScore": null,
+          "NextVisit": "៩០ថ្ងៃបន្ទាប់",
+          "Priority": 8,
+          "LowestSectionScore": null,
+          "Section2": 34.25,
+          "Section2Priority": 8,
+          "Section3": 34.8,
+          "Section3Priority": 8,
+          "Section4": 15,
+          "Section4Priority": 8,
+          "Section5": 5,
+          "Section5Priority": 8,
+          "Section6": 5.01,
+          "Section6Priority": 8,
+          "Section7": 5,
+          "Section7Priority": 8
+      },
+      {
+          "Rec_ID": null,
+          "Code_Prov_T": "15",
+          "Name_Prov_E": "Pursat",
+          "Name_Prov_K": "ពោធិ៍សាត់",
+          "Code_OD_T": "1503",
+          "Name_OD_E": "Kravanh",
+          "Name_OD_K": "ក្រវាញ",
+          "Code_Facility_T": "150301",
+          "Name_Facility_E": "Phnom Kravanh",
+          "Name_Facility_K": "ភ្នំក្រវាញ",
+          "Code_Vill_T": "1504020501",
+          "Name_Vill_E": "Meart",
+          "Name_Vill_K": "មៀត",
+          "VMWType": "VMW",
+          "VMWName": null,
+          "VisitDate": null,
+          "VisitorName": null,
+          "Position": null,
+          "WorkPlace": null,
+          "TPR": null,
+          "TotalScore": null,
+          "PreviousScore": null,
+          "NextVisit": "Never access",
+          "Priority": 5,
+          "LowestSectionScore": null,
+          "Section2": null,
+          "Section2Priority": 5,
+          "Section3": null,
+          "Section3Priority": 5,
+          "Section4": null,
+          "Section4Priority": 5,
+          "Section5": null,
+          "Section5Priority": 5,
+          "Section6": null,
+          "Section6Priority": 5,
+          "Section7": null,
+          "Section7Priority": 5
+      }
+    ]
+
+Detail of question
+~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-qa/v1/VMW/detail
+
+  Get detail info of question.
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Rec_ID": 387
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Rec_ID": 387,
+      "Code_Vill_T": "1504020400",
+      "VMWName": "ជុំ នាង",
+      "VisitDate": "2021-08-09",
+      "VisitorName": "ក្រូច សុខុម",
+      "Position": "បុគ្គលឹក់",
+      "WorkPlace": "HC",
+      "TotalScore": 99.06,
+      "TPR": 6,
+      "Summary": {
+          "Current": {
+              "Section2": 34.25,
+              "Section3": 34.8,
+              "Section4": 15,
+              "Section5": 5,
+              "Section6": 5.01,
+              "Section7": 5
+          },
+          "Previous": {
+              "Section2": 0,
+              "Section3": 0,
+              "Section4": 0,
+              "Section5": 0,
+              "Section6": 0,
+              "Section7": 0
+          }
+      },
+      "Detail": [
+          {
+              "Question": "0.1",
+              "Answer": "≤ 6 Months",
+              "Score": 0
+          },
+          {
+              "Question": "0.2",
+              "Answer": "Male",
+              "Score": 0
+          },
+          {
+              "Question": "1",
+              "Answer": "",
+              "Score": 1
+          },
+          {
+              "Question": "1.1",
+              "Answer": "Yes",
+              "Score": 0.25
+          },
+          {
+              "Question": "1.2",
+              "Answer": "Yes",
+              "Score": 0.25
+          },
+          {
+              "Question": "1.3",
+              "Answer": "Yes",
+              "Score": 0.25
+          },
+          {
+              "Question": "1.4",
+              "Answer": "Yes",
+              "Score": 0.25
+          },
+          {
+              "Question": "2",
+              "Answer": "Yes",
+              "Score": 2
+          },
+          {
+              "Question": "3",
+              "Answer": "",
+              "Score": 3
+          },
+          {
+              "Question": "3.1",
+              "Answer": "Yes",
+              "Score": 0.5
+          },
+          {
+              "Question": "3.2",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "3.3",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "4",
+              "Answer": "Loss of consciousness/coma,Little urine,Convulsion",
+              "Score": 3
+          },
+          {
+              "Question": "5",
+              "Answer": "Fever,Headache,Chills",
+              "Score": 3
+          },
+          {
+              "Question": "6",
+              "Answer": "",
+              "Score": 6
+          },
+          {
+              "Question": "6.1",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "6.2",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "6.3",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "6.4",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "6.5",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "6.6",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "7",
+              "Answer": "Health Center,Referral Hospital",
+              "Score": 3
+          },
+          {
+              "Question": "8",
+              "Answer": "Conduct blood test (RDT)",
+              "Score": 1
+          },
+          {
+              "Question": "9",
+              "Answer": "",
+              "Score": 12.25
+          },
+          {
+              "Question": "9.1",
+              "Answer": "Yes",
+              "Score": 0.5
+          },
+          {
+              "Question": "9.2",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "9.3",
+              "Answer": "Yes",
+              "Score": 0.5
+          },
+          {
+              "Question": "9.4",
+              "Answer": "Yes",
+              "Score": 0.5
+          },
+          {
+              "Question": "9.5",
+              "Answer": "Yes",
+              "Score": 0.5
+          },
+          {
+              "Question": "9.6",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "9.7",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "9.8",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "9.9",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "9.10",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "9.11",
+              "Answer": "Yes",
+              "Score": 1.25
+          },
+          {
+              "Question": "9.12",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "9.13",
+              "Answer": "Yes",
+              "Score": 0.75
+          },
+          {
+              "Question": "10",
+              "Answer": "ACT or ACT+PQ",
+              "Score": 3.5
+          },
+          {
+              "Question": "11",
+              "Answer": "Weight",
+              "Score": 3.5
+          },
+          {
+              "Question": "12",
+              "Answer": "",
+              "Score": 19.8
+          },
+          {
+              "Question": "12.1",
+              "Answer": "Yes",
+              "Score": 3.3
+          },
+          {
+              "Question": "12.2",
+              "Answer": "Yes",
+              "Score": 3.3
+          },
+          {
+              "Question": "12.3",
+              "Answer": "Yes",
+              "Score": 3.3
+          },
+          {
+              "Question": "12.4",
+              "Answer": "Yes",
+              "Score": 3.3
+          },
+          {
+              "Question": "12.5",
+              "Answer": "Yes",
+              "Score": 3.3
+          },
+          {
+              "Question": "12.6",
+              "Answer": "Yes",
+              "Score": 3.3
+          },
+          {
+              "Question": "13",
+              "Answer": "",
+              "Score": 2
+          },
+          {
+              "Question": "13.1",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "13.2",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "14",
+              "Answer": "Yes",
+              "Score": 3
+          },
+          {
+              "Question": "15",
+              "Answer": "",
+              "Score": 3
+          },
+          {
+              "Question": "15.1",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "15.2",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "15.3",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "16",
+              "Answer": "",
+              "Score": 3
+          },
+          {
+              "Question": "16.1",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "16.2",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "16.3",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "17",
+              "Answer": "",
+              "Score": 6
+          },
+          {
+              "Question": "17.1",
+              "Answer": "Yes",
+              "Score": 1.2
+          },
+          {
+              "Question": "17.2",
+              "Answer": "Yes",
+              "Score": 1.2
+          },
+          {
+              "Question": "17.3",
+              "Answer": "Yes",
+              "Score": 1.2
+          },
+          {
+              "Question": "17.4",
+              "Answer": "Yes",
+              "Score": 1.2
+          },
+          {
+              "Question": "17.5",
+              "Answer": "Yes",
+              "Score": 1.2
+          },
+          {
+              "Question": "18",
+              "Answer": "",
+              "Score": 3
+          },
+          {
+              "Question": "18.1",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "18.2",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "18.3",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "19",
+              "Answer": "",
+              "Score": 3
+          },
+          {
+              "Question": "19.1",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "19.2",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "19.3",
+              "Answer": "Yes",
+              "Score": 1
+          },
+          {
+              "Question": "20",
+              "Answer": "",
+              "Score": 2.4799998
+          },
+          {
+              "Question": "20.1",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "20.2",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "20.3",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "20.4",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "20.5",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "20.6",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "20.7",
+              "Answer": "Yes",
+              "Score": 0
+          },
+          {
+              "Question": "20.8",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "20.9",
+              "Answer": "Yes",
+              "Score": 0.31
+          },
+          {
+              "Question": "21",
+              "Answer": "",
+              "Score": 2.52
+          },
+          {
+              "Question": "21.1",
+              "Answer": "18",
+              "Score": 0
+          },
+          {
+              "Question": "21.2",
+              "Answer": "No",
+              "Score": 0.42
+          },
+          {
+              "Question": "21.3",
+              "Answer": "No",
+              "Score": 0.42
+          },
+          {
+              "Question": "21.4",
+              "Answer": "Yes",
+              "Score": 0.42
+          },
+          {
+              "Question": "21.5",
+              "Answer": "50",
+              "Score": 0
+          },
+          {
+              "Question": "21.6",
+              "Answer": "No",
+              "Score": 0.42
+          },
+          {
+              "Question": "21.7",
+              "Answer": "No",
+              "Score": 0.42
+          },
+          {
+              "Question": "21.8",
+              "Answer": "Yes",
+              "Score": 0.42
+          },
+          {
+              "Question": "22",
+              "Answer": "",
+              "Score": 5.0099998
+          },
+          {
+              "Question": "22.1",
+              "Answer": "Yes",
+              "Score": 1.67
+          },
+          {
+              "Question": "22.2",
+              "Answer": "Yes",
+              "Score": 1.67
+          },
+          {
+              "Question": "22.3",
+              "Answer": "Yes",
+              "Score": 1.67
+          },
+          {
+              "Question": "23",
+              "Answer": "Yes",
+              "Score": 2
+          },
+          {
+              "Question": "24",
+              "Answer": "Sleep under a bednet every night,Wear long sleeved clothes especially at night and in the forest,Use mosquito repellent on exposed skin",
+              "Score": 3
+          }
+      ]
+    }
+
+
+Insert/Update Question
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-qa/v1/VMW/update
+
+  Insert/Update question.
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "data": {
+          "Code_Vill_T": "0105090400",
+          "Detail": [
+              {
+                  "Answer": "13 Months - 24 Months",
+                  "Question": "0.1",
+                  "Score": 0
+              },
+              {
+                  "Answer": "Female",
+                  "Question": "0.2",
+                  "Score": 0
+              },
+              {
+                  "Answer": "",
+                  "Question": "1",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "1.1",
+                  "Score": 0.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "1.2",
+                  "Score": 0.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "1.3",
+                  "Score": 0.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "1.4",
+                  "Score": 0.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "2",
+                  "Score": 2
+              },
+              {
+                  "Answer": "",
+                  "Question": "3",
+                  "Score": 3
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "3.1",
+                  "Score": 0.5
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "3.2",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "3.3",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Loss of consciousness\/coma,Little urine,Jaundice or very pale",
+                  "Question": "4",
+                  "Score": 3
+              },
+              {
+                  "Answer": "Fever,Headache,Chills",
+                  "Question": "5",
+                  "Score": 3
+              },
+              {
+                  "Answer": "",
+                  "Question": "6",
+                  "Score": 6
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "6.1",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "6.2",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "6.3",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "6.4",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "6.5",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "6.6",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Health Center",
+                  "Question": "7",
+                  "Score": 3
+              },
+              {
+                  "Answer": "Conduct blood test (RDT)",
+                  "Question": "8",
+                  "Score": 1
+              },
+              {
+                  "Answer": "",
+                  "Question": "9",
+                  "Score": 12.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.1",
+                  "Score": 0.5
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.2",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.3",
+                  "Score": 0.5
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.4",
+                  "Score": 0.5
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.5",
+                  "Score": 0.5
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.6",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.7",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.8",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.9",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.10",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.11",
+                  "Score": 1.25
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.12",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "9.13",
+                  "Score": 0.75
+              },
+              {
+                  "Answer": "ACT or ACT+PQ",
+                  "Question": "10",
+                  "Score": 3.5
+              },
+              {
+                  "Answer": "Weight,Age",
+                  "Question": "11",
+                  "Score": 3.5
+              },
+              {
+                  "Answer": "",
+                  "Question": "12",
+                  "Score": 16.5
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "12.1",
+                  "Score": 3.3
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "12.2",
+                  "Score": 3.3
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "12.3",
+                  "Score": 3.3
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "12.4",
+                  "Score": 3.3
+              },
+              {
+                  "Answer": "No",
+                  "Question": "12.5",
+                  "Score": 0
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "12.6",
+                  "Score": 3.3
+              },
+              {
+                  "Answer": "",
+                  "Question": "13",
+                  "Score": 2
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "13.1",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "13.2",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "14",
+                  "Score": 3
+              },
+              {
+                  "Answer": "",
+                  "Question": "15",
+                  "Score": 3
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "15.1",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "15.2",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "15.3",
+                  "Score": 1
+              },
+              {
+                  "Answer": "",
+                  "Question": "16",
+                  "Score": 3
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "16.1",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "16.2",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "16.3",
+                  "Score": 1
+              },
+              {
+                  "Answer": "",
+                  "Question": "17",
+                  "Score": 6
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "17.1",
+                  "Score": 1.2
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "17.2",
+                  "Score": 1.2
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "17.3",
+                  "Score": 1.2
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "17.4",
+                  "Score": 1.2
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "17.5",
+                  "Score": 1.2
+              },
+              {
+                  "Answer": "",
+                  "Question": "18",
+                  "Score": 3
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "18.1",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "18.2",
+                  "Score": 1
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "18.3",
+                  "Score": 1
+              },
+              {
+                  "Answer": "",
+                  "Question": "19",
+                  "Score": 0
+              },
+              {
+                  "Answer": "No",
+                  "Question": "19.1",
+                  "Score": 0
+              },
+              {
+                  "Answer": "",
+                  "Question": "19.2",
+                  "Score": 0
+              },
+              {
+                  "Answer": "",
+                  "Question": "19.3",
+                  "Score": 0
+              },
+              {
+                  "Answer": "",
+                  "Question": "20",
+                  "Score": 2.1699998
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "20.1",
+                  "Score": 0.31
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "20.2",
+                  "Score": 0.31
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "20.3",
+                  "Score": 0.31
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "20.4",
+                  "Score": 0.31
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "20.5",
+                  "Score": 0.31
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "20.6",
+                  "Score": 0.31
+              },
+              {
+                  "Answer": "No",
+                  "Question": "20.7",
+                  "Score": 0
+              },
+              {
+                  "Answer": "No",
+                  "Question": "20.8",
+                  "Score": 0
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "20.9",
+                  "Score": 0.31
+              },
+              {
+                  "Answer": "",
+                  "Question": "21",
+                  "Score": 2.1
+              },
+              {
+                  "Answer": "24",
+                  "Question": "21.1",
+                  "Score": 0
+              },
+              {
+                  "Answer": "No",
+                  "Question": "21.2",
+                  "Score": 0.42
+              },
+              {
+                  "Answer": "No",
+                  "Question": "21.3",
+                  "Score": 0.42
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "21.4",
+                  "Score": 0.42
+              },
+              {
+                  "Answer": "32",
+                  "Question": "21.5",
+                  "Score": 0
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "21.6",
+                  "Score": 0
+              },
+              {
+                  "Answer": "No",
+                  "Question": "21.7",
+                  "Score": 0.42
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "21.8",
+                  "Score": 0.42
+              },
+              {
+                  "Answer": "",
+                  "Question": "22",
+                  "Score": 3.34
+              },
+              {
+                  "Answer": "No",
+                  "Question": "22.1",
+                  "Score": 0
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "22.2",
+                  "Score": 1.67
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "22.3",
+                  "Score": 1.67
+              },
+              {
+                  "Answer": "Yes",
+                  "Question": "23",
+                  "Score": 2
+              },
+              {
+                  "Answer": "Sleep under a bednet every night,Plant holy basil around your home,Clear excess vegetation from around your home",
+                  "Question": "24",
+                  "Score": 3
+              }
+          ],
+          "Position": "áž”áŸ’ážšáž’áž¶áž“áž€áž˜áŸ’áž˜ážœáž·áž’áž¸áž‚áŸ’ážšáž»áž“áž…áž¶áž‰áŸ‹",
+          "Rec_ID": 177,
+          "Summary": {
+              "Section2": 34.25,
+              "Section3": 31.5,
+              "Section4": 12,
+              "Section5": 4.2699995,
+              "Section6": 3.34,
+              "Section7": 5
+          },
+          "TotalScore": 90.35999,
+          "VMWName": "        áž¢áŸáž„ áž•áž›áŸ’áž›áž¶",
+          "VisitDate": "2021-06-11",
+          "VisitorName": " áž˜áŸ‰áž»áž€ áž…áž“áŸáŸ’áž‘ážŸáž¶ážœáŸ‰áž¶áž",
+          "WorkPlace": "OD"
+      }
+    }
+
+.. note:: 
+
+  if ``Rec_ID`` is empty/null it will insert new.
+
+  if ``Rec_ID`` is not empty/null it will update.
+
+
+Delete Question
+~~~~~~~~~~~~~~~
+
+.. http:post:: /api-qa/v1/VMW/delete
+
+  Delete question.
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Rec_ID": 387
+    }
+
+Report
+~~~~~~
+
+.. http:post:: /api-qa/v1/VMW/report
+
+  Show report
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Code_Prov_T": "15",
+      "Code_OD_T": "1503",
+      "Code_Facility_T": "150301",
+      "Code_VIll_T": "",
+      "Year": 2021,
+      "Month": ""
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+    
+    [
+      {
+        "Rec_ID": 387,
+        "Code_Prov_T": "15",
+        "Name_Prov_E": "Pursat",
+        "Name_Prov_K": "ពោធិ៍សាត់",
+        "Code_OD_T": "1503",
+        "Name_OD_E": "Kravanh",
+        "Name_OD_K": "ក្រវាញ",
+        "Code_Facility_T": "150301",
+        "Name_Facility_E": "Phnom Kravanh",
+        "Name_Facility_K": "ភ្នំក្រវាញ",
+        "Code_Vill_T": "1504020400",
+        "Name_Vill_E": "Sbov Rik",
+        "Name_Vill_K": "ស្បូវរីក",
+        "VMWType": "VMW",
+        "VMWName": "ជុំ នាង",
+        "VisitDate": "2021-08-09",
+        "VisitorName": "ក្រូច សុខុម",
+        "Position": "បុគ្គលឹក់",
+        "WorkPlace": "HC",
+        "TPR": 6,
+        "TotalScore": 99.06,
+        "PreviousScore": null,
+        "NextVisit": "៩០ថ្ងៃបន្ទាប់",
+        "Priority": 8,
+        "LowestSectionScore": null,
+        "Section2": 34.25,
+        "Section2Priority": 8,
+        "Section3": 34.8,
+        "Section3Priority": 8,
+        "Section4": 15,
+        "Section4Priority": 8,
+        "Section5": 5,
+        "Section5Priority": 8,
+        "Section6": 5.01,
+        "Section6Priority": 8,
+        "Section7": 5,
+        "Section7Priority": 8
+    },
+    {
+        "Rec_ID": null,
+        "Code_Prov_T": "15",
+        "Name_Prov_E": "Pursat",
+        "Name_Prov_K": "ពោធិ៍សាត់",
+        "Code_OD_T": "1503",
+        "Name_OD_E": "Kravanh",
+        "Name_OD_K": "ក្រវាញ",
+        "Code_Facility_T": "150301",
+        "Name_Facility_E": "Phnom Kravanh",
+        "Name_Facility_K": "ភ្នំក្រវាញ",
+        "Code_Vill_T": "1504020501",
+        "Name_Vill_E": "Meart",
+        "Name_Vill_K": "មៀត",
+        "VMWType": "VMW",
+        "VMWName": null,
+        "VisitDate": null,
+        "VisitorName": null,
+        "Position": null,
+        "WorkPlace": null,
+        "TPR": null,
+        "TotalScore": null,
+        "PreviousScore": null,
+        "NextVisit": "Never access",
+        "Priority": 5,
+        "LowestSectionScore": null,
+        "Section2": null,
+        "Section2Priority": 5,
+        "Section3": null,
+        "Section3Priority": 5,
+        "Section4": null,
+        "Section4Priority": 5,
+        "Section5": null,
+        "Section5Priority": 5,
+        "Section6": null,
+        "Section6Priority": 5,
+        "Section7": null,
+        "Section7Priority": 5
+      }
+    ]  
