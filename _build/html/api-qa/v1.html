@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API v1 of QA &mdash; MIS developer doc  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css\rtd_sphinx_search.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/js\rtd_sphinx_search.min.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="API v1 of CMI" href="../api-cmi/v1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MIS developer doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html#who-is-for-mis">Who is for MIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../technology/technology.html">Technology usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Third%20Party/data-export-tool.html">Third Party</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of CNM Reporting App</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/v4.html">API v4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/v5.html">API v5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-cmi/v1.html">API v1 of CMI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of VWM QA App</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API v1 of QA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#users">Users</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#authentication">Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#place">Place</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MIS developer doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API v1 of QA</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api-qa/v1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="api-v1-of-qa">
+<h1>API v1 of QA<a class="headerlink" href="#api-v1-of-qa" title="Permalink to this headline"></a></h1>
+<div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline"></a></h2>
+<div class="section" id="authentication">
+<h3>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-qa-v1-Users-auth">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-qa/v1/Users/auth</span></span><a class="headerlink" href="#post--api-qa-v1-Users-auth" title="Permalink to this definition"></a></dt>
+<dd><p>User login</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;HC_Code&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;1234567890&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Role&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Meanchey&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយមានជ័យ&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010202&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet I&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត១&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="place">
+<h2>Place<a class="headerlink" href="#place" title="Permalink to this headline"></a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-qa-v1-Place-all">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-qa/v1/Place/all</span></span><a class="headerlink" href="#post--api-qa-v1-Place-all" title="Permalink to this definition"></a></dt>
+<dd><p>Get place</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;province&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Meanchey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយមានជ័យ&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;02&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Battambang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បាត់ដំបង&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;od&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0103&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Net Preah&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះនេត្រព្រះ&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010202&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet I&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត១&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010203&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Ou Russei&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អូរឫស្សី&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;village&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010313&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0103010100&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Rongvean&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;រង្វាន&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010313&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0103011000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samraong&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរោង&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../api-cmi/v1.html" class="btn btn-neutral float-left" title="API v1 of CMI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, CNM MIS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

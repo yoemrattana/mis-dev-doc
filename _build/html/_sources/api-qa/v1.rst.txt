@@ -1,0 +1,107 @@
+API v1 of QA
+============
+
+Users
+-----
+
+Authentication
+~~~~~~~~~~~~~~
+
+.. http:post:: /api-qa/v1/Users/auth
+
+  User login
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "HC_Code": "123456",
+      "Imei": "1234567890"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Role": "HC",
+      "Code_Prov_T": "01",
+      "Name_Prov_E": "Banteay Meanchey",
+      "Name_Prov_K": "បន្ទាយមានជ័យ",
+      "Code_OD_T": "0102",
+      "Name_OD_E": "Poipet",
+      "Name_OD_K": "ប៉ោយប៉ែត",
+      "Code_Facility_T": "010202",
+      "Name_Facility_E": "Poipet I",
+      "Name_Facility_K": "ប៉ោយប៉ែត១",
+      "message": "ok"
+    }
+
+Place
+-----
+
+.. http:post:: /api-qa/v1/Place/all
+
+  Get place
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "province": [
+        {
+            "Code_Prov_T": "01",
+            "Name_Prov_E": "Banteay Meanchey",
+            "Name_Prov_K": "បន្ទាយមានជ័យ"
+        },
+        {
+            "Code_Prov_T": "02",
+            "Name_Prov_E": "Battambang",
+            "Name_Prov_K": "បាត់ដំបង"
+        }
+      ],
+      "od": [
+        {
+            "Code_Prov_T": "01",
+            "Code_OD_T": "0102",
+            "Name_OD_E": "Poipet",
+            "Name_OD_K": "ប៉ោយប៉ែត"
+        },
+        {
+            "Code_Prov_T": "01",
+            "Code_OD_T": "0103",
+            "Name_OD_E": "Preah Net Preah",
+            "Name_OD_K": "ព្រះនេត្រព្រះ"
+        }
+      ],
+      "hc": [
+        {
+            "Code_OD_T": "0102",
+            "Code_Facility_T": "010202",
+            "Name_Facility_E": "Poipet I",
+            "Name_Facility_K": "ប៉ោយប៉ែត១"
+        },
+        {
+            "Code_OD_T": "0102",
+            "Code_Facility_T": "010203",
+            "Name_Facility_E": "Ou Russei",
+            "Name_Facility_K": "អូរឫស្សី"
+        }
+      ],
+      "village": [
+        {
+            "Code_Facility_T": "010313",
+            "Code_Vill_T": "0103010100",
+            "Name_Vill_E": "Rongvean",
+            "Name_Vill_K": "រង្វាន"
+        },
+        {
+            "Code_Facility_T": "010313",
+            "Code_Vill_T": "0103011000",
+            "Name_Vill_E": "Samraong",
+            "Name_Vill_K": "សំរោង"
+        }
+      ]
+    }
