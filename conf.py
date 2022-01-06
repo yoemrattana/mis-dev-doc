@@ -75,17 +75,6 @@ latex_elements = {
   # 'preamble': r'''
   #   \setmainfont[Script=Khmer,Scale=0.95]{Khmer OS Battambang} 
   # ''',
-
-  'preamble': r'''
-    \usepackage[UTF8]{ctex}
-
-    \usepackage{float}
-
-    \usepackage{graphicx}
-
-    \usepackage{indentfirst}
-    \setlength{\parindent}{2em}
-  ''',
 }
 
 latex_engine = 'xelatex'
