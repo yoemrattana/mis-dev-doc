@@ -11,7 +11,7 @@ The new system was designed by Malaria National Program (CNM) staff and the syst
 The technology has been designed to engage the whole malaria control program team from the senior staff of the National Center for Parasitology, Entomology and Malaria Control (CNM) at the central level to the voluntary workers living in the endemic villages around the country. This level of coordination and efficiency is required during the final stages of malaria elimination.
 For a system to be useful it must be designed in close collab with the users. It must be responsive to the constantly changing requirements of a country in the end stages of malaria elimination where new ideas and initiatives are being delivered frequently. This is why we argue that development in-country is the most appropriate way.
 
-MIS (Malaria Information System) is an web base application was originally developed by CNM developer team.
+MIS (Malaria Information System) is an web base application was originally developed by CNM.
 
 
 Who is for MIS
