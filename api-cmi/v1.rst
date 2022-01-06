@@ -161,3 +161,978 @@ Monthly case
           }
       ]
     }
+
+This year case
+~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/case_this_year
+
+  To get this year case information
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "PF": 1,
+              "PV": 53,
+              "Mix": 0,
+              "Total": 54
+          }
+      ]
+    }
+
+Pv Radical cure (chart)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/pv_radicalcure
+
+  To get Pv radical cure info
+
+  :query int year: year.
+  :query string month_from: month begin.
+  :query string month_to: month to.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Pv": 56,
+              "G6PDTest": 32,
+              "G6PDNormal": 18,
+              "Primaquine": 13
+          }
+      ]
+    }
+
+HF report timely
+~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/hf_report_timely
+
+  To get report timely of health facility
+
+  :query int year: year, e.g: 2021, 2022, ...
+  :query string month: month, e.g: 01, ...,12.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Type": "Timely",
+              "Month": "09",
+              "Value": "36"
+          },
+          {
+              "Type": "Received",
+              "Month": "09",
+              "Value": "815"
+          }
+      ]
+    }
+
+VMW report timely
+~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/vmw_report_timely
+
+  To get report timely of VMW
+
+  :query int year: year, e.g: 2021, 2022, ...
+  :query string month: month, e.g: 01, ...,12.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Type": "Timely",
+              "Month": "06",
+              "Value": 42
+          },
+          {
+              "Type": "Received",
+              "Month": "06",
+              "Value": 3311
+          }
+      ]
+    }
+
+Annual Foci classification
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/foci
+
+  To get annual foci classification and mornitoring
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Name_Prov_E": "Kampong Chhnang",
+            "Name_Prov_K": "កំពង់ឆ្នាំង",
+            "Code_Prov_T": "04",
+            "Name_OD_E": "Kampong Chhnang",
+            "Name_OD_K": "កំពង់ឆ្នាំង",
+            "Code_OD_T": "0401",
+            "Name_Facility_E": "Kbal Tuek",
+            "Name_Facility_K": "ក្បាលទឹក",
+            "Code_Facility_T": "040116",
+            "Name_Vill_E": "Doung Sla",
+            "Name_Vill_K": "ដូងស្លា",
+            "Code_Vill_T": "0408040200",
+            "Lat": 11.961394,
+            "Long": 104.303273,
+            "Year1": "orange",
+            "Year2": "",
+            "Year3": "",
+            "Year4": "",
+            "Status": "Active"
+        },
+        {
+            "Name_Prov_E": "Kampong Chhnang",
+            "Name_Prov_K": "កំពង់ឆ្នាំង",
+            "Code_Prov_T": "04",
+            "Name_OD_E": "Kampong Tralach",
+            "Name_OD_K": "កំពង់ត្រឡាច",
+            "Code_OD_T": "0402",
+            "Name_Facility_E": "Kampong Tralach Leu",
+            "Name_Facility_K": "កំពង់ត្រឡាចលើ",
+            "Code_Facility_T": "040202",
+            "Name_Vill_E": "Samretthi Chey",
+            "Name_Vill_K": "សំរិទ្ធិជ័យ",
+            "Code_Vill_T": "0405040400",
+            "Lat": 11.910326,
+            "Long": 104.778443,
+            "Year1": "orange",
+            "Year2": "green",
+            "Year3": "",
+            "Year4": "",
+            "Status": "Residual"
+        } 
+      ]  
+    }
+
+Health worker
+~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/HF/hf_worker
+
+  To get number of health facility, village, VMW, MMW, OD, province that is malaria target
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "PopAtRisk": 9714485
+          },
+          {
+              "Village": 10739
+          },
+          {
+              "MMW": 269
+          },
+          {
+              "VMW": 2560
+          },
+          {
+              "HC": 874
+          },
+          {
+              "OD": 55
+          },
+          {
+              "Province": 21
+          }
+      ]
+    }
+
+Dashboard
+---------
+
+Number of malaria test and case (Bar chart)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/malaria
+
+  To get number of test, Pv, Pf, Mix of each month in selected year
+
+  :query int Year: year of report, e.g: 2020,2021,...
+  :query string province: code of province.
+  :query string od: code of OD. 
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Month": "01",
+            "PF": 11,
+            "PV": 49,
+            "MIX": 1,
+            "Positive": 61,
+            "Test": 797
+        },
+        {
+            "Month": "02",
+            "PF": 16,
+            "PV": 48,
+            "MIX": 1,
+            "Positive": 65,
+            "Test": 1131
+        },
+        {
+            "Month": "03",
+            "PF": 16,
+            "PV": 25,
+            "MIX": 1,
+            "Positive": 42,
+            "Test": 1347
+        },
+        {
+            "Month": "04",
+            "PF": 17,
+            "PV": 25,
+            "MIX": 0,
+            "Positive": 42,
+            "Test": 1450
+        },
+        {
+            "Month": "05",
+            "PF": 26,
+            "PV": 18,
+            "MIX": 0,
+            "Positive": 44,
+            "Test": 1095
+        },
+        {
+            "Month": "06",
+            "PF": 77,
+            "PV": 36,
+            "MIX": 0,
+            "Positive": 113,
+            "Test": 1565
+        },
+        {
+            "Month": "07",
+            "PF": 37,
+            "PV": 50,
+            "MIX": 1,
+            "Positive": 88,
+            "Test": 2274
+        },
+        {
+            "Month": "08",
+            "PF": 33,
+            "PV": 41,
+            "MIX": 0,
+            "Positive": 74,
+            "Test": 2152
+        },
+        {
+            "Month": "09",
+            "PF": 7,
+            "PV": 35,
+            "MIX": 0,
+            "Positive": 42,
+            "Test": 1352
+        },
+        {
+            "Month": "10",
+            "PF": 10,
+            "PV": 37,
+            "MIX": 0,
+            "Positive": 47,
+            "Test": 1215
+        },
+        {
+            "Month": "11",
+            "PF": 8,
+            "PV": 27,
+            "MIX": 0,
+            "Positive": 35,
+            "Test": 1143
+        },
+        {
+            "Month": "12",
+            "PF": 5,
+            "PV": 18,
+            "MIX": 0,
+            "Positive": 23,
+            "Test": 1221
+        }
+      ]
+    }
+
+Top 10 villages with Pf and Mix (Pie chart)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/pf_mix
+
+  To get top 10 villages with Pf and Mix.
+
+  :query int Year: year of report, e.g: 2020,2021,...
+  :query string province: code of province.
+  :query string od: code of OD. 
+  :query string month_from: begin month.
+  :query string month_to: end of month.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Name_Vill_K": "រំដួលថ្មី",
+              "Name_Vill_E": "Rumduol Thmei",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 61
+          },
+          {
+              "Name_Vill_K": "ពាមល្វា",
+              "Name_Vill_E": "Peam lvea",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 37
+          },
+          {
+              "Name_Vill_K": "ក្រាំងចេក",
+              "Name_Vill_E": "Krang Chek",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 18
+          },
+          {
+              "Name_Vill_K": "បន្ទាយរការ_គិរីសែនជ័យ (M)",
+              "Name_Vill_E": "Banteay Roka_Kirisenchey (M)",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 17
+          },
+          {
+              "Name_Vill_K": "ជន្លង់ម្លូ",
+              "Name_Vill_E": "Chonlong Mlu",
+              "Name_Facility_K": "សំរោងរំដួល",
+              "Name_Facility_E": "Samroung romduol",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 15
+          },
+          {
+              "Name_Vill_K": "ពាមល្វា_ស្រែដូង (M)",
+              "Name_Vill_E": "Peam Lvea_Sre Doung (M)",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 13
+          },
+          {
+              "Name_Vill_K": "ដូង_គ្រោងមានជ័យ (M)",
+              "Name_Vill_E": "Doung_Kraong Meanchey (M)",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 12
+          },
+          {
+              "Name_Vill_K": "ដូង",
+              "Name_Vill_E": "Doung",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 10
+          },
+          {
+              "Name_Vill_K": "ក្រាំងក្រូច",
+              "Name_Vill_E": "Krang Krouch",
+              "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+              "Name_Facility_E": "Chambak",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 8
+          },
+          {
+              "Name_Vill_K": "កណ្តាល",
+              "Name_Vill_E": "Kandal",
+              "Name_Facility_K": "សំរោងរំដួល",
+              "Name_Facility_E": "Samroung romduol",
+              "Name_OD_K": "ភ្នំស្រួច",
+              "Name_OD_E": "Phnom Srouch",
+              "PFMix": 7
+          },
+          {
+              "Name_Vill_K": "អ្នកជំងឺមកពីភូមិផ្សេង (203 ភូមិ)",
+              "Name_Vill_E": "Patient form other village (203 Village)",
+              "Name_Facility_K": "មណ្ឌលសុខភាពផ្សេង",
+              "Name_Facility_E": "Patient form other HF",
+              "Name_OD_K": "ស្រុកប្រតិបត្តិផ្សេង",
+              "Name_OD_E": "Patient form other OD",
+              "PFMix": 66
+          }
+      ]
+    }
+
+Top 10 villages (table)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/top_ten_village
+
+  To get top 10 villages.
+
+  :query int year: year of report, e.g: 2020,2021,...
+  :query string province: code of province.
+  :query string od: code of OD. 
+  :query string month_from: begin month, e.g: 01, 02, ..., 12.
+  :query string month_to: end of month, e.g: 01, 02, ..., 12.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+    
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Name_Vill_K": "រំដួលថ្មី",
+            "Name_Vill_E": "Rumduol Thmei",
+            "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+            "Name_Facility_E": "Chambak",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 61,
+            "PV": 23,
+            "Mix": 1,
+            "Total": 85,
+            "Pop": 345,
+            "Incident": "246.376811594000"
+        },
+        {
+            "Name_Vill_K": "ក្រាំងចេក",
+            "Name_Vill_E": "Krang Chek",
+            "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+            "Name_Facility_E": "Chambak",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 16,
+            "PV": 20,
+            "Mix": 0,
+            "Total": 36,
+            "Pop": 500,
+            "Incident": "72.000000000000"
+        },
+        {
+            "Name_Vill_K": "បន្ទាយរការ_គិរីសែនជ័យ (M)",
+            "Name_Vill_E": "Banteay Roka_Kirisenchey (M)",
+            "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+            "Name_Facility_E": "Chambak",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 15,
+            "PV": 18,
+            "Mix": 1,
+            "Total": 34,
+            "Pop": 434,
+            "Incident": "78.341013824000"
+        },
+        {
+            "Name_Vill_K": "ក្រាំងបឹង",
+            "Name_Vill_E": "Krang Boeng",
+            "Name_Facility_K": "សំរោងរំដួល",
+            "Name_Facility_E": "Samroung romduol",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 4,
+            "PV": 18,
+            "Mix": 0,
+            "Total": 22,
+            "Pop": 645,
+            "Incident": "34.108527131000"
+        },
+        {
+            "Name_Vill_K": "ស្រែជ្រៅ",
+            "Name_Vill_E": "Srae Chrov",
+            "Name_Facility_K": "សំរោងរំដួល",
+            "Name_Facility_E": "Samroung romduol",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 3,
+            "PV": 14,
+            "Mix": 0,
+            "Total": 17,
+            "Pop": 735,
+            "Incident": "23.129251700000"
+        },
+        {
+            "Name_Vill_K": "ជន្លង់ម្លូ",
+            "Name_Vill_E": "Chonlong Mlu",
+            "Name_Facility_K": "សំរោងរំដួល",
+            "Name_Facility_E": "Samroung romduol",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 14,
+            "PV": 2,
+            "Mix": 0,
+            "Total": 16,
+            "Pop": 1016,
+            "Incident": "15.748031496000"
+        },
+        {
+            "Name_Vill_K": "ដក់ពរ_ទ័ពម្រាក់ (M)",
+            "Name_Vill_E": "Dak Por_Toap Mreak (M)",
+            "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+            "Name_Facility_E": "Chambak",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 1,
+            "PV": 14,
+            "Mix": 0,
+            "Total": 15,
+            "Pop": 340,
+            "Incident": "44.117647058000"
+        },
+        {
+            "Name_Vill_K": "ដូង",
+            "Name_Vill_E": "Doung",
+            "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+            "Name_Facility_E": "Chambak",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 9,
+            "PV": 4,
+            "Mix": 1,
+            "Total": 14,
+            "Pop": 869,
+            "Incident": "16.110471806000"
+        },
+        {
+            "Name_Vill_K": "ព្រៃកាហៀច",
+            "Name_Vill_E": "Prey Kahiech",
+            "Name_Facility_K": "មិត្តភាពកម្ពុជាជប៉ុន ចំបក់",
+            "Name_Facility_E": "Chambak",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 4,
+            "PV": 9,
+            "Mix": 1,
+            "Total": 14,
+            "Pop": 704,
+            "Incident": "19.886363636000"
+        },
+        {
+            "Name_Vill_K": "ក្រាំងធំ",
+            "Name_Vill_E": "Krang Thum",
+            "Name_Facility_K": "សំរោងរំដួល",
+            "Name_Facility_E": "Samroung romduol",
+            "Name_OD_K": "ភ្នំស្រួច",
+            "Name_OD_E": "Phnom Srouch",
+            "PF": 1,
+            "PV": 12,
+            "Mix": 0,
+            "Total": 13,
+            "Pop": 1054,
+            "Incident": "12.333965844000"
+        }
+      ]
+    }
+
+Stock out
+~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/stock_out
+
+  To get HC that has stock out.
+
+  :query int Year: year of report, e.g: 2020,2021,...
+  :query string month: month of report, e.g: 01, 02, ..., 12
+  :query string province: code of province.
+  :query string od: code of OD. 
+  :query string user: user name get form MIS.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Name_Prov_K": "ព្រះសីហនុ",
+            "Name_Prov_E": "Preah Sihanouk",
+            "Name_Facility_K": "ព្រះសីហនុ មន្ទីរពេទ្យ",
+            "Name_Facility_E": "Preah Sihanouk RH",
+            "Name_OD_K": "ព្រះសីហនុ",
+            "Name_OD_E": "Preah Sihanouk",
+            "Description": "Rapid Dignostic Test (RDT)",
+            "Unit": "Kit / 25 Tests"
+        },
+        {
+            "Name_Prov_K": "ព្រះសីហនុ",
+            "Name_Prov_E": "Preah Sihanouk",
+            "Name_Facility_K": "ស្ទឹងហាវ",
+            "Name_Facility_E": "Steung Hav",
+            "Name_OD_K": "ព្រះសីហនុ",
+            "Name_OD_E": "Preah Sihanouk",
+            "Description": "Rapid Dignostic Test (RDT)",
+            "Unit": "Kit / 25 Tests"
+        },
+        {
+            "Name_Prov_K": "ព្រះសីហនុ",
+            "Name_Prov_E": "Preah Sihanouk",
+            "Name_Facility_K": "ទឹកល្អក់",
+            "Name_Facility_E": "Tuek L'ak",
+            "Name_OD_K": "ព្រះសីហនុ",
+            "Name_OD_E": "Preah Sihanouk",
+            "Description": "Rapid Dignostic Test (RDT)",
+            "Unit": "Kit / 25 Tests"
+        }
+      ]
+    }
+
+Malaria Hotspot
+~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Surveillance/malaria_hotspot
+
+  To get village that is in hight rank of malaria cases.
+
+  :query int year: year of report, e.g: 2020,2021,...
+  :query string province: code of province.
+  :query string od: code of OD. 
+  :query string month_from: begin month, e.g: 01, 02, ..., 12.
+  :query string month_to: end of month, e.g: 01, 02, ..., 12.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Name_Vill_E": "Kbal Teahean",
+            "Name_Vill_K": "ក្បាលទាហាន",
+            "Name_Facility_E": "Chheu Tom",
+            "Name_Facility_K": "ឈើតុំ",
+            "Code_Vill_T": "1503042100",
+            "Name_OD_E": "Krakor",
+            "Name_OD_K": "ក្រគរ",
+            "Lat": 12.255001,
+            "long": 104.161842,
+            "Total": 757,
+            "Rank": 35
+        },
+        {
+            "Name_Vill_E": "Bam Nak",
+            "Name_Vill_K": "បំណក់",
+            "Name_Facility_E": "Chheu Tom",
+            "Name_Facility_K": "ឈើតុំ",
+            "Code_Vill_T": "1503041900",
+            "Name_OD_E": "Krakor",
+            "Name_OD_K": "ក្រគរ",
+            "Lat": 12.28574,
+            "long": 104.180935,
+            "Total": 670,
+            "Rank": 33
+        },
+        {
+            "Name_Vill_E": "Ksetr Bourei",
+            "Name_Vill_K": "ក្សេត្របូរី",
+            "Name_Facility_E": "Phnom Kravanh",
+            "Name_Facility_K": "ភ្នំក្រវាញ",
+            "Code_Vill_T": "1504060300",
+            "Name_OD_E": "Kravanh",
+            "Name_OD_K": "ក្រវាញ",
+            "Lat": 12.04307,
+            "long": 103.828709,
+            "Total": 536,
+            "Rank": 26
+        },
+        {
+            "Name_Vill_E": "Po Meas",
+            "Name_Vill_K": "ពោធិមាស",
+            "Name_Facility_E": "Trapeang Cho",
+            "Name_Facility_K": "ត្រពាំងជោ",
+            "Code_Vill_T": "0504032600",
+            "Name_OD_E": "Kampong Speu",
+            "Name_OD_K": "កំពង់ស្ពឺ",
+            "Lat": 11.8267223,
+            "long": 104.130547,
+            "Total": 351,
+            "Rank": 25
+        }
+      ]
+    }
+
+Map of HC and Village
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-malaria-info/v1/Map/village_hf
+
+  To get village that is in hight rank of malaria cases.
+  
+  :query string code_province: code of province.
+  :query string code_od: code of OD. 
+  :query string code_hf: code of health facility.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Code_Vill_T": "0105030400",
+            "Name_Vill_K": "យាយអត",
+            "Name_Vill_E": "Yeay At",
+            "Code_Facility_T": "010205",
+            "Name_Facility_K": "និមិត្ត",
+            "Name_Facility_E": "Nimith",
+            "Code_OD_T": "0102",
+            "Name_OD_K": "ប៉ោយប៉ែត",
+            "Name_OD_E": "Poipet",
+            "Code_Prov_T": "01",
+            "Name_Prov_K": "បន្ទាយមានជ័យ",
+            "Name_Prov_E": "Banteay Meanchey",
+            "Lat": 13.546843,
+            "Long": 102.758938,
+            "Type": "Village"
+        },
+        {
+            "Code_Vill_T": "0105030500",
+            "Name_Vill_K": "គោកកាណាំង",
+            "Name_Vill_E": "Kok Kanang",
+            "Code_Facility_T": "010205",
+            "Name_Facility_K": "និមិត្ត",
+            "Name_Facility_E": "Nimith",
+            "Code_OD_T": "0102",
+            "Name_OD_K": "ប៉ោយប៉ែត",
+            "Name_OD_E": "Poipet",
+            "Code_Prov_T": "01",
+            "Name_Prov_K": "បន្ទាយមានជ័យ",
+            "Name_Prov_E": "Banteay Meanchey",
+            "Lat": 13.566657,
+            "Long": 102.733455,
+            "Type": "Village"
+        },
+        {
+            "Code_Vill_T": "0105030600",
+            "Name_Vill_K": "ត្មាតពង",
+            "Name_Vill_E": "Thmat Porng",
+            "Code_Facility_T": "010205",
+            "Name_Facility_K": "និមិត្ត",
+            "Name_Facility_E": "Nimith",
+            "Code_OD_T": "0102",
+            "Name_OD_K": "ប៉ោយប៉ែត",
+            "Name_OD_E": "Poipet",
+            "Code_Prov_T": "01",
+            "Name_Prov_K": "បន្ទាយមានជ័យ",
+            "Name_Prov_E": "Banteay Meanchey",
+            "Lat": 13.572624,
+            "Long": 102.716994,
+            "Type": "Village"
+        },
+        {
+            "Code_Vill_T": "0105090200",
+            "Name_Vill_K": "ជោគជ័យ",
+            "Name_Vill_E": "Chouk Chey",
+            "Code_Facility_T": "010218",
+            "Name_Facility_K": "សិលាខ្មែរ",
+            "Name_Facility_E": "Seila Khmer",
+            "Code_OD_T": "0102",
+            "Name_OD_K": "ប៉ោយប៉ែត",
+            "Name_OD_E": "Poipet",
+            "Code_Prov_T": "01",
+            "Name_Prov_K": "បន្ទាយមានជ័យ",
+            "Name_Prov_E": "Banteay Meanchey",
+            "Lat": 13.760794,
+            "Long": 102.701674,
+            "Type": "Village"
+        }         
+      ]
+    }
+
+Map of foci
+~~~~~~~~~~~
+
+.. http:post:: /api-malaria-info/v1/Foci/list
+
+  To get foci village map
+  
+  :query string user: user name.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Name_Prov_E": "Kampong Chhnang",
+            "Name_OD_E": "Kampong Chhnang",
+            "Name_Facility_E": "Kbal Tuek",
+            "Name_Vill_E": "Doung Sla",
+            "Lat": 11.961394,
+            "Long": 104.303273,
+            "Year1": "orange",
+            "Year2": "",
+            "Year3": "",
+            "Year4": "",
+            "Status": "Active"
+        },
+        {
+            "Name_Prov_E": "Kampong Chhnang",
+            "Name_OD_E": "Kampong Tralach",
+            "Name_Facility_E": "Kampong Tralach Leu",
+            "Name_Vill_E": "Samretthi Chey",
+            "Lat": 11.910326,
+            "Long": 104.778443,
+            "Year1": "orange",
+            "Year2": "green",
+            "Year3": "",
+            "Year4": "",
+            "Status": "Residual"
+        }
+      ]
+    }
+
+Contact
+-------
+
+.. http:post:: /api-malaria-info/v1/Contact/list
+
+  To get contact list
+  
+  :query string type: type of contact, CNM/Partner/PHD/OD/HC/VMW.
+  :query string user: user name.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Rec_ID": 3909,
+            "Name": "Mr. Chhim Chon",
+            "Phone": "077 918 883",
+            "Email": "",
+            "Position": "Officer",
+            "UnitName": "Accounting"
+        },
+        {
+            "Rec_ID": 3910,
+            "Name": "Mr. Yeouk Soklin",
+            "Phone": "012 311 713",
+            "Email": "",
+            "Position": "Officer",
+            "UnitName": "Accounting"
+        },
+        {
+            "Rec_ID": 3975,
+            "Name": "Ms. Arm Monybora",
+            "Phone": "012 247 806",
+            "Email": "",
+            "Position": "Contract Staff",
+            "UnitName": "Accounting"
+        },
+        {
+            "Rec_ID": 3895,
+            "Name": "Ma. Chea Monthavy",
+            "Phone": "012 779 353",
+            "Email": "",
+            "Position": "Deputy Chief of Administration Office",
+            "UnitName": "Administration"
+        }
+      ]
+    }
+
+Notification
+------------
+
+.. http:get:: /api-malaria-info/v1/Notification/get_list
+
+  To get list of notification
+  
+  :query string imei: Imei of device.
+  :query string type: CASE/STOCK.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+            "Rec_ID": 639506,
+            "Imei": "866222031369872",
+            "Message": "អ្នកជំងឺឈ្មោះ test ភេទប្រុស អាយុ 30ឆ្នាំ លេខទូរសព្ទអ្នកជំងឺ 096 មានប្រភេទមេរោគ  Pv នៅភូមិជាចកណ្ដាល មណ្ឌលសុខភាព​ជាច ស្រុកប្រតិបត្តិកំចាយមារ ខេត្តព្រៃវែង រកឃើញដោយ VMWភូមិជាចកណ្ដាល លេខទំនាក់ទំនង 0968888886​ ។ ",
+            "Type": "case",
+            "InitTime": "2021-12-19 13:48:33.293"
+        },
+        {
+            "Rec_ID": 639503,
+            "Imei": "866222031369872",
+            "Message": "អ្នកជំងឺឈ្មោះ hhh ភេទប្រុស អាយុ 30ឆ្នាំ លេខទូរសព្ទអ្នកជំងឺ 096 មានប្រភេទមេរោគ  Pv នៅភូមិរហាល មណ្ឌលសុខភាព​ជាច ស្រុកប្រតិបត្តិកំចាយមារ ខេត្តព្រៃវែង រកឃើញដោយ HCជាច លេខទំនាក់ទំនង 012917012​ ។ ",
+            "Type": "case",
+            "InitTime": "2021-12-19 13:30:19.527"
+        }
+      ]
+    }

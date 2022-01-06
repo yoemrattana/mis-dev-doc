@@ -84,8 +84,26 @@
 <li class="toctree-l3"><a class="reference internal" href="#daily-case">Daily case</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#weekly-case">Weekly case</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#monthly-case">Monthly case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#this-year-case">This year case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pv-radical-cure-chart">Pv Radical cure (chart)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hf-report-timely">HF report timely</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vmw-report-timely">VMW report timely</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#annual-foci-classification">Annual Foci classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#health-worker">Health worker</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#dashboard">Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#number-of-malaria-test-and-case-bar-chart">Number of malaria test and case (Bar chart)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#top-10-villages-with-pf-and-mix-pie-chart">Top 10 villages with Pf and Mix (Pie chart)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#top-10-villages-table">Top 10 villages (table)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stock-out">Stock out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#malaria-hotspot">Malaria Hotspot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map-of-hc-and-village">Map of HC and Village</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map-of-foci">Map of foci</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notification">Notification</a></li>
 </ul>
 </li>
 </ul>
@@ -277,6 +295,1041 @@
 </dd></dl>
 
 </div>
+<div class="section" id="this-year-case">
+<h3>This year case<a class="headerlink" href="#this-year-case" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-case_this_year">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/case_this_year</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-case_this_year" title="Permalink to this definition"></a></dt>
+<dd><p>To get this year case information</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+          <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">54</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="pv-radical-cure-chart">
+<h3>Pv Radical cure (chart)<a class="headerlink" href="#pv-radical-cure-chart" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-pv_radicalcure">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/pv_radicalcure</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-pv_radicalcure" title="Permalink to this definition"></a></dt>
+<dd><p>To get Pv radical cure info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year.</p></li>
+<li><p><strong>month_from</strong> (<em>string</em>) – month begin.</p></li>
+<li><p><strong>month_to</strong> (<em>string</em>) – month to.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Pv&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+          <span class="nt">&quot;G6PDTest&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+          <span class="nt">&quot;G6PDNormal&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+          <span class="nt">&quot;Primaquine&quot;</span><span class="p">:</span> <span class="mi">13</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hf-report-timely">
+<h3>HF report timely<a class="headerlink" href="#hf-report-timely" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-hf_report_timely">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/hf_report_timely</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-hf_report_timely" title="Permalink to this definition"></a></dt>
+<dd><p>To get report timely of health facility</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year, e.g: 2021, 2022, …</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – month, e.g: 01, …,12.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Timely&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="s2">&quot;36&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Received&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="s2">&quot;815&quot;</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="vmw-report-timely">
+<h3>VMW report timely<a class="headerlink" href="#vmw-report-timely" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-vmw_report_timely">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/vmw_report_timely</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-vmw_report_timely" title="Permalink to this definition"></a></dt>
+<dd><p>To get report timely of VMW</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year, e.g: 2021, 2022, …</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – month, e.g: 01, …,12.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Timely&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="mi">42</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Received&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Value&quot;</span><span class="p">:</span> <span class="mi">3311</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="annual-foci-classification">
+<h3>Annual Foci classification<a class="headerlink" href="#annual-foci-classification" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-foci">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/foci</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-foci" title="Permalink to this definition"></a></dt>
+<dd><p>To get annual foci classification and mornitoring</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Chhnang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កំពង់ឆ្នាំង&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;04&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Chhnang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កំពង់ឆ្នាំង&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0401&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kbal Tuek&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្បាលទឹក&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;040116&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Doung Sla&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ដូងស្លា&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0408040200&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">11.961394</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">104.303273</span><span class="p">,</span>
+        <span class="nt">&quot;Year1&quot;</span><span class="p">:</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Status&quot;</span><span class="p">:</span> <span class="s2">&quot;Active&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Chhnang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កំពង់ឆ្នាំង&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;04&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Tralach&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កំពង់ត្រឡាច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0402&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Tralach Leu&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កំពង់ត្រឡាចលើ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;040202&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samretthi Chey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរិទ្ធិជ័យ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0405040400&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">11.910326</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">104.778443</span><span class="p">,</span>
+        <span class="nt">&quot;Year1&quot;</span><span class="p">:</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year2&quot;</span><span class="p">:</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Status&quot;</span><span class="p">:</span> <span class="s2">&quot;Residual&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="health-worker">
+<h3>Health worker<a class="headerlink" href="#health-worker" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-HF-hf_worker">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/HF/hf_worker</span></span><a class="headerlink" href="#get--api-malaria-info-v1-HF-hf_worker" title="Permalink to this definition"></a></dt>
+<dd><p>To get number of health facility, village, VMW, MMW, OD, province that is malaria target</p>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;PopAtRisk&quot;</span><span class="p">:</span> <span class="mi">9714485</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Village&quot;</span><span class="p">:</span> <span class="mi">10739</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;MMW&quot;</span><span class="p">:</span> <span class="mi">269</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;VMW&quot;</span><span class="p">:</span> <span class="mi">2560</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;HC&quot;</span><span class="p">:</span> <span class="mi">874</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;OD&quot;</span><span class="p">:</span> <span class="mi">55</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Province&quot;</span><span class="p">:</span> <span class="mi">21</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="dashboard">
+<h2>Dashboard<a class="headerlink" href="#dashboard" title="Permalink to this headline"></a></h2>
+<div class="section" id="number-of-malaria-test-and-case-bar-chart">
+<h3>Number of malaria test and case (Bar chart)<a class="headerlink" href="#number-of-malaria-test-and-case-bar-chart" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-malaria">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/malaria</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-malaria" title="Permalink to this definition"></a></dt>
+<dd><p>To get number of test, Pv, Pf, Mix of each month in selected year</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Year</strong> (<em>int</em>) – year of report, e.g: 2020,2021,…</p></li>
+<li><p><strong>province</strong> (<em>string</em>) – code of province.</p></li>
+<li><p><strong>od</strong> (<em>string</em>) – code of OD.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">49</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">797</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;02&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1131</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;03&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1347</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;04&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1450</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;05&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1095</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">77</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">113</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1565</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">2274</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;08&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">41</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">2152</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1352</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1215</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1143</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="nt">&quot;MIX&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Positive&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+        <span class="nt">&quot;Test&quot;</span><span class="p">:</span> <span class="mi">1221</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="top-10-villages-with-pf-and-mix-pie-chart">
+<h3>Top 10 villages with Pf and Mix (Pie chart)<a class="headerlink" href="#top-10-villages-with-pf-and-mix-pie-chart" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-pf_mix">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/pf_mix</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-pf_mix" title="Permalink to this definition"></a></dt>
+<dd><p>To get top 10 villages with Pf and Mix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Year</strong> (<em>int</em>) – year of report, e.g: 2020,2021,…</p></li>
+<li><p><strong>province</strong> (<em>string</em>) – code of province.</p></li>
+<li><p><strong>od</strong> (<em>string</em>) – code of OD.</p></li>
+<li><p><strong>month_from</strong> (<em>string</em>) – begin month.</p></li>
+<li><p><strong>month_to</strong> (<em>string</em>) – end of month.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;រំដួលថ្មី&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Rumduol Thmei&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">61</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពាមល្វា&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Peam lvea&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">37</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រាំងចេក&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Krang Chek&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">18</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយរការ_គិរីសែនជ័យ (M)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Roka_Kirisenchey (M)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">17</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ជន្លង់ម្លូ&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chonlong Mlu&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរោងរំដួល&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samroung romduol&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">15</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពាមល្វា_ស្រែដូង (M)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Peam Lvea_Sre Doung (M)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">13</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ដូង_គ្រោងមានជ័យ (M)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Doung_Kraong Meanchey (M)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">12</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ដូង&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Doung&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">10</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រាំងក្រូច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Krang Krouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">8</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កណ្តាល&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kandal&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរោងរំដួល&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samroung romduol&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">7</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;អ្នកជំងឺមកពីភូមិផ្សេង (203 ភូមិ)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Patient form other village (203 Village)&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មណ្ឌលសុខភាពផ្សេង&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Patient form other HF&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្រុកប្រតិបត្តិផ្សេង&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Patient form other OD&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;PFMix&quot;</span><span class="p">:</span> <span class="mi">66</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="top-10-villages-table">
+<h3>Top 10 villages (table)<a class="headerlink" href="#top-10-villages-table" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-top_ten_village">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/top_ten_village</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-top_ten_village" title="Permalink to this definition"></a></dt>
+<dd><p>To get top 10 villages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year of report, e.g: 2020,2021,…</p></li>
+<li><p><strong>province</strong> (<em>string</em>) – code of province.</p></li>
+<li><p><strong>od</strong> (<em>string</em>) – code of OD.</p></li>
+<li><p><strong>month_from</strong> (<em>string</em>) – begin month, e.g: 01, 02, …, 12.</p></li>
+<li><p><strong>month_to</strong> (<em>string</em>) – end of month, e.g: 01, 02, …, 12.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;រំដួលថ្មី&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Rumduol Thmei&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">345</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;246.376811594000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រាំងចេក&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Krang Chek&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;72.000000000000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយរការ_គិរីសែនជ័យ (M)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Roka_Kirisenchey (M)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">434</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;78.341013824000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រាំងបឹង&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Krang Boeng&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរោងរំដួល&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samroung romduol&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">645</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;34.108527131000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្រែជ្រៅ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Srae Chrov&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរោងរំដួល&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samroung romduol&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">735</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;23.129251700000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ជន្លង់ម្លូ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chonlong Mlu&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរោងរំដួល&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samroung romduol&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">1016</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;15.748031496000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ដក់ពរ_ទ័ពម្រាក់ (M)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Dak Por_Toap Mreak (M)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">340</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;44.117647058000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ដូង&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Doung&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">869</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;16.110471806000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រៃកាហៀច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Prey Kahiech&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;មិត្តភាពកម្ពុជាជប៉ុន ចំបក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chambak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">704</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;19.886363636000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រាំងធំ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Krang Thum&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សំរោងរំដួល&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samroung romduol&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំស្រួច&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Srouch&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PF&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;PV&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="nt">&quot;Mix&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+        <span class="nt">&quot;Pop&quot;</span><span class="p">:</span> <span class="mi">1054</span><span class="p">,</span>
+        <span class="nt">&quot;Incident&quot;</span><span class="p">:</span> <span class="s2">&quot;12.333965844000&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="stock-out">
+<h3>Stock out<a class="headerlink" href="#stock-out" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-stock_out">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/stock_out</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-stock_out" title="Permalink to this definition"></a></dt>
+<dd><p>To get HC that has stock out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Year</strong> (<em>int</em>) – year of report, e.g: 2020,2021,…</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – month of report, e.g: 01, 02, …, 12</p></li>
+<li><p><strong>province</strong> (<em>string</em>) – code of province.</p></li>
+<li><p><strong>od</strong> (<em>string</em>) – code of OD.</p></li>
+<li><p><strong>user</strong> (<em>string</em>) – user name get form MIS.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះសីហនុ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Sihanouk&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះសីហនុ មន្ទីរពេទ្យ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Sihanouk RH&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះសីហនុ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Sihanouk&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Rapid Dignostic Test (RDT)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Unit&quot;</span><span class="p">:</span> <span class="s2">&quot;Kit / 25 Tests&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះសីហនុ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Sihanouk&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្ទឹងហាវ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Steung Hav&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះសីហនុ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Sihanouk&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Rapid Dignostic Test (RDT)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Unit&quot;</span><span class="p">:</span> <span class="s2">&quot;Kit / 25 Tests&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះសីហនុ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Sihanouk&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ទឹកល្អក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Tuek L&#39;ak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ព្រះសីហនុ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Preah Sihanouk&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Rapid Dignostic Test (RDT)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Unit&quot;</span><span class="p">:</span> <span class="s2">&quot;Kit / 25 Tests&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="malaria-hotspot">
+<h3>Malaria Hotspot<a class="headerlink" href="#malaria-hotspot" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Surveillance-malaria_hotspot">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Surveillance/malaria_hotspot</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Surveillance-malaria_hotspot" title="Permalink to this definition"></a></dt>
+<dd><p>To get village that is in hight rank of malaria cases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – year of report, e.g: 2020,2021,…</p></li>
+<li><p><strong>province</strong> (<em>string</em>) – code of province.</p></li>
+<li><p><strong>od</strong> (<em>string</em>) – code of OD.</p></li>
+<li><p><strong>month_from</strong> (<em>string</em>) – begin month, e.g: 01, 02, …, 12.</p></li>
+<li><p><strong>month_to</strong> (<em>string</em>) – end of month, e.g: 01, 02, …, 12.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kbal Teahean&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្បាលទាហាន&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chheu Tom&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ឈើតុំ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503042100&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Krakor&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រគរ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">12.255001</span><span class="p">,</span>
+        <span class="nt">&quot;long&quot;</span><span class="p">:</span> <span class="mf">104.161842</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">757</span><span class="p">,</span>
+        <span class="nt">&quot;Rank&quot;</span><span class="p">:</span> <span class="mi">35</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Bam Nak&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បំណក់&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chheu Tom&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ឈើតុំ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1503041900&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Krakor&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រគរ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">12.28574</span><span class="p">,</span>
+        <span class="nt">&quot;long&quot;</span><span class="p">:</span> <span class="mf">104.180935</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">670</span><span class="p">,</span>
+        <span class="nt">&quot;Rank&quot;</span><span class="p">:</span> <span class="mi">33</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Ksetr Bourei&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្សេត្របូរី&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Phnom Kravanh&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ភ្នំក្រវាញ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504060300&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kravanh&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ក្រវាញ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">12.04307</span><span class="p">,</span>
+        <span class="nt">&quot;long&quot;</span><span class="p">:</span> <span class="mf">103.828709</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">536</span><span class="p">,</span>
+        <span class="nt">&quot;Rank&quot;</span><span class="p">:</span> <span class="mi">26</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Po Meas&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ពោធិមាស&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Trapeang Cho&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ត្រពាំងជោ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0504032600&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Speu&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;កំពង់ស្ពឺ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">11.8267223</span><span class="p">,</span>
+        <span class="nt">&quot;long&quot;</span><span class="p">:</span> <span class="mf">104.130547</span><span class="p">,</span>
+        <span class="nt">&quot;Total&quot;</span><span class="p">:</span> <span class="mi">351</span><span class="p">,</span>
+        <span class="nt">&quot;Rank&quot;</span><span class="p">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="map-of-hc-and-village">
+<h3>Map of HC and Village<a class="headerlink" href="#map-of-hc-and-village" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Map-village_hf">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Map/village_hf</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Map-village_hf" title="Permalink to this definition"></a></dt>
+<dd><p>To get village that is in hight rank of malaria cases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code_province</strong> (<em>string</em>) – code of province.</p></li>
+<li><p><strong>code_od</strong> (<em>string</em>) – code of OD.</p></li>
+<li><p><strong>code_hf</strong> (<em>string</em>) – code of health facility.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0105030400&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;យាយអត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Yeay At&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010205&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;និមិត្ត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Nimith&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយមានជ័យ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Meanchey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">13.546843</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">102.758938</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Village&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0105030500&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;គោកកាណាំង&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kok Kanang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010205&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;និមិត្ត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Nimith&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយមានជ័យ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Meanchey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">13.566657</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">102.733455</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Village&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0105030600&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ត្មាតពង&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Thmat Porng&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010205&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;និមិត្ត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Nimith&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយមានជ័យ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Meanchey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">13.572624</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">102.716994</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Village&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0105090200&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ជោគជ័យ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Chouk Chey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010218&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_K&quot;</span><span class="p">:</span> <span class="s2">&quot;សិលាខ្មែរ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Seila Khmer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_K&quot;</span><span class="p">:</span> <span class="s2">&quot;ប៉ោយប៉ែត&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Poipet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_K&quot;</span><span class="p">:</span> <span class="s2">&quot;បន្ទាយមានជ័យ&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Banteay Meanchey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">13.760794</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">102.701674</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Village&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="map-of-foci">
+<h3>Map of foci<a class="headerlink" href="#map-of-foci" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-malaria-info-v1-Foci-list">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Foci/list</span></span><a class="headerlink" href="#post--api-malaria-info-v1-Foci-list" title="Permalink to this definition"></a></dt>
+<dd><p>To get foci village map</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> (<em>string</em>) – user name.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Chhnang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Chhnang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kbal Tuek&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Doung Sla&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">11.961394</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">104.303273</span><span class="p">,</span>
+        <span class="nt">&quot;Year1&quot;</span><span class="p">:</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Status&quot;</span><span class="p">:</span> <span class="s2">&quot;Active&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Name_Prov_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Chhnang&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_OD_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Tralach&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Facility_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Kampong Tralach Leu&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name_Vill_E&quot;</span><span class="p">:</span> <span class="s2">&quot;Samretthi Chey&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">11.910326</span><span class="p">,</span>
+        <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">104.778443</span><span class="p">,</span>
+        <span class="nt">&quot;Year1&quot;</span><span class="p">:</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year2&quot;</span><span class="p">:</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Year4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Status&quot;</span><span class="p">:</span> <span class="s2">&quot;Residual&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline"></a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-malaria-info-v1-Contact-list">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Contact/list</span></span><a class="headerlink" href="#post--api-malaria-info-v1-Contact-list" title="Permalink to this definition"></a></dt>
+<dd><p>To get contact list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>string</em>) – type of contact, CNM/Partner/PHD/OD/HC/VMW.</p></li>
+<li><p><strong>user</strong> (<em>string</em>) – user name.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3909</span><span class="p">,</span>
+        <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mr. Chhim Chon&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;077 918 883&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;Officer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;UnitName&quot;</span><span class="p">:</span> <span class="s2">&quot;Accounting&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3910</span><span class="p">,</span>
+        <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mr. Yeouk Soklin&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;012 311 713&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;Officer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;UnitName&quot;</span><span class="p">:</span> <span class="s2">&quot;Accounting&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3975</span><span class="p">,</span>
+        <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ms. Arm Monybora&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;012 247 806&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;Contract Staff&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;UnitName&quot;</span><span class="p">:</span> <span class="s2">&quot;Accounting&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3895</span><span class="p">,</span>
+        <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ma. Chea Monthavy&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;012 779 353&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Position&quot;</span><span class="p">:</span> <span class="s2">&quot;Deputy Chief of Administration Office&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;UnitName&quot;</span><span class="p">:</span> <span class="s2">&quot;Administration&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="notification">
+<h2>Notification<a class="headerlink" href="#notification" title="Permalink to this headline"></a></h2>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-malaria-info-v1-Notification-get_list">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-malaria-info/v1/Notification/get_list</span></span><a class="headerlink" href="#get--api-malaria-info-v1-Notification-get_list" title="Permalink to this definition"></a></dt>
+<dd><p>To get list of notification</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imei</strong> (<em>string</em>) – Imei of device.</p></li>
+<li><p><strong>type</strong> (<em>string</em>) – CASE/STOCK.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">639506</span><span class="p">,</span>
+        <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;866222031369872&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Message&quot;</span><span class="p">:</span> <span class="s2">&quot;អ្នកជំងឺឈ្មោះ test ភេទប្រុស អាយុ 30ឆ្នាំ លេខទូរសព្ទអ្នកជំងឺ 096 មានប្រភេទមេរោគ  Pv នៅភូមិជាចកណ្ដាល មណ្ឌលសុខភាព​ជាច ស្រុកប្រតិបត្តិកំចាយមារ ខេត្តព្រៃវែង រកឃើញដោយ VMWភូមិជាចកណ្ដាល លេខទំនាក់ទំនង 0968888886​ ។ &quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-19 13:48:33.293&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">639503</span><span class="p">,</span>
+        <span class="nt">&quot;Imei&quot;</span><span class="p">:</span> <span class="s2">&quot;866222031369872&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Message&quot;</span><span class="p">:</span> <span class="s2">&quot;អ្នកជំងឺឈ្មោះ hhh ភេទប្រុស អាយុ 30ឆ្នាំ លេខទូរសព្ទអ្នកជំងឺ 096 មានប្រភេទមេរោគ  Pv នៅភូមិរហាល មណ្ឌលសុខភាព​ជាច ស្រុកប្រតិបត្តិកំចាយមារ ខេត្តព្រៃវែង រកឃើញដោយ HCជាច លេខទំនាក់ទំនង 012917012​ ។ &quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;case&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-19 13:30:19.527&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </div>
 </div>
 
