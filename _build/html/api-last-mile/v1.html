@@ -88,6 +88,21 @@
 <li class="toctree-l3"><a class="reference internal" href="#insert-update-house-hold">Insert/Update house hold</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#tda">TDA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tda-form">TDA form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-update-tda">Insert/Update TDA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ipt">IPT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ipt-form">IPT form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-update-ipt">Insert/Update IPT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afs">AFS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#afs-form">AFS form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-update-afs">Insert/Update AFS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -252,9 +267,9 @@
 </div>
 <div class="section" id="insert-update-house-hold">
 <h3>Insert/Update house hold<a class="headerlink" href="#insert-update-house-hold" title="Permalink to this headline"></a></h3>
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api-last-smile-v1-fociHouseHold-update">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/fociHouseHold/update</span></span><a class="headerlink" href="#get--api-last-smile-v1-fociHouseHold-update" title="Permalink to this definition"></a></dt>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-last-smile-v1-fociHouseHold-update">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/fociHouseHold/update</span></span><a class="headerlink" href="#post--api-last-smile-v1-fociHouseHold-update" title="Permalink to this definition"></a></dt>
 <dd><p>Insert/Update house hold</p>
 <p><strong>Parse as json</strong>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -327,6 +342,319 @@
 <p>if Rec_ID is not null then it will update.</p>
 <p>If member of house hold with Age between 15 and 49 and Sex = M then TDA = Yes</p>
 <p>If member of house hold with Age between 15 and 49 and ForestEntry = Yes then IPT = Yes</p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="tda">
+<h2>TDA<a class="headerlink" href="#tda" title="Permalink to this headline"></a></h2>
+<div class="section" id="tda-form">
+<h3>TDA form<a class="headerlink" href="#tda-form" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-last-smile-v1-TDA-form">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/TDA/form</span></span><a class="headerlink" href="#get--api-last-smile-v1-TDA-form" title="Permalink to this definition"></a></dt>
+<dd><p>Get form of TDA</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>house_hold_id</strong> (<em>int</em>) – id (primary key) house hold.</p></li>
+<li><p><strong>type</strong> (<em>int</em>) – 1/2.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Respone as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;TDA&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;TDADate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-19&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">216</span><span class="p">,</span>
+          <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">792</span><span class="p">,</span>
+          <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;ភៀង សុង&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+          <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;DoNotUse&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Reject&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Absent&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;SideEffect&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;RejectReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;IsTDA&quot;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;TDADate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-19&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">216</span><span class="p">,</span>
+          <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">794</span><span class="p">,</span>
+          <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;សុង វិច&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+          <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;DoNotUse&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Reject&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Absent&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;SideEffect&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;RejectReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;IsTDA&quot;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DoNotUse</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>Reject</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>Absent</strong> (<em>string</em>) – Yes/No.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="insert-update-tda">
+<h3>Insert/Update TDA<a class="headerlink" href="#insert-update-tda" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-last-smile-v1-TDA-update">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/TDA/update</span></span><a class="headerlink" href="#post--api-last-smile-v1-TDA-update" title="Permalink to this definition"></a></dt>
+<dd><p>Insert/update TDA</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;TDA&quot;</span> <span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;TDADate&quot;</span> <span class="p">:</span> <span class="s2">&quot;2021-07-07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;DoNotUse&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Reject&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Absent&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-18-01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;SideEffect&quot;</span><span class="p">:</span> <span class="s2">&quot;headache&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;RejectReason&quot;</span><span class="p">:</span> <span class="s2">&quot;lazy&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">216</span><span class="p">,</span>
+        <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">794</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;TDADate&quot;</span> <span class="p">:</span> <span class="s2">&quot;2021-07-07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;DoNotUse&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Reject&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Absent&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;SideEffect&quot;</span><span class="p">:</span> <span class="s2">&quot;headache&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;RejectReason&quot;</span><span class="p">:</span> <span class="s2">&quot;lazy&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">216</span><span class="p">,</span>
+        <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">794</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="ipt">
+<h2>IPT<a class="headerlink" href="#ipt" title="Permalink to this headline"></a></h2>
+<div class="section" id="ipt-form">
+<h3>IPT form<a class="headerlink" href="#ipt-form" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-last-smile-v1-IPT-form">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/IPT/form</span></span><a class="headerlink" href="#get--api-last-smile-v1-IPT-form" title="Permalink to this definition"></a></dt>
+<dd><p>Get form of IPT</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>house_hold_id</strong> (<em>int</em>) – id (primary key) house hold.</p></li>
+<li><p><strong>month</strong> (<em>string</em>) – 01,02,…,12.</p></li>
+<li><p><strong>year</strong> (<em>string</em>) – 2021,2022,…</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Respone as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">792</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;ភៀង សុង&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+          <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;IPTDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;DoNotUse&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;Reject&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">216</span><span class="p">,</span>
+          <span class="nt">&quot;NotEnterForest&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;RefuseReason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;Absent&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;IsIPT&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NotEnterForest</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>DoNotUse</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>Reject</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>Absent</strong> (<em>string</em>) – Yes/No.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="insert-update-ipt">
+<h3>Insert/Update IPT<a class="headerlink" href="#insert-update-ipt" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-last-smile-v1-IPT-update">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/IPT/update</span></span><a class="headerlink" href="#post--api-last-smile-v1-IPT-update" title="Permalink to this definition"></a></dt>
+<dd><p>Insert/update IPT</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">479</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;08&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+          <span class="nt">&quot;IPTDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-07&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;DoNotUse&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Reject&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;NotEnterForest&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Absent&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;RefuseReason&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">82</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="afs">
+<h2>AFS<a class="headerlink" href="#afs" title="Permalink to this headline"></a></h2>
+<div class="section" id="afs-form">
+<h3>AFS form<a class="headerlink" href="#afs-form" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-last-smile-v1-AFS-form">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/AFS/form</span></span><a class="headerlink" href="#get--api-last-smile-v1-AFS-form" title="Permalink to this definition"></a></dt>
+<dd><p>Get form of AFS</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>house_hold_id</strong> (<em>int</em>) – id (primary key) house hold.</p></li>
+<li><p><strong>afs_date</strong> (<em>string</em>) – Date of AFS, YYYY-MM-DD, e.g: 2021-11-30.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Respone as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;AFS&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">479</span><span class="p">,</span>
+          <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sophy&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+          <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;AFSDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W1&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W2&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W3&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W4&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W1Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W2Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W3Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W4Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">82</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">480</span><span class="p">,</span>
+          <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bopha&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span>
+          <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;AFSDate&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W1&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W2&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W3&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W4&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W1Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W2Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W3Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;W4Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">82</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>W1/W2/W3/W4</strong> (<em>string</em>) – Yes/No/N/A.</p></li>
+<li><p><strong>W1Specie/W2Specie/W3Specie/W4Specie</strong> (<em>string</em>) – F/V/M/N.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="insert-update-afs">
+<h3>Insert/Update AFS<a class="headerlink" href="#insert-update-afs" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-last-smile-v1-AFS-update">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/AFS/update</span></span><a class="headerlink" href="#get--api-last-smile-v1-AFS-update" title="Permalink to this definition"></a></dt>
+<dd><p>Insert/update AFS</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;AFS&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">479</span><span class="p">,</span>
+        <span class="nt">&quot;AFSDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W1Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;W2Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;W3Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;W4Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">82</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;HouseMemberID&quot;</span><span class="p">:</span> <span class="mi">480</span><span class="p">,</span>
+        <span class="nt">&quot;AFSDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-07-07&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W1Specie&quot;</span><span class="p">:</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;W2Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;W3Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;W4Specie&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">82</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </dd></dl>
 
