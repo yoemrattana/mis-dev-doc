@@ -41,3 +41,9 @@ Welcome to MIS developer doc's documentation!
    :caption: API of VWM QA App
 
    api-qa/v1
+
+.. toctree::
+   :maxdepth: 2
+   :caption: API of Last mile
+
+   api-last-mile/v1

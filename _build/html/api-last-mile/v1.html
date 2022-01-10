@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API of Last mile &mdash; MIS developer doc  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css\rtd_sphinx_search.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/js\rtd_sphinx_search.min.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="API v1 of QA" href="../api-qa/v1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MIS developer doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html#who-is-for-mis">Who is for MIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../technology/technology.html">Technology usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Third%20Party/data-export-tool.html">Third Party</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of CNM Reporting App</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/v4.html">API v4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/v5.html">API v5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-cmi/v1.html">API v1 of CMI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of VWM QA App</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-qa/v1.html">API v1 of QA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of Last mile</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API of Last mile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#house-hold">House hold</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#house-hold-list">House hold List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#house-hold-detail">House hold detail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-update-house-hold">Insert/Update house hold</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MIS developer doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API of Last mile</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api-last-mile/v1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="api-of-last-mile">
+<h1>API of Last mile<a class="headerlink" href="#api-of-last-mile" title="Permalink to this headline"></a></h1>
+<div class="section" id="house-hold">
+<h2>House hold<a class="headerlink" href="#house-hold" title="Permalink to this headline"></a></h2>
+<div class="section" id="house-hold-list">
+<h3>House hold List<a class="headerlink" href="#house-hold-list" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-last-smile-v1-fociHouseHold-list">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/fociHouseHold/list</span></span><a class="headerlink" href="#get--api-last-smile-v1-fociHouseHold-list" title="Permalink to this definition"></a></dt>
+<dd><p>get list of house hold</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>village_code</strong> (<em>int</em>) – code of village</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Respone as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;1504060300&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;HouseNumber&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;HouseHolder&quot;</span><span class="p">:</span> <span class="s2">&quot;ធី&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;010898989&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;TotalMember&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;LLIN&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;LLINLack&quot;</span><span class="p">:</span> <span class="mi">-2</span><span class="p">,</span>
+      <span class="nt">&quot;LLIHN&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;LLIHNLack&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;TotalForestEntry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">11.5923671</span><span class="p">,</span>
+      <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">104.8897794</span><span class="p">,</span>
+      <span class="nt">&quot;HasMemberAtHome&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;InitUser&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;IsMobileEntry&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;TDA1&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;TDA2&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="nt">&quot;AFS&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>HasMemberAtHome</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>TDA1</strong> (<em>string</em>) – Date of TDA 1.</p></li>
+<li><p><strong>TDA2</strong> (<em>string</em>) – Date of TDA 2.</p></li>
+<li><p><strong>IPT</strong> (<em>array</em>) – Date of IPT (Array).</p></li>
+<li><p><strong>AFS</strong> (<em>array</em>) – Date of AFS (Array).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="house-hold-detail">
+<h3>House hold detail<a class="headerlink" href="#house-hold-detail" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-last-smile-v1-fociHouseHold-detail">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/fociHouseHold/detail</span></span><a class="headerlink" href="#get--api-last-smile-v1-fociHouseHold-detail" title="Permalink to this definition"></a></dt>
+<dd><p>get detail of house hold</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>house_hold_id</strong> (<em>int</em>) – id (primary key) house hold.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Respone as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;house&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+          <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0504033301&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;HouseNumber&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;HouseHolder&quot;</span><span class="p">:</span> <span class="s2">&quot;Dary&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;069859540&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;TotalMember&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="nt">&quot;LLIN&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="nt">&quot;LLINLack&quot;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+          <span class="nt">&quot;LLIHN&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;LLIHNLack&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;TotalForestEntry&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">11.8050141</span><span class="p">,</span>
+          <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">104.1685751</span><span class="p">,</span>
+          <span class="nt">&quot;HasMemberAtHome&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;InitUser&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;IsMobileEntry&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;TDA1&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;TDA2&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+              <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dara&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+              <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;ForestEntry&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;TDA&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">21</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">41</span><span class="p">,</span>
+              <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Daro&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">43</span><span class="p">,</span>
+              <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;ForestEntry&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;TDA&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+              <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">21</span>
+          <span class="p">}</span>
+      <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="insert-update-house-hold">
+<h3>Insert/Update house hold<a class="headerlink" href="#insert-update-house-hold" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-last-smile-v1-fociHouseHold-update">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-last-smile/v1/fociHouseHold/update</span></span><a class="headerlink" href="#get--api-last-smile-v1-fociHouseHold-update" title="Permalink to this definition"></a></dt>
+<dd><p>Insert/Update house hold</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;house&quot;</span><span class="p">:{</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0109050901&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;HouseNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;HouseHolder&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;013346789&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TotalMember&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;LLIN&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;LLINLack&quot;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+    <span class="nt">&quot;LLIHN&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;LLIHNLack&quot;</span><span class="p">:</span> <span class="mi">-2</span><span class="p">,</span>
+    <span class="nt">&quot;TotalForestEntry&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;Month&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;HasMemberAtHome&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Lat&quot;</span><span class="p">:</span> <span class="mf">122.255</span><span class="p">,</span>
+    <span class="nt">&quot;Long&quot;</span><span class="p">:</span> <span class="mf">234.555</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;member&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="s2">&quot;34&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ForestEntry&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;TDA&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;ty&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ForestEntry&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;TDA&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;tt&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+      <span class="nt">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ForestEntry&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;TDA&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;IPT&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;HouseHoldID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>HasMemberAtHome</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>TDA</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>IPT</strong> (<em>string</em>) – Yes/No.</p></li>
+<li><p><strong>ForestEntry</strong> (<em>string</em>) – Yes/No.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If Rec_ID is null then it will insert new.</p>
+<p>if Rec_ID is not null then it will update.</p>
+<p>If member of house hold with Age between 15 and 49 and Sex = M then TDA = Yes</p>
+<p>If member of house hold with Age between 15 and 49 and ForestEntry = Yes then IPT = Yes</p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../api-qa/v1.html" class="btn btn-neutral float-left" title="API v1 of QA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, CNM MIS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

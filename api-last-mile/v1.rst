@@ -1,0 +1,203 @@
+API of Last mile
+================
+
+House hold
+----------
+
+House hold List
+~~~~~~~~~~~~~~~
+
+.. http:get:: /api-last-smile/v1/fociHouseHold/list
+
+  get list of house hold
+
+  :query int village_code: code of village
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "Rec_ID": 119,
+          "Month": "7",
+          "Year": "2021",
+          "Code_Vill_T": "1504060300",
+          "HouseNumber": 1,
+          "HouseHolder": "ធី",
+          "Phone": "010898989",
+          "TotalMember": 2,
+          "LLIN": 3,
+          "LLINLack": -2,
+          "LLIHN": 1,
+          "LLIHNLack": 0,
+          "TotalForestEntry": 1,
+          "Lat": 11.5923671,
+          "Long": 104.8897794,
+          "HasMemberAtHome": null,
+          "InitUser": null,
+          "IsMobileEntry": null,
+          "TDA1": null,
+          "TDA2": null,
+          "IPT": [],
+          "AFS": []
+        }
+      ]
+    }
+
+  :Object:
+
+    * **HasMemberAtHome** (*string*) -- Yes/No.
+    * **TDA1** (*string*) -- Date of TDA 1.
+    * **TDA2** (*string*) -- Date of TDA 2.
+    * **IPT** (*array*) -- Date of IPT (Array).
+    * **AFS** (*array*) -- Date of AFS (Array).
+  
+House hold detail
+~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-last-smile/v1/fociHouseHold/detail
+
+  get detail of house hold
+
+  :query int house_hold_id: id (primary key) house hold.
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": {
+          "house": {
+              "Rec_ID": 21,
+              "Month": "4",
+              "Year": "2021",
+              "Code_Vill_T": "0504033301",
+              "HouseNumber": 1,
+              "HouseHolder": "Dary",
+              "Phone": "069859540",
+              "TotalMember": 2,
+              "LLIN": 2,
+              "LLINLack": -1,
+              "LLIHN": 1,
+              "LLIHNLack": 0,
+              "TotalForestEntry": 1,
+              "Lat": 11.8050141,
+              "Long": 104.1685751,
+              "HasMemberAtHome": null,
+              "InitUser": null,
+              "IsMobileEntry": null,
+              "TDA1": null,
+              "TDA2": null,
+              "IPT": []
+          },
+          "members": [
+              {
+                  "Rec_ID": 40,
+                  "Name": "Dara",
+                  "Age": 22,
+                  "Sex": "M",
+                  "ForestEntry": "Yes",
+                  "TDA": "Yes",
+                  "IPT": "Yes",
+                  "HouseHoldID": 21
+              },
+              {
+                  "Rec_ID": 41,
+                  "Name": "Daro",
+                  "Age": 43,
+                  "Sex": "F",
+                  "ForestEntry": "No",
+                  "TDA": null,
+                  "IPT": null,
+                  "HouseHoldID": 21
+              }
+          ]
+      }
+    }
+
+Insert/Update house hold
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:get:: /api-last-smile/v1/fociHouseHold/update
+
+  Insert/Update house hold
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "house":{
+        "Rec_ID": null,
+        "Code_Vill_T": "0109050901",
+        "HouseNumber": "1",
+        "HouseHolder": "test",
+        "Phone": "013346789",
+        "TotalMember": 8,
+        "LLIN": 1,
+        "LLINLack": -1,
+        "LLIHN": 1,
+        "LLIHNLack": -2,
+        "TotalForestEntry": 0,
+        "Month": "01",
+        "Year": "2021",
+        "HasMemberAtHome": "Yes",
+        "Lat": 122.255,
+        "Long": 234.555
+      },
+      "member": [
+        {
+          "Rec_ID": null,
+          "Name": "ta",
+          "Age": "34",
+          "Sex": "M",
+          "ForestEntry": "No",
+          "TDA": "",
+          "IPT": "",
+          "HouseHoldID": 1
+        },
+        {
+          "Rec_ID": null,
+          "Name": "ty",
+          "Age": "40",
+          "Sex": "F",
+          "ForestEntry": "Yes",
+          "TDA": "",
+          "IPT": "",
+          "HouseHoldID": 1
+        },
+        {
+          "Rec_ID": null,
+          "Name": "tt",
+          "Age": 45,
+          "Sex": "M",
+          "ForestEntry": "Yes",
+          "TDA": "",
+          "IPT": "",
+          "HouseHoldID": 1
+        }
+      ]
+    }
+
+  :Object:
+
+    * **HasMemberAtHome** (*string*) -- Yes/No.
+    * **TDA** (*string*) -- Yes/No.
+    * **IPT** (*string*) -- Yes/No.
+    * **ForestEntry** (*string*) -- Yes/No.
+
+  .. note::
+
+    If Rec_ID is null then it will insert new.
+
+    if Rec_ID is not null then it will update.
+
+    If member of house hold with Age between 15 and 49 and Sex = M then TDA = Yes
+
+    If member of house hold with Age between 15 and 49 and ForestEntry = Yes then IPT = Yes
