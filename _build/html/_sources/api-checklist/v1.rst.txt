@@ -1,0 +1,852 @@
+API v1 of Check list app
+========================
+
+User Authentication
+-------------------
+
+.. http:post:: /api-checklist/v1/Users/auth
+
+  User login
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Username": "RattanaMIS",
+      "Password": "123456"
+    }
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Role": "AU",
+      "Code_Prov_T": "",
+      "Code_OD_T": "",
+      "Code_Facility_T": "",
+      "message": "ok"
+    }
+
+HC checklist
+------------
+
+Get HC check list 
+~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/hc/list
+
+  Get list of HC checklist
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Code_Prov_T":"01",
+      "Code_OD_T":"",
+      "Code_Facility_T":""
+    }
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    [
+      {
+          "Rec_ID": 33,
+          "Code_Facility_T": "010202",
+          "Quarter": "2021 Q3",
+          "VisitDate": "2021-10-13",
+          "VisitorName": "Hem Vanna ",
+          "VisitorSex": "M",
+          "Part1Score": null,
+          "Part2Score": null,
+          "Part3Score": null,
+          "Part4Score": null,
+          "Part5Score": null,
+          "Code_Prov_T": "01",
+          "Code_OD_T": "0102"
+      },
+      {
+          "Rec_ID": 58,
+          "Code_Facility_T": "010303",
+          "Quarter": "Q1 2021",
+          "VisitDate": "2022-01-04",
+          "VisitorName": "1",
+          "VisitorSex": "F",
+          "Part1Score": 18.5,
+          "Part2Score": 19,
+          "Part3Score": 20,
+          "Part4Score": 1,
+          "Part5Score": 4,
+          "Code_Prov_T": "01",
+          "Code_OD_T": "0103"
+      },
+      {
+          "Rec_ID": 59,
+          "Code_Facility_T": "010303",
+          "Quarter": "Q1 2021",
+          "VisitDate": "2022-01-04",
+          "VisitorName": "1",
+          "VisitorSex": "F",
+          "Part1Score": 18.5,
+          "Part2Score": 19,
+          "Part3Score": 20,
+          "Part4Score": 1,
+          "Part5Score": 4,
+          "Code_Prov_T": "01",
+          "Code_OD_T": "0103"
+      }
+    ]
+
+HC checklist detail
+~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/hc/detail
+
+  Get detail of HC checklist
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Rec_ID": 33
+    }
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+        "Rec_ID": 33,
+        "Code_Facility_T": "010202",
+        "Quarter": "2021 Q3",
+        "VisitDate": "2021-10-13",
+        "VisitorName": "Hem Vanna ",
+        "VisitorSex": "M",
+        "Part1Score": null,
+        "Part2Score": null,
+        "Part3Score": null,
+        "Part4Score": null,
+        "Part5Score": null,
+        "Code_Prov_T": "01",
+        "Code_OD_T": "0102",
+        "Detail": {
+            "P1Q1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 0
+            },
+            "P1Q1_1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Over 7 days"
+                },
+                "Score": 0
+            },
+            "P1Q1_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 0
+            },
+            "P1Q2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 0
+            },
+            "P1Q3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Referred"
+                },
+                "Score": 0
+            },
+            "P1Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 0
+            },
+            "P1Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 0
+            },
+            "P1Q6": {
+                "Answer": {
+                    "other": "",
+                    "tick": [
+                        "National guidelines",
+                        "Surveillance book",
+                        "Other"
+                    ]
+                },
+                "Score": 0
+            },
+            "P1Q7": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 0
+            },
+            "P2Q1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Everyday"
+                },
+                "Score": 0
+            },
+            "P2Q2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Everyday"
+                },
+                "Score": 0
+            },
+            "P2Q3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Under 24 hours"
+                },
+                "Score": 0
+            },
+            "P2Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Correct"
+                },
+                "Score": 0
+            },
+            "P2Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Correct"
+                },
+                "Score": 0
+            },
+            "P2Q6": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Correct"
+                },
+                "Score": 0
+            },
+            "P3Q1": {
+                "Answer": {
+                    "mix": "2",
+                    "pf": "2",
+                    "positive": "2",
+                    "pv": "2",
+                    "test": "2"
+                },
+                "Score": 0
+            },
+            "P3Q2": {
+                "Answer": {
+                    "mix": "2",
+                    "pf": "2",
+                    "positive": "2",
+                    "pv": "2",
+                    "test": ""
+                },
+                "Score": 0
+            },
+            "P3Q2_1": {
+                "Answer": "thhh",
+                "Score": 0
+            },
+            "P3Q3": {
+                "Answer": {
+                    "mix": "2",
+                    "pf": "2",
+                    "positive": "2",
+                    "pv": "2",
+                    "test": ""
+                },
+                "Score": 0
+            },
+            "P3Q3_1": {
+                "Answer": "vghh",
+                "Score": 0
+            },
+            "P3Q3_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No Pf and Mix"
+                },
+                "Score": 0
+            },
+            "P3Q3_3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No Pv"
+                },
+                "Score": 0
+            },
+            "P3Q3_4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No Pf and Mix"
+                },
+                "Score": 0
+            },
+            "P3Q4": {
+                "Answer": {
+                    "l1": "3",
+                    "lc": ""
+                },
+                "Score": 0
+            },
+            "P3Q5": {
+                "Answer": "3",
+                "Score": 0
+            },
+            "P4": {
+                "Answer": {
+                    "list": [
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 0,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        }
+                    ],
+                    "qty": 9
+                },
+                "Score": 0
+            },
+            "P5Q1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Not stockout"
+                },
+                "Score": 0
+            },
+            "P5Q2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Stockout"
+                },
+                "Score": 0
+            },
+            "P5Q3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Stockout"
+                },
+                "Score": 0
+            },
+            "P5Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Not stockout"
+                },
+                "Score": 0
+            },
+            "P5Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Not stockout"
+                },
+                "Score": 0
+            },
+            "P6Q1": {
+                "Answer": {
+                    "date": "2021-10-10",
+                    "person": "jhhu",
+                    "problem": "yffyyg",
+                    "solution": "vhghy"
+                },
+                "Score": 0
+            },
+            "P6Q2": {
+                "Answer": {
+                    "date": "2021-10-01",
+                    "person": "huhu",
+                    "problem": "hvyg",
+                    "solution": "hguh"
+                },
+                "Score": 0
+            }
+        }
+    }
+
+HC checklist Insert/Update
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/hc/update
+
+  Insert/Update
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+        "Code_Facility_T": "010202",
+        "Code_OD_T": "0102",
+        "Code_Prov_T": "01",
+        "Detail": {
+            "P1Q1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 2
+            },
+            "P1Q1_1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Over 7 days"
+                },
+                "Score": 0
+            },
+            "P1Q1_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 1
+            },
+            "P1Q2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 0
+            },
+            "P1Q3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Referred"
+                },
+                "Score": 2
+            },
+            "P1Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 4
+            },
+            "P1Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 5
+            },
+            "P1Q6": {
+                "Answer": {
+                    "other": "",
+                    "tick": [
+                        "National guidelines",
+                        "Surveillance book",
+                        "Other"
+                    ]
+                },
+                "Score": 6
+            },
+            "P1Q7": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 4
+            },
+            "P2Q1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Everyday"
+                },
+                "Score": 5
+            },
+            "P2Q2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Everyday"
+                },
+                "Score": 5
+            },
+            "P2Q3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Under 24 hours"
+                },
+                "Score": 5
+            },
+            "P2Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Correct"
+                },
+                "Score": 5
+            },
+            "P2Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Correct"
+                },
+                "Score": 5
+            },
+            "P2Q6": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Correct"
+                },
+                "Score": 5
+            },
+            "P3Q1": {
+                "Answer": {
+                    "mix": "2",
+                    "pf": "2",
+                    "positive": "2",
+                    "pv": "2",
+                    "test": "2"
+                },
+                "Score": 0
+            },
+            "P3Q2": {
+                "Answer": {
+                    "mix": "2",
+                    "pf": "2",
+                    "positive": "2",
+                    "pv": "2",
+                    "test": ""
+                },
+                "Score": 0
+            },
+            "P3Q2_1": {
+                "Answer": "thhh",
+                "Score": 0
+            },
+            "P3Q3": {
+                "Answer": {
+                    "mix": "2",
+                    "pf": "2",
+                    "positive": "2",
+                    "pv": "2",
+                    "test": ""
+                },
+                "Score": 0
+            },
+            "P3Q3_1": {
+                "Answer": "vghh",
+                "Score": 0
+            },
+            "P3Q3_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No Pf and Mix"
+                },
+                "Score": 8
+            },
+            "P3Q3_3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No Pv"
+                },
+                "Score": 8
+            },
+            "P3Q3_4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No Pf and Mix"
+                },
+                "Score": 4
+            },
+            "P3Q4": {
+                "Answer": {
+                    "l1": "3",
+                    "lc": "0"
+                },
+                "Score": 0
+            },
+            "P3Q5": {
+                "Answer": "3",
+                "Score": 0
+            },
+            "P4": {
+                "Answer": {
+                    "list": [
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        },
+                        {
+                            "age": "88",
+                            "duration": "556",
+                            "medicine": "gg",
+                            "pill": "555",
+                            "score": 1,
+                            "sex": "M",
+                            "tick": "Correct",
+                            "virus": "F"
+                        }
+                    ],
+                    "qty": 9
+                },
+                "Score": 9
+            },
+            "P5Q1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Not stockout"
+                },
+                "Score": 2
+            },
+            "P5Q2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Stockout"
+                },
+                "Score": 0
+            },
+            "P5Q3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Stockout"
+                },
+                "Score": 0
+            },
+            "P5Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Not stockout"
+                },
+                "Score": 2
+            },
+            "P5Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Not stockout"
+                },
+                "Score": 2
+            },
+            "P6Q1": {
+                "Answer": {
+                    "date": "2021-10-10",
+                    "person": "jhhu",
+                    "problem": "yffyyg",
+                    "solution": "vhghy"
+                },
+                "Score": 0
+            },
+            "P6Q2": {
+                "Answer": {
+                    "date": "2021-10-01",
+                    "person": "huhu",
+                    "problem": "hvyg",
+                    "solution": "hguh"
+                },
+                "Score": 0
+            }
+        },
+        "Quarter": "2021 Q3",
+        "Rec_ID": 33,
+        "VisitDate": "2021-10-13",
+        "VisitorName": "Hem Vanna ",
+        "VisitorSex": "M"
+    }
+
+.. note::
+
+  If ``Rec_ID`` is null or 0 it will insert new.
+
+  If ``Rec_ID`` is not null or not equal 0 it will update.
+
+HC checklist aditional data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/hc/misdata
+
+  get aditional data
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Code_Facility_T": "010202"
+    }
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "vmw": 0
+    }

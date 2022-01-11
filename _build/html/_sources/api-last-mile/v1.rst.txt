@@ -1,5 +1,5 @@
-API of Last mile
-================
+API v2 of Last mile
+===================
 
 House hold
 ----------
@@ -452,7 +452,7 @@ AFS form
 Insert/Update AFS
 ~~~~~~~~~~~~~~~~~
 
-.. http:get:: /api-last-smile/v1/AFS/update
+.. http:post:: /api-last-smile/v1/AFS/update
 
   Insert/update AFS
 

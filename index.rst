@@ -47,3 +47,9 @@ Welcome to MIS developer doc's documentation!
    :caption: API of Last mile
 
    api-last-mile/v1
+
+.. toctree::
+   :maxdepth: 2
+   :caption: API v1 of Check list
+
+   api-checklist/v1
