@@ -101,6 +101,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#od-check-list-aditional-data">OD check list aditional data</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#epi">EPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#epi-check-list">EPI check list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#epi-check-list-detail">EPI check list detail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-update-epi-check-list">Insert/Update EPI check list</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1691,6 +1697,1401 @@
     <span class="nt">&quot;pfFoci&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;pvFoci&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="nt">&quot;mixFoci&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="epi">
+<h2>EPI<a class="headerlink" href="#epi" title="Permalink to this headline"></a></h2>
+<div class="section" id="epi-check-list">
+<h3>EPI check list<a class="headerlink" href="#epi-check-list" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-checklist-v1-epi-list">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-checklist/v1/epi/list</span></span><a class="headerlink" href="#post--api-checklist-v1-epi-list" title="Permalink to this definition"></a></dt>
+<dd><p>Get list data of EPI checklist</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Respone as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010402&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Quarter&quot;</span><span class="p">:</span> <span class="s2">&quot;2021 Q3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-11-08&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot;vanna&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorSex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorPosition&quot;</span><span class="p">:</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;0967333347&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorWorkplace&quot;</span><span class="p">:</span> <span class="s2">&quot;CNM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Part1Score&quot;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span>
+        <span class="nt">&quot;Part2Score&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0104&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010203&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Quarter&quot;</span><span class="p">:</span> <span class="s2">&quot;2021 Q1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-01-04&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorSex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorPosition&quot;</span><span class="p">:</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;55&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;VisitorWorkplace&quot;</span><span class="p">:</span> <span class="s2">&quot;Province&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Part1Score&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;Part2Score&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="epi-check-list-detail">
+<h3>EPI check list detail<a class="headerlink" href="#epi-check-list-detail" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-checklist-v1-epi-detail">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-checklist/v1/epi/detail</span></span><a class="headerlink" href="#post--api-checklist-v1-epi-detail" title="Permalink to this definition"></a></dt>
+<dd><p>Get detail data of EPI checklist</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span><span class="mi">123</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Respone as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010402&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Quarter&quot;</span><span class="p">:</span> <span class="s2">&quot;2021 Q3&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-11-08&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot;vanna&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorSex&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorPosition&quot;</span><span class="p">:</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;0967333347&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorWorkplace&quot;</span><span class="p">:</span> <span class="s2">&quot;CNM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Part1Score&quot;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span>
+    <span class="nt">&quot;Part2Score&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+    <span class="nt">&quot;Code_Prov_T&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Code_OD_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0104&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Detail&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Q1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q2&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q3&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q4&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2020&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q5&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q6&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q7&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q8&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q9&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ត្រឹមត្រូវ&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q10&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ល្អ&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q2&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">14</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q3&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;No internet&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q4&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">15</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q5&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;No internet&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q6&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q6_1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;50&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q7&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q7_1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;50&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q8&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;Far village&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Not enough staff&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Passing patient&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;No reports from VMW&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Wait for OD&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q9&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;paper&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L4&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;tablet&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L3&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L4&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">5</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q10&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">5</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q11&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Under 7 days&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">20</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Under 14 days&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">20</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q2&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Full&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">20</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q3&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Draw&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">20</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q4&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Done&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">19</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q5&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;bednet&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;educate&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">20</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Request&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ល្អ&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="insert-update-epi-check-list">
+<h3>Insert/Update EPI check list<a class="headerlink" href="#insert-update-epi-check-list" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-checklist-v1-epi-detail">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-checklist/v1/epi/detail</span></span><a class="headerlink" href="#post--api-checklist-v1-epi-detail" title="Permalink to this definition"></a></dt>
+<dd><p>Insert/Update data of EPI checklist</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Code_Facility_T&quot;</span><span class="p">:</span> <span class="s2">&quot;010203&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Detail&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;P1Q1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q10&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q11&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent1&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Under 7 days&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q2&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q3&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;Phone\/Tablet broken&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q4&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q5&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;Tablet broken&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q6&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">2</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q6_1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q7&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q7_1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;30&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q8&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;ooi&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;Other&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P1Q9&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;paper&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L2&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L3&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L4&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;tablet&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;IMP&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L1&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L2&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;L4&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent1&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;percent3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Under 14 days&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q2&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;55&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Full&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">6</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q3&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Draw&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q4&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty1&quot;</span><span class="p">:</span> <span class="s2">&quot;55&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;qty3&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tick&quot;</span><span class="p">:</span> <span class="s2">&quot;Done&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;P2Q5&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;bednet&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;educate&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q10&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q2&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q3&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q4&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;lastYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;thisYear&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q5&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q6&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q7&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q8&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;hc&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vmw&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;month1&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month2&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;month3&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value1&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value2&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value3&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;2021&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Q9&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;Request&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Score&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;Part1Score&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;Part2Score&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;Quarter&quot;</span><span class="p">:</span> <span class="s2">&quot;2021 Q1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+    <span class="nt">&quot;VisitDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-01-04&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorName&quot;</span><span class="p">:</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorPhone&quot;</span><span class="p">:</span> <span class="s2">&quot;55&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorPosition&quot;</span><span class="p">:</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorSex&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;VisitorWorkplace&quot;</span><span class="p">:</span> <span class="s2">&quot;Province&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
