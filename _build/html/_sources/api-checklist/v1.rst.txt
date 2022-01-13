@@ -850,3 +850,736 @@ HC checklist aditional data
     {
       "vmw": 0
     }
+
+OD checklist
+------------
+
+Get OD check list 
+~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/od/list
+
+  Get list of OD checklist
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Code_Prov_T":"01",
+      "Code_OD_T":""
+    }
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    [
+        {
+            "Rec_ID": 25,
+            "Code_OD_T": "0102",
+            "Quarter": "2021 Q3",
+            "VisitDate": "2021-10-01",
+            "VisitorName": "Tata",
+            "VisitorSex": "F",
+            "Part1Score": 34.19,
+            "Part2Score": 2,
+            "Part3Score": 0,
+            "Part4Score": 0,
+            "Code_Prov_T": "01"
+        },
+        {
+            "Rec_ID": 26,
+            "Code_OD_T": "0102",
+            "Quarter": "2021 Q3",
+            "VisitDate": "2021-10-04",
+            "VisitorName": "Vary",
+            "VisitorSex": "F",
+            "Part1Score": null,
+            "Part2Score": null,
+            "Part3Score": null,
+            "Part4Score": null,
+            "Code_Prov_T": "01"
+        },
+        {
+            "Rec_ID": 28,
+            "Code_OD_T": "0102",
+            "Quarter": "2021 Q3",
+            "VisitDate": "2021-10-12",
+            "VisitorName": "Rinna",
+            "VisitorSex": "M",
+            "Part1Score": null,
+            "Part2Score": null,
+            "Part3Score": null,
+            "Part4Score": null,
+            "Code_Prov_T": "01"
+        }
+    ]
+
+OD check list detail
+~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/od/list
+
+  Get detail data of OD checklist
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Rec_ID": 123
+    }
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+      {
+        "Rec_ID": 25,
+        "Code_OD_T": "0102",
+        "Quarter": "2021 Q3",
+        "VisitDate": "2021-10-01",
+        "VisitorName": "តេស្ត",
+        "VisitorSex": "F",
+        "Part1Score": 34.19,
+        "Part2Score": 2,
+        "Part3Score": 0,
+        "Part4Score": 0,
+        "Code_Prov_T": "01",
+        "Detail": {
+            "P1Q1_1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q1_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q1_3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q2_1": {
+                "Answer": {
+                    "plan": "3",
+                    "result": "3"
+                },
+                "Score": 100
+            },
+            "P1Q2_2": {
+                "Answer": {
+                    "plan": "11",
+                    "result": "1"
+                },
+                "Score": 9
+            },
+            "P1Q2_3": {
+                "Answer": {
+                    "plan": "1",
+                    "result": "1"
+                },
+                "Score": 100
+            },
+            "P1Q3_1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q3_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q3_3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 5
+            },
+            "P1Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 15
+            },
+            "P1Q6": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 5
+            },
+            "P1Q7": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 5
+            },
+            "P1Q8_1": {
+                "Answer": {
+                    "plan": "15",
+                    "result": "2"
+                },
+                "Score": 0.4
+            },
+            "P1Q8_2": {
+                "Answer": {
+                    "plan": "8",
+                    "result": "2"
+                },
+                "Score": 0.25
+            },
+            "P1Q8_3": {
+                "Answer": {
+                    "plan": "50",
+                    "result": "2"
+                },
+                "Score": 0.04
+            },
+            "P2Q1": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.5
+            },
+            "P2Q2": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.5
+            },
+            "P2Q3": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.5
+            },
+            "P2Q4": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.25
+            },
+            "P2Q5": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.25
+            },
+            "P3VMW_Test": {
+                "Answer": "32",
+                "Score": null
+            },
+            "P3VMW_Positive": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3VMW_Pf": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3VMW_Pv": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3VMW_Mix": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3VMW_Minor": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3VMW_Severe": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3VMW_Death": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3VMW_Report": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Test": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Positive": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Pf": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Pv": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Mix": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Minor": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Severe": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Death": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P3HC_Report": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P4Q1": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P4Q2": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P4Q3": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P4Q4": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P4Q5": {
+                "Answer": "2",
+                "Score": null
+            },
+            "P5Q1": {
+                "Answer": {
+                    "date": "2021-10-01",
+                    "person": "ងហ្",
+                    "problem": "ថថ",
+                    "solution": "ងត"
+                },
+                "Score": null
+            },
+            "P5Q2": {
+                "Answer": {
+                    "date": "2021-10-01",
+                    "person": "ងរថរ",
+                    "problem": "ថង",
+                    "solution": "ងង"
+                },
+                "Score": null
+            }
+        }
+    }
+
+Insert/Update OD check list
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/od/update
+
+  Insert/Update OD check list
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+   {
+        "Code_OD_T": "0102",
+        "Code_Prov_T": "01",
+        "Detail": {
+            "P1Q1_1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q1_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q1_3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q2_1": {
+                "Answer": {
+                    "plan": "3",
+                    "result": "3"
+                },
+                "Score": 1.67
+            },
+            "P1Q2_2": {
+                "Answer": {
+                    "plan": "11",
+                    "result": "1"
+                },
+                "Score": 0.15
+            },
+            "P1Q2_3": {
+                "Answer": {
+                    "plan": "1",
+                    "result": "1"
+                },
+                "Score": 1.67
+            },
+            "P1Q3_1": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q3_2": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q3_3": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q4": {
+                "Answer": {
+                    "other": "",
+                    "tick": "No"
+                },
+                "Score": 0
+            },
+            "P1Q5": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 15
+            },
+            "P1Q6": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 5
+            },
+            "P1Q7": {
+                "Answer": {
+                    "other": "",
+                    "tick": "Yes"
+                },
+                "Score": 5
+            },
+            "P1Q8_1": {
+                "Answer": {
+                    "plan": "15",
+                    "result": "2"
+                },
+                "Score": 0.4
+            },
+            "P1Q8_2": {
+                "Answer": {
+                    "plan": "8",
+                    "result": "2"
+                },
+                "Score": 0.25
+            },
+            "P1Q8_3": {
+                "Answer": {
+                    "plan": "50",
+                    "result": "2"
+                },
+                "Score": 0.08
+            },
+            "P2Q1": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.5
+            },
+            "P2Q2": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.5
+            },
+            "P2Q3": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.5
+            },
+            "P2Q4": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.25
+            },
+            "P2Q5": {
+                "Answer": {
+                    "amc": "2",
+                    "balance": "2",
+                    "stockin": "2",
+                    "stockout": "2",
+                    "tick": "Under"
+                },
+                "Score": 0.25
+            },
+            "P3HC_Death": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3HC_Minor": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3HC_Mix": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3HC_Pf": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3HC_Positive": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3HC_Pv": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3HC_Report": {
+                "Answer": "2",
+                "Score": 0.01
+            },
+            "P3HC_Severe": {
+                "Answer": "2",
+                "Score": 0
+            },
+            "P3HC_Test": {
+                "Answer": "2",
+                "Score": 0
+            },
+            "P3VMW_Death": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3VMW_Minor": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3VMW_Mix": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3VMW_Pf": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3VMW_Positive": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3VMW_Pv": {
+                "Answer": "2",
+                "Score": 0.56
+            },
+            "P3VMW_Report": {
+                "Answer": "2",
+                "Score": 0.01
+            },
+            "P3VMW_Severe": {
+                "Answer": "2",
+                "Score": 0
+            },
+            "P3VMW_Test": {
+                "Answer": "32",
+                "Score": 0.02
+            },
+            "P4Q1": {
+                "Answer": "2",
+                "Score": 12
+            },
+            "P4Q2": {
+                "Answer": "2",
+                "Score": 4.5
+            },
+            "P4Q3": {
+                "Answer": "2",
+                "Score": 4.5
+            },
+            "P4Q4": {
+                "Answer": "2",
+                "Score": 4.5
+            },
+            "P4Q5": {
+                "Answer": "2",
+                "Score": 4.5
+            },
+            "P5Q1": {
+                "Answer": {
+                    "date": "2021-10-01",
+                    "person": "áž„áž áŸ’",
+                    "problem": "ážáž",
+                    "solution": "áž„áž"
+                },
+                "Score": 0
+            },
+            "P5Q2": {
+                "Answer": {
+                    "date": "2021-10-01",
+                    "person": "áž„ážšážážš",
+                    "problem": "ážáž„",
+                    "solution": "áž„áž„"
+                },
+                "Score": 0
+            }
+        },
+        "Part1Score": 34.19,
+        "Part2Score": 2,
+        "Part3Score": 0,
+        "Part4Score": 0,
+        "Quarter": "2021 Q3",
+        "Rec_ID": 25,
+        "VisitDate": "2021-10-01",
+        "VisitorName": "ážáŸážŸáŸ’áž",
+        "VisitorSex": "F"
+    }
+
+.. note::
+
+    if Rec_ID is 0 or null, it will insert new
+
+    if Rec_ID > 0, it will update    
+
+OD check list aditional data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-checklist/v1/od/misdata
+
+  Get aditional data of OD checklist
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "Code_OD_T": "0102",
+      "Quarter": 1
+    }
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+        "stockReport": 0,
+        "stockACT": 92,
+        "stockRDT": 100,
+        "vmwTest": 0,
+        "vmwPositive": null,
+        "vmwPf": null,
+        "vmwPv": null,
+        "vmwMix": null,
+        "vmwMinor": null,
+        "vmwSevere": null,
+        "vmwDeath": 0,
+        "vmwReport": null,
+        "hcTest": 0,
+        "hcPositive": null,
+        "hcPf": null,
+        "hcPv": null,
+        "hcMix": null,
+        "hcMinor": null,
+        "hcSevere": null,
+        "hcDeath": 0,
+        "hcReport": null,
+        "pf": null,
+        "pv": null,
+        "mix": null,
+        "pfL1": null,
+        "pfLC": null,
+        "pvL1": null,
+        "pvLC": null,
+        "mixL1": null,
+        "mixLC": null,
+        "pfFoci": null,
+        "pvFoci": 0,
+        "mixFoci": null
+    }
