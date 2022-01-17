@@ -1,5 +1,5 @@
 Third Party
-++++++++++++
++++++++++++
 
 Some task is run by ``.exe`` file
 
@@ -37,5 +37,5 @@ Monthly task (cron job)
 DB Backup (cron job)
 --------------------
 
-- DB Backup task cron job execute ``C:\MIS\Task Scheduler\MIS DB Backup.exe`` for dashboard data. This cron job run by windows task scheduler every day.
+- DB Backup task cron job execute ``C:\MIS\Task Scheduler\MIS DB Backup.exe`` to run backup data. This cron job run by windows task scheduler every day. Backed upd data will store on google drive
 - Git repository: ``https://gitlab.com/mis-projects/mis-db-backup.git``

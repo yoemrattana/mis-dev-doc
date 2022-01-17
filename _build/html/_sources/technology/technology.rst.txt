@@ -6,11 +6,13 @@ Development Tools
 - Visual Studio 2015
 - Microsoft SQL Server Managment Studio
 - PHP Tools for Visual Studio (crack)
+- Microsoft Drivers for PHP for SQL Server
 
 Server Requirement
 ------------------
-- PHP version 7.2
-- Microsoft SQL Server 
+- PHP version 7.2+
+- Microsoft SQL Server
+- Microsoft windows server 2012 
 
 Server site programming languages
 ----------------------------------
@@ -42,7 +44,7 @@ Frontend languages
 Managing Databases
 ------------------
 
-We use 2 database
+We use 2 databases
 
 -  ``DB_MIS2`` for real data
 -  ``DB_MIS2_LOCK`` for locking data in previous years
@@ -55,4 +57,4 @@ MIS prject is follow ``MVC`` structure.
 Model view (KnockoutJS - MVVM)   
 ------------------------------
 
-To bind data with UI we use KnockoutJS ``MVVM`` structure. ViewModel is in ``\media\ViewModel`` directory.
+To bind data with UI we use KnockoutJS ``MVVM`` structure. All ViewModels file is in ``\media\ViewModel`` directory.
