@@ -38,6 +38,12 @@ Welcome to MIS developer doc's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: Module
+
+   module/module
+
+.. toctree::
+   :maxdepth: 2
    :caption: API of Cambodia Malaria Info
 
    api-cmi/v1

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Third Party &mdash; MIS developer doc  documentation</title>
+  <title>Module &mdash; MIS developer doc  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
@@ -35,8 +35,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cron Job" href="../cron-job/cron-job.html" />
-    <link rel="prev" title="Technology usage" href="../technology/technology.html" /> 
+    <link rel="next" title="API v1 of CMI" href="../api-cmi/v1.html" />
+    <link rel="prev" title="API v5" href="../api/v5.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -64,15 +64,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../technology/technology.html">Technology usage</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Third Party</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#notification-case">Notification (case)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#export-tool-on-home-page">Export Tool (on home page)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#daily-task-cron-job">Daily task (cron job)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#monthly-task-cron-job">Monthly task (cron job)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#db-backup-cron-job">DB Backup (cron job)</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Third%20Party/data-export-tool.html">Third Party</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Cron Job</span></p>
 <ul>
@@ -84,8 +77,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/v5.html">API v5</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Module</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../module/module.html">Module</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vmw">VMW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hc">HC</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
 <ul>
@@ -118,9 +115,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Third Party</li>
+      <li>Module</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/Third Party/data-export-tool.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/module/module.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -128,45 +125,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="third-party">
-<h1>Third Party<a class="headerlink" href="#third-party" title="Permalink to this headline"></a></h1>
-<p>Some task is run by <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file</p>
-<div class="section" id="notification-case">
-<h2>Notification (case)<a class="headerlink" href="#notification-case" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>Multi thread message purpose we use <code class="docutils literal notranslate"><span class="pre">\media\Message\MIS</span> <span class="pre">Notification.exe</span></code></p></li>
-<li><p>Other library: Firebase cloud message.</p></li>
-<li><p>Git repository <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/rattana/mis-notification.git</span></code></p></li>
-</ul>
+  <div class="section" id="module">
+<h1>Module<a class="headerlink" href="#module" title="Permalink to this headline"></a></h1>
+<div class="section" id="vmw">
+<h2>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                               <span class="o">+-----------+</span>
+                         <span class="o">+-----|</span> <span class="n">Load</span> <span class="n">Bal</span>  <span class="o">|------+</span>
+                         <span class="o">|</span>     <span class="o">+-----------+</span>      <span class="o">|</span>
+                         <span class="o">|</span>                        <span class="o">|</span>
+                    <span class="o">+---------+</span>              <span class="o">+---------+</span>
+<span class="o">+-------------+</span>     <span class="o">|</span>         <span class="o">|</span>              <span class="o">|</span>         <span class="o">|</span>    <span class="o">+--------------+</span>
+<span class="o">|</span>             <span class="o">|-----|</span> <span class="n">Nginx</span>   <span class="o">|</span>              <span class="o">|</span> <span class="n">Nginx</span>   <span class="o">|----|</span>              <span class="o">|</span>
+<span class="o">|</span>  <span class="n">File</span>       <span class="o">|</span>     <span class="o">+---------+</span>              <span class="o">+---------+</span>    <span class="o">|</span>  <span class="n">File</span>        <span class="o">|</span>
+<span class="o">|</span>  <span class="n">System</span>     <span class="o">|</span>          <span class="o">|</span>                        <span class="o">|</span>         <span class="o">|</span>  <span class="n">System</span>      <span class="o">|</span>
+<span class="o">+-------------+</span>     <span class="o">+---------+</span>  <span class="o">+--------+</span>  <span class="o">+---------+</span>    <span class="o">+--------------+</span>
+       <span class="o">|</span>  <span class="o">|</span>         <span class="o">|</span><span class="n">Gunicorn</span> <span class="o">|</span>  <span class="o">|</span>        <span class="o">|</span>  <span class="o">|</span><span class="n">Gunicorn</span> <span class="o">|</span>        <span class="o">|</span>   <span class="o">|</span>
+       <span class="o">|</span>  <span class="o">+---------|</span><span class="p">(</span><span class="n">Django</span><span class="p">)</span> <span class="o">|--|</span><span class="n">Postgres</span><span class="o">|--|</span><span class="p">(</span><span class="n">Django</span><span class="p">)</span> <span class="o">|--------+</span>   <span class="o">|</span>
+       <span class="o">|</span>            <span class="o">+---------+</span>  <span class="o">+--------+</span>  <span class="o">+---------+</span>            <span class="o">|</span>
+       <span class="o">|</span>                 <span class="o">|</span>                        <span class="o">|</span>                 <span class="o">|</span>
+       <span class="o">|</span>                 <span class="o">|</span>                        <span class="o">|</span>                 <span class="o">|</span>
+       <span class="o">|</span>                 <span class="o">-----------</span><span class="n">API</span><span class="o">------------</span>                 <span class="o">|</span>
+       <span class="o">|</span>                             <span class="o">|</span>                              <span class="o">|</span>
+       <span class="o">|</span>                             <span class="o">|</span>                              <span class="o">|</span>
+       <span class="o">|</span>                     <span class="o">+------------------+</span>                   <span class="o">|</span>
+       <span class="o">|</span>                     <span class="o">|</span>                  <span class="o">|</span>                   <span class="o">|</span>
+       <span class="o">+---------------------|</span>  <span class="n">Build</span> <span class="n">Server</span>    <span class="o">|-------------------+</span>
+                             <span class="o">|</span>                  <span class="o">|</span>
+                             <span class="o">+------------------+</span>
+</pre></div>
 </div>
-<div class="section" id="export-tool-on-home-page">
-<h2>Export Tool (on home page)<a class="headerlink" href="#export-tool-on-home-page" title="Permalink to this headline"></a></h2>
-<a class="reference internal image-reference" href="../_images/export-tool.PNG"><img alt="'Export tool on home page'" class="align-center" src="../_images/export-tool.PNG" style="width: 368px;" /></a>
-<ul class="simple">
-<li><p>To speed up export data to excel we use <code class="docutils literal notranslate"><span class="pre">\media\ExportExcel\MISExcel.exe</span></code></p></li>
-<li><p>Git repository <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-excel.git</span></code></p></li>
-</ul>
 </div>
-<div class="section" id="daily-task-cron-job">
-<h2>Daily task (cron job)<a class="headerlink" href="#daily-task-cron-job" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>Daily task cron job execute <code class="docutils literal notranslate"><span class="pre">C:\MIS\Task</span> <span class="pre">Scheduler\MIS</span> <span class="pre">Daily</span> <span class="pre">Task.exe</span></code> for dashboard data and pivot data. This cron job run by windows task scheduler every day.</p></li>
-<li><p>Git repository: <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-task-scheduler.git</span></code></p></li>
-</ul>
-</div>
-<div class="section" id="monthly-task-cron-job">
-<h2>Monthly task (cron job)<a class="headerlink" href="#monthly-task-cron-job" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>Monthly task cron job execute <code class="docutils literal notranslate"><span class="pre">C:\MIS\Task</span> <span class="pre">Scheduler\MIS</span> <span class="pre">Monthly</span> <span class="pre">Task.exe</span></code> for log HF and VMW. This cron job run by windows task scheduler every month.</p></li>
-<li><p>Git repository: <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-task-scheduler.git</span></code></p></li>
-</ul>
-</div>
-<div class="section" id="db-backup-cron-job">
-<h2>DB Backup (cron job)<a class="headerlink" href="#db-backup-cron-job" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>DB Backup task cron job execute <code class="docutils literal notranslate"><span class="pre">C:\MIS\Task</span> <span class="pre">Scheduler\MIS</span> <span class="pre">DB</span> <span class="pre">Backup.exe</span></code> to run backup data. This cron job run by windows task scheduler every day. Backed upd data will store on google drive</p></li>
-<li><p>Git repository: <code class="docutils literal notranslate"><span class="pre">https://gitlab.com/mis-projects/mis-db-backup.git</span></code></p></li>
-</ul>
+<div class="section" id="hc">
+<h2>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h2>
 </div>
 </div>
 
@@ -174,8 +164,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../technology/technology.html" class="btn btn-neutral float-left" title="Technology usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../cron-job/cron-job.html" class="btn btn-neutral float-right" title="Cron Job" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../api/v5.html" class="btn btn-neutral float-left" title="API v5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../api-cmi/v1.html" class="btn btn-neutral float-right" title="API v1 of CMI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
