@@ -306,6 +306,16 @@ Insert/Update TDA
       ]
     }
 
+.. note::
+
+  TDA1 and TDA2 must be 28 days apart.
+
+  Must complete TDA1/TDA2 before do IPT.
+
+  IPT and TDA1 must be 14 days apart.
+
+  IPT and TDA2 must be 28 days apart.
+
 IPT
 ---
 

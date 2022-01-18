@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cron Job &mdash; MIS developer doc  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css\rtd_sphinx_search.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/js\rtd_sphinx_search.min.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API v4" href="../api/v4.html" />
+    <link rel="prev" title="Third Party" href="../Third%20Party/data-export-tool.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MIS developer doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html#who-is-for-mis">Who is for MIS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../technology/technology.html">Technology usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Third Party</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Third%20Party/data-export-tool.html">Third Party</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cron Job</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cron Job</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup-cron-job">Setup cron job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-cron-job">List of cron job</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vmw-follow-up-patient-notification-pv-radical-cure">VMW follow up patient notification (Pv radical cure)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hc-follow-up-patient-notification-pv-radical-cure">HC follow up patient notification (Pv radical cure)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#foci-reminder-notification">Foci reminder notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reactive-case-reminder-notification">Reactive case reminder notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hight-risk-village-reminder-notification">Hight risk village reminder notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stock-out-notification">Stock out notification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of CNM Reporting App</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/v4.html">API v4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/v5.html">API v5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-cmi/v1.html">API v1 of CMI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of VWM QA App</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-qa/v1.html">API v1 of QA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of Last mile</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-last-mile/v1.html">API v2 of Last mile</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API v1 of Check list</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-checklist/v1.html">API v1 of Check list app</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MIS developer doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Cron Job</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/cron-job/cron-job.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="cron-job">
+<h1>Cron Job<a class="headerlink" href="#cron-job" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>To run cron job on windows server we need <code class="docutils literal notranslate"><span class="pre">wget.exe</span></code>.</p></li>
+<li><p>Click here to <a class="reference external" href="http://gnuwin32.sourceforge.net/packages/wget.htm">Download</a></p></li>
+</ul>
+<div class="section" id="setup-cron-job">
+<h2>Setup cron job<a class="headerlink" href="#setup-cron-job" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">wget.exe</span></code></p></li>
+<li><p>Go to <span class="guilabel">Task Scheduler</span></p></li>
+<li><p>Righ click on task area then click on <span class="guilabel">Create New Task</span></p></li>
+<li><p>Click on <span class="guilabel">Actions</span></p></li>
+<li><p>Click on <span class="guilabel">New…</span></p></li>
+<li><p>Click on <span class="guilabel">Browse…</span>&gt; go to <code class="docutils literal notranslate"><span class="pre">wget.exe</span></code> (directory that installed wget.exe) &gt; click on <span class="guilabel">Open</span></p></li>
+<li><p>In textbox <span class="guilabel">Add arguments (optional):</span> fill in URL of task, e.g: <code class="docutils literal notranslate"><span class="pre">/cron/notifyVMWFU/Day3</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="list-of-cron-job">
+<h2>List of cron job<a class="headerlink" href="#list-of-cron-job" title="Permalink to this headline"></a></h2>
+<div class="section" id="vmw-follow-up-patient-notification-pv-radical-cure">
+<h3>VMW follow up patient notification (Pv radical cure)<a class="headerlink" href="#vmw-follow-up-patient-notification-pv-radical-cure" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Purpose: Send message notification to VMW’s smart phone about date of follow up.</p></li>
+<li><p>Type: run everyday.</p></li>
+<li><p>URL <code class="docutils literal notranslate"><span class="pre">/cron/notifyVMWFU/parameter</span></code></p></li>
+<li><p><strong>parameter</strong> (<em>string</em>) – <span class="guilabel">Day3</span> / <span class="guilabel">Day7</span> / <span class="guilabel">Day14</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="hc-follow-up-patient-notification-pv-radical-cure">
+<h3>HC follow up patient notification (Pv radical cure)<a class="headerlink" href="#hc-follow-up-patient-notification-pv-radical-cure" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Purpose: Send message notification to HC’s tablet about follow up.</p></li>
+<li><p>Type: run everyday.</p></li>
+<li><p>URL <code class="docutils literal notranslate"><span class="pre">/cron/notifyHFFU/parameter</span></code></p></li>
+<li><p><strong>parameter</strong> (<em>string</em>) – <span class="guilabel">Day3</span> / <span class="guilabel">Day7</span> / <span class="guilabel">Day14</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="foci-reminder-notification">
+<h3>Foci reminder notification<a class="headerlink" href="#foci-reminder-notification" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Purpose: send message notification to VMW, HC, OD, PHD, CSO.</p></li>
+<li><p>Type: run everyday.</p></li>
+<li><p>URL <code class="docutils literal notranslate"><span class="pre">/cron/remindFoci</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if malaria case that not yet do foci investigation in during 5 days, system will produce notification.</p>
+</div>
+</div>
+<div class="section" id="reactive-case-reminder-notification">
+<h3>Reactive case reminder notification<a class="headerlink" href="#reactive-case-reminder-notification" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Purpose: send message notification to HC and VMW.</p></li>
+<li><p>Type: run everyday.</p></li>
+<li><p>URL <code class="docutils literal notranslate"><span class="pre">/cron/remindReactive</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if malaria case that not yet do reactive case in during 3 days, system will produce notification.</p>
+</div>
+</div>
+<div class="section" id="hight-risk-village-reminder-notification">
+<h3>Hight risk village reminder notification<a class="headerlink" href="#hight-risk-village-reminder-notification" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Purpose: send message notification to HC, OD, PHP, CSO.</p></li>
+<li><p>Type: run every.</p></li>
+<li><p>URL <code class="docutils literal notranslate"><span class="pre">/cron/remindHighRiskVillage</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Retrieve positive last 12 months.</p></li>
+<li><p>Retrieve positive last month.</p></li>
+<li><p>Calculate STD, AVG.</p></li>
+<li><p>If Positive last month &gt; STD + AVG =&gt; High risk.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="stock-out-notification">
+<h3>Stock out notification<a class="headerlink" href="#stock-out-notification" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Purpose: send message notification to OD, PHP, CSO</p></li>
+<li><p>Type: run everyday.</p></li>
+<li><p>URL <code class="docutils literal notranslate"><span class="pre">/cron/notifyNonStock</span></code></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Third%20Party/data-export-tool.html" class="btn btn-neutral float-left" title="Third Party" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../api/v4.html" class="btn btn-neutral float-right" title="API v4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, CNM MIS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

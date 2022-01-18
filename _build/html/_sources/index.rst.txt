@@ -25,6 +25,12 @@ Welcome to MIS developer doc's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: Cron Job
+
+   cron-job/cron-job
+
+.. toctree::
+   :maxdepth: 2
    :caption: API of CNM Reporting App
 
    api/v4
