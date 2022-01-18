@@ -80,7 +80,6 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#vmw">VMW</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hc">HC</a></li>
 </ul>
 </li>
 </ul>
@@ -129,34 +128,19 @@
 <h1>Module<a class="headerlink" href="#module" title="Permalink to this headline"></a></h1>
 <div class="section" id="vmw">
 <h2>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                               <span class="o">+-----------+</span>
-                         <span class="o">+-----|</span> <span class="n">Load</span> <span class="n">Bal</span>  <span class="o">|------+</span>
-                         <span class="o">|</span>     <span class="o">+-----------+</span>      <span class="o">|</span>
-                         <span class="o">|</span>                        <span class="o">|</span>
-                    <span class="o">+---------+</span>              <span class="o">+---------+</span>
-<span class="o">+-------------+</span>     <span class="o">|</span>         <span class="o">|</span>              <span class="o">|</span>         <span class="o">|</span>    <span class="o">+--------------+</span>
-<span class="o">|</span>             <span class="o">|-----|</span> <span class="n">Nginx</span>   <span class="o">|</span>              <span class="o">|</span> <span class="n">Nginx</span>   <span class="o">|----|</span>              <span class="o">|</span>
-<span class="o">|</span>  <span class="n">File</span>       <span class="o">|</span>     <span class="o">+---------+</span>              <span class="o">+---------+</span>    <span class="o">|</span>  <span class="n">File</span>        <span class="o">|</span>
-<span class="o">|</span>  <span class="n">System</span>     <span class="o">|</span>          <span class="o">|</span>                        <span class="o">|</span>         <span class="o">|</span>  <span class="n">System</span>      <span class="o">|</span>
-<span class="o">+-------------+</span>     <span class="o">+---------+</span>  <span class="o">+--------+</span>  <span class="o">+---------+</span>    <span class="o">+--------------+</span>
-       <span class="o">|</span>  <span class="o">|</span>         <span class="o">|</span><span class="n">Gunicorn</span> <span class="o">|</span>  <span class="o">|</span>        <span class="o">|</span>  <span class="o">|</span><span class="n">Gunicorn</span> <span class="o">|</span>        <span class="o">|</span>   <span class="o">|</span>
-       <span class="o">|</span>  <span class="o">+---------|</span><span class="p">(</span><span class="n">Django</span><span class="p">)</span> <span class="o">|--|</span><span class="n">Postgres</span><span class="o">|--|</span><span class="p">(</span><span class="n">Django</span><span class="p">)</span> <span class="o">|--------+</span>   <span class="o">|</span>
-       <span class="o">|</span>            <span class="o">+---------+</span>  <span class="o">+--------+</span>  <span class="o">+---------+</span>            <span class="o">|</span>
-       <span class="o">|</span>                 <span class="o">|</span>                        <span class="o">|</span>                 <span class="o">|</span>
-       <span class="o">|</span>                 <span class="o">|</span>                        <span class="o">|</span>                 <span class="o">|</span>
-       <span class="o">|</span>                 <span class="o">-----------</span><span class="n">API</span><span class="o">------------</span>                 <span class="o">|</span>
-       <span class="o">|</span>                             <span class="o">|</span>                              <span class="o">|</span>
-       <span class="o">|</span>                             <span class="o">|</span>                              <span class="o">|</span>
-       <span class="o">|</span>                     <span class="o">+------------------+</span>                   <span class="o">|</span>
-       <span class="o">|</span>                     <span class="o">|</span>                  <span class="o">|</span>                   <span class="o">|</span>
-       <span class="o">+---------------------|</span>  <span class="n">Build</span> <span class="n">Server</span>    <span class="o">|-------------------+</span>
-                             <span class="o">|</span>                  <span class="o">|</span>
-                             <span class="o">+------------------+</span>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>        <span class="o">+---------------------+</span>
+<span class="o">|</span>                <span class="o">|</span>        <span class="o">|</span>                     <span class="o">|</span>
+<span class="o">|</span><span class="n">tblVMWActivity</span>  <span class="o">|--------|</span><span class="n">tblVMWActivityCases</span>  <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>        <span class="o">|</span>                     <span class="o">|</span>
+<span class="o">+----------------+</span>        <span class="o">+---------------------+</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="hc">
-<h2>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Controller: CaseReport.php</p></li>
+<li><p>View: vmwcase_view.php</p></li>
+<li><p>ViewModel: VMWCase.js</p></li>
+</ul>
 </div>
 </div>
 
