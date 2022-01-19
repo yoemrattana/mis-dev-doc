@@ -1,3 +1,5 @@
+Module
+++++++
 Malaria & ITN Data
 ==================
 
@@ -85,6 +87,19 @@ Table diagram
   +---------------+
 
 - Controller: CaseReport.php
+
+  - ``hf()`` : view hf page
+  - ``hfGetPreData()`` Treatments list.
+  - ``hfGetReport()`` get HF and reported months list when you select OD.
+  - ``hfGetCase()`` get HF case report when you click on report month of any HF.
+  - ``hfUpdateCase()`` insert/update/delete case.
+  ::
+
+    if( Rec_ID > 0 ) 
+      then update()
+    else if ( Rec_ID < 0 )
+      then delete()
+    else insert() 
 - View: hfcase_view.php
 - ViewModel: HFCase.js
 
@@ -131,6 +146,19 @@ Table diagram
   +---------------+
 
 - Controller: CaseReport.php
+
+  - ``ml()`` : view MMP page
+  - ``mlGetPreData()`` get region, province and treatments list.
+  - ``mlGetReport()`` get group and reported months list when you select province.
+  - ``mlGetCase()`` get case report when you click on report month of any group.
+  - ``mlUpdateCase()`` insert/update/delete case.
+  ::
+
+    if ( Rec_ID > 0 ) 
+      then update()
+    else if ( Rec_ID < 0 )
+      then delete()
+    else insert()
 - View: mlcase_view.php
 - ViewModel: MLCase.js
 
@@ -153,3 +181,62 @@ Table diagram
      |__ViewModel
         |
         |__MLCase.js
+
+Police
+------
+Insert/Update/Delete Police case
+
+Table diagram
+
+::
+
+  +---------------+        +------------------+
+  |               |        |                  | 
+  |tblPLActivity  |--------|tblPLActivityCases|
+  |               |        |                  |
+  +---------------+        +------------------+  
+          |
+          |
+          |
+  +---------------+
+  |               |
+  |tblPLCodes     |
+  |               |
+  +---------------+
+
+- Controller: CaseReport.php
+
+  - ``pl()`` : view police page
+  - ``plGetPreData()`` get province, troop, treatment list.
+  - ``plGetReport()`` get post, district, month report list.
+  - ``plGetCase()`` get case report when you click on report month.
+  - ``plUpdateCase()`` insert/update/delete case.
+  ::
+
+    if ( Rec_ID > 0 ) 
+      then update()
+    else if ( Rec_ID < 0 )
+      then delete()
+    else insert()
+- View: plcase_view.php
+- ViewModel: PLCase.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__CaseReport.php
+  |  |
+  |  |__views
+  |     |
+  |     |__plcase_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__PLCase.js

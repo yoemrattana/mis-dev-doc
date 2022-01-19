@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malaria &amp; ITN Data &mdash; MIS developer doc  documentation</title>
+  <title>Module &mdash; MIS developer doc  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
@@ -78,10 +78,14 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Module</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Malaria &amp; ITN Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#vmw">VMW</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hc">HC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mmp">MMP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#malaria-itn-data">Malaria &amp; ITN Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vmw">VMW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hc">HC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mmp">MMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#police">Police</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -116,7 +120,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Malaria &amp; ITN Data</li>
+      <li>Module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/module/module.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -126,10 +130,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="malaria-itn-data">
-<h1>Malaria &amp; ITN Data<a class="headerlink" href="#malaria-itn-data" title="Permalink to this headline"></a></h1>
+  <div class="section" id="module">
+<h1>Module<a class="headerlink" href="#module" title="Permalink to this headline"></a></h1>
+<div class="section" id="malaria-itn-data">
+<h2>Malaria &amp; ITN Data<a class="headerlink" href="#malaria-itn-data" title="Permalink to this headline"></a></h2>
 <div class="section" id="vmw">
-<h2>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h2>
+<h3>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h3>
 <p>Insert/Update/Delete VMW case</p>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>        <span class="o">+---------------------+</span>
@@ -188,7 +194,7 @@
 </div>
 </div>
 <div class="section" id="hc">
-<h2>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h2>
+<h3>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h3>
 <p>Insert/Update/Delete HC case</p>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>        <span class="o">+------------------+</span>
@@ -206,8 +212,23 @@
 <span class="o">+---------------+</span>
 </pre></div>
 </div>
+<ul>
+<li><p>Controller: CaseReport.php</p>
 <ul class="simple">
-<li><p>Controller: CaseReport.php</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hf()</span></code> : view hf page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hfGetPreData()</span></code> Treatments list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hfGetReport()</span></code> get HF and reported months list when you select OD.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hfGetCase()</span></code> get HF case report when you click on report month of any HF.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hfUpdateCase()</span></code> insert/update/delete case.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">update</span><span class="p">()</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">delete</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">insert</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
 <li><p>View: hfcase_view.php</p></li>
 <li><p>ViewModel: HFCase.js</p></li>
 </ul>
@@ -232,7 +253,7 @@
 </div>
 </div>
 <div class="section" id="mmp">
-<h2>MMP<a class="headerlink" href="#mmp" title="Permalink to this headline"></a></h2>
+<h3>MMP<a class="headerlink" href="#mmp" title="Permalink to this headline"></a></h3>
 <p>Insert/Update/Delete MMP case</p>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>        <span class="o">+------------------+</span>
@@ -250,8 +271,23 @@
 <span class="o">+---------------+</span>
 </pre></div>
 </div>
+<ul>
+<li><p>Controller: CaseReport.php</p>
 <ul class="simple">
-<li><p>Controller: CaseReport.php</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ml()</span></code> : view MMP page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mlGetPreData()</span></code> get region, province and treatments list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mlGetReport()</span></code> get group and reported months list when you select province.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mlGetCase()</span></code> get case report when you click on report month of any group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mlUpdateCase()</span></code> insert/update/delete case.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">update</span><span class="p">()</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">delete</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">insert</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
 <li><p>View: mlcase_view.php</p></li>
 <li><p>ViewModel: MLCase.js</p></li>
 </ul>
@@ -273,6 +309,66 @@
       <span class="o">|</span>
       <span class="o">|</span><span class="n">__MLCase</span><span class="o">.</span><span class="n">js</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="police">
+<h3>Police<a class="headerlink" href="#police" title="Permalink to this headline"></a></h3>
+<p>Insert/Update/Delete Police case</p>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>        <span class="o">+------------------+</span>
+<span class="o">|</span>               <span class="o">|</span>        <span class="o">|</span>                  <span class="o">|</span>
+<span class="o">|</span><span class="n">tblPLActivity</span>  <span class="o">|--------|</span><span class="n">tblPLActivityCases</span><span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>        <span class="o">|</span>                  <span class="o">|</span>
+<span class="o">+---------------+</span>        <span class="o">+------------------+</span>
+        <span class="o">|</span>
+        <span class="o">|</span>
+        <span class="o">|</span>
+<span class="o">+---------------+</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span><span class="n">tblPLCodes</span>     <span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">+---------------+</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Controller: CaseReport.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pl()</span></code> : view police page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plGetPreData()</span></code> get province, troop, treatment list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plGetReport()</span></code> get post, district, month report list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plGetCase()</span></code> get case report when you click on report month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plUpdateCase()</span></code> insert/update/delete case.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">update</span><span class="p">()</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">delete</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">insert</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>View: plcase_view.php</p></li>
+<li><p>ViewModel: PLCase.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__CaseReport</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__plcase_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__PLCase</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
