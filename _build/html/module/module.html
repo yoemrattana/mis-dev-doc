@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module &mdash; MIS developer doc  documentation</title>
+  <title>VMW &mdash; MIS developer doc  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
@@ -56,7 +56,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html">Welcome to MIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/about-mis.html#who-is-for-mis">Who is for MIS</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technology</span></p>
@@ -78,10 +78,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Module</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#vmw">VMW</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">VMW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#hc">HC</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
 <ul>
@@ -114,7 +112,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Module</li>
+      <li>VMW</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/module/module.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -124,10 +122,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="module">
-<h1>Module<a class="headerlink" href="#module" title="Permalink to this headline"></a></h1>
-<div class="section" id="vmw">
-<h2>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h2>
+  <div class="section" id="vmw">
+<h1>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h1>
+<p>Insert/Update/Delete VMW case</p>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>        <span class="o">+---------------------+</span>
 <span class="o">|</span>                <span class="o">|</span>        <span class="o">|</span>                     <span class="o">|</span>
@@ -142,6 +139,22 @@
 <li><p>ViewModel: VMWCase.js</p></li>
 </ul>
 </div>
+<div class="section" id="hc">
+<h1>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h1>
+<p>Insert/Update/Delete HC case</p>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>        <span class="o">+------------------+</span>
+<span class="o">|</span>               <span class="o">|</span>        <span class="o">|</span>                  <span class="o">|</span>
+<span class="o">|</span><span class="n">tblHFActivity</span>  <span class="o">|--------|</span><span class="n">tblHFActivityCases</span><span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>        <span class="o">|</span>                  <span class="o">|</span>
+<span class="o">+---------------+</span>        <span class="o">+------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: CaseReport.php</p></li>
+<li><p>View: hfcase_view.php</p></li>
+<li><p>ViewModel: HFCase.js</p></li>
+</ul>
 </div>
 
 

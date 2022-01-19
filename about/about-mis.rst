@@ -1,5 +1,5 @@
-Welcome to MIS
-==============
+Introduction
+============
 
 .. image:: ../images/cnm.png
    :width: 100
