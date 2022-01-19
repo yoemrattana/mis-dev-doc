@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VMW &mdash; MIS developer doc  documentation</title>
+  <title>Module &mdash; MIS developer doc  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
@@ -78,8 +78,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Module</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">VMW</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#hc">HC</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vmw">VMW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hc">HC</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
 <ul>
@@ -112,7 +115,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>VMW</li>
+      <li>Module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/module/module.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -122,8 +125,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="vmw">
-<h1>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h1>
+  <div class="section" id="module">
+<h1>Module<a class="headerlink" href="#module" title="Permalink to this headline"></a></h1>
+<div class="section" id="vmw">
+<h2>VMW<a class="headerlink" href="#vmw" title="Permalink to this headline"></a></h2>
 <p>Insert/Update/Delete VMW case</p>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>        <span class="o">+---------------------+</span>
@@ -138,9 +143,28 @@
 <li><p>View: vmwcase_view.php</p></li>
 <li><p>ViewModel: VMWCase.js</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__CaseReport</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__vmwcase_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+  <span class="o">|</span>
+  <span class="o">|</span><span class="n">__ViewModel</span>
+    <span class="o">|</span>
+    <span class="o">|</span><span class="n">__VMWCase</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="hc">
-<h1>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h1>
+<h2>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h2>
 <p>Insert/Update/Delete HC case</p>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>        <span class="o">+------------------+</span>
@@ -155,6 +179,26 @@
 <li><p>View: hfcase_view.php</p></li>
 <li><p>ViewModel: HFCase.js</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__CaseReport</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__hfcase_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+  <span class="o">|</span>
+  <span class="o">|</span><span class="n">__ViewModel</span>
+    <span class="o">|</span>
+    <span class="o">|</span><span class="n">__HFCase</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
