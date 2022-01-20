@@ -222,6 +222,7 @@ Table diagram
     else if ( Rec_ID < 0 )
       then delete()
     else insert()
+
 - View: plcase_view.php
 - ViewModel: PLCase.js
 
@@ -245,6 +246,62 @@ Table diagram
         |
         |__PLCase.js
 
+Bed net
+-------
+
+Insert/Update/Delete bed net
+
+Tablet diagram
+
+::
+
+  +-----------------+     +---------------+     +---------------+
+  |                 |     |               |     |               |
+  | tblCensusVillage|-----| tblMalBedNet  |-----| tblHFCodes    |
+  |                 |     |               |     |               |
+  +-----------------+     +---------------+     +---------------+
+
+- Controller: CaseReport.php 
+
+  - ``bednet()`` : view bed net page.
+  - ``bednetGetReport()`` get groups and month report list.
+  - ``bednetGetCase()`` get bed net report when you click on report month.
+  - ``bednetUpdateCase()`` insert/update/delete bed net.
+
+  ::
+
+    if ( Rec_ID > 0 ) 
+      then update()
+    else if ( Rec_ID < 0 )
+      then delete()
+    else insert()
+
+  - ``bednetDeleteReport()`` delete report.
+  
+- View: bednet_view.php
+- ViewModel: Bednet.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__CaseReport.php
+  |  |
+  |  |__views
+  |     |
+  |     |__bednet_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__Bednet.js
+
+
 MMP bed net
 -----------
 
@@ -254,11 +311,11 @@ Tablet diagram
 
 ::
 
-  +-------------+
-  |             |
-  | tblMlBednet |
-  |             |
-  +-------------+
+  +-------------+    +-------------+ 
+  |             |    |             | 
+  | tblMLBednet |----| tblMLCodes  |     
+  |             |    |             | 
+  +-------------+    +-------------+ 
 
 - Controller: CaseReport.php 
 
@@ -266,7 +323,14 @@ Tablet diagram
   - ``mlGetPreData()`` get region, province and treatments list.
   - ``bednetMLGetReport()`` get groups and month report list.
   - ``bednetMLGetCase()`` get bed net report when you click on report month.
-  - ``bednetMLUpdateCase()`` insert/update/delete bed net.
+  - ``bednetMLUpdateCase()`` insert/update bed net.
+
+  ::
+
+    if ( Rec_ID == -1 )
+      then insert()
+    else update()
+
   - ``bednetMLDeleteReport()`` delete report.
   
 - View: mlbednet_view.php
@@ -303,7 +367,7 @@ Tablet diagram
 
     +-------------+         +------------------+
     |             |         |                  |
-    | tblPlBednet | --------|tblPLTroopCodes   |
+    | tblPLBednet | --------|tblPLTroopCodes   |
     |             |         |                  |
     +-------------+         +------------------+
 
@@ -313,7 +377,14 @@ Tablet diagram
   - ``plGetPreData()`` get province list.
   - ``bednetPLGetReport()`` get troop and month report list.
   - ``bednetPLGetCase()`` get bed net report when you click on report month.
-  - ``bednetPLUpdateCase()`` insert/update/delete bed net.
+  - ``bednetPLUpdateCase()`` insert/update bed net.
+
+  ::
+
+    if ( Rec_ID == -1 )
+      then insert()
+    else update()
+
   - ``bednetPLDeleteReport()`` delete report.
   
 - View: plbednet_view.php
@@ -337,4 +408,186 @@ Tablet diagram
      |
      |__ViewModel
         |
-        |__PLBednet.js    
+        |__PLBednet.js
+
+Bed net other
+-------------
+
+Insert/Update/Delete other bed net report
+
+Tablet diagram
+
+::
+
+    +-------------------+
+    |                   |
+    | tblMalBednetOther |
+    |                   |
+    +-------------------+
+
+- Controller: CaseReport.php 
+
+  - ``bednetother()`` : view police bed net page.
+  - ``bednetOtherGetReport()`` get troop and month report list.
+  - ``bednetOtherUpdateReport()`` insert/update/delete bed net.
+
+::
+
+    if ( Rec_ID > 0 ) 
+      then update()
+    else if ( Rec_ID < 0 )
+      then delete()
+    else insert()
+  
+- View: bednetother_view.php
+- ViewModel: BednetOther.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__CaseReport.php
+  |  |
+  |  |__views
+  |     |
+  |     |__bednetother_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__BednetOther.js    
+
+Questionaire
+------------
+
+tblQuestion11 , tblQuestion12, tblQuestion21, tblQuestion13, tblQuestion22
+
+Annex 1: Village Selection
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Table
+
+::
+
+    +---------------+
+    |               |
+    | tblQuestion11 |
+    |               |
+    +---------------+
+
+- Controller: Question.php
+
+  - ``index(Q11)`` view page.
+  - getData(tblQuestion11) retrieve data.
+- Controller: Direct.php
+
+  - ``insert()``
+  - ``update()``
+  
+- View: question11_view.php
+- ViewModel: Question11.js
+
+Annex 2: Hotspot Identification
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Table
+
+::
+
+    +---------------+
+    |               |
+    | tblQuestion12 |
+    |               |
+    +---------------+
+
+- Controller: Question.php
+
+  - ``index(Q12)`` view page.
+  - getData(tblQuestion12) retrieve data.
+- Controller: Direct.php
+
+  - ``insert()``
+  - ``update()``
+  
+- View: question12_view.php
+- ViewModel: Question12.js
+
+Annex 4: MMW Recruitment
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Table
+
+::
+
+    +---------------+
+    |               |
+    | tblQuestion21 |
+    |               |
+    +---------------+
+
+- Controller: Question.php
+
+  - ``index(Q21)`` view page.
+  - getData(tblQuestion21) retrieve data.
+- Controller: Direct.php
+
+  - ``insert()``
+  - ``update()``
+  
+- View: question21_view.php
+- ViewModel: Question21.js
+
+Annex 5, 6: Site Visit Active Screening
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Table
+
+::
+
+    +---------------+
+    |               |
+    | tblQuestion13 |
+    |               |
+    +---------------+
+
+- Controller: Question.php
+
+  - ``index(Q13)`` view page.
+  - getData(tblQuestion13) retrieve data.
+- Controller: Direct.php
+
+  - ``insert()``
+  - ``update()``
+  
+- View: question13_view.php
+- ViewModel: Question13.js
+
+Annex 7: Forest Pack
+~~~~~~~~~~~~~~~~~~~~
+
+Table
+
+::
+
+    +---------------+
+    |               |
+    | tblQuestion22 |
+    |               |
+    +---------------+
+
+- Controller: Question.php
+
+  - ``index(Q22)`` view page.
+  - getData(tblQuestion22) retrieve data.
+- Controller: Direct.php
+
+  - ``insert()``
+  - ``update()``
+  
+- View: question22_view.php
+- ViewModel: Question22.js

@@ -79,8 +79,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#hc">HC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mmp">MMP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#police">Police</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bed-net">Bed net</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mmp-bed-net">MMP bed net</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#police-bed-net">Police bed net</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bed-net-other">Bed net other</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#questionaire">Questionaire</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#annex-1-village-selection">Annex 1: Village Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#annex-2-hotspot-identification">Annex 2: Hotspot Identification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#annex-4-mmw-recruitment">Annex 4: MMW Recruitment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#annex-5-6-site-visit-active-screening">Annex 5, 6: Site Visit Active Screening</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#annex-7-forest-pack">Annex 7: Forest Pack</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -372,25 +382,85 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="bed-net">
+<h3>Bed net<a class="headerlink" href="#bed-net" title="Permalink to this headline"></a></h3>
+<p>Insert/Update/Delete bed net</p>
+<p>Tablet diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------+</span>     <span class="o">+---------------+</span>     <span class="o">+---------------+</span>
+<span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>               <span class="o">|</span>     <span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblCensusVillage</span><span class="o">|-----|</span> <span class="n">tblMalBedNet</span>  <span class="o">|-----|</span> <span class="n">tblHFCodes</span>    <span class="o">|</span>
+<span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>               <span class="o">|</span>     <span class="o">|</span>               <span class="o">|</span>
+<span class="o">+-----------------+</span>     <span class="o">+---------------+</span>     <span class="o">+---------------+</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Controller: CaseReport.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bednet()</span></code> : view bed net page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetGetReport()</span></code> get groups and month report list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetGetCase()</span></code> get bed net report when you click on report month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetUpdateCase()</span></code> insert/update/delete bed net.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">update</span><span class="p">()</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">delete</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">insert</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetDeleteReport()</span></code> delete report.</p></li>
+</ul>
+</li>
+<li><p>View: bednet_view.php</p></li>
+<li><p>ViewModel: Bednet.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__CaseReport</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__bednet_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__Bednet</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="mmp-bed-net">
 <h3>MMP bed net<a class="headerlink" href="#mmp-bed-net" title="Permalink to this headline"></a></h3>
 <p>Insert/Update/Delete MMP bed net</p>
 <p>Tablet diagram</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------+</span>
-<span class="o">|</span>             <span class="o">|</span>
-<span class="o">|</span> <span class="n">tblMlBednet</span> <span class="o">|</span>
-<span class="o">|</span>             <span class="o">|</span>
-<span class="o">+-------------+</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------+</span>    <span class="o">+-------------+</span>
+<span class="o">|</span>             <span class="o">|</span>    <span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblMLBednet</span> <span class="o">|----|</span> <span class="n">tblMLCodes</span>  <span class="o">|</span>
+<span class="o">|</span>             <span class="o">|</span>    <span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------+</span>    <span class="o">+-------------+</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Controller: CaseReport.php</p>
 <ul>
+<li><p>Controller: CaseReport.php</p>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetML()</span></code> : view MMP bed net page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mlGetPreData()</span></code> get region, province and treatments list.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetMLGetReport()</span></code> get groups and month report list.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetMLGetCase()</span></code> get bed net report when you click on report month.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bednetMLUpdateCase()</span></code> insert/update/delete bed net.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetMLUpdateCase()</span></code> insert/update bed net.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">insert</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">update</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetMLDeleteReport()</span></code> delete report.</p></li>
 </ul>
 </li>
@@ -423,19 +493,26 @@
 <p>Tablet diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------+</span>         <span class="o">+------------------+</span>
 <span class="o">|</span>             <span class="o">|</span>         <span class="o">|</span>                  <span class="o">|</span>
-<span class="o">|</span> <span class="n">tblPlBednet</span> <span class="o">|</span> <span class="o">--------|</span><span class="n">tblPLTroopCodes</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblPLBednet</span> <span class="o">|</span> <span class="o">--------|</span><span class="n">tblPLTroopCodes</span>   <span class="o">|</span>
 <span class="o">|</span>             <span class="o">|</span>         <span class="o">|</span>                  <span class="o">|</span>
 <span class="o">+-------------+</span>         <span class="o">+------------------+</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Controller: CaseReport.php</p>
 <ul>
+<li><p>Controller: CaseReport.php</p>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetPL()</span></code> : view police bed net page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">plGetPreData()</span></code> get province list.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetPLGetReport()</span></code> get troop and month report list.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetPLGetCase()</span></code> get bed net report when you click on report month.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bednetPLUpdateCase()</span></code> insert/update/delete bed net.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetPLUpdateCase()</span></code> insert/update bed net.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">insert</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">update</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bednetPLDeleteReport()</span></code> delete report.</p></li>
 </ul>
 </li>
@@ -460,6 +537,196 @@
       <span class="o">|</span>
       <span class="o">|</span><span class="n">__PLBednet</span><span class="o">.</span><span class="n">js</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="bed-net-other">
+<h3>Bed net other<a class="headerlink" href="#bed-net-other" title="Permalink to this headline"></a></h3>
+<p>Insert/Update/Delete other bed net report</p>
+<p>Tablet diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------------+</span>
+<span class="o">|</span>                   <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblMalBednetOther</span> <span class="o">|</span>
+<span class="o">|</span>                   <span class="o">|</span>
+<span class="o">+-------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: CaseReport.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetother()</span></code> : view police bed net page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetOtherGetReport()</span></code> get troop and month report list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetOtherUpdateReport()</span></code> insert/update/delete bed net.</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">update</span><span class="p">()</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">delete</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">insert</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>View: bednetother_view.php</p></li>
+<li><p>ViewModel: BednetOther.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__CaseReport</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__bednetother_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__BednetOther</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="questionaire">
+<h3>Questionaire<a class="headerlink" href="#questionaire" title="Permalink to this headline"></a></h3>
+<p>tblQuestion11 , tblQuestion12, tblQuestion21, tblQuestion13, tblQuestion22</p>
+<div class="section" id="annex-1-village-selection">
+<h4>Annex 1: Village Selection<a class="headerlink" href="#annex-1-village-selection" title="Permalink to this headline"></a></h4>
+<p>Table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblQuestion11</span> <span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">+---------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Question.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index(Q11)</span></code> view page.</p></li>
+<li><p>getData(tblQuestion11) retrieve data.</p></li>
+</ul>
+</li>
+<li><p>Controller: Direct.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: question11_view.php</p></li>
+<li><p>ViewModel: Question11.js</p></li>
+</ul>
+</div>
+<div class="section" id="annex-2-hotspot-identification">
+<h4>Annex 2: Hotspot Identification<a class="headerlink" href="#annex-2-hotspot-identification" title="Permalink to this headline"></a></h4>
+<p>Table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblQuestion12</span> <span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">+---------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Question.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index(Q12)</span></code> view page.</p></li>
+<li><p>getData(tblQuestion12) retrieve data.</p></li>
+</ul>
+</li>
+<li><p>Controller: Direct.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: question12_view.php</p></li>
+<li><p>ViewModel: Question12.js</p></li>
+</ul>
+</div>
+<div class="section" id="annex-4-mmw-recruitment">
+<h4>Annex 4: MMW Recruitment<a class="headerlink" href="#annex-4-mmw-recruitment" title="Permalink to this headline"></a></h4>
+<p>Table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblQuestion21</span> <span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">+---------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Question.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index(Q21)</span></code> view page.</p></li>
+<li><p>getData(tblQuestion21) retrieve data.</p></li>
+</ul>
+</li>
+<li><p>Controller: Direct.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: question21_view.php</p></li>
+<li><p>ViewModel: Question21.js</p></li>
+</ul>
+</div>
+<div class="section" id="annex-5-6-site-visit-active-screening">
+<h4>Annex 5, 6: Site Visit Active Screening<a class="headerlink" href="#annex-5-6-site-visit-active-screening" title="Permalink to this headline"></a></h4>
+<p>Table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblQuestion13</span> <span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">+---------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Question.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index(Q13)</span></code> view page.</p></li>
+<li><p>getData(tblQuestion13) retrieve data.</p></li>
+</ul>
+</li>
+<li><p>Controller: Direct.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: question13_view.php</p></li>
+<li><p>ViewModel: Question13.js</p></li>
+</ul>
+</div>
+<div class="section" id="annex-7-forest-pack">
+<h4>Annex 7: Forest Pack<a class="headerlink" href="#annex-7-forest-pack" title="Permalink to this headline"></a></h4>
+<p>Table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblQuestion22</span> <span class="o">|</span>
+<span class="o">|</span>               <span class="o">|</span>
+<span class="o">+---------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Question.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index(Q22)</span></code> view page.</p></li>
+<li><p>getData(tblQuestion22) retrieve data.</p></li>
+</ul>
+</li>
+<li><p>Controller: Direct.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: question22_view.php</p></li>
+<li><p>ViewModel: Question22.js</p></li>
+</ul>
 </div>
 </div>
 </div>
