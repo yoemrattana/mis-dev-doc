@@ -35,8 +35,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API v1 of CMI" href="../api-cmi/v1.html" />
-    <link rel="prev" title="API v5" href="../api/v5.html" /> 
+    <link rel="next" title="API v4" href="../api/v4.html" />
+    <link rel="prev" title="Cron Job" href="../cron-job/cron-job.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -71,11 +71,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cron-job/cron-job.html">Cron Job</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">API of CNM Reporting App</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/v4.html">API v4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/v5.html">API v5</a></li>
-</ul>
 <p class="caption" role="heading"><span class="caption-text">Module</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Module</a><ul>
@@ -84,10 +79,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#hc">HC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mmp">MMP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#police">Police</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mmp-bed-net">MMP bed net</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#police-bed-net">Police bed net</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API of CNM Reporting App</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/v4.html">API v4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/v5.html">API v5</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
 <ul>
@@ -370,6 +372,96 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="mmp-bed-net">
+<h3>MMP bed net<a class="headerlink" href="#mmp-bed-net" title="Permalink to this headline"></a></h3>
+<p>Insert/Update/Delete MMP bed net</p>
+<p>Tablet diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------+</span>
+<span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblMlBednet</span> <span class="o">|</span>
+<span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: CaseReport.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetML()</span></code> : view MMP bed net page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mlGetPreData()</span></code> get region, province and treatments list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetMLGetReport()</span></code> get groups and month report list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetMLGetCase()</span></code> get bed net report when you click on report month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetMLUpdateCase()</span></code> insert/update/delete bed net.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetMLDeleteReport()</span></code> delete report.</p></li>
+</ul>
+</li>
+<li><p>View: mlbednet_view.php</p></li>
+<li><p>ViewModel: MLBednet.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__CaseReport</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__mlbednet_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__MLBednet</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="police-bed-net">
+<h3>Police bed net<a class="headerlink" href="#police-bed-net" title="Permalink to this headline"></a></h3>
+<p>Insert/Update/Delete police bed net report</p>
+<p>Tablet diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------+</span>         <span class="o">+------------------+</span>
+<span class="o">|</span>             <span class="o">|</span>         <span class="o">|</span>                  <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblPlBednet</span> <span class="o">|</span> <span class="o">--------|</span><span class="n">tblPLTroopCodes</span>   <span class="o">|</span>
+<span class="o">|</span>             <span class="o">|</span>         <span class="o">|</span>                  <span class="o">|</span>
+<span class="o">+-------------+</span>         <span class="o">+------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: CaseReport.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetPL()</span></code> : view police bed net page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plGetPreData()</span></code> get province list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetPLGetReport()</span></code> get troop and month report list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetPLGetCase()</span></code> get bed net report when you click on report month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetPLUpdateCase()</span></code> insert/update/delete bed net.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bednetPLDeleteReport()</span></code> delete report.</p></li>
+</ul>
+</li>
+<li><p>View: plbednet_view.php</p></li>
+<li><p>ViewModel: PLBednet.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__CaseReport</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__plbednet_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__PLBednet</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -377,8 +469,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../api/v5.html" class="btn btn-neutral float-left" title="API v5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../api-cmi/v1.html" class="btn btn-neutral float-right" title="API v1 of CMI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../cron-job/cron-job.html" class="btn btn-neutral float-left" title="Cron Job" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../api/v4.html" class="btn btn-neutral float-right" title="API v4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

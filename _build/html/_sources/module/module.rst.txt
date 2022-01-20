@@ -33,6 +33,7 @@ Table diagram
   - ``vmwGetReport()`` get VMWs' villages and reported months list when you select HF.
   - ``vmwGetCase()`` get vmw case report when you click on report month of any village.
   - ``vmwUpdateCase()`` insert/update/delete case.
+  
   ::
 
     if(Rec_ID > 0) 
@@ -93,6 +94,7 @@ Table diagram
   - ``hfGetReport()`` get HF and reported months list when you select OD.
   - ``hfGetCase()`` get HF case report when you click on report month of any HF.
   - ``hfUpdateCase()`` insert/update/delete case.
+  
   ::
 
     if( Rec_ID > 0 ) 
@@ -152,6 +154,7 @@ Table diagram
   - ``mlGetReport()`` get group and reported months list when you select province.
   - ``mlGetCase()`` get case report when you click on report month of any group.
   - ``mlUpdateCase()`` insert/update/delete case.
+  
   ::
 
     if ( Rec_ID > 0 ) 
@@ -211,6 +214,7 @@ Table diagram
   - ``plGetReport()`` get post, district, month report list.
   - ``plGetCase()`` get case report when you click on report month.
   - ``plUpdateCase()`` insert/update/delete case.
+  
   ::
 
     if ( Rec_ID > 0 ) 
@@ -240,3 +244,97 @@ Table diagram
      |__ViewModel
         |
         |__PLCase.js
+
+MMP bed net
+-----------
+
+Insert/Update/Delete MMP bed net
+
+Tablet diagram
+
+::
+
+  +-------------+
+  |             |
+  | tblMlBednet |
+  |             |
+  +-------------+
+
+- Controller: CaseReport.php 
+
+  - ``bednetML()`` : view MMP bed net page.
+  - ``mlGetPreData()`` get region, province and treatments list.
+  - ``bednetMLGetReport()`` get groups and month report list.
+  - ``bednetMLGetCase()`` get bed net report when you click on report month.
+  - ``bednetMLUpdateCase()`` insert/update/delete bed net.
+  - ``bednetMLDeleteReport()`` delete report.
+  
+- View: mlbednet_view.php
+- ViewModel: MLBednet.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__CaseReport.php
+  |  |
+  |  |__views
+  |     |
+  |     |__mlbednet_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__MLBednet.js
+
+Police bed net
+--------------
+
+Insert/Update/Delete police bed net report
+
+Tablet diagram
+
+::
+
+    +-------------+         +------------------+
+    |             |         |                  |
+    | tblPlBednet | --------|tblPLTroopCodes   |
+    |             |         |                  |
+    +-------------+         +------------------+
+
+- Controller: CaseReport.php 
+
+  - ``bednetPL()`` : view police bed net page.
+  - ``plGetPreData()`` get province list.
+  - ``bednetPLGetReport()`` get troop and month report list.
+  - ``bednetPLGetCase()`` get bed net report when you click on report month.
+  - ``bednetPLUpdateCase()`` insert/update/delete bed net.
+  - ``bednetPLDeleteReport()`` delete report.
+  
+- View: plbednet_view.php
+- ViewModel: PLBednet.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__CaseReport.php
+  |  |
+  |  |__views
+  |     |
+  |     |__plbednet_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__PLBednet.js    
