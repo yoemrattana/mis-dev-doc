@@ -741,3 +741,22 @@ Table diagram
   - ``getReport()`` show report of HIS and MIS
   - ``upload()`` upload excel file of HIS
   - ``delete()`` delete report
+- View his_view.php
+- ViewModel: HIS.js
+
+Border upload
+~~~~~~~~~~~~~
+
+Table
+
+::
+
+  +----------------+
+  |                |
+  | tblBorderCases |
+  |                |
+  +----------------+
+
+- Controller: BorderImport.php
+- View: borderimport_view.php
+- ViewModel: BorderImport.js
