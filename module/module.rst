@@ -583,7 +583,7 @@ Table
 - Controller: Question.php
 
   - ``index(Q22)`` view page.
-  - getData(tblQuestion22) retrieve data.
+  - ``getData(tblQuestion22)`` retrieve data.
 - Controller: Direct.php
 
   - ``insert()``
@@ -591,3 +591,73 @@ Table
   
 - View: question22_view.php
 - ViewModel: Question22.js
+
+Foci investigation
+------------------
+
+Table v1
+
+::
+
+    +-----------------------+     +-------------------+
+    |                       |     |                   |
+    | tblFociInvestiation   |-----| tblCensusVillage  |
+    |                       |     |                   |
+    +-----------------------+     +-------------------+
+
+Table v2
+
+::
+
+    +-----------------------+     +-------------------+
+    |                       |     |                   |
+    | tblFociInvestiation2  |-----| tblCensusVillage  |
+    |                       |     |                   |
+    +-----------------------+     +-------------------+
+
+List of foci
+~~~~~~~~~~~~
+
+- Controller: Foci.php
+
+  - ``index()`` view page
+  - ``getData()`` we use store procedure ``SP_Get_FociList`` 
+  - ``getDetail()``
+- View: foci_view.php
+- ViewModel: Foci.js
+
+Detail of foci v1
+~~~~~~~~~~~~~~~~~~
+
+- Controller: Foci.php
+
+  - ``open(village_code)`` to open form of foci v1.
+  - ``save1()`` to save data of foci v1.
+
+  ::
+
+    if ( Rec_ID == null )
+      then insert()
+    else update()
+
+  - ``getPatient()``
+- View: foci1_view.php
+- ViewModel: Foci1.js
+
+Detail of foci v2
+~~~~~~~~~~~~~~~~~~
+
+- Controller: Foci.php
+
+  - ``open(village_code)`` to open form of foci v2.
+  - ``save2()`` to save data of foci v2.
+
+  ::
+
+    if ( Rec_ID == null )
+      then insert()
+    else update()
+    
+  - ``getClassify()``
+- View: foci1_view.php
+- ViewModel: Foci1.js

@@ -91,6 +91,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#annex-7-forest-pack">Annex 7: Forest Pack</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#foci-investigation">Foci investigation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-foci">List of foci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detail-of-foci-v1">Detail of foci v1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detail-of-foci-v2">Detail of foci v2</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -715,7 +721,7 @@
 <li><p>Controller: Question.php</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">index(Q22)</span></code> view page.</p></li>
-<li><p>getData(tblQuestion22) retrieve data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getData(tblQuestion22)</span></code> retrieve data.</p></li>
 </ul>
 </li>
 <li><p>Controller: Direct.php</p>
@@ -726,6 +732,74 @@
 </li>
 <li><p>View: question22_view.php</p></li>
 <li><p>ViewModel: Question22.js</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="foci-investigation">
+<h3>Foci investigation<a class="headerlink" href="#foci-investigation" title="Permalink to this headline"></a></h3>
+<p>Table v1</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------------+</span>     <span class="o">+-------------------+</span>
+<span class="o">|</span>                       <span class="o">|</span>     <span class="o">|</span>                   <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblFociInvestiation</span>   <span class="o">|-----|</span> <span class="n">tblCensusVillage</span>  <span class="o">|</span>
+<span class="o">|</span>                       <span class="o">|</span>     <span class="o">|</span>                   <span class="o">|</span>
+<span class="o">+-----------------------+</span>     <span class="o">+-------------------+</span>
+</pre></div>
+</div>
+<p>Table v2</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------------+</span>     <span class="o">+-------------------+</span>
+<span class="o">|</span>                       <span class="o">|</span>     <span class="o">|</span>                   <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblFociInvestiation2</span>  <span class="o">|-----|</span> <span class="n">tblCensusVillage</span>  <span class="o">|</span>
+<span class="o">|</span>                       <span class="o">|</span>     <span class="o">|</span>                   <span class="o">|</span>
+<span class="o">+-----------------------+</span>     <span class="o">+-------------------+</span>
+</pre></div>
+</div>
+<div class="section" id="list-of-foci">
+<h4>List of foci<a class="headerlink" href="#list-of-foci" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Controller: Foci.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code> view page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getData()</span></code> we use store procedure <code class="docutils literal notranslate"><span class="pre">SP_Get_FociList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getDetail()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: foci_view.php</p></li>
+<li><p>ViewModel: Foci.js</p></li>
+</ul>
+</div>
+<div class="section" id="detail-of-foci-v1">
+<h4>Detail of foci v1<a class="headerlink" href="#detail-of-foci-v1" title="Permalink to this headline"></a></h4>
+<ul>
+<li><p>Controller: Foci.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">open(village_code)</span></code> to open form of foci v1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">save1()</span></code> to save data of foci v1.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="n">Rec_ID</span> <span class="o">==</span> <span class="n">null</span> <span class="p">)</span>
+  <span class="n">then</span> <span class="n">insert</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">update</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">getPatient()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: foci1_view.php</p></li>
+<li><p>ViewModel: Foci1.js</p></li>
+</ul>
+</div>
+<div class="section" id="detail-of-foci-v2">
+<h4>Detail of foci v2<a class="headerlink" href="#detail-of-foci-v2" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Controller: Foci.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">open(village_code)</span></code> to open form of foci v2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">save2()</span></code> to save data of foci v2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getClassify()</span></code></p></li>
+</ul>
+</li>
+<li><p>View: foci1_view.php</p></li>
+<li><p>ViewModel: Foci1.js</p></li>
 </ul>
 </div>
 </div>
