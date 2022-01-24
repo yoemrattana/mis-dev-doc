@@ -657,7 +657,67 @@ Detail of foci v2
     if ( Rec_ID == null )
       then insert()
     else update()
-    
+
   - ``getClassify()``
 - View: foci1_view.php
 - ViewModel: Foci1.js
+
+Follow up
+---------
+
+VMW follow up
+~~~~~~~~~~~~~
+
+Table
+
+::
+
+  +----------------+
+  |                |
+  | tblVMWFollowup |
+  |                |
+  +----------------+
+
+- Controller: VMWFollowup.php
+
+  - ``getData()`` get list of VMW follow up
+  - ``getDetail()`` get detail of VMW follow up
+  - ``delete()`` delete follow up.
+  - ``save()`` insert/update
+
+  ::
+
+    if ( empty (Rec_ID) )
+      then insert()
+    else update()  
+- View: vmwfollowup_view.php
+- ViewModel: VMWFollowup.js
+  
+HC follow up
+~~~~~~~~~~~~
+
+Table
+
+::
+
+  +---------------+
+  |               |
+  | tblHCFollowup |
+  |               |
+  +---------------+
+
+- Controller: HCFollowup.php
+
+  - ``getData()`` get list of follow up
+  - ``getDetail()`` get detail of follow up
+  - ``delete()`` delete follow up.
+  - ``save()`` insert/update
+
+  ::
+
+    if ( empty (Rec_ID) )
+      then insert()
+    else update()  
+- View: hcfollowup_view.php
+- ViewModel: HCFollowup.js
+  
