@@ -8,6 +8,10 @@ VMW
 
 Insert/Update/Delete VMW case
 
+- System: Enter data of malaria case that report by VMW
+- Primary Actor: OD staff, PHD staff.
+- Scenario: When VMW does not report malaria data by smart phone then OD staff will be responsible for entering data.
+
 Table diagram
 
 ::
@@ -668,6 +672,12 @@ Follow up
 VMW follow up
 ~~~~~~~~~~~~~
 
+- System: Followup tool for enter VMW followup data.
+- Primary actor: OD staff.
+- Scenario: When VMW report malaria case with Pv or Mix specie then system will create patient code and write to database and create VMW notification log.
+  when patient go to health center to get Pv radical cure then Hc staff update case by adding G6PD result and number of primaquine then system will create follow up form for that patient.
+  In case Hc does not enter data then OD staff will be responsible for entering data.
+
 Table
 
 ::
@@ -695,6 +705,13 @@ Table
   
 HC follow up
 ~~~~~~~~~~~~
+
+- System: Followup tool for enter HF followup data.
+- Primary actor: OD staff.
+- Scenario: When HC report malaria case with Pv or Mix specie then system will write to database and generate patient code.
+  If patient come from Village that has VMW system will create VMW Notificatino, otherwise system will create HC notification.
+  If that patient get Pv radical cure service then Hc update case by enter result of G6PD and number of primaquine then system will create follow up form.
+  in case Hc staff does not enter followup data in time then OD staff will be responsible for entering data.
 
 Table
 
@@ -741,3 +758,22 @@ Table diagram
   - ``getReport()`` show report of HIS and MIS
   - ``upload()`` upload excel file of HIS
   - ``delete()`` delete report
+- View his_view.php
+- ViewModel: HIS.js
+
+Border malaria case upload
+--------------------------
+
+Table
+
+::
+
+  +----------------+
+  |                |
+  | tblBorderCases |
+  |                |
+  +----------------+
+
+- Controller: BorderImport.php
+- View: borderimport_view.php
+- ViewModel: BorderImport.js
