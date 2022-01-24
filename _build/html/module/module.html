@@ -102,6 +102,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#hc-follow-up">HC follow up</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#his-data-upload">HIS data upload</a></li>
 </ul>
 </li>
 </ul>
@@ -873,6 +874,28 @@
 <li><p>ViewModel: HCFollowup.js</p></li>
 </ul>
 </div>
+</div>
+<div class="section" id="his-data-upload">
+<h3>HIS data upload<a class="headerlink" href="#his-data-upload" title="Permalink to this headline"></a></h3>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------+</span>     <span class="o">+-----------------+</span>     <span class="o">+-----------------+</span>     <span class="o">+-----------------+</span>
+<span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>                 <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblHisDipstick</span>  <span class="o">|</span>     <span class="o">|</span>    <span class="n">tblHisSlide</span>  <span class="o">|</span>     <span class="o">|</span>   <span class="n">tblHisTreat</span>   <span class="o">|</span>     <span class="o">|</span>    <span class="n">tblHisVMW</span>    <span class="o">|</span>
+<span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>                 <span class="o">|</span>     <span class="o">|</span>                 <span class="o">|</span>
+<span class="o">+-----------------+</span>     <span class="o">+-----------------+</span>     <span class="o">+-----------------+</span>     <span class="o">+-----------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: HIS.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">getData()</span></code> get list of his report</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getDetail()</span></code> show detail of report by month</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReport()</span></code> show report of HIS and MIS</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upload()</span></code> upload excel file of HIS</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete()</span></code> delete report</p></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>

@@ -720,4 +720,24 @@ Table
     else update()  
 - View: hcfollowup_view.php
 - ViewModel: HCFollowup.js
-  
+
+HIS data upload
+---------------
+
+Table diagram
+
+::
+
+  +-----------------+     +-----------------+     +-----------------+     +-----------------+
+  |                 |     |                 |     |                 |     |                 |
+  | tblHisDipstick  |     |    tblHisSlide  |     |   tblHisTreat   |     |    tblHisVMW    |
+  |                 |     |                 |     |                 |     |                 |
+  +-----------------+     +-----------------+     +-----------------+     +-----------------+
+
+- Controller: HIS.php
+
+  - ``getData()`` get list of his report
+  - ``getDetail()`` show detail of report by month
+  - ``getReport()`` show report of HIS and MIS
+  - ``upload()`` upload excel file of HIS
+  - ``delete()`` delete report
