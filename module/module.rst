@@ -1,5 +1,13 @@
 Module
 ++++++
+
+Main Diagram
+============
+
+.. image:: ../images/software-requirement.jpg
+   :align: center
+   :alt: 'diagram'
+
 Malaria & ITN Data
 ==================
 
@@ -71,7 +79,12 @@ Table diagram
 
 HC
 ---
+
 Insert/Update/Delete HC case
+
+- System: Tool for entering malaria case that report by health center/ referal hospital.
+- Actor: OD staff
+- Scenario: When HC/RH staff cannot report its case then OD staff will be responsible for entering data.
 
 Table diagram
 
@@ -131,7 +144,12 @@ Table diagram
 
 MMP
 ---
+
 Insert/Update/Delete MMP case
+
+- System: Tool for MMP to enter malaria case.
+- Actor: MMP staff.
+- Scenario: MMP staff login and go to MMP tool then enter data.
 
 Table diagram
 
@@ -139,7 +157,7 @@ Table diagram
 
   +---------------+        +------------------+
   |               |        |                  | 
-  |tblMLActivity  |--------|tblMLActivityCases|
+  | tblMLActivity |--------|tblMLActivityCases|
   |               |        |                  |
   +---------------+        +------------------+  
           |
@@ -147,7 +165,7 @@ Table diagram
           |
   +---------------+
   |               |
-  |tblMLCodes     |
+  |   tblMLCodes  |
   |               |
   +---------------+
 

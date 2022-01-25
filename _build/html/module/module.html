@@ -74,6 +74,7 @@
 <p class="caption" role="heading"><span class="caption-text">Module</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main-diagram">Main Diagram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#malaria-itn-data">Malaria &amp; ITN Data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#vmw">VMW</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hc">HC</a></li>
@@ -157,6 +158,10 @@
              
   <div class="section" id="module">
 <h1>Module<a class="headerlink" href="#module" title="Permalink to this headline"></a></h1>
+<div class="section" id="main-diagram">
+<h2>Main Diagram<a class="headerlink" href="#main-diagram" title="Permalink to this headline"></a></h2>
+<img alt="'diagram'" class="align-center" src="../_images/software-requirement.jpg" />
+</div>
 <div class="section" id="malaria-itn-data">
 <h2>Malaria &amp; ITN Data<a class="headerlink" href="#malaria-itn-data" title="Permalink to this headline"></a></h2>
 <div class="section" id="vmw">
@@ -226,6 +231,11 @@
 <div class="section" id="hc">
 <h3>HC<a class="headerlink" href="#hc" title="Permalink to this headline"></a></h3>
 <p>Insert/Update/Delete HC case</p>
+<ul class="simple">
+<li><p>System: Tool for entering malaria case that report by health center/ referal hospital.</p></li>
+<li><p>Actor: OD staff</p></li>
+<li><p>Scenario: When HC/RH staff cannot report its case then OD staff will be responsible for entering data.</p></li>
+</ul>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>        <span class="o">+------------------+</span>
 <span class="o">|</span>               <span class="o">|</span>        <span class="o">|</span>                  <span class="o">|</span>
@@ -285,10 +295,15 @@
 <div class="section" id="mmp">
 <h3>MMP<a class="headerlink" href="#mmp" title="Permalink to this headline"></a></h3>
 <p>Insert/Update/Delete MMP case</p>
+<ul class="simple">
+<li><p>System: Tool for MMP to enter malaria case.</p></li>
+<li><p>Actor: MMP staff.</p></li>
+<li><p>Scenario: MMP staff login and go to MMP tool then enter data.</p></li>
+</ul>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------+</span>        <span class="o">+------------------+</span>
 <span class="o">|</span>               <span class="o">|</span>        <span class="o">|</span>                  <span class="o">|</span>
-<span class="o">|</span><span class="n">tblMLActivity</span>  <span class="o">|--------|</span><span class="n">tblMLActivityCases</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">tblMLActivity</span> <span class="o">|--------|</span><span class="n">tblMLActivityCases</span><span class="o">|</span>
 <span class="o">|</span>               <span class="o">|</span>        <span class="o">|</span>                  <span class="o">|</span>
 <span class="o">+---------------+</span>        <span class="o">+------------------+</span>
         <span class="o">|</span>
@@ -296,7 +311,7 @@
         <span class="o">|</span>
 <span class="o">+---------------+</span>
 <span class="o">|</span>               <span class="o">|</span>
-<span class="o">|</span><span class="n">tblMLCodes</span>     <span class="o">|</span>
+<span class="o">|</span>   <span class="n">tblMLCodes</span>  <span class="o">|</span>
 <span class="o">|</span>               <span class="o">|</span>
 <span class="o">+---------------+</span>
 </pre></div>
