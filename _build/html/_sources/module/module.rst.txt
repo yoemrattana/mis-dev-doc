@@ -4,9 +4,12 @@ Module
 Main Diagram
 ============
 
-.. figure:: ../images/software-requirement.jpg
+.. figure:: ../images/detail-diagram.jpg
+  :width: 80%
+  :align: center
+  :alt: Detail diagram
 
-  Diagram of function
+  Detail diagram
 
 Malaria & ITN Data
 ==================
