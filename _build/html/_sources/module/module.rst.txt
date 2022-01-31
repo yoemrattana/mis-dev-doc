@@ -8,7 +8,7 @@ Use case malaria & ITN data
 ---------------------------
 
 .. figure:: ../images/use_case_malaria_itn.jpg
-  :width: 80%
+  :width: 70%
   :align: center
   :alt: Use case for malaria & ITN data
 

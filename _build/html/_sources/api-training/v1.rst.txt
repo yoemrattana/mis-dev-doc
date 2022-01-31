@@ -1,0 +1,92 @@
+API V1 of Training
+==================
+
+Material
+--------
+
+.. http:get:: /api-training/v1/material/list
+
+  To get list of material file: PDF, Slide, Video
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "Rec_ID": 1,
+              "Title": "Documentation",
+              "Source": "https://drive.google.com/file/d/13ozAFcTGX-C5HD1rz3XUpioeeVK83KQU/preview",
+              "Category": "PDF",
+              "Audience": "HC"
+          },
+          {
+              "Rec_ID": 2,
+              "Title": "Video",
+              "Source": "qUotrP3M-Dc",
+              "Category": "Video",
+              "Audience": "VMW"
+          }
+      ]
+    }
+
+  :Object:
+
+    * **Category** (*string*) -- type of Source. e.g: PDF, Slide, Video.
+    * **Audience** (*string*) -- HC/VMW.
+    * **Source** (*string*) -- if ``Category`` is ``Video`` then ``Source`` is a video ID of youtube. If ``Category`` is ``PDF`` or ``Slide`` then ``Source`` is a link embeded from google drive
+
+Quiz Question
+-------------
+
+.. http:get:: /api-training/v1/quiz/list
+
+  To get list of Questionaire.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+            "Rec_ID": 2,
+            "Question": "តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?",
+            "Answers": [
+                {
+                    "Rec_ID": 5,
+                    "Answer": "24",
+                    "IsCorrect": 1,
+                    "QuestionID": 2
+                },
+                {
+                    "Rec_ID": 6,
+                    "Answer": "45",
+                    "IsCorrect": 0,
+                    "QuestionID": 2
+                },
+                {
+                    "Rec_ID": 7,
+                    "Answer": "73",
+                    "IsCorrect": 0,
+                    "QuestionID": 2
+                },
+                {
+                    "Rec_ID": 8,
+                    "Answer": "21",
+                    "IsCorrect": 0,
+                    "QuestionID": 2
+                }
+            ]
+          }
+      ]
+    }
+
+  :Object:
+
+    * **IsCorrect** (*bit*) -- if it is a correct answer its value is ``1`` otherwise ``0`` 
