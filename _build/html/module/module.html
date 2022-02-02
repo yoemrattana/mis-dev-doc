@@ -109,6 +109,24 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#his-data-upload">HIS data upload</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#border-malaria-case-upload">Border malaria case upload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vmw-qa">VMW QA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lastmile">Lastmile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-list">Check list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-list-hc">Check list HC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-list-od">Check list OD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-list-epi">Check list EPI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#stock">Stock</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stock-request">Stock request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stock-data">Stock Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stock-hc">Stock HC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stock-od">Stock OD</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#stock-cnm">Stock CNM</a></li>
 </ul>
 </li>
 </ul>
@@ -970,6 +988,227 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <li><p>Controller: BorderImport.php</p></li>
 <li><p>View: borderimport_view.php</p></li>
 <li><p>ViewModel: BorderImport.js</p></li>
+</ul>
+</div>
+<div class="section" id="vmw-qa">
+<h3>VMW QA<a class="headerlink" href="#vmw-qa" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>System: VMW QA tool for OD/PHD monitor VMW.</p></li>
+<li><p>Actor: OD , PHD</p></li>
+<li><p>Scenario: When HC/OD/PHP use tablet to enter data, then OD/PHD can use this tool to view questionaire, supervision schedule, Monitor, Report, Dashboard.</p></li>
+</ul>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+---------------------+</span>     <span class="o">+---------------------------+</span>     <span class="o">+-------------------------+</span>
+<span class="o">|</span>                     <span class="o">|</span>     <span class="o">|</span>                           <span class="o">|</span>     <span class="o">|</span>                         <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblVMWQuestionnaire</span> <span class="o">|-----|</span> <span class="n">tblVMWQuestionnaireDetail</span> <span class="o">|-----|</span> <span class="n">tblVMWQuestionnaireItem</span> <span class="o">|</span>
+<span class="o">|</span>                     <span class="o">|</span>     <span class="o">|</span>                           <span class="o">|</span>     <span class="o">|</span>                         <span class="o">|</span>
+<span class="o">+---------------------+</span>     <span class="o">+---------------------------+</span>     <span class="o">+-------------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: VMWQA.php</p></li>
+<li><p>View: vmwqa_view.php</p></li>
+<li><p>ViewModel: VMWQA.js</p></li>
+</ul>
+</div>
+<div class="section" id="lastmile">
+<h3>Lastmile<a class="headerlink" href="#lastmile" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>System: Last mile</p></li>
+<li><p>Actor: OD/PHD</p></li>
+<li><p>Scenario: When VMW cannot enter data, then OD staff will be responsible for entering data.</p></li>
+</ul>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------------+</span>     <span class="o">+----------------------------+</span>     <span class="o">+----------------+</span>
+<span class="o">|</span>                      <span class="o">|</span>     <span class="o">|</span>                            <span class="o">|</span>     <span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblLastmileHouseHold</span> <span class="o">|----&lt;|</span> <span class="n">tblLastmileHouseHoldMember</span> <span class="o">|----&lt;|</span> <span class="n">tblLastmileTDA</span> <span class="o">|</span>
+<span class="o">|</span>                      <span class="o">|</span>     <span class="o">|</span>                            <span class="o">|</span>     <span class="o">|</span>                <span class="o">|</span>
+<span class="o">+----------------------+</span>     <span class="o">+----------------------------+</span>     <span class="o">+----------------+</span>
+                                <span class="o">|</span>                   <span class="o">|</span>
+                                <span class="o">|</span>                   <span class="o">|</span>
+                        <span class="o">+----------------+</span>    <span class="o">+----------------+</span>
+                        <span class="o">|</span>                <span class="o">|</span>    <span class="o">|</span>                <span class="o">|</span>
+                        <span class="o">|</span> <span class="n">tblLastmileIPT</span> <span class="o">|</span>    <span class="o">|</span> <span class="n">tblLastmileAFS</span> <span class="o">|</span>
+                        <span class="o">|</span>                <span class="o">|</span>    <span class="o">|</span>                <span class="o">|</span>
+                        <span class="o">+----------------+</span>    <span class="o">+----------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Lastmile.php</p></li>
+<li><p>View: lastmile_view.php</p></li>
+<li><p>ViewModel: Lastmile.js</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TDA1 and TDA2 must be 28 days apart.</p>
+<p>Must complete TDA1/TDA2 before do IPT.</p>
+<p>IPT and TDA1 must be 14 days apart.</p>
+<p>IPT and TDA2 must be 28 days apart.</p>
+</div>
+</div>
+<div class="section" id="check-list">
+<h3>Check list<a class="headerlink" href="#check-list" title="Permalink to this headline"></a></h3>
+<div class="section" id="check-list-hc">
+<h4>Check list HC<a class="headerlink" href="#check-list-hc" title="Permalink to this headline"></a></h4>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>      <span class="o">+----------------------+</span>
+<span class="o">|</span>                <span class="o">|</span>      <span class="o">|</span>                      <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblChecklistHC</span> <span class="o">|-----&lt;|</span> <span class="n">tblChecklistHCDetail</span> <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>      <span class="o">|</span>                      <span class="o">|</span>
+<span class="o">+----------------+</span>      <span class="o">+----------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Checklist.php</p></li>
+<li><p>View: checklist_hc_view.php</p></li>
+<li><p>ViewModel: Checklist_HC.js</p></li>
+</ul>
+</div>
+<div class="section" id="check-list-od">
+<h4>Check list OD<a class="headerlink" href="#check-list-od" title="Permalink to this headline"></a></h4>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>      <span class="o">+----------------------+</span>
+<span class="o">|</span>                <span class="o">|</span>      <span class="o">|</span>                      <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblChecklistOD</span> <span class="o">|-----&lt;|</span> <span class="n">tblChecklistODDetail</span> <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>      <span class="o">|</span>                      <span class="o">|</span>
+<span class="o">+----------------+</span>      <span class="o">+----------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Checklist.php</p></li>
+<li><p>View: checklist_od_view.php</p></li>
+<li><p>ViewModel: Checklist_OD.js</p></li>
+</ul>
+</div>
+<div class="section" id="check-list-epi">
+<h4>Check list EPI<a class="headerlink" href="#check-list-epi" title="Permalink to this headline"></a></h4>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------+</span>      <span class="o">+-----------------------+</span>
+<span class="o">|</span>                 <span class="o">|</span>      <span class="o">|</span>                       <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblChecklistEPI</span> <span class="o">|-----&lt;|</span> <span class="n">tblChecklistEPIDetail</span> <span class="o">|</span>
+<span class="o">|</span>                 <span class="o">|</span>      <span class="o">|</span>                       <span class="o">|</span>
+<span class="o">+-----------------+</span>      <span class="o">+-----------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Checklist.php</p></li>
+<li><p>View: checklist_epi_view.php</p></li>
+<li><p>ViewModel: Checklist_EPI.js</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="stock">
+<h2>Stock<a class="headerlink" href="#stock" title="Permalink to this headline"></a></h2>
+<div class="section" id="stock-request">
+<h3>Stock request<a class="headerlink" href="#stock-request" title="Permalink to this headline"></a></h3>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+</span>      <span class="o">+------------+</span>
+<span class="o">|</span>            <span class="o">|</span>      <span class="o">|</span>            <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblStockV2</span> <span class="o">|-----&lt;|</span> <span class="n">tblHFCodes</span> <span class="o">|</span>
+<span class="o">|</span>            <span class="o">|</span>      <span class="o">|</span>            <span class="o">|</span>
+<span class="o">+------------+</span>      <span class="o">+------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: Stock.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">request()</span></code> view UI of stock request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getRequest()</span></code> get stock request data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getDetail()</span></code> get detail stock item of hc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer()</span></code> confirm stock offer.</p></li>
+</ul>
+</li>
+<li><p>View: stockrequest_view.php</p></li>
+<li><p>ViewModel: StockRequest.js</p></li>
+</ul>
+</div>
+<div class="section" id="stock-data">
+<h3>Stock Data<a class="headerlink" href="#stock-data" title="Permalink to this headline"></a></h3>
+<div class="section" id="stock-hc">
+<h4>Stock HC<a class="headerlink" href="#stock-hc" title="Permalink to this headline"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+</span>      <span class="o">+------------+</span>
+<span class="o">|</span>            <span class="o">|</span>      <span class="o">|</span>            <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblStockV2</span> <span class="o">|-----&lt;|</span> <span class="n">tblHFCodes</span> <span class="o">|</span>
+<span class="o">|</span>            <span class="o">|</span>      <span class="o">|</span>            <span class="o">|</span>
+<span class="o">+------------+</span>      <span class="o">+------------+</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Controller: Stock.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">report()</span></code> view UI of stock data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReportHF()</span></code> get month of report.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReportDetailHF()</span></code> get detail sotck item data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportExcel()</span></code> export to excel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveStockHF()</span></code> Insert/Update stock data.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">Rec_ID</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">Insert</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">Update</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>View: stockreport_view.php</p></li>
+<li><p>ViewModel: StockReport.js</p></li>
+</ul>
+</div>
+<div class="section" id="stock-od">
+<h4>Stock OD<a class="headerlink" href="#stock-od" title="Permalink to this headline"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+</span>      <span class="o">+------------+</span>
+<span class="o">|</span>            <span class="o">|</span>      <span class="o">|</span>            <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblStockOD</span> <span class="o">|-----&lt;|</span>    <span class="n">tblOD</span>   <span class="o">|</span>
+<span class="o">|</span>            <span class="o">|</span>      <span class="o">|</span>            <span class="o">|</span>
+<span class="o">+------------+</span>      <span class="o">+------------+</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Controller: Stock.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">report()</span></code> view UI of stock data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReportOD()</span></code> get month of report.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReportDetailOD()</span></code> get detail sotck item data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportExcel()</span></code> export to excel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveStockOD()</span></code> Insert/Update stock data.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">Rec_ID</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">Insert</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">Update</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>View: stockreport_view.php</p></li>
+<li><p>ViewModel: StockReport.js</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="stock-cnm">
+<h3>Stock CNM<a class="headerlink" href="#stock-cnm" title="Permalink to this headline"></a></h3>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------------+</span>
+<span class="o">|</span>             <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblStockCNM</span> <span class="o">|</span>
+<span class="o">|</span>             <span class="o">|</span>
+<span class="o">+-------------+</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Controller: Stock.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">report()</span></code> view UI of stock data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReportCNM()</span></code> get month of report.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReportDetailCNM()</span></code> get detail sotck item data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportExcel()</span></code> export to excel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveStockCNM()</span></code> Insert/Update stock data.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">Rec_ID</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">Insert</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">Update</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>View: stockreportcnm_view.php</p></li>
+<li><p>ViewModel: StockReportCNM.js</p></li>
 </ul>
 </div>
 </div>

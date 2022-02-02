@@ -1,0 +1,183 @@
+\selectlanguage *{english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Who is for MIS}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Technology usage}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Development Tools}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Server Requirement}{3}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Server site programming languages}{3}{section.3.3}%
+\contentsline {section}{\numberline {3.4}PHP Framework}{3}{section.3.4}%
+\contentsline {section}{\numberline {3.5}PHP Libraries}{4}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Frontend languages}{4}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Managing Databases}{4}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Project Structure}{4}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Model view (KnockoutJS \sphinxhyphen {} MVVM)}{4}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Third Party}{5}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Notification (case)}{5}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Export Tool (on home page)}{5}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Daily task (cron job)}{5}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Monthly task (cron job)}{6}{section.4.4}%
+\contentsline {section}{\numberline {4.5}DB Backup (cron job)}{6}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Cron Job}{7}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Setup cron job}{7}{section.5.1}%
+\contentsline {section}{\numberline {5.2}List of cron job}{7}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}VMW follow up patient notification (Pv radical cure)}{7}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}HC follow up patient notification (Pv radical cure)}{8}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Foci reminder notification}{8}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Reactive case reminder notification}{8}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Hight risk village reminder notification}{8}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Stock out notification}{9}{subsection.5.2.6}%
+\contentsline {chapter}{\numberline {6}Module}{10}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Use case diagram}{10}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Use case malaria \& ITN data}{10}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Detail diagram}{11}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Malaria \& ITN Data}{11}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}VMW}{11}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}HC}{13}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}MMP}{14}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Police}{15}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Bed net}{16}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}MMP bed net}{17}{subsection.6.2.6}%
+\contentsline {subsection}{\numberline {6.2.7}Police bed net}{18}{subsection.6.2.7}%
+\contentsline {subsection}{\numberline {6.2.8}Bed net other}{19}{subsection.6.2.8}%
+\contentsline {subsection}{\numberline {6.2.9}Questionaire}{20}{subsection.6.2.9}%
+\contentsline {subsubsection}{Annex 1: Village Selection}{20}{subsubsection*.3}%
+\contentsline {subsubsection}{Annex 2: Hotspot Identification}{20}{subsubsection*.4}%
+\contentsline {subsubsection}{Annex 4: MMW Recruitment}{21}{subsubsection*.5}%
+\contentsline {subsubsection}{Annex 5, 6: Site Visit Active Screening}{21}{subsubsection*.6}%
+\contentsline {subsubsection}{Annex 7: Forest Pack}{22}{subsubsection*.7}%
+\contentsline {subsection}{\numberline {6.2.10}Foci investigation}{22}{subsection.6.2.10}%
+\contentsline {subsubsection}{List of foci}{22}{subsubsection*.8}%
+\contentsline {subsubsection}{Detail of foci v1}{23}{subsubsection*.9}%
+\contentsline {subsubsection}{Detail of foci v2}{23}{subsubsection*.10}%
+\contentsline {subsection}{\numberline {6.2.11}Follow up}{23}{subsection.6.2.11}%
+\contentsline {subsubsection}{VMW follow up}{23}{subsubsection*.11}%
+\contentsline {subsubsection}{HC follow up}{24}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {6.2.12}HIS data upload}{25}{subsection.6.2.12}%
+\contentsline {subsection}{\numberline {6.2.13}Border malaria case upload}{25}{subsection.6.2.13}%
+\contentsline {chapter}{\numberline {7}API v4}{26}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Users}{26}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}HF Authentication}{26}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}VMW Authentication}{27}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Logout}{27}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Location}{28}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Log device information}{28}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Restrict user login}{28}{subsection.7.1.6}%
+\contentsline {subsection}{\numberline {7.1.7}User permission}{28}{subsection.7.1.7}%
+\contentsline {section}{\numberline {7.2}HF Activity case}{29}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Insert}{29}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Update}{30}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Delete}{31}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}List}{31}{subsection.7.2.4}%
+\contentsline {section}{\numberline {7.3}VMW Activity case}{34}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Insert}{34}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Update}{35}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Delete}{36}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}List}{36}{subsection.7.3.4}%
+\contentsline {section}{\numberline {7.4}Reactive case}{37}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}List}{37}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Detail}{38}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Update}{40}{subsection.7.4.3}%
+\contentsline {section}{\numberline {7.5}Stock data}{42}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Stock close}{42}{subsection.7.5.1}%
+\contentsline {section}{\numberline {7.6}Report}{45}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Case report}{45}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Stock report}{46}{subsection.7.6.2}%
+\contentsline {section}{\numberline {7.7}Population}{46}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Form and data}{46}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Insert/Update Population}{47}{subsection.7.7.2}%
+\contentsline {section}{\numberline {7.8}Bednet}{48}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Bednet form}{48}{subsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.8.2}Bednet Insert/Update}{49}{subsection.7.8.2}%
+\contentsline {section}{\numberline {7.9}Dashboard}{49}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Malaria status}{49}{subsection.7.9.1}%
+\contentsline {subsection}{\numberline {7.9.2}API of villages (chart)}{50}{subsection.7.9.2}%
+\contentsline {subsection}{\numberline {7.9.3}Cases (chart)}{51}{subsection.7.9.3}%
+\contentsline {subsection}{\numberline {7.9.4}Top 10 villages (chart)}{53}{subsection.7.9.4}%
+\contentsline {section}{\numberline {7.10}Pv Radical cure}{54}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}HF patient follow up list}{54}{subsection.7.10.1}%
+\contentsline {subsection}{\numberline {7.10.2}HF follow up detail}{55}{subsection.7.10.2}%
+\contentsline {subsection}{\numberline {7.10.3}HF follow up Insert/Update}{56}{subsection.7.10.3}%
+\contentsline {subsection}{\numberline {7.10.4}VMW Follow up List}{56}{subsection.7.10.4}%
+\contentsline {subsection}{\numberline {7.10.5}VMW follow up detail}{57}{subsection.7.10.5}%
+\contentsline {subsection}{\numberline {7.10.6}VMW follow up Insert/Update}{59}{subsection.7.10.6}%
+\contentsline {section}{\numberline {7.11}Medication}{59}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}HF Medication}{59}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {7.11.2}VMW Medication}{60}{subsection.7.11.2}%
+\contentsline {section}{\numberline {7.12}Register token}{61}{section.7.12}%
+\contentsline {section}{\numberline {7.13}Place}{61}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Check place is modify}{61}{subsection.7.13.1}%
+\contentsline {subsection}{\numberline {7.13.2}Get Province}{61}{subsection.7.13.2}%
+\contentsline {subsection}{\numberline {7.13.3}Get district}{64}{subsection.7.13.3}%
+\contentsline {subsection}{\numberline {7.13.4}Get district}{65}{subsection.7.13.4}%
+\contentsline {chapter}{\numberline {8}API v5}{66}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Stock}{66}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Form}{66}{subsection.8.1.1}%
+\contentsline {chapter}{\numberline {9}API v1 of CMI}{74}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Users}{74}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Authentication}{74}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Register token}{75}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Device logging}{75}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}Summary}{75}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Daily case}{75}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Weekly case}{76}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Monthly case}{76}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}This year case}{77}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}Pv Radical cure (chart)}{77}{subsection.9.2.5}%
+\contentsline {subsection}{\numberline {9.2.6}HF report timely}{78}{subsection.9.2.6}%
+\contentsline {subsection}{\numberline {9.2.7}VMW report timely}{78}{subsection.9.2.7}%
+\contentsline {subsection}{\numberline {9.2.8}Annual Foci classification}{79}{subsection.9.2.8}%
+\contentsline {subsection}{\numberline {9.2.9}Health worker}{80}{subsection.9.2.9}%
+\contentsline {section}{\numberline {9.3}Dashboard}{80}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Number of malaria test and case (Bar chart)}{80}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Top 10 villages with Pf and Mix (Pie chart)}{82}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Top 10 villages (table)}{85}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Stock out}{88}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Malaria Hotspot}{89}{subsection.9.3.5}%
+\contentsline {subsection}{\numberline {9.3.6}Map of HC and Village}{90}{subsection.9.3.6}%
+\contentsline {subsection}{\numberline {9.3.7}Map of foci}{92}{subsection.9.3.7}%
+\contentsline {section}{\numberline {9.4}Contact}{92}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Notification}{93}{section.9.5}%
+\contentsline {chapter}{\numberline {10}API v1 of QA}{95}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Users}{95}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Authentication}{95}{subsection.10.1.1}%
+\contentsline {section}{\numberline {10.2}Place}{95}{section.10.2}%
+\contentsline {section}{\numberline {10.3}VMW’s question}{97}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}List of VMW’s question}{97}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Detail of question}{98}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Insert/Update Question}{108}{subsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.3.4}Delete Question}{117}{subsection.10.3.4}%
+\contentsline {subsection}{\numberline {10.3.5}Report}{118}{subsection.10.3.5}%
+\contentsline {chapter}{\numberline {11}API v2 of Last mile}{120}{chapter.11}%
+\contentsline {section}{\numberline {11.1}House hold}{120}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}House hold List}{120}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}House hold detail}{121}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}Insert/Update house hold}{122}{subsection.11.1.3}%
+\contentsline {section}{\numberline {11.2}TDA}{123}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}TDA form}{123}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Insert/Update TDA}{125}{subsection.11.2.2}%
+\contentsline {section}{\numberline {11.3}IPT}{125}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}IPT form}{125}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Insert/Update IPT}{126}{subsection.11.3.2}%
+\contentsline {section}{\numberline {11.4}AFS}{127}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}AFS form}{127}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Insert/Update AFS}{128}{subsection.11.4.2}%
+\contentsline {chapter}{\numberline {12}API v1 of Check list app}{129}{chapter.12}%
+\contentsline {section}{\numberline {12.1}User Authentication}{129}{section.12.1}%
+\contentsline {section}{\numberline {12.2}HC checklist}{129}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Get HC check list}{129}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}HC checklist detail}{131}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}HC checklist Insert/Update}{137}{subsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.2.4}HC checklist aditional data}{143}{subsection.12.2.4}%
+\contentsline {section}{\numberline {12.3}OD checklist}{144}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Get OD check list}{144}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}OD check list detail}{145}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}Insert/Update OD check list}{150}{subsection.12.3.3}%
+\contentsline {subsection}{\numberline {12.3.4}OD check list aditional data}{156}{subsection.12.3.4}%
+\contentsline {section}{\numberline {12.4}EPI check list}{157}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}EPI check list}{157}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.4.2}EPI check list detail}{158}{subsection.12.4.2}%
+\contentsline {subsection}{\numberline {12.4.3}Insert/Update EPI check list}{170}{subsection.12.4.3}%
+\contentsline {chapter}{\numberline {13}API V1 of Training}{182}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Material}{182}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Quiz Question}{183}{section.13.2}%
+\contentsline {chapter}{HTTP Routing Table}{184}{section*.107}%

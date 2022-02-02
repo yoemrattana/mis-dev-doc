@@ -811,3 +811,230 @@ Table
 - Controller: BorderImport.php
 - View: borderimport_view.php
 - ViewModel: BorderImport.js
+
+VMW QA
+------
+
+- System: VMW QA tool for OD/PHD monitor VMW.
+- Actor: OD , PHD
+- Scenario: When HC/OD/PHP use tablet to enter data, then OD/PHD can use this tool to view questionaire, supervision schedule, Monitor, Report, Dashboard.
+  
+Table diagram
+
+::
+
+  +---------------------+     +---------------------------+     +-------------------------+
+  |                     |     |                           |     |                         |
+  | tblVMWQuestionnaire |-----| tblVMWQuestionnaireDetail |-----| tblVMWQuestionnaireItem |
+  |                     |     |                           |     |                         |
+  +---------------------+     +---------------------------+     +-------------------------+
+
+  
+- Controller: VMWQA.php
+- View: vmwqa_view.php
+- ViewModel: VMWQA.js
+
+Lastmile
+--------
+
+- System: Last mile 
+- Actor: OD/PHD
+- Scenario: When VMW cannot enter data, then OD staff will be responsible for entering data.
+
+Table diagram
+
+::
+
+  +----------------------+     +----------------------------+     +----------------+     
+  |                      |     |                            |     |                |     
+  | tblLastmileHouseHold |----<| tblLastmileHouseHoldMember |----<| tblLastmileTDA |
+  |                      |     |                            |     |                |     
+  +----------------------+     +----------------------------+     +----------------+
+                                  |                   |
+                                  |                   |
+                          +----------------+    +----------------+
+                          |                |    |                |
+                          | tblLastmileIPT |    | tblLastmileAFS |
+                          |                |    |                |
+                          +----------------+    +----------------+
+
+- Controller: Lastmile.php
+- View: lastmile_view.php
+- ViewModel: Lastmile.js
+
+.. note::
+
+  TDA1 and TDA2 must be 28 days apart.
+
+  Must complete TDA1/TDA2 before do IPT.
+
+  IPT and TDA1 must be 14 days apart.
+
+  IPT and TDA2 must be 28 days apart.
+
+Check list
+----------
+
+Check list HC
+~~~~~~~~~~~~~
+Table diagram
+
+::
+
+  +----------------+      +----------------------+
+  |                |      |                      |
+  | tblChecklistHC |-----<| tblChecklistHCDetail |
+  |                |      |                      |
+  +----------------+      +----------------------+
+
+- Controller: Checklist.php
+- View: checklist_hc_view.php
+- ViewModel: Checklist_HC.js
+
+Check list OD
+~~~~~~~~~~~~~
+
+Table diagram
+
+::
+
+  +----------------+      +----------------------+
+  |                |      |                      |
+  | tblChecklistOD |-----<| tblChecklistODDetail |
+  |                |      |                      |
+  +----------------+      +----------------------+
+
+- Controller: Checklist.php
+- View: checklist_od_view.php
+- ViewModel: Checklist_OD.js
+
+Check list EPI
+~~~~~~~~~~~~~~
+
+Table diagram
+
+::
+
+  +-----------------+      +-----------------------+
+  |                 |      |                       |
+  | tblChecklistEPI |-----<| tblChecklistEPIDetail |
+  |                 |      |                       |
+  +-----------------+      +-----------------------+
+
+- Controller: Checklist.php
+- View: checklist_epi_view.php
+- ViewModel: Checklist_EPI.js
+
+Stock
+=====
+
+Stock request
+-------------
+
+Table diagram
+
+::
+
+  +------------+      +------------+
+  |            |      |            |
+  | tblStockV2 |-----<| tblHFCodes |
+  |            |      |            |
+  +------------+      +------------+
+
+- Controller: Stock.php
+
+  - ``request()`` view UI of stock request.
+  - ``getRequest()`` get stock request data.
+  - ``getDetail()`` get detail stock item of hc.
+  - ``offer()`` confirm stock offer.
+- View: stockrequest_view.php
+- ViewModel: StockRequest.js
+
+Stock Data
+----------
+
+Stock HC
+~~~~~~~~
+
+::
+
+  +------------+      +------------+
+  |            |      |            |
+  | tblStockV2 |-----<| tblHFCodes |
+  |            |      |            |
+  +------------+      +------------+
+
+- Controller: Stock.php
+
+  - ``report()`` view UI of stock data.
+  - ``getReportHF()`` get month of report.
+  - ``getReportDetailHF()`` get detail sotck item data.
+  - ``exportExcel()`` export to excel.
+  - ``saveStockHF()`` Insert/Update stock data.
+
+  ::
+
+    if (Rec_ID == 0)
+      Insert()
+    else Update()  
+
+- View: stockreport_view.php
+- ViewModel: StockReport.js
+
+Stock OD
+~~~~~~~~
+
+::
+
+  +------------+      +------------+
+  |            |      |            |
+  | tblStockOD |-----<|    tblOD   |
+  |            |      |            |
+  +------------+      +------------+
+
+- Controller: Stock.php
+
+  - ``report()`` view UI of stock data.
+  - ``getReportOD()`` get month of report.
+  - ``getReportDetailOD()`` get detail sotck item data.
+  - ``exportExcel()`` export to excel.
+  - ``saveStockOD()`` Insert/Update stock data.
+
+  ::
+    
+    if (Rec_ID == 0)
+      Insert()
+    else Update()  
+
+- View: stockreport_view.php
+- ViewModel: StockReport.js
+
+Stock CNM
+---------
+
+Table diagram
+
+::
+
+  +-------------+
+  |             |
+  | tblStockCNM |
+  |             |
+  +-------------+
+
+- Controller: Stock.php
+
+  - ``report()`` view UI of stock data.
+  - ``getReportCNM()`` get month of report.
+  - ``getReportDetailCNM()`` get detail sotck item data.
+  - ``exportExcel()`` export to excel.
+  - ``saveStockCNM()`` Insert/Update stock data.
+
+  ::
+    
+    if (Rec_ID == 0)
+      Insert()
+    else Update()  
+
+- View: stockreportcnm_view.php
+- ViewModel: StockReportCNM.js  
