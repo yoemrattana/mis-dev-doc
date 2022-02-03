@@ -19,15 +19,17 @@ Material
           {
               "Rec_ID": 1,
               "Title": "Documentation",
+              "Type": "PDF",
               "Source": "https://drive.google.com/file/d/13ozAFcTGX-C5HD1rz3XUpioeeVK83KQU/preview",
-              "Category": "PDF",
+              "Category": "MIS",
               "Audience": "HC"
           },
           {
               "Rec_ID": 2,
               "Title": "Video",
+              "Type": "Video",
               "Source": "qUotrP3M-Dc",
-              "Category": "Video",
+              "Category": "MIS",
               "Audience": "VMW"
           }
       ]
@@ -35,9 +37,10 @@ Material
 
   :Object:
 
-    * **Category** (*string*) -- type of Source. e.g: PDF, Slide, Video.
-    * **Audience** (*string*) -- HC/VMW.
+    * **Type** (*string*) -- type of Source. e.g: PDF, Slide, Video.
+    * **Audience** (*string*) -- OD/HC/VMW.
     * **Source** (*string*) -- if ``Category`` is ``Video`` then ``Source`` is a video ID of youtube. If ``Category`` is ``PDF`` or ``Slide`` then ``Source`` is a link embeded from google drive
+    * **Category** (*string*) -- MIS/M&E/EPI/Finance/VMW/Education
 
 Quiz Question
 -------------
@@ -55,34 +58,68 @@ Quiz Question
       "message": "success",
       "data": [
           {
-            "Rec_ID": 2,
-            "Question": "តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?",
-            "Answers": [
-                {
-                    "Rec_ID": 5,
-                    "Answer": "24",
-                    "IsCorrect": 1,
-                    "QuestionID": 2
-                },
-                {
-                    "Rec_ID": 6,
-                    "Answer": "45",
-                    "IsCorrect": 0,
-                    "QuestionID": 2
-                },
-                {
-                    "Rec_ID": 7,
-                    "Answer": "73",
-                    "IsCorrect": 0,
-                    "QuestionID": 2
-                },
-                {
-                    "Rec_ID": 8,
-                    "Answer": "21",
-                    "IsCorrect": 0,
-                    "QuestionID": 2
-                }
-            ]
+              "Rec_ID": 3,
+              "Question": "តើគោស៊ីអ្វីជាអាហារ?",
+              "Category": "MIS",
+              "Candidate": "VMW",
+              "Answers": [
+                  {
+                      "Rec_ID": 9,
+                      "Answer": "បាយ",
+                      "IsCorrect": 0,
+                      "QuestionID": 3
+                  },
+                  {
+                      "Rec_ID": 10,
+                      "Answer": "បាយសាច់ជ្រូក",
+                      "IsCorrect": 0,
+                      "QuestionID": 3
+                  },
+                  {
+                      "Rec_ID": 11,
+                      "Answer": "ស្មៅ",
+                      "IsCorrect": 1,
+                      "QuestionID": 3
+                  },
+                  {
+                      "Rec_ID": 12,
+                      "Answer": "ឡុកឡាក់",
+                      "IsCorrect": 0,
+                      "QuestionID": 3
+                  }
+              ]
+          },
+          {
+              "Rec_ID": 4,
+              "Question": "តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?",
+              "Category": "MIS",
+              "Candidate": "VMW",
+              "Answers": [
+                  {
+                      "Rec_ID": 13,
+                      "Answer": "24h",
+                      "IsCorrect": 1,
+                      "QuestionID": 4
+                  },
+                  {
+                      "Rec_ID": 14,
+                      "Answer": "45h",
+                      "IsCorrect": 0,
+                      "QuestionID": 4
+                  },
+                  {
+                      "Rec_ID": 15,
+                      "Answer": "73h",
+                      "IsCorrect": 0,
+                      "QuestionID": 4
+                  },
+                  {
+                      "Rec_ID": 16,
+                      "Answer": "21h",
+                      "IsCorrect": 0,
+                      "QuestionID": 4
+                  }
+              ]
           }
       ]
     }
@@ -90,3 +127,5 @@ Quiz Question
   :Object:
 
     * **IsCorrect** (*bit*) -- if it is a correct answer its value is ``1`` otherwise ``0`` 
+    * **Candidate** (*string*) -- OD/HC/VMW.
+    * **Category** (*string*) -- MIS/M&E/EPI/Finance/VMW/Education

@@ -144,15 +144,17 @@
       <span class="p">{</span>
           <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
           <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Documentation&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;PDF&quot;</span><span class="p">,</span>
           <span class="nt">&quot;Source&quot;</span><span class="p">:</span> <span class="s2">&quot;https://drive.google.com/file/d/13ozAFcTGX-C5HD1rz3XUpioeeVK83KQU/preview&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;PDF&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
           <span class="nt">&quot;Audience&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span>
       <span class="p">},</span>
       <span class="p">{</span>
           <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
           <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Video&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Video&quot;</span><span class="p">,</span>
           <span class="nt">&quot;Source&quot;</span><span class="p">:</span> <span class="s2">&quot;qUotrP3M-Dc&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Video&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
           <span class="nt">&quot;Audience&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span>
       <span class="p">}</span>
   <span class="p">]</span>
@@ -162,9 +164,10 @@
 <dl class="field-list simple">
 <dt class="field-odd">Object</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Category</strong> (<em>string</em>) – type of Source. e.g: PDF, Slide, Video.</p></li>
-<li><p><strong>Audience</strong> (<em>string</em>) – HC/VMW.</p></li>
+<li><p><strong>Type</strong> (<em>string</em>) – type of Source. e.g: PDF, Slide, Video.</p></li>
+<li><p><strong>Audience</strong> (<em>string</em>) – OD/HC/VMW.</p></li>
 <li><p><strong>Source</strong> (<em>string</em>) – if <code class="docutils literal notranslate"><span class="pre">Category</span></code> is <code class="docutils literal notranslate"><span class="pre">Video</span></code> then <code class="docutils literal notranslate"><span class="pre">Source</span></code> is a video ID of youtube. If <code class="docutils literal notranslate"><span class="pre">Category</span></code> is <code class="docutils literal notranslate"><span class="pre">PDF</span></code> or <code class="docutils literal notranslate"><span class="pre">Slide</span></code> then <code class="docutils literal notranslate"><span class="pre">Source</span></code> is a link embeded from google drive</p></li>
+<li><p><strong>Category</strong> (<em>string</em>) – MIS/M&amp;E/EPI/Finance/VMW/Education</p></li>
 </ul>
 </dd>
 </dl>
@@ -183,34 +186,68 @@
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
   <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
-        <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Answers&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-                <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;24&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">2</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-                <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;45&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">2</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-                <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;73&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">2</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-                <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;21&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">2</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
+          <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;តើគោស៊ីអ្វីជាអាហារ?&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Candidate&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answers&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;បាយ&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;បាយសាច់ជ្រូក&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្មៅ&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ឡុកឡាក់&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
+              <span class="p">}</span>
+          <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Candidate&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;Answers&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;24h&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;45h&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;73h&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;21h&quot;</span><span class="p">,</span>
+                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+              <span class="p">}</span>
+          <span class="p">]</span>
       <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
@@ -220,6 +257,8 @@
 <dt class="field-odd">Object</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>IsCorrect</strong> (<em>bit</em>) – if it is a correct answer its value is <code class="docutils literal notranslate"><span class="pre">1</span></code> otherwise <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><strong>Candidate</strong> (<em>string</em>) – OD/HC/VMW.</p></li>
+<li><p><strong>Category</strong> (<em>string</em>) – MIS/M&amp;E/EPI/Finance/VMW/Education</p></li>
 </ul>
 </dd>
 </dl>
