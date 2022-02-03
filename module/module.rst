@@ -1038,3 +1038,34 @@ Table diagram
 
 - View: stockreportcnm_view.php
 - ViewModel: StockReportCNM.js  
+
+Stock item
+----------
+- System: tool for admin to set up stock item (which item is for OD/HC)
+- Actor: Admin
+- Scenario: Admin use this tool to Insert/update/Setup stock item.
+
+Table diagram
+
+::
+
+  +--------------+
+  |              |
+  | tblStockItem |
+  |              |
+  +--------------+
+
+- Controller: Stock.php
+
+  - ``item()`` view UI of stock data.
+  - ``getItem()`` get month of report.
+  - ``saveItem()`` Insert/Update stock data.
+
+  ::
+    
+    if (Id == 0)
+      Insert()
+    else Update()  
+
+- View: stockitem_view.php
+- ViewModel: StockItem.js    

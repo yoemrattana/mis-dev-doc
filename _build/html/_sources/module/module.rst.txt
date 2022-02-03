@@ -1038,3 +1038,31 @@ Table diagram
 
 - View: stockreportcnm_view.php
 - ViewModel: StockReportCNM.js  
+
+Stock item
+----------
+
+Table diagram
+
+::
+
+  +--------------+
+  |              |
+  | tblStockItem |
+  |              |
+  +--------------+
+
+- Controller: Stock.php
+
+  - ``item()`` view UI of stock data.
+  - ``getItem()`` get month of report.
+  - ``saveItem()`` Insert/Update stock data.
+
+  ::
+    
+    if (Id == 0)
+      Insert()
+    else Update()  
+
+- View: stockitem_view.php
+- ViewModel: StockItem.js    

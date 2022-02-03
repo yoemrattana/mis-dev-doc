@@ -127,6 +127,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#stock-cnm">Stock CNM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stock-item">Stock item</a></li>
 </ul>
 </li>
 </ul>
@@ -1209,6 +1210,33 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 </li>
 <li><p>View: stockreportcnm_view.php</p></li>
 <li><p>ViewModel: StockReportCNM.js</p></li>
+</ul>
+</div>
+<div class="section" id="stock-item">
+<h3>Stock item<a class="headerlink" href="#stock-item" title="Permalink to this headline"></a></h3>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--------------+</span>
+<span class="o">|</span>              <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblStockItem</span> <span class="o">|</span>
+<span class="o">|</span>              <span class="o">|</span>
+<span class="o">+--------------+</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Controller: Stock.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">item()</span></code> view UI of stock data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getItem()</span></code> get month of report.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveItem()</span></code> Insert/Update stock data.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">Id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">Insert</span><span class="p">()</span>
+<span class="k">else</span> <span class="n">Update</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>View: stockitem_view.php</p></li>
+<li><p>ViewModel: StockItem.js</p></li>
 </ul>
 </div>
 </div>
