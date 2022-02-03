@@ -1041,6 +1041,9 @@ Table diagram
 
 Stock item
 ----------
+- System: tool for admin to set up stock item (which item is for OD/HC)
+- Actor: Admin
+- Scenario: Admin use this tool to Insert/update/Setup stock item.
 
 Table diagram
 
@@ -1065,4 +1068,128 @@ Table diagram
     else Update()  
 
 - View: stockitem_view.php
-- ViewModel: StockItem.js    
+- ViewModel: StockItem.js
+
+Report
+======
+
+Dashboard
+---------
+
+- Controller: Dashboard.php
+- Main View: dashboard_v2_view.php
+- Sub view: 
+
+  - dashboard_overview_view.php
+  - dashboard_border_view.php
+  - dashboard_intensification_view.php
+  - dashboard_ipmappopup_view.php
+  - dashbarod_map_view.php
+  - dashboard_outbreak_view.php
+  - dashbaord_overview_view.php
+  - dashboard_pfmap_view.php
+  - dashboard_stock_view.php
+  - dashboard_surveillance_view.php
+  - dashboard_table_view.php
+
+- Main ViewModel: Dashboard.js
+- Sub ViewModel: 
+  
+  - Dashboard_Border.js
+  - Dashboard_Intensification.js
+  - Dashboard_Map.js
+  - Dashboard_Outbreak.js
+  - Dashboard_PFMap.js
+  - Dashboard_Overview.js
+  - Dashboard_Stock.js
+
+.. Note::
+
+  We use store procedure to retrieve data
+
+  To improve performance, first load data will read from file. all files is in ``root\media\Dashboard\Preload Data`` directory
+
+
+Overview
+~~~~~~~~
+
+Insecticide Treated Net (ITN)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_OverviewNet``
+
+National Surveillance data (55 ODs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_OverviewCase2``
+
+Top 10 Villages having most cases by species
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartTop30Vill``
+
+Top 10 HFs having most cases by species
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartTop30HF``
+
+Treated malaria cases from HF and VMW by month
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_OverviewChart``
+
+Severe malaria cases and deaths from HF by month
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_OverviewChart``
+
+Malaria test results (HF, VMW) by species
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_OverviewChart``
+
+Number of malaria-reported case and death by year
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartCaseDeathSpecie``
+
+Percentage of malaria cases by species and year
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartCaseDeathSpecie``
+
+Percentage of malaria cases by sex and age group
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartSexAge``
+
+Malaria Cases by Species, Provinces and Year
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartSpecieProvince``
+
+Malaria Incidence and Mortality Rate by Year and Provinces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartIncidentMortality``
+
+Surveillance
+~~~~~~~~~~~~
+
+- Store procedure: ``SP_Dashboard_SurveillanceData2``
+
+Stock
+~~~~~
+
+Current Stock HF Info by OD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Count number of HF by status by OD (out of stock, low stock, Proper stock, congested stock)
+
+- Store procedure: ``SP_Dashboard_Stock``
+
+Current Stock HF info by Province
+
+Count number of HF by status by province (out of stock, low stock, Proper stock, congested stock)
+
+- Store procedure: ``SP_Dashboard_Stock``

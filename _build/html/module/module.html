@@ -130,6 +130,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#stock-item">Stock item</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#report">Report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dashboard">Dashboard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#surveillance">Surveillance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Stock</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -189,16 +198,16 @@
 <h2>Use case diagram<a class="headerlink" href="#use-case-diagram" title="Permalink to this headline"></a></h2>
 <div class="section" id="use-case-malaria-itn-data">
 <h3>Use case malaria &amp; ITN data<a class="headerlink" href="#use-case-malaria-itn-data" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/use_case_malaria_itn.jpg"><img alt="Use case for malaria &amp; ITN data" src="../_images/use_case_malaria_itn.jpg" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="detail-diagram">
 <h3>Detail diagram<a class="headerlink" href="#detail-diagram" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/detail-diagram.jpg"><img alt="Detail diagram" src="../_images/detail-diagram.jpg" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </div>
 </div>
 </div>
@@ -1214,6 +1223,11 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 </div>
 <div class="section" id="stock-item">
 <h3>Stock item<a class="headerlink" href="#stock-item" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>System: tool for admin to set up stock item (which item is for OD/HC)</p></li>
+<li><p>Actor: Admin</p></li>
+<li><p>Scenario: Admin use this tool to Insert/update/Setup stock item.</p></li>
+</ul>
 <p>Table diagram</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--------------+</span>
 <span class="o">|</span>              <span class="o">|</span>
@@ -1238,6 +1252,144 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <li><p>View: stockitem_view.php</p></li>
 <li><p>ViewModel: StockItem.js</p></li>
 </ul>
+</div>
+</div>
+<div class="section" id="report">
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline"></a></h2>
+<div class="section" id="dashboard">
+<h3>Dashboard<a class="headerlink" href="#dashboard" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Controller: Dashboard.php</p></li>
+<li><p>Main View: dashboard_v2_view.php</p></li>
+<li><p>Sub view:</p>
+<ul>
+<li><p>dashboard_overview_view.php</p></li>
+<li><p>dashboard_border_view.php</p></li>
+<li><p>dashboard_intensification_view.php</p></li>
+<li><p>dashboard_ipmappopup_view.php</p></li>
+<li><p>dashbarod_map_view.php</p></li>
+<li><p>dashboard_outbreak_view.php</p></li>
+<li><p>dashbaord_overview_view.php</p></li>
+<li><p>dashboard_pfmap_view.php</p></li>
+<li><p>dashboard_stock_view.php</p></li>
+<li><p>dashboard_surveillance_view.php</p></li>
+<li><p>dashboard_table_view.php</p></li>
+</ul>
+</li>
+<li><p>Main ViewModel: Dashboard.js</p></li>
+<li><p>Sub ViewModel:</p>
+<ul>
+<li><p>Dashboard_Border.js</p></li>
+<li><p>Dashboard_Intensification.js</p></li>
+<li><p>Dashboard_Map.js</p></li>
+<li><p>Dashboard_Outbreak.js</p></li>
+<li><p>Dashboard_PFMap.js</p></li>
+<li><p>Dashboard_Overview.js</p></li>
+<li><p>Dashboard_Stock.js</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use store procedure to retrieve data</p>
+<p>To improve performance, first load data will read from file. all files is in <code class="docutils literal notranslate"><span class="pre">root\media\Dashboard\Preload</span> <span class="pre">Data</span></code> directory</p>
+</div>
+<div class="section" id="overview">
+<h4>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h4>
+<div class="section" id="insecticide-treated-net-itn">
+<h5>Insecticide Treated Net (ITN)<a class="headerlink" href="#insecticide-treated-net-itn" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_OverviewNet</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="national-surveillance-data-55-ods">
+<h5>National Surveillance data (55 ODs)<a class="headerlink" href="#national-surveillance-data-55-ods" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_OverviewCase2</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="top-10-villages-having-most-cases-by-species">
+<h5>Top 10 Villages having most cases by species<a class="headerlink" href="#top-10-villages-having-most-cases-by-species" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartTop30Vill</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="top-10-hfs-having-most-cases-by-species">
+<h5>Top 10 HFs having most cases by species<a class="headerlink" href="#top-10-hfs-having-most-cases-by-species" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartTop30HF</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="treated-malaria-cases-from-hf-and-vmw-by-month">
+<h5>Treated malaria cases from HF and VMW by month<a class="headerlink" href="#treated-malaria-cases-from-hf-and-vmw-by-month" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_OverviewChart</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="severe-malaria-cases-and-deaths-from-hf-by-month">
+<h5>Severe malaria cases and deaths from HF by month<a class="headerlink" href="#severe-malaria-cases-and-deaths-from-hf-by-month" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_OverviewChart</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="malaria-test-results-hf-vmw-by-species">
+<h5>Malaria test results (HF, VMW) by species<a class="headerlink" href="#malaria-test-results-hf-vmw-by-species" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_OverviewChart</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="number-of-malaria-reported-case-and-death-by-year">
+<h5>Number of malaria-reported case and death by year<a class="headerlink" href="#number-of-malaria-reported-case-and-death-by-year" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartCaseDeathSpecie</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="percentage-of-malaria-cases-by-species-and-year">
+<h5>Percentage of malaria cases by species and year<a class="headerlink" href="#percentage-of-malaria-cases-by-species-and-year" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartCaseDeathSpecie</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="percentage-of-malaria-cases-by-sex-and-age-group">
+<h5>Percentage of malaria cases by sex and age group<a class="headerlink" href="#percentage-of-malaria-cases-by-sex-and-age-group" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartSexAge</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="malaria-cases-by-species-provinces-and-year">
+<h5>Malaria Cases by Species, Provinces and Year<a class="headerlink" href="#malaria-cases-by-species-provinces-and-year" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartSpecieProvince</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="malaria-incidence-and-mortality-rate-by-year-and-provinces">
+<h5>Malaria Incidence and Mortality Rate by Year and Provinces<a class="headerlink" href="#malaria-incidence-and-mortality-rate-by-year-and-provinces" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartIncidentMortality</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="surveillance">
+<h4>Surveillance<a class="headerlink" href="#surveillance" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_SurveillanceData2</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h4>Stock<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<div class="section" id="current-stock-hf-info-by-od">
+<h5>Current Stock HF Info by OD<a class="headerlink" href="#current-stock-hf-info-by-od" title="Permalink to this headline"></a></h5>
+<p>Count number of HF by status by OD (out of stock, low stock, Proper stock, congested stock)</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_Stock</span></code></p></li>
+</ul>
+<p>Current Stock HF info by Province</p>
+<p>Count number of HF by status by province (out of stock, low stock, Proper stock, congested stock)</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_Stock</span></code></p></li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>

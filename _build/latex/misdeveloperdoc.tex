@@ -18,35 +18,38 @@
 
 \PassOptionsToPackage{warn}{textcomp}
 
-
+\catcode`^^^^00a0\active\protected\def^^^^00a0{\leavevmode\nobreak\ }
 \usepackage{cmap}
 \usepackage{fontspec}
 \defaultfontfeatures[\rmfamily,\sffamily,\ttfamily]{}
 \usepackage{amsmath,amssymb,amstext}
 \usepackage{polyglossia}
 \setmainlanguage{english}
-\newfontfamily{\khmerfont}{Khmer OS}
-
-\usepackage{xeCJK}
-\setmainfont{Khmer OS}
-\usepackage[utf8]{inputenc}
 
 
 
+\setmainfont{FreeSerif}[
+  Extension      = .otf,
+  UprightFont    = *,
+  ItalicFont     = *Italic,
+  BoldFont       = *Bold,
+  BoldItalicFont = *BoldItalic
+]
 \setsansfont{FreeSans}[
-Extension      = .otf,
-UprightFont    = *,
-ItalicFont     = *Oblique,
-BoldFont       = *Bold,
-BoldItalicFont = *BoldOblique,
+  Extension      = .otf,
+  UprightFont    = *,
+  ItalicFont     = *Oblique,
+  BoldFont       = *Bold,
+  BoldItalicFont = *BoldOblique,
 ]
 \setmonofont{FreeMono}[
-Extension      = .otf,
-UprightFont    = *,
-ItalicFont     = *Oblique,
-BoldFont       = *Bold,
-BoldItalicFont = *BoldOblique,
+  Extension      = .otf,
+  UprightFont    = *,
+  ItalicFont     = *Oblique,
+  BoldFont       = *Bold,
+  BoldItalicFont = *BoldOblique,
 ]
+
 
 
 \usepackage[Bjarne]{fncychap}
@@ -69,15 +72,16 @@ BoldItalicFont = *BoldOblique,
 \setcounter{tocdepth}{1}
 
 
-\title{MIS developer doc ការសិក្សា}
-\date{Feb 01, 2022}
+
+\title{MIS developer doc}
+\date{Feb 03, 2022}
 \release{}
 \author{MIS Developer}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{}
 \makeindex
 \begin{document}
-	ការសិក្សា
+
 \pagestyle{empty}
 \sphinxmaketitle
 \pagestyle{plain}
@@ -1957,6 +1961,541 @@ View: borderimport\_view.php
 \sphinxAtStartPar
 ViewModel: BorderImport.js
 
+\end{itemize}
+
+
+\subsection{VMW QA}
+\label{\detokenize{module/module:vmw-qa}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+System: VMW QA tool for OD/PHD monitor VMW.
+
+\item {} 
+\sphinxAtStartPar
+Actor: OD , PHD
+
+\item {} 
+\sphinxAtStartPar
+Scenario: When HC/OD/PHP use tablet to enter data, then OD/PHD can use this tool to view questionaire, supervision schedule, Monitor, Report, Dashboard.
+
+\end{itemize}
+
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}                     \PYG{o}{|}     \PYG{o}{|}                           \PYG{o}{|}     \PYG{o}{|}                         \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblVMWQuestionnaire} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{|} \PYG{n}{tblVMWQuestionnaireDetail} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{|} \PYG{n}{tblVMWQuestionnaireItem} \PYG{o}{|}
+\PYG{o}{|}                     \PYG{o}{|}     \PYG{o}{|}                           \PYG{o}{|}     \PYG{o}{|}                         \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: VMWQA.php
+
+\item {} 
+\sphinxAtStartPar
+View: vmwqa\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: VMWQA.js
+
+\end{itemize}
+
+
+\subsection{Lastmile}
+\label{\detokenize{module/module:lastmile}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+System: Last mile
+
+\item {} 
+\sphinxAtStartPar
+Actor: OD/PHD
+
+\item {} 
+\sphinxAtStartPar
+Scenario: When VMW cannot enter data, then OD staff will be responsible for entering data.
+
+\end{itemize}
+
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}                      \PYG{o}{|}     \PYG{o}{|}                            \PYG{o}{|}     \PYG{o}{|}                \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblLastmileHouseHold} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|} \PYG{n}{tblLastmileHouseHoldMember} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|} \PYG{n}{tblLastmileTDA} \PYG{o}{|}
+\PYG{o}{|}                      \PYG{o}{|}     \PYG{o}{|}                            \PYG{o}{|}     \PYG{o}{|}                \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}     \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+                                \PYG{o}{|}                   \PYG{o}{|}
+                                \PYG{o}{|}                   \PYG{o}{|}
+                        \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}    \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+                        \PYG{o}{|}                \PYG{o}{|}    \PYG{o}{|}                \PYG{o}{|}
+                        \PYG{o}{|} \PYG{n}{tblLastmileIPT} \PYG{o}{|}    \PYG{o}{|} \PYG{n}{tblLastmileAFS} \PYG{o}{|}
+                        \PYG{o}{|}                \PYG{o}{|}    \PYG{o}{|}                \PYG{o}{|}
+                        \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}    \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Lastmile.php
+
+\item {} 
+\sphinxAtStartPar
+View: lastmile\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: Lastmile.js
+
+\end{itemize}
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+TDA1 and TDA2 must be 28 days apart.
+
+\sphinxAtStartPar
+Must complete TDA1/TDA2 before do IPT.
+
+\sphinxAtStartPar
+IPT and TDA1 must be 14 days apart.
+
+\sphinxAtStartPar
+IPT and TDA2 must be 28 days apart.
+\end{sphinxadmonition}
+
+
+\subsection{Check list}
+\label{\detokenize{module/module:check-list}}
+
+\subsubsection{Check list HC}
+\label{\detokenize{module/module:check-list-hc}}
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}                \PYG{o}{|}      \PYG{o}{|}                      \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblChecklistHC} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|} \PYG{n}{tblChecklistHCDetail} \PYG{o}{|}
+\PYG{o}{|}                \PYG{o}{|}      \PYG{o}{|}                      \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Checklist.php
+
+\item {} 
+\sphinxAtStartPar
+View: checklist\_hc\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: Checklist\_HC.js
+
+\end{itemize}
+
+
+\subsubsection{Check list OD}
+\label{\detokenize{module/module:check-list-od}}
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}                \PYG{o}{|}      \PYG{o}{|}                      \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblChecklistOD} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|} \PYG{n}{tblChecklistODDetail} \PYG{o}{|}
+\PYG{o}{|}                \PYG{o}{|}      \PYG{o}{|}                      \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Checklist.php
+
+\item {} 
+\sphinxAtStartPar
+View: checklist\_od\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: Checklist\_OD.js
+
+\end{itemize}
+
+
+\subsubsection{Check list EPI}
+\label{\detokenize{module/module:check-list-epi}}
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}                 \PYG{o}{|}      \PYG{o}{|}                       \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblChecklistEPI} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|} \PYG{n}{tblChecklistEPIDetail} \PYG{o}{|}
+\PYG{o}{|}                 \PYG{o}{|}      \PYG{o}{|}                       \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Checklist.php
+
+\item {} 
+\sphinxAtStartPar
+View: checklist\_epi\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: Checklist\_EPI.js
+
+\end{itemize}
+
+
+\section{Stock}
+\label{\detokenize{module/module:stock}}
+
+\subsection{Stock request}
+\label{\detokenize{module/module:stock-request}}
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}            \PYG{o}{|}      \PYG{o}{|}            \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblStockV2} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|} \PYG{n}{tblHFCodes} \PYG{o}{|}
+\PYG{o}{|}            \PYG{o}{|}      \PYG{o}{|}            \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Stock.php
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{request()}} view UI of stock request.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getRequest()}} get stock request data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getDetail()}} get detail stock item of hc.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{offer()}} confirm stock offer.
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+View: stockrequest\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: StockRequest.js
+
+\end{itemize}
+
+
+\subsection{Stock Data}
+\label{\detokenize{module/module:stock-data}}
+
+\subsubsection{Stock HC}
+\label{\detokenize{module/module:stock-hc}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}            \PYG{o}{|}      \PYG{o}{|}            \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblStockV2} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|} \PYG{n}{tblHFCodes} \PYG{o}{|}
+\PYG{o}{|}            \PYG{o}{|}      \PYG{o}{|}            \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Stock.php
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{report()}} view UI of stock data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getReportHF()}} get month of report.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getReportDetailHF()}} get detail sotck item data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{exportExcel()}} export to excel.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{saveStockHF()}} Insert/Update stock data.
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{p}{(}\PYG{n}{Rec\PYGZus{}ID} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+  \PYG{n}{Insert}\PYG{p}{(}\PYG{p}{)}
+\PYG{k}{else} \PYG{n}{Update}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\item {} 
+\sphinxAtStartPar
+View: stockreport\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: StockReport.js
+
+\end{itemize}
+
+
+\subsubsection{Stock OD}
+\label{\detokenize{module/module:stock-od}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}            \PYG{o}{|}      \PYG{o}{|}            \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblStockOD} \PYG{o}{|}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZlt{}}\PYG{o}{|}    \PYG{n}{tblOD}   \PYG{o}{|}
+\PYG{o}{|}            \PYG{o}{|}      \PYG{o}{|}            \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}      \PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Stock.php
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{report()}} view UI of stock data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getReportOD()}} get month of report.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getReportDetailOD()}} get detail sotck item data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{exportExcel()}} export to excel.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{saveStockOD()}} Insert/Update stock data.
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{p}{(}\PYG{n}{Rec\PYGZus{}ID} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+  \PYG{n}{Insert}\PYG{p}{(}\PYG{p}{)}
+\PYG{k}{else} \PYG{n}{Update}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\item {} 
+\sphinxAtStartPar
+View: stockreport\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: StockReport.js
+
+\end{itemize}
+
+
+\subsection{Stock CNM}
+\label{\detokenize{module/module:stock-cnm}}
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}             \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblStockCNM} \PYG{o}{|}
+\PYG{o}{|}             \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Stock.php
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{report()}} view UI of stock data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getReportCNM()}} get month of report.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getReportDetailCNM()}} get detail sotck item data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{exportExcel()}} export to excel.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{saveStockCNM()}} Insert/Update stock data.
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{p}{(}\PYG{n}{Rec\PYGZus{}ID} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+  \PYG{n}{Insert}\PYG{p}{(}\PYG{p}{)}
+\PYG{k}{else} \PYG{n}{Update}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\item {} 
+\sphinxAtStartPar
+View: stockreportcnm\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: StockReportCNM.js
+
+\end{itemize}
+
+
+\subsection{Stock item}
+\label{\detokenize{module/module:stock-item}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+System: tool for admin to set up stock item (which item is for OD/HC)
+
+\item {} 
+\sphinxAtStartPar
+Actor: Admin
+
+\item {} 
+\sphinxAtStartPar
+Scenario: Admin use this tool to Insert/update/Setup stock item.
+
+\end{itemize}
+
+\sphinxAtStartPar
+Table diagram
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\PYG{o}{|}              \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{tblStockItem} \PYG{o}{|}
+\PYG{o}{|}              \PYG{o}{|}
+\PYG{o}{+}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{+}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Stock.php
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{item()}} view UI of stock data.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{getItem()}} get month of report.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{saveItem()}} Insert/Update stock data.
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{p}{(}\PYG{n}{Id} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+  \PYG{n}{Insert}\PYG{p}{(}\PYG{p}{)}
+\PYG{k}{else} \PYG{n}{Update}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\item {} 
+\sphinxAtStartPar
+View: stockitem\_view.php
+
+\item {} 
+\sphinxAtStartPar
+ViewModel: StockItem.js
+
+\end{itemize}
+
+
+\section{Report}
+\label{\detokenize{module/module:report}}
+
+\subsection{Dashboard}
+\label{\detokenize{module/module:dashboard}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Controller: Dashboard.php
+
+\item {} 
+\sphinxAtStartPar
+Main View: dashboard\_v2\_view.php
+
+\item {} 
+\sphinxAtStartPar
+Sub view:
+\sphinxhyphen{} dashboard\_overview\_view.php
+\sphinxhyphen{} dashboard\_border\_view.php
+\sphinxhyphen{} dashboard\_intensification\_view.php
+\sphinxhyphen{} dashboard\_ipmappopup\_view.php
+\sphinxhyphen{} dashbarod\_map\_view.php
+\sphinxhyphen{} dashboard\_outbreak\_view.php
+\sphinxhyphen{} dashbaord\_overview\_view.php
+\sphinxhyphen{} dashboard\_pfmap\_view.php
+\sphinxhyphen{} dashboard\_stock\_view.php
+\sphinxhyphen{} dashboard\_surveillance\_view.php
+\sphinxhyphen{} dashboard\_table\_view.php
+
+\item {} 
+\sphinxAtStartPar
+Main ViewModel: Dashboard.js
+
+\item {} 
+\sphinxAtStartPar
+Sub ViewModel:
+\sphinxhyphen{} Dashboard\_Border.js
+\sphinxhyphen{} Dashboard\_Intensification.js
+\sphinxhyphen{} Dashboard\_Map.js
+\sphinxhyphen{} Dashboard\_Outbreak.js
+\sphinxhyphen{} Dashboard\_PFMap.js
+\sphinxhyphen{} Dashboard\_Overview.js
+\sphinxhyphen{} Dashboard\_Stock.js
+
+\end{itemize}
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+We use store procedure to retrieve data
+
+\sphinxAtStartPar
+To improve performance, first load data will read from file. all files is in \sphinxcode{\sphinxupquote{root\textbackslash{}media\textbackslash{}Dashboard\textbackslash{}Preload Data}} directory
+\end{sphinxadmonition}
+
+
+\subsubsection{Overview}
+\label{\detokenize{module/module:overview}}
+
+\paragraph{Insecticide Treated Net (ITN)}
+\label{\detokenize{module/module:insecticide-treated-net-itn}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Store procedure: \sphinxcode{\sphinxupquote{SP\_Dashboard\_OverviewNet}}
+
+\item {} 
 \end{itemize}
 
 
@@ -11849,15 +12388,17 @@ To get list of material file: PDF, Slide, Video
       \PYG{p}{\PYGZob{}}
           \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
           \PYG{n+nt}{\PYGZdq{}Title\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Documentation\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Type\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}PDF\PYGZdq{}}\PYG{p}{,}
           \PYG{n+nt}{\PYGZdq{}Source\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}https://drive.google.com/file/d/13ozAFcTGX\PYGZhy{}C5HD1rz3XUpioeeVK83KQU/preview\PYGZdq{}}\PYG{p}{,}
-          \PYG{n+nt}{\PYGZdq{}Category\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}PDF\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Category\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}MIS\PYGZdq{}}\PYG{p}{,}
           \PYG{n+nt}{\PYGZdq{}Audience\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}HC\PYGZdq{}}
       \PYG{p}{\PYGZcb{},}
       \PYG{p}{\PYGZob{}}
           \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,}
           \PYG{n+nt}{\PYGZdq{}Title\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Video\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Type\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Video\PYGZdq{}}\PYG{p}{,}
           \PYG{n+nt}{\PYGZdq{}Source\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}qUotrP3M\PYGZhy{}Dc\PYGZdq{}}\PYG{p}{,}
-          \PYG{n+nt}{\PYGZdq{}Category\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Video\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Category\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}MIS\PYGZdq{}}\PYG{p}{,}
           \PYG{n+nt}{\PYGZdq{}Audience\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}VMW\PYGZdq{}}
       \PYG{p}{\PYGZcb{}}
   \PYG{p}{]}
@@ -11867,15 +12408,19 @@ To get list of material file: PDF, Slide, Video
 \item[{Object}] \leavevmode\begin{itemize}
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Category} (\sphinxstyleemphasis{string}) – type of Source. e.g: PDF, Slide, Video.
+\sphinxstylestrong{Type} (\sphinxstyleemphasis{string}) – type of Source. e.g: PDF, Slide, Video.
 
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Audience} (\sphinxstyleemphasis{string}) – HC/VMW.
+\sphinxstylestrong{Audience} (\sphinxstyleemphasis{string}) – OD/HC/VMW.
 
 \item {} 
 \sphinxAtStartPar
 \sphinxstylestrong{Source} (\sphinxstyleemphasis{string}) – if \sphinxcode{\sphinxupquote{Category}} is \sphinxcode{\sphinxupquote{Video}} then \sphinxcode{\sphinxupquote{Source}} is a video ID of youtube. If \sphinxcode{\sphinxupquote{Category}} is \sphinxcode{\sphinxupquote{PDF}} or \sphinxcode{\sphinxupquote{Slide}} then \sphinxcode{\sphinxupquote{Source}} is a link embeded from google drive
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Category} (\sphinxstyleemphasis{string}) – MIS/M\&E/EPI/Finance/VMW/Education
 
 \end{itemize}
 
@@ -11902,34 +12447,68 @@ To get list of Questionaire.
   \PYG{n+nt}{\PYGZdq{}message\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{,}
   \PYG{n+nt}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
       \PYG{p}{\PYGZob{}}
-        \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,}
-        \PYG{n+nt}{\PYGZdq{}Question\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?\PYGZdq{}}\PYG{p}{,}
-        \PYG{n+nt}{\PYGZdq{}Answers\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
-            \PYG{p}{\PYGZob{}}
-                \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{5}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}24\PYGZdq{}}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}
-            \PYG{p}{\PYGZcb{},}
-            \PYG{p}{\PYGZob{}}
-                \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{6}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}45\PYGZdq{}}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}
-            \PYG{p}{\PYGZcb{},}
-            \PYG{p}{\PYGZob{}}
-                \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{7}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}73\PYGZdq{}}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}
-            \PYG{p}{\PYGZcb{},}
-            \PYG{p}{\PYGZob{}}
-                \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{8}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}21\PYGZdq{}}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
-                \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}
-            \PYG{p}{\PYGZcb{}}
-        \PYG{p}{]}
+          \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Question\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}តើគោស៊ីអ្វីជាអាហារ?\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Category\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}MIS\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Candidate\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}VMW\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Answers\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{9}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}បាយ\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}
+              \PYG{p}{\PYGZcb{},}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{10}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}បាយសាច់ជ្រូក\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}
+              \PYG{p}{\PYGZcb{},}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{11}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}ស្មៅ\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}
+              \PYG{p}{\PYGZcb{},}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{12}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}ឡុកឡាក់\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}
+              \PYG{p}{\PYGZcb{}}
+          \PYG{p}{]}
+      \PYG{p}{\PYGZcb{},}
+      \PYG{p}{\PYGZob{}}
+          \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Question\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Category\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}MIS\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Candidate\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}VMW\PYGZdq{}}\PYG{p}{,}
+          \PYG{n+nt}{\PYGZdq{}Answers\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{13}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}24h\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}
+              \PYG{p}{\PYGZcb{},}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{14}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}45h\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}
+              \PYG{p}{\PYGZcb{},}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{15}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}73h\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}
+              \PYG{p}{\PYGZcb{},}
+              \PYG{p}{\PYGZob{}}
+                  \PYG{n+nt}{\PYGZdq{}Rec\PYGZus{}ID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{16}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}Answer\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}21h\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}IsCorrect\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+                  \PYG{n+nt}{\PYGZdq{}QuestionID\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}
+              \PYG{p}{\PYGZcb{}}
+          \PYG{p}{]}
       \PYG{p}{\PYGZcb{}}
   \PYG{p}{]}
 \PYG{p}{\PYGZcb{}}
@@ -11939,6 +12518,14 @@ To get list of Questionaire.
 \item {} 
 \sphinxAtStartPar
 \sphinxstylestrong{IsCorrect} (\sphinxstyleemphasis{bit}) – if it is a correct answer its value is \sphinxcode{\sphinxupquote{1}} otherwise \sphinxcode{\sphinxupquote{0}}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Candidate} (\sphinxstyleemphasis{string}) – OD/HC/VMW.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Category} (\sphinxstyleemphasis{string}) – MIS/M\&E/EPI/Finance/VMW/Education
 
 \end{itemize}
 
