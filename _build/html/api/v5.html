@@ -35,7 +35,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="VMW" href="../module/module.html" />
+    <link rel="next" title="API v1 of CMI" href="../api-cmi/v1.html" />
     <link rel="prev" title="API v4" href="v4.html" /> 
 </head>
 
@@ -71,6 +71,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cron-job/cron-job.html">Cron Job</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Module</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../module/module.html">Module</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">API of CNM Reporting App</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="v4.html">API v4</a></li>
@@ -79,13 +83,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#form">Form</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#message">Message</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#message-list">Message List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#send-message">Send message</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Module</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../module/module.html">VMW</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module/module.html#hc">HC</a></li>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API of Cambodia Malaria Info</span></p>
 <ul>
@@ -102,6 +106,10 @@
 <p class="caption" role="heading"><span class="caption-text">API v1 of Check list</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api-checklist/v1.html">API v1 of Check list app</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API v1 of Training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api-training/v1.html">API V1 of Training</a></li>
 </ul>
 
         </div>
@@ -546,6 +554,92 @@
 
 </div>
 </div>
+<div class="section" id="message">
+<h2>Message<a class="headerlink" href="#message" title="Permalink to this headline"></a></h2>
+<div class="section" id="message-list">
+<h3>Message List<a class="headerlink" href="#message-list" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api5-message-list">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api5/message/list</span></span><a class="headerlink" href="#get--api5-message-list" title="Permalink to this definition"></a></dt>
+<dd><p>List of messages</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code_place</strong> (<em>string</em>) – code of health facility / village code / name of CNM</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;010201&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello CNM I need some money&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-02-04 00:00:00.000&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;CNM&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-02-06 00:00:00.000&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;010201&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;I need 1 million dollar&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-02-06 00:00:00.000&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;CNM&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;OK I will give you&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-02-06 00:00:00.000&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="send-message">
+<h3>Send message<a class="headerlink" href="#send-message" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api5-message-list">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api5/message/list</span></span><a class="headerlink" href="#post--api5-message-list" title="Permalink to this definition"></a></dt>
+<dd><p>Send message</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;010201&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code_place</strong> (<em>string</em>) – code of health facility / village code / name of CNM</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
 </div>
 
 
@@ -553,7 +647,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="v4.html" class="btn btn-neutral float-left" title="API v4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../module/module.html" class="btn btn-neutral float-right" title="VMW" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../api-cmi/v1.html" class="btn btn-neutral float-right" title="API v1 of CMI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
