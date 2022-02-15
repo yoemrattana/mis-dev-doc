@@ -135,6 +135,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#surveillance">Surveillance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Stock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#border">Border</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map">Map</a></li>
 </ul>
 </li>
 </ul>
@@ -1383,10 +1385,116 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <ul class="simple">
 <li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_Stock</span></code></p></li>
 </ul>
-<p>Current Stock HF info by Province</p>
+</div>
+<div class="section" id="current-stock-hf-info-by-province">
+<h5>Current Stock HF info by Province<a class="headerlink" href="#current-stock-hf-info-by-province" title="Permalink to this headline"></a></h5>
 <p>Count number of HF by status by province (out of stock, low stock, Proper stock, congested stock)</p>
 <ul class="simple">
 <li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_Stock</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="malaria-commodity-map">
+<h5>Malaria commodity map<a class="headerlink" href="#malaria-commodity-map" title="Permalink to this headline"></a></h5>
+<p>Map of HF by status (out of stock, low stock, Proper stock, congested stock)</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_StockMap</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="current-stock-hf-item-by-od">
+<h5>Current stock HF Item by OD<a class="headerlink" href="#current-stock-hf-item-by-od" title="Permalink to this headline"></a></h5>
+<p>Count balance of HF’s item by OD.</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_Stock</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="current-stock-hf-item-by-province">
+<h5>Current stock HF Item by province<a class="headerlink" href="#current-stock-hf-item-by-province" title="Permalink to this headline"></a></h5>
+<p>Count balance of HF’s item by province.</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_Stock</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="top-30-hfs-malaria-commodity-having-most-case">
+<h5>Top 30 HFs malaria commodity having most case<a class="headerlink" href="#top-30-hfs-malaria-commodity-having-most-case" title="Permalink to this headline"></a></h5>
+<p>Count RDT, ASMQ, PQ of HFs that having most case.</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_StockTop30HF</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="discrepancy-between-malaria-cases-and-commodity">
+<h5>Discrepancy between malaria cases and commodity<a class="headerlink" href="#discrepancy-between-malaria-cases-and-commodity" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_StockDiscrepancy</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="border">
+<h4>Border<a class="headerlink" href="#border" title="Permalink to this headline"></a></h4>
+<div class="section" id="trends-in-border-areas">
+<h5>Trends in border areas<a class="headerlink" href="#trends-in-border-areas" title="Permalink to this headline"></a></h5>
+<p>number of malaria case of border (Lao, Thailand, Vietnam)</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_BorderChart</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="malaria-cases-by-commune-along-the-border">
+<h5>Malaria cases by commune along the border<a class="headerlink" href="#malaria-cases-by-commune-along-the-border" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_BorderMap</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="map">
+<h4>Map<a class="headerlink" href="#map" title="Permalink to this headline"></a></h4>
+<div class="section" id="annual-foci-classification-and-monitoring">
+<h5>Annual foci classification and monitoring<a class="headerlink" href="#annual-foci-classification-and-monitoring" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_MapFoci</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if duration of foci less than or equal to <code class="docutils literal notranslate"><span class="pre">12</span> <span class="pre">months</span></code> then it is <code class="docutils literal notranslate"><span class="pre">Active</span> <span class="pre">Focus</span></code></p>
+<p>if duration of foci between <code class="docutils literal notranslate"><span class="pre">13</span> <span class="pre">months</span></code> and <code class="docutils literal notranslate"><span class="pre">36</span> <span class="pre">months</span></code> then it is <code class="docutils literal notranslate"><span class="pre">Residual</span> <span class="pre">Focus</span></code></p>
+<p>if duration of foci more than <code class="docutils literal notranslate"><span class="pre">36</span> <span class="pre">months</span></code> this it is <code class="docutils literal notranslate"><span class="pre">Cleared</span></code></p>
+</div>
+</div>
+<div class="section" id="malaria-cases-by-od">
+<h5>Malaria cases by OD<a class="headerlink" href="#malaria-cases-by-od" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_ChartTop10OD</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="malaria-hotspot-by-village">
+<h5>Malaria hotspot by village<a class="headerlink" href="#malaria-hotspot-by-village" title="Permalink to this headline"></a></h5>
+</div>
+<div class="section" id="malaria-hotspot-by-village-for-last-36-months">
+<h5>Malaria hotspot by village for last 36 months<a class="headerlink" href="#malaria-hotspot-by-village-for-last-36-months" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_MapTop30Vill</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>step 1: total positive case by village.</p></li>
+<li><p>step 2: top 30 villages by total positive cases by each month.</p></li>
+<li><p>step 3: top 30 villages that most frequent from second step.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="malaria-aber-percentage-by-od">
+<h5>Malaria aber percentage by OD<a class="headerlink" href="#malaria-aber-percentage-by-od" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_MapAber</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Aber = total test * 100 / total population</p>
+</div>
+</div>
+<div class="section" id="malaria-incidence-by-od">
+<h5>Malaria Incidence by OD<a class="headerlink" href="#malaria-incidence-by-od" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_MapODInc</span></code></p></li>
 </ul>
 </div>
 </div>

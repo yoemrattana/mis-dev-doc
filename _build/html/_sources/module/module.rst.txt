@@ -1189,7 +1189,106 @@ Count number of HF by status by OD (out of stock, low stock, Proper stock, conge
 - Store procedure: ``SP_Dashboard_Stock``
 
 Current Stock HF info by Province
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Count number of HF by status by province (out of stock, low stock, Proper stock, congested stock)
 
 - Store procedure: ``SP_Dashboard_Stock``
+
+Malaria commodity map
+^^^^^^^^^^^^^^^^^^^^^
+
+Map of HF by status (out of stock, low stock, Proper stock, congested stock)
+
+- Store procedure: ``SP_Dashboard_StockMap``
+
+Current stock HF Item by OD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Count balance of HF's item by OD.
+
+- Store procedure: ``SP_Dashboard_Stock``
+
+Current stock HF Item by province
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Count balance of HF's item by province.
+
+- Store procedure: ``SP_Dashboard_Stock``
+
+Top 30 HFs malaria commodity having most case
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Count RDT, ASMQ, PQ of HFs that having most case.
+
+- Store procedure: ``SP_Dashboard_StockTop30HF``
+
+Discrepancy between malaria cases and commodity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_StockDiscrepancy``
+
+Border
+~~~~~~
+
+Trends in border areas
+^^^^^^^^^^^^^^^^^^^^^^
+
+number of malaria case of border (Lao, Thailand, Vietnam)
+
+- Store procedure: ``SP_Dashboard_BorderChart``
+
+Malaria cases by commune along the border
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_BorderMap``
+
+Map
+~~~~
+
+Annual foci classification and monitoring
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_MapFoci``
+
+.. note::
+
+  if duration of foci less than or equal to ``12 months`` then it is ``Active Focus``
+
+  if duration of foci between ``13 months`` and ``36 months`` then it is ``Residual Focus``
+
+  if duration of foci more than ``36 months`` this it is ``Cleared``
+
+
+Malaria cases by OD
+^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_ChartTop10OD``
+
+Malaria hotspot by village
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Malaria hotspot by village for last 36 months
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_MapTop30Vill``
+
+.. note::
+
+  - step 1: total positive case by village.
+  - step 2: top 30 villages by total positive cases by each month.
+  - step 3: top 30 villages that most frequent from second step.
+
+Malaria aber percentage by OD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_MapAber``
+
+.. note:: 
+
+  Aber = total test * 100 / total population
+
+Malaria Incidence by OD
+^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_MapODInc``
