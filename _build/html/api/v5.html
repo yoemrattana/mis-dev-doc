@@ -88,6 +88,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#send-message">Send message</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#update-status">Update status</a></li>
 </ul>
 </li>
 </ul>
@@ -630,15 +631,39 @@
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Query Parameters</dt>
+<dt class="field-odd">Object</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>code_place</strong> (<em>string</em>) – code of health facility / village code / name of CNM</p></li>
+<li><p><strong>Code_Place</strong> (<em>int</em>) – code of health facility / village code / name of CNM.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
+</div>
+<div class="section" id="update-status">
+<h2>Update status<a class="headerlink" href="#update-status" title="Permalink to this headline"></a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api5-message-update_status">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api5/message/update_status</span></span><a class="headerlink" href="#post--api5-message-update_status" title="Permalink to this definition"></a></dt>
+<dd><p>Update read status</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Rec_ID</strong> (<em>int</em>) – Rec_ID of message.</p></li>
+<li><p><strong>IsRead</strong> (<em>bit</em>) – 0/1, if not yet read the value is 0 other wise is 1.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 

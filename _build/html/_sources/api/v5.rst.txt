@@ -486,4 +486,27 @@ Send message
             }
         }
     
-    :query string code_place: code of health facility / village code / name of CNM
+    :Object:
+
+        * **Code_Place** (*int*) -- code of health facility / village code / name of CNM.
+
+Update status
+-------------
+
+.. http:post:: /api5/message/update_status
+
+    Update read status
+
+    **Parse as json**:
+
+    .. sourcecode:: json
+
+        {
+            "Rec_ID": 1,
+            "IsRead": 1 
+        }
+
+    :Object:
+
+        * **Rec_ID** (*int*) -- Rec_ID of message.
+        * **IsRead** (*bit*) -- 0/1, if not yet read the value is 0 other wise is 1.

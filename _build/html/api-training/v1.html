@@ -99,7 +99,11 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API V1 of Training</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-status-material">Update status material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quiz-list">Quiz list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quiz-question">Quiz Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#answer-question">Answer Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profile">Profile</a></li>
 </ul>
 </li>
 </ul>
@@ -136,27 +140,30 @@
 <dt class="sig sig-object http" id="get--api-training-v1-material-list">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-training/v1/material/list</span></span><a class="headerlink" href="#get--api-training-v1-material-list" title="Permalink to this definition"></a></dt>
 <dd><p>To get list of material file: PDF, Slide, Video</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>audience</strong> (<em>string</em>) – VMW/HC/OD</p></li>
+<li><p><strong>category</strong> (<em>string</em>) – MIS/M&amp;E/EPI/Finance/VMW/Education</p></li>
+<li><p><strong>place_code</strong> (<em>string</em>) – code of village / code of HF</p></li>
+</ul>
+</dd>
+</dl>
 <p><strong>Response as json</strong>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
   <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-          <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-          <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Documentation&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;PDF&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Source&quot;</span><span class="p">:</span> <span class="s2">&quot;https://drive.google.com/file/d/13ozAFcTGX-C5HD1rz3XUpioeeVK83KQU/preview&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Audience&quot;</span><span class="p">:</span> <span class="s2">&quot;HC&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-          <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-          <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Video&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;Video&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Source&quot;</span><span class="p">:</span> <span class="s2">&quot;qUotrP3M-Dc&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Audience&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span>
-      <span class="p">}</span>
+       <span class="p">{</span>
+            <span class="nt">&quot;Material_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Documentation&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Source&quot;</span><span class="p">:</span> <span class="s2">&quot;52.168.163.48/media/Training/name.pdf&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;PDF&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Vill_T&quot;</span><span class="p">:</span> <span class="s2">&quot;0102010300&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Thumbnail&quot;</span><span class="p">:</span> <span class="s2">&quot;52.168.163.48/media/Training/e-learning.png&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
@@ -166,90 +173,153 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Type</strong> (<em>string</em>) – type of Source. e.g: PDF, Slide, Video.</p></li>
 <li><p><strong>Audience</strong> (<em>string</em>) – OD/HC/VMW.</p></li>
-<li><p><strong>Source</strong> (<em>string</em>) – if <code class="docutils literal notranslate"><span class="pre">Category</span></code> is <code class="docutils literal notranslate"><span class="pre">Video</span></code> then <code class="docutils literal notranslate"><span class="pre">Source</span></code> is a video ID of youtube. If <code class="docutils literal notranslate"><span class="pre">Category</span></code> is <code class="docutils literal notranslate"><span class="pre">PDF</span></code> or <code class="docutils literal notranslate"><span class="pre">Slide</span></code> then <code class="docutils literal notranslate"><span class="pre">Source</span></code> is a link embeded from google drive</p></li>
+<li><p><strong>Source</strong> (<em>string</em>) – URL</p></li>
 <li><p><strong>Category</strong> (<em>string</em>) – MIS/M&amp;E/EPI/Finance/VMW/Education</p></li>
+<li><p><strong>IsRead</strong> (<em>bit</em>) – 0/1</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
-<div class="section" id="quiz-question">
-<h2>Quiz Question<a class="headerlink" href="#quiz-question" title="Permalink to this headline"></a></h2>
+<div class="section" id="update-status-material">
+<h2>Update status material<a class="headerlink" href="#update-status-material" title="Permalink to this headline"></a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-training-v1-material-update_status">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-training/v1/material/update_status</span></span><a class="headerlink" href="#post--api-training-v1-material-update_status" title="Permalink to this definition"></a></dt>
+<dd><p>To update status weather material training is read or not yet.</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Code_Place&quot;</span> <span class="p">:</span> <span class="s2">&quot;0102010300&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Material_ID&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Code_Place</strong> (<em>string</em>) – code of Village / code of HF</p></li>
+<li><p><strong>Material_ID</strong> (<em>string</em>) – Rec_ID of material training</p></li>
+<li><p><strong>IsRead</strong> (<em>bit</em>) – 0/1, if not yet read the value is 0 otherwise is 1.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="quiz-list">
+<h2>Quiz list<a class="headerlink" href="#quiz-list" title="Permalink to this headline"></a></h2>
 <dl class="http get">
 <dt class="sig sig-object http" id="get--api-training-v1-quiz-list">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-training/v1/quiz/list</span></span><a class="headerlink" href="#get--api-training-v1-quiz-list" title="Permalink to this definition"></a></dt>
-<dd><p>To get list of Questionaire.</p>
+<dd><p>To get list of Quiz</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> (<em>string</em>) – MIS/M&amp;E/EPI/Finance/VMW/Education</p></li>
+<li><p><strong>candidate</strong> (<em>string</em>) – VMW/HC</p></li>
+</ul>
+</dd>
+</dl>
 <p><strong>Response as json</strong>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-          <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;តើគោស៊ីអ្វីជាអាហារ?&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Candidate&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Answers&quot;</span><span class="p">:</span> <span class="p">[</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;បាយ&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;បាយសាច់ជ្រូក&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ស្មៅ&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;ឡុកឡាក់&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">3</span>
-              <span class="p">}</span>
-          <span class="p">]</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-          <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-          <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Candidate&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;Answers&quot;</span><span class="p">:</span> <span class="p">[</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;24h&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;45h&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;73h&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
-              <span class="p">},</span>
-              <span class="p">{</span>
-                  <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
-                  <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;21h&quot;</span><span class="p">,</span>
-                  <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
-              <span class="p">}</span>
-          <span class="p">]</span>
-      <span class="p">}</span>
-  <span class="p">]</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;ការរាយការអំពីជំងឺគ្រុនចាញ់&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;រាយការតាមប្រពន្ទ&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Candidate&quot;</span><span class="p">:</span> <span class="s2">&quot;VMW&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="quiz-question">
+<h2>Quiz Question<a class="headerlink" href="#quiz-question" title="Permalink to this headline"></a></h2>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-training-v1-quiz-questions">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-training/v1/quiz/questions</span></span><a class="headerlink" href="#get--api-training-v1-quiz-questions" title="Permalink to this definition"></a></dt>
+<dd><p>To get list of Questionaire.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>quiz_id</strong> (<em>int</em>) – Rec_Id of quiz</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Answers&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;245h&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;23h&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;20h&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;21h&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="s2">&quot;តើមួយឆ្នាំមានប៊ុន្មានថ្ងៃ?&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Answers&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;233&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;365&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;555&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                    <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="s2">&quot;55&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;IsCorrect&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span> <span class="mi">4</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -262,6 +332,71 @@
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+</div>
+<div class="section" id="answer-question">
+<h2>Answer Question<a class="headerlink" href="#answer-question" title="Permalink to this headline"></a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-training-v1-quiz-answer_question">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api-training/v1/quiz/answer_question</span></span><a class="headerlink" href="#post--api-training-v1-quiz-answer_question" title="Permalink to this definition"></a></dt>
+<dd><p>To answer the question of quiz.</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;quiz_take&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;QuizID&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span><span class="s2">&quot;010101&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+        <span class="nt">&quot;StartTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-04 10:10:00&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;EndTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-04 10:14:00&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;answers&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;AnswerID&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;QuestionID&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;AnswerID&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="profile">
+<h2>Profile<a class="headerlink" href="#profile" title="Permalink to this headline"></a></h2>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-training-v1-quiz-profile">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api-training/v1/quiz/profile</span></span><a class="headerlink" href="#get--api-training-v1-quiz-profile" title="Permalink to this definition"></a></dt>
+<dd><p>To get profil and result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Code_Place</strong> (<em>string</em>) – Code of village / code of HF</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;010101&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Name_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;Serei Sophon RH&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;QuizID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;ការរាយការអំពីជំងឺគ្រុនចាញ់&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;StartTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-04 10:10:00.000&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;EndTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-04 10:14:00.000&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;TotalScore&quot;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

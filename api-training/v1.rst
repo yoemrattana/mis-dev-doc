@@ -8,6 +8,10 @@ Material
 
   To get list of material file: PDF, Slide, Video
 
+  :query string audience: VMW/HC/OD
+  :query string category: MIS/M&E/EPI/Finance/VMW/Education
+  :query string place_code: code of village / code of HF
+
   **Response as json**:
 
   .. sourcecode:: json
@@ -16,22 +20,16 @@ Material
       "code": 200,
       "message": "success",
       "data": [
-          {
-              "Rec_ID": 1,
-              "Title": "Documentation",
-              "Type": "PDF",
-              "Source": "https://drive.google.com/file/d/13ozAFcTGX-C5HD1rz3XUpioeeVK83KQU/preview",
-              "Category": "MIS",
-              "Audience": "HC"
-          },
-          {
-              "Rec_ID": 2,
-              "Title": "Video",
-              "Type": "Video",
-              "Source": "qUotrP3M-Dc",
-              "Category": "MIS",
-              "Audience": "VMW"
-          }
+           {
+                "Material_ID": 1,
+                "Title": "Documentation",
+                "Source": "52.168.163.48/media/Training/name.pdf",
+                "Type": "PDF",
+                "Category": "MIS",
+                "Code_Vill_T": "0102010300",
+                "Thumbnail": "52.168.163.48/media/Training/e-learning.png",
+                "IsRead": 0
+            }
       ]
     }
 
@@ -39,93 +37,204 @@ Material
 
     * **Type** (*string*) -- type of Source. e.g: PDF, Slide, Video.
     * **Audience** (*string*) -- OD/HC/VMW.
-    * **Source** (*string*) -- if ``Category`` is ``Video`` then ``Source`` is a video ID of youtube. If ``Category`` is ``PDF`` or ``Slide`` then ``Source`` is a link embeded from google drive
+    * **Source** (*string*) -- URL
     * **Category** (*string*) -- MIS/M&E/EPI/Finance/VMW/Education
+    * **IsRead** (*bit*) -- 0/1
 
-Quiz Question
--------------
+Update status material
+----------------------
+
+.. http:post:: /api-training/v1/material/update_status
+
+    To update status weather material training is read or not yet.
+
+    **Parse as json**:
+
+    .. sourcecode:: json
+
+        {
+            "Code_Place" : "0102010300",
+            "Material_ID" : 1,
+            "IsRead": 1
+        }
+
+    :Object:
+
+      * **Code_Place** (*string*) -- code of Village / code of HF
+      * **Material_ID** (*string*) -- Rec_ID of material training
+      * **IsRead** (*bit*) -- 0/1, if not yet read the value is 0 otherwise is 1.
+
+
+Quiz list
+---------
 
 .. http:get:: /api-training/v1/quiz/list
 
-  To get list of Questionaire.
+  To get list of Quiz
+
+  :query string category: MIS/M&E/EPI/Finance/VMW/Education
+  :query string candidate: VMW/HC
 
   **Response as json**:
 
   .. sourcecode:: json
 
     {
-      "code": 200,
-      "message": "success",
-      "data": [
-          {
-              "Rec_ID": 3,
-              "Question": "តើគោស៊ីអ្វីជាអាហារ?",
-              "Category": "MIS",
-              "Candidate": "VMW",
-              "Answers": [
-                  {
-                      "Rec_ID": 9,
-                      "Answer": "បាយ",
-                      "IsCorrect": 0,
-                      "QuestionID": 3
-                  },
-                  {
-                      "Rec_ID": 10,
-                      "Answer": "បាយសាច់ជ្រូក",
-                      "IsCorrect": 0,
-                      "QuestionID": 3
-                  },
-                  {
-                      "Rec_ID": 11,
-                      "Answer": "ស្មៅ",
-                      "IsCorrect": 1,
-                      "QuestionID": 3
-                  },
-                  {
-                      "Rec_ID": 12,
-                      "Answer": "ឡុកឡាក់",
-                      "IsCorrect": 0,
-                      "QuestionID": 3
-                  }
-              ]
-          },
-          {
-              "Rec_ID": 4,
-              "Question": "តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?",
-              "Category": "MIS",
-              "Candidate": "VMW",
-              "Answers": [
-                  {
-                      "Rec_ID": 13,
-                      "Answer": "24h",
-                      "IsCorrect": 1,
-                      "QuestionID": 4
-                  },
-                  {
-                      "Rec_ID": 14,
-                      "Answer": "45h",
-                      "IsCorrect": 0,
-                      "QuestionID": 4
-                  },
-                  {
-                      "Rec_ID": 15,
-                      "Answer": "73h",
-                      "IsCorrect": 0,
-                      "QuestionID": 4
-                  },
-                  {
-                      "Rec_ID": 16,
-                      "Answer": "21h",
-                      "IsCorrect": 0,
-                      "QuestionID": 4
-                  }
-              ]
-          }
-      ]
+        "code": 200,
+        "message": "success",
+        "data": [
+            {
+                "Rec_ID": 1,
+                "Title": "ការរាយការអំពីជំងឺគ្រុនចាញ់",
+                "Description": "រាយការតាមប្រពន្ទ",
+                "Category": "MIS",
+                "Candidate": "VMW"
+            }
+        ]
     }
 
-  :Object:
+Quiz Question
+-------------
 
-    * **IsCorrect** (*bit*) -- if it is a correct answer its value is ``1`` otherwise ``0`` 
-    * **Candidate** (*string*) -- OD/HC/VMW.
-    * **Category** (*string*) -- MIS/M&E/EPI/Finance/VMW/Education
+.. http:get:: /api-training/v1/quiz/questions
+
+    To get list of Questionaire.
+
+    :query int quiz_id: Rec_Id of quiz
+
+    **Response as json**:
+
+    .. sourcecode:: json
+
+        {
+            "code": 200,
+            "message": "success",
+            "data": [
+                {
+                    "QuestionID": 1,
+                    "Question": "តើមួយថ្ងៃមានប៊ុន្មានម៉ោង?",
+                    "Answers": [
+                        {
+                            "Rec_ID": 1,
+                            "Answer": "245h",
+                            "IsCorrect": 1,
+                            "QuestionID": 1
+                        },
+                        {
+                            "Rec_ID": 2,
+                            "Answer": "23h",
+                            "IsCorrect": 1,
+                            "QuestionID": 1
+                        },
+                        {
+                            "Rec_ID": 3,
+                            "Answer": "20h",
+                            "IsCorrect": 0,
+                            "QuestionID": 1
+                        },
+                        {
+                            "Rec_ID": 4,
+                            "Answer": "21h",
+                            "IsCorrect": 0,
+                            "QuestionID": 1
+                        }
+                    ]
+                },
+                {
+                    "QuestionID": 4,
+                    "Question": "តើមួយឆ្នាំមានប៊ុន្មានថ្ងៃ?",
+                    "Answers": [
+                        {
+                            "Rec_ID": 13,
+                            "Answer": "233",
+                            "IsCorrect": 0,
+                            "QuestionID": 4
+                        },
+                        {
+                            "Rec_ID": 14,
+                            "Answer": "365",
+                            "IsCorrect": 1,
+                            "QuestionID": 4
+                        },
+                        {
+                            "Rec_ID": 15,
+                            "Answer": "555",
+                            "IsCorrect": 0,
+                            "QuestionID": 4
+                        },
+                        {
+                            "Rec_ID": 16,
+                            "Answer": "55",
+                            "IsCorrect": 0,
+                            "QuestionID": 4
+                        }
+                    ]
+                }
+            ]
+        }
+
+    :Object:
+
+        * **IsCorrect** (*bit*) -- if it is a correct answer its value is ``1`` otherwise ``0`` 
+        * **Candidate** (*string*) -- OD/HC/VMW.
+        * **Category** (*string*) -- MIS/M&E/EPI/Finance/VMW/Education
+
+Answer Question
+---------------
+
+.. http:post:: /api-training/v1/quiz/answer_question
+
+    To answer the question of quiz.
+
+    **Parse as json**:
+
+    .. sourcecode:: json
+
+        {
+            "quiz_take" : {
+                "QuizID":"1",
+                "Code_Place":"010101",
+                "TotalScore":10,
+                "StartTime": "2022-03-04 10:10:00",
+                "EndTime": "2022-03-04 10:14:00"
+            },
+            "answers": [
+                {
+                    "QuestionID":"1",
+                    "AnswerID":"1"
+                },
+                {
+                    "QuestionID":"1",
+                    "AnswerID":"1"
+                }
+            ]
+        }
+
+Profile
+-------
+
+.. http:get:: /api-training/v1/quiz/profile
+
+    To get profil and result.
+
+    :query string Code_Place: Code of village / code of HF
+
+    **Response as json**:
+
+    .. sourcecode:: json
+
+        {
+            "code": 200,
+            "message": "success",
+            "data": [
+                {
+                    "Code_Place": "010101",
+                    "Name_Place": "Serei Sophon RH",
+                    "QuizID": 1,
+                    "Title": "ការរាយការអំពីជំងឺគ្រុនចាញ់",
+                    "StartTime": "2022-03-04 10:10:00.000",
+                    "EndTime": "2022-03-04 10:14:00.000",
+                    "TotalScore": 10
+                }
+            ]
+        }
