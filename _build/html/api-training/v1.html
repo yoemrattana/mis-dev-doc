@@ -104,6 +104,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#quiz-question">Quiz Question</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#answer-question">Answer Question</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#profile">Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comment">Comment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comment-list">Comment List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#send-comment">Send comment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#update-status">Update status</a></li>
 </ul>
 </li>
 </ul>
@@ -397,6 +403,113 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+</dd></dl>
+
+</div>
+<div class="section" id="comment">
+<h2>Comment<a class="headerlink" href="#comment" title="Permalink to this headline"></a></h2>
+<div class="section" id="comment-list">
+<h3>Comment List<a class="headerlink" href="#comment-list" title="Permalink to this headline"></a></h3>
+<dl class="http get">
+<dt class="sig sig-object http" id="get-api-training-v1-comment-list">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">api-training/v1/comment/list</span></span><a class="headerlink" href="#get-api-training-v1-comment-list" title="Permalink to this definition"></a></dt>
+<dd><p>List of comment of any material lesson</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code_place</strong> (<em>string</em>) – code of health facility / village code / name of CNM user</p></li>
+<li><p><strong>material_id</strong> (<em>int</em>) – rec_id of lesson.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Response as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;010102&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;I don&#39;t know this one &quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;Material_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-18 00:00:00.000&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;CNM&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;I can explain you&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Material_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-18 00:00:00.000&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;010102&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;Material_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;InitTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-03-18 10:03:06.493&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="send-comment">
+<h3>Send comment<a class="headerlink" href="#send-comment" title="Permalink to this headline"></a></h3>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-api-training-v1-comment-send">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">api-training/v1/comment/send</span></span><a class="headerlink" href="#post-api-training-v1-comment-send" title="Permalink to this definition"></a></dt>
+<dd><p>Send message</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Code_Place&quot;</span><span class="p">:</span> <span class="s2">&quot;010102&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Text&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Parent_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;Material_ID&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Code_Place</strong> (<em>int</em>) – code of health facility / village code / name of CNM user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="update-status">
+<h2>Update status<a class="headerlink" href="#update-status" title="Permalink to this headline"></a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-api-training-v1-comment-update_status">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">api-training/v1/comment/update_status</span></span><a class="headerlink" href="#post-api-training-v1-comment-update_status" title="Permalink to this definition"></a></dt>
+<dd><p>Update read status</p>
+<p><strong>Parse as json</strong>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Rec_ID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;IsRead&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Rec_ID</strong> (<em>int</em>) – Rec_ID of message.</p></li>
+<li><p><strong>IsRead</strong> (<em>bit</em>) – 0/1, if not yet read the value is 0 other wise is 1.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

@@ -238,3 +238,99 @@ Profile
                 }
             ]
         }
+
+Comment
+-------
+
+Comment List
+~~~~~~~~~~~~
+
+.. http:get:: api-training/v1/comment/list
+
+    List of comment of any material lesson
+
+    :query string code_place: code of health facility / village code / name of CNM user
+    :query int material_id: rec_id of lesson.
+
+    **Response as json**:
+
+    .. sourcecode:: json
+
+        {
+            "code": 200,
+            "message": "success",
+            "data": [
+                {
+                    "Rec_ID": 1,
+                    "Code_Place": "010102",
+                    "Text": "I don't know this one ",
+                    "Parent_ID": null,
+                    "Material_ID": 1,
+                    "IsRead": 0,
+                    "InitTime": "2022-03-18 00:00:00.000"
+                },
+                {
+                    "Rec_ID": 2,
+                    "Code_Place": "CNM",
+                    "Text": "I can explain you",
+                    "Parent_ID": 1,
+                    "Material_ID": 1,
+                    "IsRead": 0,
+                    "InitTime": "2022-03-18 00:00:00.000"
+                },
+                {
+                    "Rec_ID": 3,
+                    "Code_Place": "010102",
+                    "Text": "Hello",
+                    "Parent_ID": 1,
+                    "Material_ID": 1,
+                    "IsRead": 0,
+                    "InitTime": "2022-03-18 10:03:06.493"
+                }
+            ]
+        }
+
+Send comment
+~~~~~~~~~~~~
+
+.. http:post:: api-training/v1/comment/send
+
+    Send message
+
+    **Parse as json**:
+
+    .. sourcecode:: json
+
+        {
+            "message": {
+                "Code_Place": "010102",
+                "Text": "Hello",
+                "Parent_ID": 1,
+                "Material_ID": 1
+            }
+        }
+    
+    :Object:
+
+        * **Code_Place** (*int*) -- code of health facility / village code / name of CNM user.
+
+Update status
+-------------
+
+.. http:post:: api-training/v1/comment/update_status
+
+    Update read status
+
+    **Parse as json**:
+
+    .. sourcecode:: json
+
+        {
+            "Rec_ID": 1,
+            "IsRead": 1 
+        }
+
+    :Object:
+
+        * **Rec_ID** (*int*) -- Rec_ID of message.
+        * **IsRead** (*bit*) -- 0/1, if not yet read the value is 0 other wise is 1.
