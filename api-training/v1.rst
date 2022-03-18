@@ -295,7 +295,7 @@ Send comment
 
 .. http:post:: api-training/v1/comment/send
 
-    Send message
+    Send comment
 
     **Parse as json**:
 
