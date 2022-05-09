@@ -137,6 +137,14 @@
 <li class="toctree-l4"><a class="reference internal" href="#id1">Stock</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#border">Border</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#map">Map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#table">Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cnm-outbreak-detection-tool">CNM Outbreak detection tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pf-map">PF Map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reports">Reports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">VMW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#health-facility">Health Facility</a></li>
 </ul>
 </li>
 </ul>
@@ -200,16 +208,16 @@
 <h2>Use case diagram<a class="headerlink" href="#use-case-diagram" title="Permalink to this headline"></a></h2>
 <div class="section" id="use-case-malaria-itn-data">
 <h3>Use case malaria &amp; ITN data<a class="headerlink" href="#use-case-malaria-itn-data" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="../_images/use_case_malaria_itn.jpg"><img alt="Use case for malaria &amp; ITN data" src="../_images/use_case_malaria_itn.jpg" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="detail-diagram">
 <h3>Detail diagram<a class="headerlink" href="#detail-diagram" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="../_images/detail-diagram.jpg"><img alt="Detail diagram" src="../_images/detail-diagram.jpg" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </div>
 </div>
 </div>
@@ -1495,6 +1503,205 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <h5>Malaria Incidence by OD<a class="headerlink" href="#malaria-incidence-by-od" title="Permalink to this headline"></a></h5>
 <ul class="simple">
 <li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_MapODInc</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Incidence = total positive * 1000 / total population</p>
+</div>
+</div>
+<div class="section" id="malaria-api-map-by-village">
+<h5>Malaria API Map by Village<a class="headerlink" href="#malaria-api-map-by-village" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_APIByVillageMap</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>API = total postive * 1000 / total population</p></li>
+<li><p>if village without population number then total population = 500</p></li>
+<li><p>Annex village doesn’t include.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="table">
+<h4>Table<a class="headerlink" href="#table" title="Permalink to this headline"></a></h4>
+<div class="section" id="monthly-malaria-cases-by-species-reported-by-provinces-55-ods">
+<h5>Monthly malaria cases by species reported by provinces (55 ods)<a class="headerlink" href="#monthly-malaria-cases-by-species-reported-by-provinces-55-ods" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_TableSpecieProvinceMonth</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="monthly-severe-malaria-cases-reported-by-provinces-55-ods">
+<h5>Monthly severe malaria cases reported by provinces (55 ods)<a class="headerlink" href="#monthly-severe-malaria-cases-reported-by-provinces-55-ods" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_TableSevereMonth</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="number-percentage-of-malaria-cases-by-age-groups-and-sex-by-year-55-ods">
+<h5>Number / percentage of malaria cases by age groups and sex by year (55 ods)<a class="headerlink" href="#number-percentage-of-malaria-cases-by-age-groups-and-sex-by-year-55-ods" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_TableAgeSex</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="number-of-malaria-species-by-age-groups-and-sex-55-ods">
+<h5>Number of malaria species by age groups and sex (55 ods)<a class="headerlink" href="#number-of-malaria-species-by-age-groups-and-sex-55-ods" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_TableAgeSexSpecie</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="number-of-malaria-severe-cases-by-age-groups-and-sex-55-ods">
+<h5>Number of malaria severe cases by age groups and sex (55 ods)<a class="headerlink" href="#number-of-malaria-severe-cases-by-age-groups-and-sex-55-ods" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_TableAgeSexSevere</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="cnm-outbreak-detection-tool">
+<h4>CNM Outbreak detection tool<a class="headerlink" href="#cnm-outbreak-detection-tool" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_OutbreakDetection</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="pf-map">
+<h4>PF Map<a class="headerlink" href="#pf-map" title="Permalink to this headline"></a></h4>
+<div class="section" id="id2">
+<h5>Map<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_PFMap</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="number-of-places-that-have-pf-and-mix-cases">
+<h5>Number of places that have pf and mix cases<a class="headerlink" href="#number-of-places-that-have-pf-and-mix-cases" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_Dashboard_PFMapCount</span></code></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="reports">
+<h3>Reports<a class="headerlink" href="#reports" title="Permalink to this headline"></a></h3>
+<blockquote>
+<div><p>Report are able filter by province, OD, Health center, Village, Year, Quarter, Month, Month from and Month to</p>
+</div></blockquote>
+<div class="section" id="id3">
+<h4>VMW<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<div class="section" id="vmw-report-completeness">
+<h5>VMW Report Completeness<a class="headerlink" href="#vmw-report-completeness" title="Permalink to this headline"></a></h5>
+<ul>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWReportCompleteness</span></code></p>
+<p>show percentage of data that insert by VMW by month.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="vmw-report-timeline">
+<h5>VMW Report timeline<a class="headerlink" href="#vmw-report-timeline" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWReportTimeline</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="vmw-data-accuracy">
+<h5>VMW Data accuracy<a class="headerlink" href="#vmw-data-accuracy" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWDataAccuracy</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="vmw-report-received">
+<h5>VMW Report Received<a class="headerlink" href="#vmw-report-received" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWReportReceived</span></code></p></li>
+</ul>
+<p>show number of report that report by VMW compare with number VMW.</p>
+</div>
+<div class="section" id="vmw-data-summary">
+<h5>VMW Data (summary)<a class="headerlink" href="#vmw-data-summary" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWDataSummary</span></code></p></li>
+</ul>
+<p>Data of VMW sum by level of <code class="docutils literal notranslate"><span class="pre">Province</span></code>, <code class="docutils literal notranslate"><span class="pre">OD</span></code>, <code class="docutils literal notranslate"><span class="pre">HF</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Passive</span> <span class="pre">=</span> <span class="pre">1</span></code> it means outreach</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="vmw-data-by-village">
+<h5>VMW Data (By village)<a class="headerlink" href="#vmw-data-by-village" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWDataByVillage</span></code></p></li>
+</ul>
+<p>Data of VMW sum by level of <code class="docutils literal notranslate"><span class="pre">Province</span></code>, <code class="docutils literal notranslate"><span class="pre">OD</span></code>, <code class="docutils literal notranslate"><span class="pre">HF</span></code>, <code class="docutils literal notranslate"><span class="pre">VMW</span> <span class="pre">village</span></code></p>
+</div>
+<div class="section" id="vmw-data-by-month">
+<h5>VMW Data by month<a class="headerlink" href="#vmw-data-by-month" title="Permalink to this headline"></a></h5>
+<p>Data of VMW by Month</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWDataByMonth</span></code></p></li>
+</ul>
+<p>Filter by:</p>
+<ul class="simple">
+<li><p>Pf + Pv + Mix</p></li>
+<li><p>Pf + Mix</p></li>
+<li><p>Pf</p></li>
+<li><p>Pv</p></li>
+<li><p>Mix</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="health-facility">
+<h4>Health Facility<a class="headerlink" href="#health-facility" title="Permalink to this headline"></a></h4>
+<div class="section" id="hf-report-completeness">
+<h5>HF Report Completeness<a class="headerlink" href="#hf-report-completeness" title="Permalink to this headline"></a></h5>
+<p>Percentage of report by month</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFReportCompleteness</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-report-timeline">
+<h5>HF Report timeline<a class="headerlink" href="#hf-report-timeline" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFReportTimeline</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-report-accuracy">
+<h5>HF Report Accuracy<a class="headerlink" href="#hf-report-accuracy" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFDataAccuracy</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-report-received">
+<h5>HF Report Received<a class="headerlink" href="#hf-report-received" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFReportReceived</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-data-summary">
+<h5>HF Data (Summary)<a class="headerlink" href="#hf-data-summary" title="Permalink to this headline"></a></h5>
+<p>Data of HF sum by level of <code class="docutils literal notranslate"><span class="pre">Province</span></code>, <code class="docutils literal notranslate"><span class="pre">OD</span></code>, <code class="docutils literal notranslate"><span class="pre">HF</span></code></p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFDataSummary</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-data-by-village">
+<h5>HF Data (By Village)<a class="headerlink" href="#hf-data-by-village" title="Permalink to this headline"></a></h5>
+<p>Data of HF sum by level of <code class="docutils literal notranslate"><span class="pre">Province</span></code>, <code class="docutils literal notranslate"><span class="pre">OD</span></code>, <code class="docutils literal notranslate"><span class="pre">HF</span></code>, <code class="docutils literal notranslate"><span class="pre">Village</span></code></p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFDataByVillage</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-data-by-month">
+<h5>HF Data by Month<a class="headerlink" href="#hf-data-by-month" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFDataByMonth</span></code></p></li>
+</ul>
+<p>Filter by:</p>
+<ul class="simple">
+<li><p>Pf + Pv + Mix</p></li>
+<li><p>Pf + Mix</p></li>
+<li><p>Pf</p></li>
+<li><p>Pv</p></li>
+<li><p>Mix</p></li>
 </ul>
 </div>
 </div>

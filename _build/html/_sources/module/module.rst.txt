@@ -1292,3 +1292,180 @@ Malaria Incidence by OD
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 - Store procedure: ``SP_Dashboard_MapODInc``
+
+.. note::
+
+  Incidence = total positive * 1000 / total population
+
+Malaria API Map by Village
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_APIByVillageMap``
+
+.. note::
+
+  - API = total postive * 1000 / total population
+  - if village without population number then total population = 500
+  - Annex village doesn't include.
+
+Table
+~~~~~~
+
+Monthly malaria cases by species reported by provinces (55 ods)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_TableSpecieProvinceMonth``
+
+Monthly severe malaria cases reported by provinces (55 ods)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_TableSevereMonth``
+
+Number / percentage of malaria cases by age groups and sex by year (55 ods)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_TableAgeSex``
+
+Number of malaria species by age groups and sex (55 ods)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_TableAgeSexSpecie``
+
+Number of malaria severe cases by age groups and sex (55 ods)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_TableAgeSexSevere``
+
+CNM Outbreak detection tool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_Dashboard_OutbreakDetection``
+
+PF Map
+~~~~~~
+
+Map
+^^^
+
+- Store procedure: ``SP_Dashboard_PFMap``
+
+Number of places that have pf and mix cases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_Dashboard_PFMapCount``
+
+Reports
+-------
+
+  Report are able filter by province, OD, Health center, Village, Year, Quarter, Month, Month from and Month to
+
+VMW
+~~~~
+
+VMW Report Completeness
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_VMWReportCompleteness``
+
+  show percentage of data that insert by VMW by month.
+
+VMW Report timeline
+^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_VMWReportTimeline``
+
+VMW Data accuracy
+^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_VMWDataAccuracy``
+
+VMW Report Received
+^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_VMWReportReceived``
+
+show number of report that report by VMW compare with number VMW.
+
+VMW Data (summary)
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_VMWDataSummary``
+
+Data of VMW sum by level of ``Province``, ``OD``, ``HF``.
+
+.. note:: 
+  - ``Passive = 1`` it means outreach
+
+VMW Data (By village)
+^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_VMWDataByVillage``
+
+Data of VMW sum by level of ``Province``, ``OD``, ``HF``, ``VMW village``
+
+VMW Data by month
+^^^^^^^^^^^^^^^^^
+
+Data of VMW by Month 
+
+- Store procedure: ``SP_V1_VMWDataByMonth``
+
+Filter by:
+
+- Pf + Pv + Mix
+- Pf + Mix 
+- Pf
+- Pv
+- Mix
+
+Health Facility
+~~~~~~~~~~~~~~~
+
+HF Report Completeness
+^^^^^^^^^^^^^^^^^^^^^^
+
+Percentage of report by month
+
+- Store procedure: ``SP_V1_HFReportCompleteness``
+
+HF Report timeline
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFReportTimeline``
+
+HF Report Accuracy
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFDataAccuracy``
+
+HF Report Received
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFReportReceived``
+
+HF Data (Summary)
+^^^^^^^^^^^^^^^^^
+
+Data of HF sum by level of ``Province``, ``OD``, ``HF``
+
+- Store procedure: ``SP_V1_HFDataSummary``
+
+HF Data (By Village)
+^^^^^^^^^^^^^^^^^^^^
+
+Data of HF sum by level of ``Province``, ``OD``, ``HF``, ``Village``
+
+- Store procedure: ``SP_V1_HFDataByVillage``
+
+HF Data by Month
+^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFDataByMonth``
+
+Filter by:
+
+- Pf + Pv + Mix
+- Pf + Mix 
+- Pf
+- Pv
+- Mix
