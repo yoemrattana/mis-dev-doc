@@ -34,6 +34,7 @@ Welcome to MIS developer doc's documentation!
    :caption: Module
 
    module/module
+   module/note
    
 .. toctree::
    :maxdepth: 2

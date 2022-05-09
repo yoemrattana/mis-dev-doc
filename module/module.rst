@@ -1483,3 +1483,70 @@ Top 10 ODs having most cases
 Data of Top 10 ODs having most cases for current and last year
 
 - Store procedure: ``SP_V1_HFVMWTop10OD``
+
+Top 30 HFs Having Most Cases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Data of top 30 HFs having most cases for current and last year.
+
+- Store procedure: ``SP_V1_HFVMWTop30HF``
+
+HFs having most cases (chart)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFVMWTop30HFChart``
+
+Parameter filter
+
+  - Top 10
+  - Top 20 
+  - Top 30
+
+Villages Having Most Cases (chart)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFVMWTop30VillChart``
+
+Parameter filter
+
+  - Top 10
+  - Top 20 
+  - Top 30
+
+HF + VMW Data (summary)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Data of HF and VMW level by ``Province``, ``OD``, ``HF``
+
+- Store procedure: ``SP_V1_HFVMWDataSummary``
+
+Pv Radical Cure and Follow up
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFVMWPvFollowup``
+
+High Risk Villages
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HighRiskVillage``
+
+Bed Net
+~~~~~~~
+
+Bed Net by Province
+^^^^^^^^^^^^^^^^^^^^
+
+Parameter filter: 
+  - All (value: all)
+  - Mobile + Continue (value: mc)
+
+- Store procedure: ``SP_V1_BedNetReport``
+
+Bed Net by OD
+^^^^^^^^^^^^^^
+
+Parameter filter:
+  -  By Filter (value: 1)
+  -  Last 3 Years (value: 3)
+
+- Store procedure: ``SP_V1_BedNetReport``

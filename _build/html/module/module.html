@@ -145,6 +145,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#reports">Reports</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id3">VMW</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#health-facility">Health Facility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hf-vmw">HF + VMW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Bed Net</a></li>
 </ul>
 </li>
 </ul>
@@ -208,16 +210,16 @@
 <h2>Use case diagram<a class="headerlink" href="#use-case-diagram" title="Permalink to this headline"></a></h2>
 <div class="section" id="use-case-malaria-itn-data">
 <h3>Use case malaria &amp; ITN data<a class="headerlink" href="#use-case-malaria-itn-data" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="../_images/use_case_malaria_itn.jpg"><img alt="Use case for malaria &amp; ITN data" src="../_images/use_case_malaria_itn.jpg" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="detail-diagram">
 <h3>Detail diagram<a class="headerlink" href="#detail-diagram" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="../_images/detail-diagram.jpg"><img alt="Detail diagram" src="../_images/detail-diagram.jpg" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </div>
 </div>
 </div>
@@ -1581,9 +1583,13 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 </div>
 <div class="section" id="reports">
 <h3>Reports<a class="headerlink" href="#reports" title="Permalink to this headline"></a></h3>
-<blockquote>
-<div><p>Report are able filter by province, OD, Health center, Village, Year, Quarter, Month, Month from and Month to</p>
-</div></blockquote>
+<ul>
+<li><p>Controller: Report.php</p></li>
+<li><p>Model View: Report.js</p></li>
+<li><p>View: report_view.php</p>
+<p>Report are able filter by province, OD, Health center, Village, Year, Quarter, Month, Month from and Month to</p>
+</li>
+</ul>
 <div class="section" id="id3">
 <h4>VMW<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
 <div class="section" id="vmw-report-completeness">
@@ -1702,6 +1708,99 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <li><p>Pf</p></li>
 <li><p>Pv</p></li>
 <li><p>Mix</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="hf-vmw">
+<h4>HF + VMW<a class="headerlink" href="#hf-vmw" title="Permalink to this headline"></a></h4>
+<div class="section" id="top-10-ods-having-most-cases">
+<h5>Top 10 ODs having most cases<a class="headerlink" href="#top-10-ods-having-most-cases" title="Permalink to this headline"></a></h5>
+<p>Data of Top 10 ODs having most cases for current and last year</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFVMWTop10OD</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="top-30-hfs-having-most-cases">
+<h5>Top 30 HFs Having Most Cases<a class="headerlink" href="#top-30-hfs-having-most-cases" title="Permalink to this headline"></a></h5>
+<p>Data of top 30 HFs having most cases for current and last year.</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFVMWTop30HF</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hfs-having-most-cases-chart">
+<h5>HFs having most cases (chart)<a class="headerlink" href="#hfs-having-most-cases-chart" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFVMWTop30HFChart</span></code></p></li>
+</ul>
+<p>Parameter filter</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Top 10</p></li>
+<li><p>Top 20</p></li>
+<li><p>Top 30</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="villages-having-most-cases-chart">
+<h5>Villages Having Most Cases (chart)<a class="headerlink" href="#villages-having-most-cases-chart" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFVMWTop30VillChart</span></code></p></li>
+</ul>
+<p>Parameter filter</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Top 10</p></li>
+<li><p>Top 20</p></li>
+<li><p>Top 30</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="hf-vmw-data-summary">
+<h5>HF + VMW Data (summary)<a class="headerlink" href="#hf-vmw-data-summary" title="Permalink to this headline"></a></h5>
+<p>Data of HF and VMW level by <code class="docutils literal notranslate"><span class="pre">Province</span></code>, <code class="docutils literal notranslate"><span class="pre">OD</span></code>, <code class="docutils literal notranslate"><span class="pre">HF</span></code></p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFVMWDataSummary</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="pv-radical-cure-and-follow-up">
+<h5>Pv Radical Cure and Follow up<a class="headerlink" href="#pv-radical-cure-and-follow-up" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFVMWPvFollowup</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="high-risk-villages">
+<h5>High Risk Villages<a class="headerlink" href="#high-risk-villages" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HighRiskVillage</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h4>Bed Net<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h4>
+<div class="section" id="bed-net-by-province">
+<h5>Bed Net by Province<a class="headerlink" href="#bed-net-by-province" title="Permalink to this headline"></a></h5>
+<dl class="simple">
+<dt>Parameter filter:</dt><dd><ul class="simple">
+<li><p>All (value: all)</p></li>
+<li><p>Mobile + Continue (value: mc)</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="bed-net-by-od">
+<h5>Bed Net by OD<a class="headerlink" href="#bed-net-by-od" title="Permalink to this headline"></a></h5>
+<dl class="simple">
+<dt>Parameter filter:</dt><dd><ul class="simple">
+<li><p>By Filter (value: 1)</p></li>
+<li><p>Last 3 Years (value: 3)</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p></li>
 </ul>
 </div>
 </div>
