@@ -35,7 +35,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API v4" href="../api/v4.html" />
+    <link rel="next" title="Note" href="note.html" />
     <link rel="prev" title="Cron Job" href="../cron-job/cron-job.html" /> 
 </head>
 
@@ -153,6 +153,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="note.html">Note</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API of CNM Reporting App</span></p>
 <ul>
@@ -1786,8 +1787,15 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 </ul>
 </dd>
 </dl>
-<ul class="simple">
-<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p></li>
+<ul>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Parameter of store procedure: <code class="docutils literal notranslate"><span class="pre">bednetType</span></code>, <code class="docutils literal notranslate"><span class="pre">bednetDuration</span></code>, <code class="docutils literal notranslate"><span class="pre">level</span></code></p></li>
+<li><p>Level: <code class="docutils literal notranslate"><span class="pre">pv</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 </div>
 <div class="section" id="bed-net-by-od">
@@ -1799,8 +1807,53 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 </ul>
 </dd>
 </dl>
+<ul>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Parameter of store procedure: <code class="docutils literal notranslate"><span class="pre">bednetType</span></code>, <code class="docutils literal notranslate"><span class="pre">bednetDuration</span></code>, <code class="docutils literal notranslate"><span class="pre">level</span></code></p></li>
+<li><p>Level: <code class="docutils literal notranslate"><span class="pre">od</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="bed-net-by-hc">
+<h5>Bed Net by HC<a class="headerlink" href="#bed-net-by-hc" title="Permalink to this headline"></a></h5>
+<ul>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Parameter of store procedure: <code class="docutils literal notranslate"><span class="pre">bednetType</span></code>, <code class="docutils literal notranslate"><span class="pre">bednetDuration</span></code>, <code class="docutils literal notranslate"><span class="pre">level</span></code></p></li>
+<li><p>Level: <code class="docutils literal notranslate"><span class="pre">hc</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="bed-net-by-village">
+<h5>Bed Net by Village<a class="headerlink" href="#bed-net-by-village" title="Permalink to this headline"></a></h5>
+<ul>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Parameter of store procedure: <code class="docutils literal notranslate"><span class="pre">bednetType</span></code>, <code class="docutils literal notranslate"><span class="pre">bednetDuration</span></code>, <code class="docutils literal notranslate"><span class="pre">level</span></code></p></li>
+<li><p>Level: <code class="docutils literal notranslate"><span class="pre">vl</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="percentage-of-pop-at-risk-covered-by-llin-mass-campaigns">
+<h5>Percentage of Pop at-risk covered by LLIN mass campaigns<a class="headerlink" href="#percentage-of-pop-at-risk-covered-by-llin-mass-campaigns" title="Permalink to this headline"></a></h5>
 <ul class="simple">
-<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_BedNetReport</span></code></p></li>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_PercentPopLLIN</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="population-data-completeness">
+<h5>Population Data Completeness<a class="headerlink" href="#population-data-completeness" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_PopCompleteness</span></code></p></li>
 </ul>
 </div>
 </div>
@@ -1813,7 +1866,7 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../cron-job/cron-job.html" class="btn btn-neutral float-left" title="Cron Job" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../api/v4.html" class="btn btn-neutral float-right" title="API v4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="note.html" class="btn btn-neutral float-right" title="Note" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1542,6 +1542,9 @@ Parameter filter:
 
 - Store procedure: ``SP_V1_BedNetReport``
 
+    - Parameter of store procedure: ``bednetType``, ``bednetDuration``, ``level``
+    - Level: ``pv``
+
 Bed Net by OD
 ^^^^^^^^^^^^^^
 
@@ -1550,3 +1553,33 @@ Parameter filter:
   -  Last 3 Years (value: 3)
 
 - Store procedure: ``SP_V1_BedNetReport``
+
+    - Parameter of store procedure: ``bednetType``, ``bednetDuration``, ``level``
+    - Level: ``od``
+
+Bed Net by HC
+^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_BedNetReport``
+
+    - Parameter of store procedure: ``bednetType``, ``bednetDuration``, ``level``
+    - Level: ``hc``
+
+Bed Net by Village
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_BedNetReport``
+
+    - Parameter of store procedure: ``bednetType``, ``bednetDuration``, ``level``
+    - Level: ``vl``
+
+Percentage of Pop at-risk covered by LLIN mass campaigns
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_PercentPopLLIN``
+
+Population Data Completeness
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_PopCompleteness``
+
