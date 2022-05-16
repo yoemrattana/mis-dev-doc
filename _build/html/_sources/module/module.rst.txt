@@ -1583,3 +1583,187 @@ Population Data Completeness
 
 - Store procedure: ``SP_V1_PopCompleteness``
 
+investigation
+~~~~~~~~~~~~~~
+
+Investigation and ReACD
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Parameter filter:
+   
+  - ``HF + VMW`` (value: ``all``)
+  - ``HF`` (value: ``hf``)
+  - ``VMW`` (value: ``vmw``)
+  - ``By Report Date`` (value: ``0``)
+  - ``By Diagnosis Date`` (value: ``1``)
+
+- Store procedure: ``SP_V1_Investigation``
+
+M&E Elimination
+^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_MnEElimination``
+
+Radical Cure HSD
+^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_RadicalCureHSD``
+
+Stock
+~~~~~~
+
+OD Stock Completeness
+^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_StockODCompleteness``
+
+HF Stock Completeness
+^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_StockHFCompleteness``
+
+HF Stock-out (ACT)
+^^^^^^^^^^^^^^^^^^
+
+Data of number of HF that has stock out ACT.
+
+- Store procedure: ``SP_V1_HFStockOut``
+
+  - Parameter of store procedure: ``category`` , ``ACT``
+
+HF Stock-out (RDT)
+^^^^^^^^^^^^^^^^^^
+
+Data of number of HF that has stock out RDT.
+
+- Store procedure: ``SP_V1_HFStockOut``
+
+  - Parameter of store procedure: ``category``, ``RDT``
+
+OD Stock Data
+^^^^^^^^^^^^^
+
+List of stock data with all items
+
+- Store procedure: ``SP_V1_StockOD``
+
+HF Stock Data
+^^^^^^^^^^^^^^
+
+List of stock data with all items
+
+- Store procedure: ``SP_V1_StockHC``
+
+Stock Forecasting 
+~~~~~~~~~~~~~~~~~
+
+Primaquine Distribution List (7.5 mg)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_Primaquine``
+
+  - Pf with age between 5 and 14 years then ``#Pf x 1``
+  - Pf with age greater than 14 years then ``#Pf x 2``
+  - Pv and Mix with G6PD (U/g Hb) > 6 & Hb(g/dL) > 9 and Age between 5 and 10 years then ``14``
+  - Pv and Mix with G6PD (U/g Hb) > 6 & Hb(g/dL) > 9 and Age between 11 and 14 years then ``28``
+  - Pv and Mix with G6PD (U/g Hb) > 6 & Hb(g/dL) > 9 and Age between 15 and 49 years then ``42``
+  - Pv and Mix with G6PD (U/g Hb) > 6 & Hb(g/dL) > 9 and Age greater than 49 years then ``56``
+  - HC Buffer (Calculation = Need x Min Stock HC (1)) 
+  - OD Buffer (Calculation = Need x Min Stock OD (3))
+  - Central (Calculation = Need x Min Stock CMS (6))
+
+G6PD Distribution
+^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_G6PD``
+  
+  - Needs (Calculation = #case_HF (PV+Mix) + #case_VMW (PV+Mix) * refered ) 
+  - HC Buffer (Calculation = Need x Min stock HC (1))
+  - OD Buffer (Calculation = Need x Min stock OD (3))
+  - Central (Calculation = Need x Min stock CMS (6))
+
+RDT Forecasting
+^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_StockForecasting``
+
+  - Parameter store procedure: ``type = rdt``
+
+  - Aber (Calculation = # Test / # Population)
+  - Need (Calculation = RDT x (1+GrowthRate))
+  - HC Buffer (Calculation = Average monthly RDT needs for past 12 months x 1)
+  - OD Buffer (Calculation = Average monthly RDT needs for past 12 months x 3)
+  - Central Buffer (Calculation = Average monthly RDT needs for past 12 months x 6)
+  - None-Endemic HC (Calculation = # None-Endemic Province * 25)
+  - New VMW (Calculation = # New VMW * 100)
+
+ASMQ Forecasting
+^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_StockForecasting``
+
+  - Parameter store procedure: ``type = asmq``
+
+  - Need (Calculation = Positive rate x # Expected No. of Test - # Pregnant Woman < 3 months + # Severe case)
+  - HC Buffer (Calculation = Average monthly ASMQ needs for past 12 months x 1)
+  - OD Buffer (Calculation = Average monthly ASMQ needs for past 12 months x 3)
+  - Central Buffer (Calculation = Average monthly ASMQ needs for past 12 months x 6)
+
+Intensification Plan
+--------------------
+
+Intensification Plan
+^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_IntensificationPlan``
+- Parameter filter:
+  
+    - IP1 (value: ``1``)
+    - IP2 (value: ``2``)
+
+Admin Tools
+~~~~~~~~~~~
+
+Dashboard Log by Role
+^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_DashboardLogByRole``
+
+Dashboard Log by User
+^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_DashboardLogByUser``
+
+System Log by Role 
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_SystemLogByRole`` 
+
+System Log by User 
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_SystemLogByUser``
+
+HF Refered Error 
+^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_HFErrorCheck``
+
+VMW Referred Error
+^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_VMWErrorCheck``
+
+Other
+~~~~~~
+
+For supervision checklist 
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Store procedure: ``SP_V1_SupervisionChecklist``
+
+Lastmile
+^^^^^^^^
+
+- Store procedure: ``SP_V1_LastMile``
+

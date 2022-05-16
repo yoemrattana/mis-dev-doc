@@ -147,6 +147,14 @@
 <li class="toctree-l4"><a class="reference internal" href="#health-facility">Health Facility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#hf-vmw">HF + VMW</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id4">Bed Net</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#investigation">investigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Stock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stock-forecasting">Stock Forecasting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#intensification-plan">Intensification Plan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#admin-tools">Admin Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other">Other</a></li>
 </ul>
 </li>
 </ul>
@@ -211,16 +219,16 @@
 <h2>Use case diagram<a class="headerlink" href="#use-case-diagram" title="Permalink to this headline"></a></h2>
 <div class="section" id="use-case-malaria-itn-data">
 <h3>Use case malaria &amp; ITN data<a class="headerlink" href="#use-case-malaria-itn-data" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id7">
 <a class="reference internal image-reference" href="../_images/use_case_malaria_itn.jpg"><img alt="Use case for malaria &amp; ITN data" src="../_images/use_case_malaria_itn.jpg" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Use case for malaria &amp; ITN data</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="detail-diagram">
 <h3>Detail diagram<a class="headerlink" href="#detail-diagram" title="Permalink to this headline"></a></h3>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id8">
 <a class="reference internal image-reference" href="../_images/detail-diagram.jpg"><img alt="Detail diagram" src="../_images/detail-diagram.jpg" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-text">Detail diagram</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </div>
 </div>
 </div>
@@ -1854,6 +1862,220 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <h5>Population Data Completeness<a class="headerlink" href="#population-data-completeness" title="Permalink to this headline"></a></h5>
 <ul class="simple">
 <li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_PopCompleteness</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="investigation">
+<h4>investigation<a class="headerlink" href="#investigation" title="Permalink to this headline"></a></h4>
+<div class="section" id="investigation-and-reacd">
+<h5>Investigation and ReACD<a class="headerlink" href="#investigation-and-reacd" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Parameter filter:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">HF</span> <span class="pre">+</span> <span class="pre">VMW</span></code> (value: <code class="docutils literal notranslate"><span class="pre">all</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HF</span></code> (value: <code class="docutils literal notranslate"><span class="pre">hf</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VMW</span></code> (value: <code class="docutils literal notranslate"><span class="pre">vmw</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">By</span> <span class="pre">Report</span> <span class="pre">Date</span></code> (value: <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">By</span> <span class="pre">Diagnosis</span> <span class="pre">Date</span></code> (value: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+</ul>
+</li>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_Investigation</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="m-e-elimination">
+<h5>M&amp;E Elimination<a class="headerlink" href="#m-e-elimination" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_MnEElimination</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="radical-cure-hsd">
+<h5>Radical Cure HSD<a class="headerlink" href="#radical-cure-hsd" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_RadicalCureHSD</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h4>Stock<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h4>
+<div class="section" id="od-stock-completeness">
+<h5>OD Stock Completeness<a class="headerlink" href="#od-stock-completeness" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_StockODCompleteness</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-stock-completeness">
+<h5>HF Stock Completeness<a class="headerlink" href="#hf-stock-completeness" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_StockHFCompleteness</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-stock-out-act">
+<h5>HF Stock-out (ACT)<a class="headerlink" href="#hf-stock-out-act" title="Permalink to this headline"></a></h5>
+<p>Data of number of HF that has stock out ACT.</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFStockOut</span></code></p>
+<ul>
+<li><p>Parameter of store procedure: <code class="docutils literal notranslate"><span class="pre">category</span></code> , <code class="docutils literal notranslate"><span class="pre">ACT</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="hf-stock-out-rdt">
+<h5>HF Stock-out (RDT)<a class="headerlink" href="#hf-stock-out-rdt" title="Permalink to this headline"></a></h5>
+<p>Data of number of HF that has stock out RDT.</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFStockOut</span></code></p>
+<ul>
+<li><p>Parameter of store procedure: <code class="docutils literal notranslate"><span class="pre">category</span></code>, <code class="docutils literal notranslate"><span class="pre">RDT</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="od-stock-data">
+<h5>OD Stock Data<a class="headerlink" href="#od-stock-data" title="Permalink to this headline"></a></h5>
+<p>List of stock data with all items</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_StockOD</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-stock-data">
+<h5>HF Stock Data<a class="headerlink" href="#hf-stock-data" title="Permalink to this headline"></a></h5>
+<p>List of stock data with all items</p>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_StockHC</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="stock-forecasting">
+<h4>Stock Forecasting<a class="headerlink" href="#stock-forecasting" title="Permalink to this headline"></a></h4>
+<div class="section" id="primaquine-distribution-list-7-5-mg">
+<h5>Primaquine Distribution List (7.5 mg)<a class="headerlink" href="#primaquine-distribution-list-7-5-mg" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_Primaquine</span></code></p>
+<ul>
+<li><p>Pf with age between 5 and 14 years then <code class="docutils literal notranslate"><span class="pre">#Pf</span> <span class="pre">x</span> <span class="pre">1</span></code></p></li>
+<li><p>Pf with age greater than 14 years then <code class="docutils literal notranslate"><span class="pre">#Pf</span> <span class="pre">x</span> <span class="pre">2</span></code></p></li>
+<li><p>Pv and Mix with G6PD (U/g Hb) &gt; 6 &amp; Hb(g/dL) &gt; 9 and Age between 5 and 10 years then <code class="docutils literal notranslate"><span class="pre">14</span></code></p></li>
+<li><p>Pv and Mix with G6PD (U/g Hb) &gt; 6 &amp; Hb(g/dL) &gt; 9 and Age between 11 and 14 years then <code class="docutils literal notranslate"><span class="pre">28</span></code></p></li>
+<li><p>Pv and Mix with G6PD (U/g Hb) &gt; 6 &amp; Hb(g/dL) &gt; 9 and Age between 15 and 49 years then <code class="docutils literal notranslate"><span class="pre">42</span></code></p></li>
+<li><p>Pv and Mix with G6PD (U/g Hb) &gt; 6 &amp; Hb(g/dL) &gt; 9 and Age greater than 49 years then <code class="docutils literal notranslate"><span class="pre">56</span></code></p></li>
+<li><p>HC Buffer (Calculation = Need x Min Stock HC (1))</p></li>
+<li><p>OD Buffer (Calculation = Need x Min Stock OD (3))</p></li>
+<li><p>Central (Calculation = Need x Min Stock CMS (6))</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="g6pd-distribution">
+<h5>G6PD Distribution<a class="headerlink" href="#g6pd-distribution" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_G6PD</span></code></p>
+<ul>
+<li><p>Needs (Calculation = #case_HF (PV+Mix) + #case_VMW (PV+Mix) * refered )</p></li>
+<li><p>HC Buffer (Calculation = Need x Min stock HC (1))</p></li>
+<li><p>OD Buffer (Calculation = Need x Min stock OD (3))</p></li>
+<li><p>Central (Calculation = Need x Min stock CMS (6))</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="rdt-forecasting">
+<h5>RDT Forecasting<a class="headerlink" href="#rdt-forecasting" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_StockForecasting</span></code></p>
+<ul>
+<li><p>Parameter store procedure: <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">rdt</span></code></p></li>
+<li><p>Aber (Calculation = # Test / # Population)</p></li>
+<li><p>Need (Calculation = RDT x (1+GrowthRate))</p></li>
+<li><p>HC Buffer (Calculation = Average monthly RDT needs for past 12 months x 1)</p></li>
+<li><p>OD Buffer (Calculation = Average monthly RDT needs for past 12 months x 3)</p></li>
+<li><p>Central Buffer (Calculation = Average monthly RDT needs for past 12 months x 6)</p></li>
+<li><p>None-Endemic HC (Calculation = # None-Endemic Province * 25)</p></li>
+<li><p>New VMW (Calculation = # New VMW * 100)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="asmq-forecasting">
+<h5>ASMQ Forecasting<a class="headerlink" href="#asmq-forecasting" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_StockForecasting</span></code></p>
+<ul>
+<li><p>Parameter store procedure: <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">asmq</span></code></p></li>
+<li><p>Need (Calculation = Positive rate x # Expected No. of Test - # Pregnant Woman &lt; 3 months + # Severe case)</p></li>
+<li><p>HC Buffer (Calculation = Average monthly ASMQ needs for past 12 months x 1)</p></li>
+<li><p>OD Buffer (Calculation = Average monthly ASMQ needs for past 12 months x 3)</p></li>
+<li><p>Central Buffer (Calculation = Average monthly ASMQ needs for past 12 months x 6)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="intensification-plan">
+<h3>Intensification Plan<a class="headerlink" href="#intensification-plan" title="Permalink to this headline"></a></h3>
+<ul>
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_IntensificationPlan</span></code></p></li>
+<li><p>Parameter filter:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>IP1 (value: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+<li><p>IP2 (value: <code class="docutils literal notranslate"><span class="pre">2</span></code>)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="section" id="admin-tools">
+<h4>Admin Tools<a class="headerlink" href="#admin-tools" title="Permalink to this headline"></a></h4>
+<div class="section" id="dashboard-log-by-role">
+<h5>Dashboard Log by Role<a class="headerlink" href="#dashboard-log-by-role" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_DashboardLogByRole</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="dashboard-log-by-user">
+<h5>Dashboard Log by User<a class="headerlink" href="#dashboard-log-by-user" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_DashboardLogByUser</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="system-log-by-role">
+<h5>System Log by Role<a class="headerlink" href="#system-log-by-role" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_SystemLogByRole</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="system-log-by-user">
+<h5>System Log by User<a class="headerlink" href="#system-log-by-user" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_SystemLogByUser</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-refered-error">
+<h5>HF Refered Error<a class="headerlink" href="#hf-refered-error" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_HFErrorCheck</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="vmw-referred-error">
+<h5>VMW Referred Error<a class="headerlink" href="#vmw-referred-error" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_VMWErrorCheck</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="other">
+<h4>Other<a class="headerlink" href="#other" title="Permalink to this headline"></a></h4>
+<div class="section" id="for-supervision-checklist">
+<h5>For supervision checklist<a class="headerlink" href="#for-supervision-checklist" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_SupervisionChecklist</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h5>Lastmile<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h5>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_LastMile</span></code></p></li>
 </ul>
 </div>
 </div>
