@@ -32,6 +32,7 @@ author = 'MIS Developer'
 # ones.
 sys.path.append(os.path.abspath('_ext'))
 extensions = [
+    'attr',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
