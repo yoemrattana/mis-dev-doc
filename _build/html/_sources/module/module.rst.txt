@@ -1710,7 +1710,7 @@ ASMQ Forecasting
   - Central Buffer (Calculation = Average monthly ASMQ needs for past 12 months x 6)
 
 Intensification Plan
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Intensification Plan
 ^^^^^^^^^^^^^^^^^^^^
