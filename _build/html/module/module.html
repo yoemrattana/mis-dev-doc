@@ -155,6 +155,21 @@
 <li class="toctree-l4"><a class="reference internal" href="#other">Other</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#report-m-e">Report M&amp;E</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#annual-cases-whole-country">Annual cases whole country</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#annual-cases-endemic-ods">Annual cases endemic ODs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ci-fi">CI &amp; FI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#whole-country-cases-hf">Whole country cases HF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#malaria-cases-vmw">Malaria Cases VMW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hf-completeness">HF Completeness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vmw-completeness">VMW Completeness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nets-distribution-mass-campaign">Nets distribution (Mass Campaign)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nets-distribution-mobile">Nets distribution (Mobile)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nets-distribution-continue">Nets distribution (Continue)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-nets-distribution">Other nets distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#public-health-facility-without-stock-out">Public Health Facility Without Stock-out</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -2079,6 +2094,98 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V1_LastMile</span></code></p></li>
 </ul>
 </div>
+</div>
+</div>
+<div class="section" id="report-m-e">
+<h3>Report M&amp;E<a class="headerlink" href="#report-m-e" title="Permalink to this headline"></a></h3>
+<p>Parameter filter:
+- Year
+- Month from
+- Month to
+- Grant</p>
+<div class="section" id="annual-cases-whole-country">
+<h4>Annual cases whole country<a class="headerlink" href="#annual-cases-whole-country" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_AnnualCaseCountry</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Annual</span> <span class="pre">cases</span> <span class="pre">whole</span> <span class="pre">country</span></code> = <code class="docutils literal notranslate"><span class="pre">MIS</span> <span class="pre">Data</span></code> + <code class="docutils literal notranslate"><span class="pre">HIS</span> <span class="pre">Data</span></code></p>
+</div>
+</div>
+<div class="section" id="annual-cases-endemic-ods">
+<h4>Annual cases endemic ODs<a class="headerlink" href="#annual-cases-endemic-ods" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_AnnualCaseOD</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Case in endemic 55 ODs</p>
+</div>
+</div>
+<div class="section" id="ci-fi">
+<h4>CI &amp; FI<a class="headerlink" href="#ci-fi" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_CIFI</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="whole-country-cases-hf">
+<h4>Whole country cases HF<a class="headerlink" href="#whole-country-cases-hf" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_CaseFromHF</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Whol</span> <span class="pre">country</span> <span class="pre">cases</span> <span class="pre">HF</span></code> = <code class="docutils literal notranslate"><span class="pre">MIS</span> <span class="pre">data</span> <span class="pre">HF</span></code> + <code class="docutils literal notranslate"><span class="pre">HIS</span> <span class="pre">data</span> <span class="pre">HF</span></code></p>
+</div>
+</div>
+<div class="section" id="malaria-cases-vmw">
+<h4>Malaria Cases VMW<a class="headerlink" href="#malaria-cases-vmw" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_CaseFromVMW</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="hf-completeness">
+<h4>HF Completeness<a class="headerlink" href="#hf-completeness" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_HFCompleteness</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="vmw-completeness">
+<h4>VMW Completeness<a class="headerlink" href="#vmw-completeness" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_VMWCompleteness</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="nets-distribution-mass-campaign">
+<h4>Nets distribution (Mass Campaign)<a class="headerlink" href="#nets-distribution-mass-campaign" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_NetStatic</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="nets-distribution-mobile">
+<h4>Nets distribution (Mobile)<a class="headerlink" href="#nets-distribution-mobile" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_NetMobile</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="nets-distribution-continue">
+<h4>Nets distribution (Continue)<a class="headerlink" href="#nets-distribution-continue" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_NetContinue</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="other-nets-distribution">
+<h4>Other nets distribution<a class="headerlink" href="#other-nets-distribution" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_NetOther</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="public-health-facility-without-stock-out">
+<h4>Public Health Facility Without Stock-out<a class="headerlink" href="#public-health-facility-without-stock-out" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_HaveStock</span></code></p></li>
+</ul>
 </div>
 </div>
 </div>

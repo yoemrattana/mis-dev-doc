@@ -1767,3 +1767,82 @@ Lastmile
 
 - Store procedure: ``SP_V1_LastMile``
 
+Report M&E
+----------
+
+Parameter filter:
+- Year
+- Month from
+- Month to 
+- Grant
+
+Annual cases whole country
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_AnnualCaseCountry``
+
+.. Note::
+  ``Annual cases whole country`` = ``MIS Data`` + ``HIS Data``
+
+Annual cases endemic ODs
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_AnnualCaseOD``
+
+.. Note::
+  Case in endemic 55 ODs
+
+CI & FI
+~~~~~~~~
+
+- Store procedure: ``SP_V2_CIFI``
+
+Whole country cases HF
+~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_CaseFromHF``
+
+.. Note:: 
+  ``Whol country cases HF`` = ``MIS data HF`` + ``HIS data HF``
+
+Malaria Cases VMW
+~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_CaseFromVMW``
+
+HF Completeness
+~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_HFCompleteness``
+
+VMW Completeness
+~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_VMWCompleteness``
+
+Nets distribution (Mass Campaign)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_NetStatic``
+
+Nets distribution (Mobile)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_NetMobile``
+
+Nets distribution (Continue)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_NetContinue``
+
+Other nets distribution
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_NetOther``
+
+Public Health Facility Without Stock-out
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Store procedure: ``SP_V2_HaveStock``
+
+
