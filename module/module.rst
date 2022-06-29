@@ -1844,5 +1844,3 @@ Public Health Facility Without Stock-out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Store procedure: ``SP_V2_HaveStock``
-
-

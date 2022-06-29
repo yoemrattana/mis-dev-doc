@@ -1,0 +1,301 @@
+API v3 of Last mile
+===================
+
+TDA
+---
+
+TDA form
+~~~~~~~~
+
+.. http:get:: /api-last-smile/v3/TDA/form
+
+  Get form of TDA
+
+  :query int house_hold_id: id (primary key) house hold.
+  :query int type: 1/2.
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": {
+        "TDA": [
+            {
+              "TDADate": "2021-07-19",
+              "HouseHoldID": 216,
+              "HouseMemberID": 792,
+              "Name": "ភៀង សុង",
+              "Age": 35,
+              "Sex": "M",
+              "DoNotUse": "No",
+              "Reject": "No",
+              "Absent": "Yes",
+              "SideEffect": null,
+              "RejectReason": null,
+              "Type": 1,
+              "Date": null,
+              "IsTDA": 1
+            },
+            {
+              "TDADate": "2021-07-19",
+              "HouseHoldID": 216,
+              "HouseMemberID": 794,
+              "Name": "សុង វិច",
+              "Age": 15,
+              "Sex": "M",
+              "DoNotUse": "No",
+              "Reject": "No",
+              "Absent": "Yes",
+              "SideEffect": null,
+              "RejectReason": null,
+              "Type": 1,
+              "Date": null,
+              "IsTDA": 1
+            }
+        ]
+      }
+    }
+
+  :Object:
+
+    * **DoNotUse** (*string*) -- Yes/No.
+    * **Reject** (*string*) -- Yes/No.
+    * **Absent** (*string*) -- Yes/No.
+
+Insert/Update TDA
+~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-last-smile/v3/TDA/update
+
+  Insert/update TDA
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "TDA" : [
+        {
+            "TDADate" : "2021-07-07",
+            "DoNotUse": "Yes",
+            "Reject": "",
+            "Absent": "",
+            "Type": "1",
+            "Date": "2021-18-01",
+            "SideEffect": "headache",
+            "RejectReason": "lazy",
+            "HouseHoldID": 216,
+            "HouseMemberID": 794
+        },
+        {
+            "TDADate" : "2021-07-07",
+            "DoNotUse": "Yes",
+            "Reject": "",
+            "Absent": "",
+            "Type": "1",
+            "Date": "",
+            "SideEffect": "headache",
+            "RejectReason": "lazy",
+            "HouseHoldID": 216,
+            "HouseMemberID": 794
+        }
+      ]
+    }
+
+.. note::
+
+  TDA1 and TDA2 must be 28 days apart.
+
+  Must complete TDA1/TDA2 before do IPT.
+
+  IPT and TDA1 must be 14 days apart.
+
+  IPT and TDA2 must be 28 days apart.
+
+IPT
+---
+
+IPT form
+~~~~~~~~
+
+.. http:get:: /api-last-smile/v3/IPT/form
+
+  Get form of IPT
+
+  :query int house_hold_id: id (primary key) house hold.
+  :query string month: 01,02,...,12.
+  :query string year: 2021,2022,...
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": {
+        "IPT": [
+          {
+              "HouseMemberID": 792,
+              "Month": null,
+              "Year": null,
+              "Name": "ភៀង សុង",
+              "Age": 35,
+              "Sex": "M",
+              "IPTDate": null,
+              "DoNotUse": null,
+              "Reject": null,
+              "Date": null,
+              "HouseHoldID": 216,
+              "NotEnterForest": null,
+              "RefuseReason": null,
+              "Absent": null,
+              "IsIPT": 1
+          }
+        ]
+      }
+    }
+
+  :Object:
+
+    * **NotEnterForest** (*string*) -- Yes/No.
+    * **DoNotUse** (*string*) -- Yes/No.
+    * **Reject** (*string*) -- Yes/No.
+    * **Absent** (*string*) -- Yes/No.
+
+Insert/Update IPT
+~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-last-smile/v3/IPT/update
+
+  Insert/update IPT
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "IPT": [
+          {
+              "HouseMemberID": 479,
+              "Month": "08",
+              "Year": 2021,
+              "IPTDate": "2021-07-07",
+              "DoNotUse": "",
+              "Reject": "",
+              "Date": "",
+              "NotEnterForest": "",
+              "Absent": "",
+              "RefuseReason": "",
+              "HouseHoldID": 82
+          }
+      ]
+    }
+
+AFS
+---
+
+AFS form
+~~~~~~~~
+
+.. http:get:: /api-last-smile/v3/AFS/form
+
+  Get form of AFS
+
+  :query int house_hold_id: id (primary key) house hold.
+  :query string afs_date: Date of AFS, YYYY-MM-DD, e.g: 2021-11-30.
+
+  **Respone as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": {
+        "AFS": [
+          {
+              "HouseMemberID": 479,
+              "Name": "Sophy",
+              "Age": 36,
+              "Sex": "F",
+              "AFSDate": null,
+              "W1": null,
+              "W2": null,
+              "W3": null,
+              "W4": null,
+              "W1Specie": null,
+              "W2Specie": null,
+              "W3Specie": null,
+              "W4Specie": null,
+              "HouseHoldID": 82
+          },
+          {
+              "HouseMemberID": 480,
+              "Name": "Bopha",
+              "Age": 38,
+              "Sex": "M",
+              "AFSDate": null,
+              "W1": null,
+              "W2": null,
+              "W3": null,
+              "W4": null,
+              "W1Specie": null,
+              "W2Specie": null,
+              "W3Specie": null,
+              "W4Specie": null,
+              "HouseHoldID": 82
+          }
+        ]
+      }
+    }
+
+  :Object:
+
+    * **W1/W2/W3/W4** (*string*) -- Yes/No/N/A.
+    * **W1Specie/W2Specie/W3Specie/W4Specie** (*string*) -- F/V/M/N.
+
+Insert/Update AFS
+~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-last-smile/v3/AFS/update
+
+  Insert/update AFS
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "AFS": [
+        {
+            "HouseMemberID": 479,
+            "AFSDate": "2021-07-07",
+            "W1": "",
+            "W2": "",
+            "W3": "",
+            "W4": "",
+            "W1Specie": null,
+            "W2Specie": null,
+            "W3Specie": null,
+            "W4Specie": null,
+            "HouseHoldID": 82
+        },
+        {
+            "HouseMemberID": 480,
+            "AFSDate": "2021-07-07",
+            "W1": "",
+            "W2": "",
+            "W3": "",
+            "W4": "",
+            "W1Specie": "Pv",
+            "W2Specie": null,
+            "W3Specie": null,
+            "W4Specie": null,
+            "HouseHoldID": 82
+        }
+      ]
+    }

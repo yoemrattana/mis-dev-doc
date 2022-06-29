@@ -60,6 +60,7 @@ Welcome to MIS developer doc's documentation!
    :caption: API of Last mile
 
    api-last-mile/v1
+   api-last-mile/v3
 
 .. toctree::
    :maxdepth: 2
