@@ -119,6 +119,41 @@ Insert/Update TDA
 
   IPT and TDA2 must be 28 days apart.
 
+TDA summary
+~~~~~~~~~~~~
+
+.. http:get:: /api-last-smile/v3/TDA/summary
+
+  Get TDA summary
+
+  :query int house_hold_id: id (primary key) house hold.
+
+  **Response as json**:
+
+  .. sourcecode:: json
+
+    {
+      "code": 200,
+      "message": "success",
+      "data": [
+          {
+              "TotalTDA": 0,
+              "TDA1": 0,
+              "SideEffectTDA1": 0,
+              "NotSickTDA1": 0,
+              "OtherTDA1": 0,
+              "DoNotUseTDA1": 0,
+              "AbsentTDA1": 0,
+              "TDA2": 0,
+              "SideEffectTDA2": 0,
+              "NotSickTDA2": 0,
+              "OtherTDA2": 0,
+              "DoNotUseTDA2": 0,
+              "AbsentTDA2": 0
+          }
+      ]
+    }
+
 IPT
 ---
 
