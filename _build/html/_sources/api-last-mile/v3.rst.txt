@@ -22,47 +22,46 @@ TDA form
       "code": 200,
       "message": "success",
       "data": {
-        "TDA": [
-            {
-              "TDADate": "2021-07-19",
-              "HouseHoldID": 216,
-              "HouseMemberID": 792,
-              "Name": "ភៀង សុង",
-              "Age": 35,
-              "Sex": "M",
-              "DoNotUse": "No",
-              "Reject": "No",
-              "Absent": "Yes",
-              "SideEffect": null,
-              "RejectReason": null,
-              "Type": 1,
-              "Date": null,
-              "IsTDA": 1
-            },
-            {
-              "TDADate": "2021-07-19",
-              "HouseHoldID": 216,
-              "HouseMemberID": 794,
-              "Name": "សុង វិច",
-              "Age": 15,
-              "Sex": "M",
-              "DoNotUse": "No",
-              "Reject": "No",
-              "Absent": "Yes",
-              "SideEffect": null,
-              "RejectReason": null,
-              "Type": 1,
-              "Date": null,
-              "IsTDA": 1
-            }
-        ]
+          "TDA": [
+              {
+                  "TDADate": "2021-07-19",
+                  "HouseHoldID": 216,
+                  "HouseMemberID": 792,
+                  "Name": "ភៀង សុង",
+                  "Age": 35,
+                  "Sex": "M",
+                  "DoNotUse": "No",
+                  "RejectReason": null,
+                  "RejectOtherReason": null,
+                  "Absent": "Yes",
+                  "Type": 1,
+                  "Date": null,
+                  "IsTDA": 1
+              },
+              {
+                  "TDADate": "2021-07-19",
+                  "HouseHoldID": 216,
+                  "HouseMemberID": 794,
+                  "Name": "សុង វិច",
+                  "Age": 15,
+                  "Sex": "M",
+                  "DoNotUse": "No",
+                  "RejectReason": null,
+                  "RejectOtherReason": null,
+                  "Absent": "Yes",
+                  "Type": 1,
+                  "Date": null,
+                  "IsTDA": 1
+              }
+          ]
       }
     }
 
   :Object:
 
     * **DoNotUse** (*string*) -- Yes/No.
-    * **Reject** (*string*) -- Yes/No.
+    * **RejectReason** (*string*) -- SideEffect/NotSick/Other/NA.
+    * **RejectOtherReason** (*string*) -- any string (available when ``RejectReason`` = ``Other``)
     * **Absent** (*string*) -- Yes/No.
 
 Insert/Update TDA
@@ -78,32 +77,37 @@ Insert/Update TDA
 
     {
       "TDA" : [
-        {
-            "TDADate" : "2021-07-07",
-            "DoNotUse": "Yes",
-            "Reject": "",
-            "Absent": "",
-            "Type": "1",
-            "Date": "2021-18-01",
-            "SideEffect": "headache",
-            "RejectReason": "lazy",
-            "HouseHoldID": 216,
-            "HouseMemberID": 794
-        },
-        {
-            "TDADate" : "2021-07-07",
-            "DoNotUse": "Yes",
-            "Reject": "",
-            "Absent": "",
-            "Type": "1",
-            "Date": "",
-            "SideEffect": "headache",
-            "RejectReason": "lazy",
-            "HouseHoldID": 216,
-            "HouseMemberID": 794
-        }
+          {
+              "TDADate" : "2021-07-07",
+              "DoNotUse": "No",
+              "Absent": "No",
+              "Type": "1",
+              "Date": "2021-18-01",
+              "RejectReason": "SideEffect",
+              "RejectOtherReason": "",
+              "HouseHoldID": 216,
+              "HouseMemberID": 794
+          },
+          {
+              "TDADate" : "2021-07-07",
+              "DoNotUse": "No",
+              "Absent": "No",
+              "Type": "1",
+              "Date": "2021-18-01",
+              "RejectReason": "Other",
+              "RejectOtherReason": "Affraid",
+              "HouseHoldID": 217,
+              "HouseMemberID": 794
+          }
       ]
     }
+
+  :Object:
+
+    * **DoNotUse** (*string*) -- Yes/No.
+    * **RejectReason** (*string*) -- SideEffect/NotSick/Other/NA.
+    * **RejectOtherReason** (*string*) -- any string (available when ``RejectReason`` = ``Other``)
+    * **Absent** (*string*) -- Yes/No.
 
 .. note::
 
@@ -134,37 +138,39 @@ IPT form
   .. sourcecode:: json
 
     {
-      "code": 200,
-      "message": "success",
-      "data": {
-        "IPT": [
-          {
-              "HouseMemberID": 792,
-              "Month": null,
-              "Year": null,
-              "Name": "ភៀង សុង",
-              "Age": 35,
-              "Sex": "M",
-              "IPTDate": null,
-              "DoNotUse": null,
-              "Reject": null,
-              "Date": null,
-              "HouseHoldID": 216,
-              "NotEnterForest": null,
-              "RefuseReason": null,
-              "Absent": null,
-              "IsIPT": 1
-          }
-        ]
-      }
+        "code": 200,
+        "message": "success",
+        "data": {
+            "IPT": [
+                {
+                    "HouseMemberID": 792,
+                    "Month": null,
+                    "Year": null,
+                    "Name": "ភៀង សុង",
+                    "Age": 35,
+                    "Sex": "M",
+                    "IPTDate": null,
+                    "DoNotUse": null,
+                    "Date": null,
+                    "HouseHoldID": 216,
+                    "NotEnterForest": null,
+                    "RefuseReason": null,
+                    "RefuseOtherReason": null,
+                    "Absent": null,
+                    "IsIPT": 1
+                }
+            ]
+        }
     }
 
   :Object:
 
     * **NotEnterForest** (*string*) -- Yes/No.
     * **DoNotUse** (*string*) -- Yes/No.
-    * **Reject** (*string*) -- Yes/No.
+    * **RefuseReason** (*string*) -- ``SideEffect`` / ``NotSick`` / ``Other`` / ``N/A``.
+    * **RefuseOtherReason** (*string*) -- any string (available when ``RefuseReason`` = ``Other``)
     * **Absent** (*string*) -- Yes/No.
+    * **Date** (*date*) -- date when received IPTf
 
 Insert/Update IPT
 ~~~~~~~~~~~~~~~~~
@@ -184,16 +190,38 @@ Insert/Update IPT
               "Month": "08",
               "Year": 2021,
               "IPTDate": "2021-07-07",
-              "DoNotUse": "",
-              "Reject": "",
+              "DoNotUse": "No",
+              "RefuseReason": "Other",
+              "RefuseOtherReason": "Afraid",
               "Date": "",
-              "NotEnterForest": "",
-              "Absent": "",
-              "RefuseReason": "",
+              "NotEnterForest": "No",
+              "Absent": "No",
+              "HouseHoldID": 82
+          },
+          {
+              "HouseMemberID": 478,
+              "Month": "08",
+              "Year": 2021,
+              "IPTDate": "2021-07-07",
+              "DoNotUse": "No",
+              "RefuseReason": "NA",
+              "RefuseOtherReason": "",
+              "Date": "2021-07-07",
+              "NotEnterForest": "No",
+              "Absent": "No",
               "HouseHoldID": 82
           }
       ]
     }
+
+  :Object:
+
+    * **NotEnterForest** (*string*) -- Yes/No.
+    * **DoNotUse** (*string*) -- Yes/No.
+    * **RefuseReason** (*string*) -- ``SideEffect`` / ``NotSick`` / ``Other`` / ``N/A``.
+    * **RefuseOtherReason** (*string*) -- any string (available when ``RefuseReason`` = ``Other``)
+    * **Absent** (*string*) -- Yes/No.
+    * **Date** (*date*) -- date when received IPTf
 
 AFS
 ---
@@ -227,10 +255,6 @@ AFS form
               "W2": null,
               "W3": null,
               "W4": null,
-              "W1Specie": null,
-              "W2Specie": null,
-              "W3Specie": null,
-              "W4Specie": null,
               "HouseHoldID": 82
           },
           {
@@ -243,10 +267,6 @@ AFS form
               "W2": null,
               "W3": null,
               "W4": null,
-              "W1Specie": null,
-              "W2Specie": null,
-              "W3Specie": null,
-              "W4Specie": null,
               "HouseHoldID": 82
           }
         ]
@@ -255,8 +275,14 @@ AFS form
 
   :Object:
 
-    * **W1/W2/W3/W4** (*string*) -- Yes/No/N/A.
-    * **W1Specie/W2Specie/W3Specie/W4Specie** (*string*) -- F/V/M/N.
+    * **W1/W2/W3/W4** (*string*) -- ``Yes`` / ``No``/ ``N/A``.
+
+.. note::
+  W1/W2/W3/W4 :
+
+    * ``Yes`` -- Tested
+    * ``No`` -- Not Test
+    * ``N/A`` -- Absent
 
 Insert/Update AFS
 ~~~~~~~~~~~~~~~~~
@@ -274,14 +300,10 @@ Insert/Update AFS
         {
             "HouseMemberID": 479,
             "AFSDate": "2021-07-07",
-            "W1": "",
-            "W2": "",
-            "W3": "",
+            "W1": "Yes",
+            "W2": "No",
+            "W3": "N/A",
             "W4": "",
-            "W1Specie": null,
-            "W2Specie": null,
-            "W3Specie": null,
-            "W4Specie": null,
             "HouseHoldID": 82
         },
         {
@@ -291,11 +313,18 @@ Insert/Update AFS
             "W2": "",
             "W3": "",
             "W4": "",
-            "W1Specie": "Pv",
-            "W2Specie": null,
-            "W3Specie": null,
-            "W4Specie": null,
             "HouseHoldID": 82
         }
       ]
     }
+
+:Object:
+
+    * **W1/W2/W3/W4** (*string*) -- ``Yes`` / ``No``/ ``N/A``.
+
+.. note::
+  W1/W2/W3/W4 :
+
+    * ``Yes`` -- Tested
+    * ``No`` -- Not Test
+    * ``N/A`` -- Absent
