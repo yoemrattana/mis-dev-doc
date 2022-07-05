@@ -19,49 +19,84 @@ TDA form
   .. sourcecode:: json
 
     {
-      "code": 200,
-      "message": "success",
-      "data": {
-          "TDA": [
-              {
-                  "TDADate": "2021-07-19",
-                  "HouseHoldID": 216,
-                  "HouseMemberID": 792,
-                  "Name": "ភៀង សុង",
-                  "Age": 35,
-                  "Sex": "M",
-                  "DoNotUse": "No",
-                  "RejectReason": null,
-                  "RejectOtherReason": null,
-                  "Absent": "Yes",
-                  "Type": 1,
-                  "Date": null,
-                  "IsTDA": 1
-              },
-              {
-                  "TDADate": "2021-07-19",
-                  "HouseHoldID": 216,
-                  "HouseMemberID": 794,
-                  "Name": "សុង វិច",
-                  "Age": 15,
-                  "Sex": "M",
-                  "DoNotUse": "No",
-                  "RejectReason": null,
-                  "RejectOtherReason": null,
-                  "Absent": "Yes",
-                  "Type": 1,
-                  "Date": null,
-                  "IsTDA": 1
-              }
-          ]
-      }
+        "code": 200,
+        "message": "success",
+        "data": {
+            "TDA": [
+                {
+                    "TDADate": null,
+                    "HouseHoldID": 216,
+                    "HouseMemberID": 792,
+                    "Name": "ភៀង សុង",
+                    "Age": 35,
+                    "Sex": "M",
+                    "DoNotUse": null,
+                    "SideEffect": null,
+                    "NotSick": null,
+                    "RejectOtherReason": null,
+                    "Absent": null,
+                    "Type": null,
+                    "Date": null,
+                    "IsTDA": 1
+                },
+                {
+                    "TDADate": "2021-07-07",
+                    "HouseHoldID": 216,
+                    "HouseMemberID": 794,
+                    "Name": "សុង វិច",
+                    "Age": 15,
+                    "Sex": "M",
+                    "DoNotUse": "No",
+                    "SideEffect": null,
+                    "NotSick": null,
+                    "RejectOtherReason": "Affraid",
+                    "Absent": "No",
+                    "Type": 1,
+                    "Date": "2021-18-01",
+                    "IsTDA": 1
+                },
+                {
+                    "TDADate": "2021-07-07",
+                    "HouseHoldID": 216,
+                    "HouseMemberID": 794,
+                    "Name": "សុង វិច",
+                    "Age": 15,
+                    "Sex": "M",
+                    "DoNotUse": "No",
+                    "SideEffect": "Yes",
+                    "NotSick": "Yes",
+                    "RejectOtherReason": "Fear",
+                    "Absent": "No",
+                    "Type": 1,
+                    "Date": "2021-18-01",
+                    "IsTDA": 1
+                },
+                {
+                    "TDADate": "2021-07-07",
+                    "HouseHoldID": 216,
+                    "HouseMemberID": 794,
+                    "Name": "សុង វិច",
+                    "Age": 15,
+                    "Sex": "M",
+                    "DoNotUse": "No",
+                    "SideEffect": "Yes",
+                    "NotSick": "",
+                    "RejectOtherReason": "Affraid",
+                    "Absent": "No",
+                    "Type": 1,
+                    "Date": "2021-18-01",
+                    "IsTDA": 1
+                }
+            ]
+        }
     }
 
   :Object:
 
     * **DoNotUse** (*string*) -- Yes/No.
-    * **RejectReason** (*string*) -- SideEffect/NotSick/Other/NA.
-    * **RejectOtherReason** (*string*) -- any string (available when ``RejectReason`` = ``Other``)
+    * **SideEffect** (*string*) -- Yes/No.
+    * **NotSick** (*string*) -- Yes/No.
+    * **RejectOtherReason** (*string*) -- any string
     * **Absent** (*string*) -- Yes/No.
 
 Insert/Update TDA
@@ -76,37 +111,40 @@ Insert/Update TDA
   .. sourcecode:: json
 
     {
-      "TDA" : [
-          {
-              "TDADate" : "2021-07-07",
-              "DoNotUse": "No",
-              "Absent": "No",
-              "Type": "1",
-              "Date": "2021-18-01",
-              "RejectReason": "SideEffect",
-              "RejectOtherReason": "",
-              "HouseHoldID": 216,
-              "HouseMemberID": 794
-          },
-          {
-              "TDADate" : "2021-07-07",
-              "DoNotUse": "No",
-              "Absent": "No",
-              "Type": "1",
-              "Date": "2021-18-01",
-              "RejectReason": "Other",
-              "RejectOtherReason": "Affraid",
-              "HouseHoldID": 217,
-              "HouseMemberID": 794
-          }
-      ]
+        "TDA" : [
+            {
+                "TDADate" : "2021-07-07",
+                "DoNotUse": "No",
+                "Absent": "No",
+                "Type": "1",
+                "Date": "2021-18-01",
+                "SideEffect": "Yes",
+                "NotSick": "Yes",
+                "RejectOtherReason": "Fear",
+                "HouseHoldID": 216,
+                "HouseMemberID": 794
+            },
+            {
+                "TDADate" : "2021-07-07",
+                "DoNotUse": "No",
+                "Absent": "No",
+                "Type": "1",
+                "Date": "2021-18-01",
+                "SideEffect": "Yes",
+                "NotSick": "",
+                "RejectOtherReason": "Affraid",
+                "HouseHoldID": 217,
+                "HouseMemberID": 794
+            }
+        ]
     }
 
   :Object:
 
     * **DoNotUse** (*string*) -- Yes/No.
-    * **RejectReason** (*string*) -- SideEffect/NotSick/Other/NA.
-    * **RejectOtherReason** (*string*) -- any string (available when ``RejectReason`` = ``Other``)
+    * **SideEffect** (*string*) -- Yes/No.
+    * **NotSick** (*string*) -- Yes/No.
+    * **RejectOtherReason** (*string*) -- any string
     * **Absent** (*string*) -- Yes/No.
 
 .. note::
@@ -189,10 +227,27 @@ IPT form
                     "Date": null,
                     "HouseHoldID": 216,
                     "NotEnterForest": null,
-                    "RefuseReason": null,
+                    "SideEffect": null,
+                    "NotSick": null,
                     "RefuseOtherReason": null,
-                    "Absent": null,
-                    "IsIPT": 1
+                    "Absent": null
+                },
+                {
+                    "HouseMemberID": 794,
+                    "Month": null,
+                    "Year": null,
+                    "Name": "សុង វិច",
+                    "Age": 15,
+                    "Sex": "M",
+                    "IPTDate": null,
+                    "DoNotUse": null,
+                    "Date": null,
+                    "HouseHoldID": 216,
+                    "NotEnterForest": null,
+                    "SideEffect": null,
+                    "NotSick": null,
+                    "RefuseOtherReason": null,
+                    "Absent": null
                 }
             ]
         }
@@ -202,8 +257,9 @@ IPT form
 
     * **NotEnterForest** (*string*) -- Yes/No.
     * **DoNotUse** (*string*) -- Yes/No.
-    * **RefuseReason** (*string*) -- ``SideEffect`` / ``NotSick`` / ``Other`` / ``N/A``.
-    * **RefuseOtherReason** (*string*) -- any string (available when ``RefuseReason`` = ``Other``)
+    * **SideEffect** (*string*) -- Yes/No.
+    * **NotSick** (*string*) -- Yes/No.
+    * **RefuseOtherReason** (*string*) -- any string
     * **Absent** (*string*) -- Yes/No.
     * **Date** (*date*) -- date when received IPTf
 
@@ -219,42 +275,45 @@ Insert/Update IPT
   .. sourcecode:: json
 
     {
-      "IPT": [
-          {
-              "HouseMemberID": 479,
-              "Month": "08",
-              "Year": 2021,
-              "IPTDate": "2021-07-07",
-              "DoNotUse": "No",
-              "RefuseReason": "Other",
-              "RefuseOtherReason": "Afraid",
-              "Date": "",
-              "NotEnterForest": "No",
-              "Absent": "No",
-              "HouseHoldID": 82
-          },
-          {
-              "HouseMemberID": 478,
-              "Month": "08",
-              "Year": 2021,
-              "IPTDate": "2021-07-07",
-              "DoNotUse": "No",
-              "RefuseReason": "NA",
-              "RefuseOtherReason": "",
-              "Date": "2021-07-07",
-              "NotEnterForest": "No",
-              "Absent": "No",
-              "HouseHoldID": 82
-          }
-      ]
+        "IPT": [
+            {
+                "HouseMemberID": 479,
+                "Month": "08",
+                "Year": 2021,
+                "IPTDate": "2021-07-07",
+                "DoNotUse": "No",
+                "SideEffect": "Yes",
+                "NotSick": "Yes",
+                "RefuseOtherReason": "Afraid",
+                "Date": "",
+                "NotEnterForest": "No",
+                "Absent": "No",
+                "HouseHoldID": 82
+            },
+            {
+                "HouseMemberID": 478,
+                "Month": "08",
+                "Year": 2021,
+                "IPTDate": "2021-07-07",
+                "DoNotUse": "No",
+                "SideEffect": "Yes",
+                "NotSick": "",
+                "RefuseOtherReason": "",
+                "Date": "2021-07-07",
+                "NotEnterForest": "No",
+                "Absent": "No",
+                "HouseHoldID": 82
+            }
+        ]
     }
 
   :Object:
 
     * **NotEnterForest** (*string*) -- Yes/No.
     * **DoNotUse** (*string*) -- Yes/No.
-    * **RefuseReason** (*string*) -- ``SideEffect`` / ``NotSick`` / ``Other`` / ``N/A``.
-    * **RefuseOtherReason** (*string*) -- any string (available when ``RefuseReason`` = ``Other``)
+    * **SideEffect** (*string*) -- Yes/No.
+    * **NotSick** (*string*) -- Yes/No.
+    * **RefuseOtherReason** (*string*) -- any string
     * **Absent** (*string*) -- Yes/No.
     * **Date** (*date*) -- date when received IPTf
 
