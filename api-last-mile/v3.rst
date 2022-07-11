@@ -4,7 +4,7 @@ API v3 of Last mile
 House hold
 ----------
 
-Insert/Update house hold
+Insert/Update
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. http:post:: /api-last-smile/v1/fociHouseHold/update

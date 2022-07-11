@@ -1,6 +1,93 @@
 API v3 of Last mile
 ===================
 
+House hold
+----------
+
+Insert/Update
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. http:post:: /api-last-smile/v1/fociHouseHold/update
+
+  Insert/Update house hold
+
+  **Parse as json**:
+
+  .. sourcecode:: json
+
+    {
+      "house":{
+        "Rec_ID": null,
+        "Code_Vill_T": "0109050901",
+        "HouseNumber": "1",
+        "HouseHolder": "test",
+        "Phone": "013346789",
+        "TotalMember": 8,
+        "LLIN": 1,
+        "LLINLack": -1,
+        "LLIHN": 1,
+        "LLIHNLack": -2,
+        "TotalForestEntry": 0,
+        "Month": "01",
+        "Year": "2021",
+        "HasMemberAtHome": "Yes",
+        "Lat": 122.255,
+        "Long": 234.555,
+        "CompleteBy": "Vicheka Nar",
+        "Position": "Village manager",
+        "CompleteDate": "2022-07-07"
+      },
+      "member": [
+        {
+          "Rec_ID": null,
+          "Name": "ta",
+          "Age": "34",
+          "Sex": "M",
+          "ForestEntry": "No",
+          "TDA": "",
+          "IPT": "",
+          "HouseHoldID": 1
+        },
+        {
+          "Rec_ID": null,
+          "Name": "ty",
+          "Age": "40",
+          "Sex": "F",
+          "ForestEntry": "Yes",
+          "TDA": "",
+          "IPT": "",
+          "HouseHoldID": 1
+        },
+        {
+          "Rec_ID": null,
+          "Name": "tt",
+          "Age": 45,
+          "Sex": "M",
+          "ForestEntry": "Yes",
+          "TDA": "",
+          "IPT": "",
+          "HouseHoldID": 1
+        }
+      ]
+    }
+
+  :Object:
+
+    * **HasMemberAtHome** (*string*) -- Yes/No.
+    * **TDA** (*string*) -- Yes/No.
+    * **IPT** (*string*) -- Yes/No.
+    * **ForestEntry** (*string*) -- Yes/No.
+
+  .. note::
+
+    If Rec_ID is null then it will insert new.
+
+    if Rec_ID is not null then it will update.
+
+    If member of house hold with Age between 15 and 49 and Sex = M then TDA = Yes
+
+    If member of house hold with Age between 15 and 49 and ForestEntry = Yes then IPT = Yes
+
 TDA
 ---
 
