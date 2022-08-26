@@ -1844,3 +1844,180 @@ Public Health Facility Without Stock-out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Store procedure: ``SP_V2_HaveStock``
+
+Report Director
+---------------
+
+- Controller: ReportDirector.php
+
+  - ``index()`` : view director report page.
+  - ``getReport()`` to retrieve data.
+  - ``export()`` to export data into excel file.
+
+  .. note::
+    We use MISExcel.exe for exporting data into excel file.
+    MISExcel.exe was developed by Csharp programing language.
+
+- View: reportdirector_view.php
+- ViewModel: ReportDirector.js
+- Store procedure:
+  - ``SP_ReportDirector1``
+  - ``SP_ReportDirector2``
+  - ``SP_ReportDirector3``
+  - ``SP_ReportDirector4``
+  - ``SP_ReportDirector5``
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__ReportDirector.php
+  |  |
+  |  |__views
+  |     |
+  |     |__reportdirector_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__ReportDirector.js
+
+Pivot
+-----
+
+- Controller: PivotChart.php
+
+  - ``index()`` view pivot page
+  - ``getData()`` get data by reading json file that located in ``C:/MIS/Pivot Data`` directory
+  - ``exportExport()`` export data into excel file.
+
+    .. note::
+        We use MISExcel.exe for exporting data into excel file.
+        MISExcel.exe was developed by Csharp programing language.
+
+- View: pivotchart_view.php
+- ViewModel: PivotChart.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__PivotChart.php
+  |  |
+  |  |__views
+  |     |
+  |     |__pivotchart_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__PivotChart.js
+
+Investigation Map
+-----------------
+
+- Controller: InvestigationMap.php
+
+  - ``index()`` view pivot page
+  - ``getData()`` get data by reading from store procedure ``SP_InvMap_HCData``
+
+- View: investigationmap_view.php
+- ViewModel: InvestigationMap.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__InvestigationMap.php
+  |  |
+  |  |__views
+  |     |
+  |     |__investigationmap_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__InvestigationMap.js
+
+Bulletin
+--------
+
+- Controller: Bulletin.php
+
+  - ``index()`` view bulletin page
+  - ``getList()`` get list of bulletin that created.
+  - ``getOldData()`` get detail of data that created.
+  - ``getNewData()`` get pre data that will create.
+  - ``save()`` to save data
+
+- View: bulletin_view.php
+- ViewModel: Bulletin.js
+
+- Database Table: ``tblBulletin``
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__Bulletin.php
+  |  |
+  |  |__views
+  |     |
+  |     |__bulletin_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__Bullentin.js
+
+Pv Radical Cure Map
+-------------------
+
+- Controller: PvRadicalCureMap.php
+
+  - ``index()`` view Pv Radical Cure Map page
+  - ``getData()`` get data to generate map by using store procedure ``SP_PvMap``.
+  - ``getDetail()`` get detail of data by using store procedure ``SP_PvMap_Detail``.
+
+- View: pvradicalcuremap_view.php
+- ViewModel: PvRadicalCureMap.js
+
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__PvRadicalCureMap.php
+  |  |
+  |  |__views
+  |     |
+  |     |__pvradicalcuremap_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__PvRadicalCureMap.js

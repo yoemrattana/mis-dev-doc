@@ -170,6 +170,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#public-health-facility-without-stock-out">Public Health Facility Without Stock-out</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#report-director">Report Director</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pivot">Pivot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#investigation-map">Investigation Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bulletin">Bulletin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pv-radical-cure-map">Pv Radical Cure Map</a></li>
 </ul>
 </li>
 </ul>
@@ -192,6 +197,7 @@
 <p class="caption" role="heading"><span class="caption-text">API of Last mile</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api-last-mile/v1.html">API v2 of Last mile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-last-mile/v3.html">API v3 of Last mile</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API v1 of Check list</span></p>
 <ul>
@@ -2186,6 +2192,190 @@ in case Hc staff does not enter followup data in time then OD staff will be resp
 <ul class="simple">
 <li><p>Store procedure: <code class="docutils literal notranslate"><span class="pre">SP_V2_HaveStock</span></code></p></li>
 </ul>
+</div>
+</div>
+<div class="section" id="report-director">
+<h3>Report Director<a class="headerlink" href="#report-director" title="Permalink to this headline"></a></h3>
+<ul>
+<li><p>Controller: ReportDirector.php</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code> : view director report page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getReport()</span></code> to retrieve data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">export()</span></code> to export data into excel file.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use MISExcel.exe for exporting data into excel file.
+MISExcel.exe was developed by Csharp programing language.</p>
+</div>
+</li>
+<li><p>View: reportdirector_view.php</p></li>
+<li><p>ViewModel: ReportDirector.js</p></li>
+<li><p>Store procedure:
+- <code class="docutils literal notranslate"><span class="pre">SP_ReportDirector1</span></code>
+- <code class="docutils literal notranslate"><span class="pre">SP_ReportDirector2</span></code>
+- <code class="docutils literal notranslate"><span class="pre">SP_ReportDirector3</span></code>
+- <code class="docutils literal notranslate"><span class="pre">SP_ReportDirector4</span></code>
+- <code class="docutils literal notranslate"><span class="pre">SP_ReportDirector5</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__ReportDirector</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__reportdirector_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__ReportDirector</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pivot">
+<h3>Pivot<a class="headerlink" href="#pivot" title="Permalink to this headline"></a></h3>
+<ul>
+<li><p>Controller: PivotChart.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code> view pivot page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getData()</span></code> get data by reading json file that located in <code class="docutils literal notranslate"><span class="pre">C:/MIS/Pivot</span> <span class="pre">Data</span></code> directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportExport()</span></code> export data into excel file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use MISExcel.exe for exporting data into excel file.
+MISExcel.exe was developed by Csharp programing language.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>View: pivotchart_view.php</p></li>
+<li><p>ViewModel: PivotChart.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__PivotChart</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__pivotchart_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__PivotChart</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="investigation-map">
+<h3>Investigation Map<a class="headerlink" href="#investigation-map" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Controller: InvestigationMap.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code> view pivot page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getData()</span></code> get data by reading from store procedure <code class="docutils literal notranslate"><span class="pre">SP_InvMap_HCData</span></code></p></li>
+</ul>
+</li>
+<li><p>View: investigationmap_view.php</p></li>
+<li><p>ViewModel: InvestigationMap.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__InvestigationMap</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__investigationmap_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__InvestigationMap</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bulletin">
+<h3>Bulletin<a class="headerlink" href="#bulletin" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Controller: Bulletin.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code> view bulletin page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getList()</span></code> get list of bulletin that created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getOldData()</span></code> get detail of data that created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getNewData()</span></code> get pre data that will create.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">save()</span></code> to save data</p></li>
+</ul>
+</li>
+<li><p>View: bulletin_view.php</p></li>
+<li><p>ViewModel: Bulletin.js</p></li>
+<li><p>Database Table: <code class="docutils literal notranslate"><span class="pre">tblBulletin</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__Bulletin</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__bulletin_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__Bullentin</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pv-radical-cure-map">
+<h3>Pv Radical Cure Map<a class="headerlink" href="#pv-radical-cure-map" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Controller: PvRadicalCureMap.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code> view Pv Radical Cure Map page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getData()</span></code> get data to generate map by using store procedure <code class="docutils literal notranslate"><span class="pre">SP_PvMap</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getDetail()</span></code> get detail of data by using store procedure <code class="docutils literal notranslate"><span class="pre">SP_PvMap_Detail</span></code>.</p></li>
+</ul>
+</li>
+<li><p>View: pvradicalcuremap_view.php</p></li>
+<li><p>ViewModel: PvRadicalCureMap.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__PvRadicalCureMap</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__pvradicalcuremap_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__PvRadicalCureMap</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
 </div>
 </div>
 </div>
