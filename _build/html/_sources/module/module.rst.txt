@@ -2021,3 +2021,137 @@ Pv Radical Cure Map
      |__ViewModel
         |
         |__PvRadicalCureMap.js
+
+Master Data Management
+======================
+
+System Menu 
+----------- 
+
+- Controller: Home.php
+
+  - ``sysmenu($code_prov = '', $systable = 'choose')`` : View page system menu.
+  - ``getSystemTable()`` : get system menu tab. (``Drug Outlets``, ``Health Facilities``, ``Village``, ``Population``, ``House Hold``, ``Province``, ``OD``, ``District``, ``Commune``, ``HF Log``, ``VMW Log``, ``Bed Net Target``, ``Police Troop``, ``Police Post``, ``Environment Office``, ``Environment Community``)
+
+- View: 
+
+  - nav_bednettarget.php
+  - nav_choose.php
+  - nav_commune.php
+  - nav_district.php
+  - nav_drugoutlets.php
+  - nav_envcommunity.php
+  - nav_envoffice.php
+  - nav_group.php
+  - nav_healthfacility.php
+  - nav_hflog.php
+  - nav_hhold.php
+  - nav_od.php
+  - nav_plpost.php
+  - nav_pltroop.php
+  - nav_population.php
+  - nav_province.php
+  - nav_regional.php
+  - nav_village.php
+  - nav_vmwlog.php
+
+- ViewModal: 
+
+  - Nav_BedNetTarget.js
+  - Nav_Commune.js
+  - Nav_District.js
+  - Nav_Drugoutlets.js
+  - Nav_EnvCommunity.js
+  - Nav_EnvOffice.js
+  - Nav_Group.js
+  - Nav_Healthfacility.js
+  - Nav_HFLog.js
+  - Nav_HHold.js
+  - Nav_OD.js
+  - Nav_PLPost.js
+  - Nav_PLTroop.js
+  - Nav_Population.js
+  - Nav_Province.js
+  - Nav_Regional.js
+  - Nav_Village.js
+  - Nav_VMWLog.js
+
+User
+----
+
+Table diagram
+
+::
+
+  +----------+        +----------+        +--------------------+     +----------------+
+  |          |        |          |        |                    |     |                |
+  |MIS_User  |>|------| MIS_Role |------|<| MIS_RolePermission |---|<| MIS_Permission |
+  |          |        |          |        |                    |     |                |
+  +----------+        +----------+        +--------------------+     +----------------+ 
+                                                                              V
+                                                                              |  
+                                                                    +--------------------+
+                                                                    |                    |
+                                                                    |MIS_PermissionGroup |
+                                                                    |                    |
+                                                                    +--------------------+
+
+
+- Controller: User.php
+- View: user_view.php
+- ViewModel: User.js
+                                                                    
+::
+
+  root
+  |
+  |__application
+  |  |
+  |  |__controller
+  |  |  |  
+  |  |  |__User.php
+  |  |
+  |  |__views
+  |     |
+  |     |__user_view.php
+  |
+  |__media
+     |
+     |__ViewModel
+        |
+        |__User.js
+
+
+Device
+------
+
+HF Device
+~~~~~~~~~~
+
+Table diagram
+
+::
+
+  +--------------+
+  |              |
+  | tblHFDevice  |
+  |              |
+  +--------------+
+
+- Controller:
+
+  - hfGetRequest(): to get list of request device form hf.
+  - hfDeviceList(): to get list of HF device that registered.
+
+- View: device_view.php
+- ViewModel: Device.js
+
+
+
+              
+              
+              
+              
+              
+              
+              

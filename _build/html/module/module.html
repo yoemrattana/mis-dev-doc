@@ -177,6 +177,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#pv-radical-cure-map">Pv Radical Cure Map</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#master-data-management">Master Data Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-menu">System Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user">User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device">Device</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hf-device">HF Device</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="note.html">Note</a></li>
@@ -2376,6 +2385,131 @@ MISExcel.exe was developed by Csharp programing language.</p>
       <span class="o">|</span>
       <span class="o">|</span><span class="n">__PvRadicalCureMap</span><span class="o">.</span><span class="n">js</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="master-data-management">
+<h2>Master Data Management<a class="headerlink" href="#master-data-management" title="Permalink to this headline"></a></h2>
+<div class="section" id="system-menu">
+<h3>System Menu<a class="headerlink" href="#system-menu" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Controller: Home.php</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sysmenu($code_prov</span> <span class="pre">=</span> <span class="pre">'',</span> <span class="pre">$systable</span> <span class="pre">=</span> <span class="pre">'choose')</span></code> : View page system menu.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getSystemTable()</span></code> : get system menu tab. (<code class="docutils literal notranslate"><span class="pre">Drug</span> <span class="pre">Outlets</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Facilities</span></code>, <code class="docutils literal notranslate"><span class="pre">Village</span></code>, <code class="docutils literal notranslate"><span class="pre">Population</span></code>, <code class="docutils literal notranslate"><span class="pre">House</span> <span class="pre">Hold</span></code>, <code class="docutils literal notranslate"><span class="pre">Province</span></code>, <code class="docutils literal notranslate"><span class="pre">OD</span></code>, <code class="docutils literal notranslate"><span class="pre">District</span></code>, <code class="docutils literal notranslate"><span class="pre">Commune</span></code>, <code class="docutils literal notranslate"><span class="pre">HF</span> <span class="pre">Log</span></code>, <code class="docutils literal notranslate"><span class="pre">VMW</span> <span class="pre">Log</span></code>, <code class="docutils literal notranslate"><span class="pre">Bed</span> <span class="pre">Net</span> <span class="pre">Target</span></code>, <code class="docutils literal notranslate"><span class="pre">Police</span> <span class="pre">Troop</span></code>, <code class="docutils literal notranslate"><span class="pre">Police</span> <span class="pre">Post</span></code>, <code class="docutils literal notranslate"><span class="pre">Environment</span> <span class="pre">Office</span></code>, <code class="docutils literal notranslate"><span class="pre">Environment</span> <span class="pre">Community</span></code>)</p></li>
+</ul>
+</li>
+<li><p>View:</p>
+<ul>
+<li><p>nav_bednettarget.php</p></li>
+<li><p>nav_choose.php</p></li>
+<li><p>nav_commune.php</p></li>
+<li><p>nav_district.php</p></li>
+<li><p>nav_drugoutlets.php</p></li>
+<li><p>nav_envcommunity.php</p></li>
+<li><p>nav_envoffice.php</p></li>
+<li><p>nav_group.php</p></li>
+<li><p>nav_healthfacility.php</p></li>
+<li><p>nav_hflog.php</p></li>
+<li><p>nav_hhold.php</p></li>
+<li><p>nav_od.php</p></li>
+<li><p>nav_plpost.php</p></li>
+<li><p>nav_pltroop.php</p></li>
+<li><p>nav_population.php</p></li>
+<li><p>nav_province.php</p></li>
+<li><p>nav_regional.php</p></li>
+<li><p>nav_village.php</p></li>
+<li><p>nav_vmwlog.php</p></li>
+</ul>
+</li>
+<li><p>ViewModal:</p>
+<ul>
+<li><p>Nav_BedNetTarget.js</p></li>
+<li><p>Nav_Commune.js</p></li>
+<li><p>Nav_District.js</p></li>
+<li><p>Nav_Drugoutlets.js</p></li>
+<li><p>Nav_EnvCommunity.js</p></li>
+<li><p>Nav_EnvOffice.js</p></li>
+<li><p>Nav_Group.js</p></li>
+<li><p>Nav_Healthfacility.js</p></li>
+<li><p>Nav_HFLog.js</p></li>
+<li><p>Nav_HHold.js</p></li>
+<li><p>Nav_OD.js</p></li>
+<li><p>Nav_PLPost.js</p></li>
+<li><p>Nav_PLTroop.js</p></li>
+<li><p>Nav_Population.js</p></li>
+<li><p>Nav_Province.js</p></li>
+<li><p>Nav_Regional.js</p></li>
+<li><p>Nav_Village.js</p></li>
+<li><p>Nav_VMWLog.js</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="user">
+<h3>User<a class="headerlink" href="#user" title="Permalink to this headline"></a></h3>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------+</span>        <span class="o">+----------+</span>        <span class="o">+--------------------+</span>     <span class="o">+----------------+</span>
+<span class="o">|</span>          <span class="o">|</span>        <span class="o">|</span>          <span class="o">|</span>        <span class="o">|</span>                    <span class="o">|</span>     <span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span><span class="n">MIS_User</span>  <span class="o">|&gt;|------|</span> <span class="n">MIS_Role</span> <span class="o">|------|&lt;|</span> <span class="n">MIS_RolePermission</span> <span class="o">|---|&lt;|</span> <span class="n">MIS_Permission</span> <span class="o">|</span>
+<span class="o">|</span>          <span class="o">|</span>        <span class="o">|</span>          <span class="o">|</span>        <span class="o">|</span>                    <span class="o">|</span>     <span class="o">|</span>                <span class="o">|</span>
+<span class="o">+----------+</span>        <span class="o">+----------+</span>        <span class="o">+--------------------+</span>     <span class="o">+----------------+</span>
+                                                                            <span class="n">V</span>
+                                                                            <span class="o">|</span>
+                                                                  <span class="o">+--------------------+</span>
+                                                                  <span class="o">|</span>                    <span class="o">|</span>
+                                                                  <span class="o">|</span><span class="n">MIS_PermissionGroup</span> <span class="o">|</span>
+                                                                  <span class="o">|</span>                    <span class="o">|</span>
+                                                                  <span class="o">+--------------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller: User.php</p></li>
+<li><p>View: user_view.php</p></li>
+<li><p>ViewModel: User.js</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__application</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__controller</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span><span class="n">__User</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>  <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__views</span>
+<span class="o">|</span>     <span class="o">|</span>
+<span class="o">|</span>     <span class="o">|</span><span class="n">__user_view</span><span class="o">.</span><span class="n">php</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="n">__media</span>
+   <span class="o">|</span>
+   <span class="o">|</span><span class="n">__ViewModel</span>
+      <span class="o">|</span>
+      <span class="o">|</span><span class="n">__User</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="device">
+<h3>Device<a class="headerlink" href="#device" title="Permalink to this headline"></a></h3>
+<div class="section" id="hf-device">
+<h4>HF Device<a class="headerlink" href="#hf-device" title="Permalink to this headline"></a></h4>
+<p>Table diagram</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--------------+</span>
+<span class="o">|</span>              <span class="o">|</span>
+<span class="o">|</span> <span class="n">tblHFDevice</span>  <span class="o">|</span>
+<span class="o">|</span>              <span class="o">|</span>
+<span class="o">+--------------+</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Controller:</p>
+<ul>
+<li><p>hfGetRequest(): to get list of request device form hf.</p></li>
+<li><p>hfDeviceList(): to get list of HF device that registered.</p></li>
+</ul>
+</li>
+<li><p>View: device_view.php</p></li>
+<li><p>ViewModel: Device.js</p></li>
+</ul>
 </div>
 </div>
 </div>
